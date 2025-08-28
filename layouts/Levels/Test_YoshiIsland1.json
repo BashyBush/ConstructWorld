@@ -419,81 +419,6 @@
 					"blendMode": "normal",
 					"zElevation": 0,
 					"global": false
-				},
-				{
-					"name": "BGTemp",
-					"overriden": 0,
-					"subLayers": [],
-					"instances": [
-						{
-							"type": "SNESSuperMarioWorldYoshisIsland",
-							"properties": {
-								"initially-visible": true,
-								"initial-animation": "Default",
-								"initial-frame": 0,
-								"enable-collisions": true,
-								"live-preview": false
-							},
-							"uid": 93,
-							"sid": 853556428816917,
-							"tags": "",
-							"instanceVariables": {},
-							"behaviors": {
-								"Solid": {
-									"properties": {
-										"enabled": false,
-										"tags": ""
-									}
-								}
-							},
-							"showing": true,
-							"locked": false,
-							"world": {
-								"x": 5120,
-								"y": 48,
-								"width": 10240,
-								"height": 864,
-								"originX": 0.5,
-								"originY": 0.5,
-								"color": [
-									1,
-									1,
-									1,
-									1
-								],
-								"angle": 0,
-								"zElevation": 0
-							}
-						}
-					],
-					"sid": 914449562547981,
-					"effectTypes": [],
-					"isInitiallyVisible": true,
-					"isInitiallyInteractive": true,
-					"isHTMLElementsLayer": false,
-					"color": [
-						1,
-						1,
-						1,
-						0.25
-					],
-					"backgroundColor": [
-						0.3686274509803922,
-						0.3686274509803922,
-						0.3686274509803922,
-						1
-					],
-					"isTransparent": true,
-					"parallaxX": 1,
-					"parallaxY": 1,
-					"scaleRate": 1,
-					"forceOwnTexture": false,
-					"renderingMode": "3d",
-					"drawOrder": "z-order",
-					"useRenderCells": false,
-					"blendMode": "normal",
-					"zElevation": 0,
-					"global": false
 				}
 			],
 			"instances": [],
@@ -3972,7 +3897,7 @@
 						"TimeAttackMode": false,
 						"TimeLimiter": 400,
 						"EnableTimeLimit": true,
-						"CountdownType": 0.5
+						"CountdownType": 1
 					},
 					"behaviors": {},
 					"showing": true,
@@ -8308,7 +8233,7 @@
 					"locked": false,
 					"world": {
 						"x": 0.8081687580454968,
-						"y": 437.12828840439215,
+						"y": 485.12828840439215,
 						"width": 200,
 						"height": 62.714934,
 						"originX": 0,

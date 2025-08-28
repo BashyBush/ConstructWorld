@@ -209,7 +209,7 @@
 					"locked": false,
 					"world": {
 						"x": 13,
-						"y": -266,
+						"y": -376,
 						"width": 408,
 						"height": 249.99852454152045,
 						"originX": 0,
@@ -258,9 +258,9 @@
 					"locked": false,
 					"world": {
 						"x": 426,
-						"y": -268,
+						"y": -378,
 						"width": 408,
-						"height": 524.9985245415205,
+						"height": 374.9985245415205,
 						"originX": 0,
 						"originY": 0,
 						"color": [
@@ -276,10 +276,10 @@
 				{
 					"type": "DevLog",
 					"properties": {
-						"text": "Build Date: whenever i do a tester build lol.",
+						"text": "controls:\nz = jump\nx = run & pick up\nc = spin jump\nspace = use itembox\nenter = pause game\n",
 						"enable-bbcode": true,
 						"font": "Arial",
-						"size": 11,
+						"size": 13,
 						"line-height": 0,
 						"bold": false,
 						"italic": false,
@@ -289,7 +289,7 @@
 							1,
 							1
 						],
-						"horizontal-alignment": "left",
+						"horizontal-alignment": "right",
 						"vertical-alignment": "top",
 						"wrapping": "word",
 						"text-direction": "ltr",
@@ -306,10 +306,63 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 10,
-						"y": 453,
-						"width": 389,
-						"height": 19.998524541520453,
+						"x": 359,
+						"y": 26,
+						"width": 471,
+						"height": 159.99852454152045,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "DevLog",
+					"properties": {
+						"text": "ignore the ugly title screen i didn't work on this that much lol\n(debug mode is enabled btw)",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 13,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"horizontal-alignment": "center",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 98,
+					"sid": 503995393098861,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 503995393098861,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 197,
+						"y": 430,
+						"width": 471,
+						"height": 159.99852454152045,
 						"originX": 0,
 						"originY": 0,
 						"color": [

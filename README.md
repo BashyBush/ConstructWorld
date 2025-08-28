@@ -24,7 +24,7 @@ That why i'm releasing the project in the current state it is. I might continue 
 - Will you still continue with this project even after this release?
    - Depends if I have the time to continue working on this and to also fix the current problems with this project.
 - Can I use this for a fan-game?
-   - Sure I guess. There will be some things that are left unfinished at the moment (like fire mario for example) but if you want to still use this eitherway then sure! Just aleast credit me if you do plan on using this aleast.
+   - Sure I guess. There will be some things that are left unfinished at the moment (like fire mario for example) but if you want to still use this eitherway then sure! Just aleast credit me if you do plan on using this engine.
 - Does this include things like Cape Mario or Yoshi?
    - No. I'm not sure if i'll even be able to add those two into the engine if I do continue updating this. 
 - Wait. Why are there objects that didn't even came from SMW?
@@ -33,3 +33,6 @@ That why i'm releasing the project in the current state it is. I might continue 
    - If I have the free time. I'll probably check what it is and see if I can fix it... I'm not quite sure if i'll keep rebuilding a playable build for these fixes but they should appear on the current source code in this git.
 - I made a Pull Request for a bug fix or a improvement for something. Will you add it into the engine?
    - To be quite honest it depends. I'm quite new to GitHub (at the time at writing this) so maybe it depends I guess..?
+
+
+### nintendo please don't murder me thanks.

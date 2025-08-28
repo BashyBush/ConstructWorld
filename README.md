@@ -10,5 +10,6 @@ Some stuff from SMW like most of Mario Movement, Blocks, Some enemies, (tbh prob
 During the making of this. I had one goal in mind. Try to make things as accurate as possible. Not quite everything will be fully accurate but things like Mario himself controls mostly like how he does in SMW. (hopefully lol.)
 
 # Requirements.
-- Either a Active Construct 3 Subscription or a Access Code. The free version will not work due to the project using way over the event limit.
+- Either a Active Construct 3 Subscription or a Access Code.
+	The free version will not work due to the project using way over the event limit.
 -

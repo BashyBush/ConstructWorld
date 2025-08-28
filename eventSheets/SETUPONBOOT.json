@@ -1,0 +1,454 @@
+{
+	"name": "SETUPONBOOT",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 434528835449254
+				}
+			],
+			"actions": [
+				{
+					"id": "check-item-exists",
+					"objectClass": "LocalStorage",
+					"sid": 965153211953526,
+					"parameters": {
+						"key": "\"ShowFPS\""
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 763305939742329,
+					"parameters": {
+						"seconds": "0.2",
+						"use-timescale": true
+					}
+				},
+				{
+					"id": "set-layer-opacity",
+					"objectClass": "System",
+					"sid": 739670450297509,
+					"parameters": {
+						"layer": "\"Fade\"",
+						"opacity": "0"
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 918684998706518,
+					"parameters": {
+						"audio-file": "coin",
+						"loop": "not-looping",
+						"volume": "-5",
+						"stereo-pan": "0",
+						"tag-optional": "\"SF\""
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 501997244835877,
+					"parameters": {
+						"seconds": "1.5",
+						"use-timescale": true
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Camera",
+					"sid": 674898481377469,
+					"parameters": {
+						"instance-variable": "FadeSetting",
+						"value": "\"In\""
+					}
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "Camera",
+					"sid": 200824104438126,
+					"parameters": {
+						"instance-variable": "StartFade",
+						"value": "true"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 559076243239665,
+					"parameters": {
+						"seconds": "1.5",
+						"use-timescale": true
+					}
+				},
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 284024435593341,
+					"parameters": {
+						"layer": "\"BuiltWith\"",
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 220756259217514,
+					"parameters": {
+						"layer": "\"Presents\"",
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Camera",
+					"sid": 499379262391165,
+					"parameters": {
+						"instance-variable": "FadeSetting",
+						"value": "\"Out\""
+					}
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "Camera",
+					"sid": 444805257225029,
+					"parameters": {
+						"instance-variable": "StartFade",
+						"value": "true"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 987052780036814,
+					"parameters": {
+						"seconds": "1.75",
+						"use-timescale": true
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Camera",
+					"sid": 475877244220251,
+					"parameters": {
+						"instance-variable": "FadeSetting",
+						"value": "\"In\""
+					}
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "Camera",
+					"sid": 132612120344371,
+					"parameters": {
+						"instance-variable": "StartFade",
+						"value": "true"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 530786841558554,
+					"parameters": {
+						"seconds": "1.5",
+						"use-timescale": true
+					}
+				},
+				{
+					"type": "comment",
+					"text": "making this a signal for now."
+				},
+				{
+					"id": "signal",
+					"objectClass": "System",
+					"sid": 241192883023355,
+					"parameters": {
+						"tag": "\"SpScGoToTitle\""
+					}
+				}
+			],
+			"sid": 478394838586682
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-item-exists",
+					"objectClass": "LocalStorage",
+					"sid": 118700575089030,
+					"parameters": {
+						"key": "\"ShowFPS\""
+					}
+				}
+			],
+			"actions": [],
+			"sid": 715436081458076,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-value",
+							"objectClass": "LocalStorage",
+							"sid": 452026658182808,
+							"parameters": {
+								"comparison": 0,
+								"value": "\"1\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 550084796098403,
+							"parameters": {
+								"variable": "InGameSetting_ShowFPS",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 878230047477843
+				}
+			]
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "SpSc_CameraFade",
+			"description": "imported from in-game events",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "Camera",
+							"sid": 105256654333966,
+							"parameters": {
+								"instance-variable": "StartFade"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-layer-opacity",
+							"objectClass": "System",
+							"sid": 624726807098004,
+							"parameters": {
+								"layer": "\"Fade\"",
+								"opacity": "Camera.FadeOpacity"
+							}
+						}
+					],
+					"sid": 705206858951016,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Camera",
+									"sid": 812575995342560,
+									"parameters": {
+										"instance-variable": "FadeSetting",
+										"comparison": 0,
+										"value": "\"In\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "add-to-instvar",
+									"objectClass": "Camera",
+									"sid": 833701953885757,
+									"parameters": {
+										"instance-variable": "FadeOpacity",
+										"value": "4"
+									}
+								}
+							],
+							"sid": 575719725557583,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-layer-opacity",
+											"objectClass": "System",
+											"sid": 746937245299316,
+											"parameters": {
+												"layer": "\"Fade\"",
+												"comparison": 5,
+												"opacity": "99.5"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-boolean-instvar",
+											"objectClass": "Camera",
+											"sid": 191789987609801,
+											"parameters": {
+												"instance-variable": "StartFade",
+												"value": "false"
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "Camera",
+											"sid": 559051596838286,
+											"parameters": {
+												"instance-variable": "FadeSetting",
+												"value": "\"\""
+											}
+										}
+									],
+									"sid": 477807112384879
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Camera",
+									"sid": 609608679555496,
+									"parameters": {
+										"instance-variable": "FadeSetting",
+										"comparison": 0,
+										"value": "\"Out\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "subtract-from-instvar",
+									"objectClass": "Camera",
+									"sid": 854898087353448,
+									"parameters": {
+										"instance-variable": "FadeOpacity",
+										"value": "5"
+									}
+								}
+							],
+							"sid": 139450943807096,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-layer-opacity",
+											"objectClass": "System",
+											"sid": 608520571911126,
+											"parameters": {
+												"layer": "\"Fade\"",
+												"comparison": 3,
+												"opacity": "5"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-boolean-instvar",
+											"objectClass": "Camera",
+											"sid": 939681051151393,
+											"parameters": {
+												"instance-variable": "StartFade",
+												"value": "false"
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "Camera",
+											"sid": 453292998616077,
+											"parameters": {
+												"instance-variable": "FadeSetting",
+												"value": "\"\""
+											}
+										}
+									],
+									"sid": 928743029269444
+								}
+							]
+						}
+					]
+				}
+			],
+			"sid": 108392960033851
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-signal",
+					"objectClass": "System",
+					"sid": 610960575269490,
+					"parameters": {
+						"tag": "\"SpScGoToTitle\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 771545459527080,
+					"parameters": {
+						"layout": "TitleScreen"
+					}
+				}
+			],
+			"sid": 851247925842857
+		},
+		{
+			"eventType": "comment",
+			"text": "doesn't work at the moment. might make the splashes it's own layout"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 494177719638868
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 840609587930724,
+					"parameters": {
+						"variable": "InGameSetting_4by3Mode"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 405635821301711,
+					"parameters": {
+						"seconds": "0.1",
+						"use-timescale": true
+					}
+				},
+				{
+					"id": "set-canvas-size",
+					"objectClass": "System",
+					"sid": 953342945643870,
+					"parameters": {
+						"width": "640",
+						"height": "480"
+					}
+				}
+			],
+			"sid": 130794800985783
+		}
+	],
+	"sid": 469529895670942
+}

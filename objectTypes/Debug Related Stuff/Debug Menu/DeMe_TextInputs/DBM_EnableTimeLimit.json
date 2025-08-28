@@ -1,0 +1,9 @@
+{
+	"name": "DBM_EnableTimeLimit",
+	"plugin-id": "Button",
+	"sid": 627119259749038,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": []
+}

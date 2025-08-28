@@ -1,0 +1,306 @@
+{
+	"name": "InvalidLayout",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "INVALID_REASON",
+			"type": "string",
+			"initialValue": "",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 583602823568480
+		},
+		{
+			"eventType": "variable",
+			"name": "INVALID_LIDError",
+			"type": "string",
+			"initialValue": "N/A",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 408067361098840
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 506380983714386
+				}
+			],
+			"actions": [
+				{
+					"id": "set-visible",
+					"objectClass": "WM_LevelPoints",
+					"sid": 567911526674934,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				}
+			],
+			"sid": 779179385138468,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "PipeLayoutWarpSetup",
+							"sid": 870720366659010,
+							"parameters": {
+								"instance-variable": "ExitingPipe",
+								"value": "0"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "PipeLayoutWarpSetup",
+							"sid": 509185173499064,
+							"parameters": {
+								"instance-variable": "X_Direction",
+								"value": "0"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "PipeLayoutWarpSetup",
+							"sid": 410324649457865,
+							"parameters": {
+								"instance-variable": "Y_Direction",
+								"value": "0"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "PipeLayoutWarpSetup",
+							"sid": 561697147173367,
+							"parameters": {
+								"instance-variable": "CamXSetLeft",
+								"value": "0"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "PipeLayoutWarpSetup",
+							"sid": 703389738091693,
+							"parameters": {
+								"instance-variable": "CamXSetRight",
+								"value": "0"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "PipeLayoutWarpSetup",
+							"sid": 946215728333632,
+							"parameters": {
+								"instance-variable": "CamYSetTop",
+								"value": "0"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "PipeLayoutWarpSetup",
+							"sid": 501401957613953,
+							"parameters": {
+								"instance-variable": "CamYSetBottom",
+								"value": "0"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "PipeLayoutWarpSetup",
+							"sid": 893762239694450,
+							"parameters": {
+								"instance-variable": "MusicChange",
+								"value": "\"\""
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "PipeLayoutWarpSetup",
+							"sid": 270532710591401,
+							"parameters": {
+								"instance-variable": "TimeReminder",
+								"value": "0"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "PipeLayoutWarpSetup",
+							"sid": 104786135137610,
+							"parameters": {
+								"instance-variable": "RemYoshiCoins",
+								"value": "0"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "PipeLayoutWarpSetup",
+							"sid": 525097360492897,
+							"parameters": {
+								"instance-variable": "PipeWarping",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Player1",
+							"sid": 122720450657389,
+							"parameters": {
+								"instance-variable": "InPipe",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 434298205569535,
+							"parameters": {
+								"variable": "PipeWarping",
+								"value": "false"
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "PipeLayoutWarpSetup",
+							"sid": 715712480197534
+						}
+					],
+					"sid": 156960537760357
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 548630049885548
+				}
+			],
+			"actions": [
+				{
+					"id": "set-text",
+					"objectClass": "INVALID_TextReason",
+					"sid": 496092864391528,
+					"parameters": {
+						"text": "\"A fatal exception has occurred due to \" & Self.ErrorReason & \". The current application will be stopped.\r\n\r\n* Press enter to return to the world map.\r\n* Press ESC to close the game window. You will lose any unsaved‎\n  progress.\r\n\r\n                      Press Enter to continue\""
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "INVALID_DebugInformation",
+					"sid": 344198252658200,
+					"parameters": {
+						"text": "\"Debug Info\r\nID Reason: \" & INVALID_LIDError"
+					}
+				}
+			],
+			"sid": 292037636651275
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 964573064879857,
+					"parameters": {
+						"variable": "INVALID_REASON",
+						"comparison": 0,
+						"value": "\"Invalid Pipe Layout\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-instvar-value",
+					"objectClass": "INVALID_TextReason",
+					"sid": 106003846990309,
+					"parameters": {
+						"instance-variable": "ErrorReason",
+						"value": "\"Pipe Layout direction being invalid\""
+					}
+				}
+			],
+			"sid": 398563201754131
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 783538658811759,
+					"parameters": {
+						"variable": "INVALID_REASON",
+						"comparison": 0,
+						"value": "\"Invalid World Level ID\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-instvar-value",
+					"objectClass": "INVALID_TextReason",
+					"sid": 458985818554123,
+					"parameters": {
+						"instance-variable": "ErrorReason",
+						"value": "\"Level ID on the World map being invalid\""
+					}
+				}
+			],
+			"sid": 408560296193360
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 246704524235524,
+					"parameters": {
+						"key": 13
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 747561553529167,
+					"parameters": {
+						"layout": "WorldMap"
+					}
+				}
+			],
+			"sid": 441848200255205
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 194722657903213,
+					"parameters": {
+						"key": 27
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "close",
+					"objectClass": "Browser",
+					"sid": 610650449156693
+				}
+			],
+			"sid": 289986989213827
+		}
+	],
+	"sid": 123605820473880
+}

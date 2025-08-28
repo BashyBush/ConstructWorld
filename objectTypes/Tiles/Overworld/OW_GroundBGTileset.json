@@ -1,0 +1,24 @@
+{
+	"name": "OW_GroundBGTileset",
+	"plugin-id": "Tilemap",
+	"sid": 289848034925971,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"image": {
+		"width": 512,
+		"height": 352,
+		"originX": 0.5,
+		"originY": 0.5,
+		"originalSource": "",
+		"exportFormat": "lossless",
+		"exportQuality": 0.8,
+		"fileType": "image/png",
+		"imageSpriteId": 9287915,
+		"useCollisionPoly": true,
+		"tag": ""
+	},
+	"tile-collision-polys": {}
+}

@@ -1,0 +1,139 @@
+{
+	"name": "PipeLayoutWarpSetup",
+	"plugin-id": "Sprite",
+	"sid": 410172568207589,
+	"isGlobal": true,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [
+		{
+			"name": "X_Direction",
+			"type": "number",
+			"desc": "",
+			"show": false,
+			"sid": 537517782254647
+		},
+		{
+			"name": "Y_Direction",
+			"type": "number",
+			"desc": "",
+			"show": false,
+			"sid": 499090573715189
+		},
+		{
+			"name": "ExitingPipe",
+			"type": "string",
+			"desc": "",
+			"show": false,
+			"sid": 165887177626342
+		},
+		{
+			"name": "CamXSetLeft",
+			"type": "number",
+			"desc": "",
+			"show": false,
+			"sid": 617454723173211
+		},
+		{
+			"name": "CamXSetRight",
+			"type": "number",
+			"desc": "",
+			"show": false,
+			"sid": 917973736790964
+		},
+		{
+			"name": "CamYSetTop",
+			"type": "number",
+			"desc": "",
+			"show": false,
+			"sid": 170761221927556
+		},
+		{
+			"name": "CamYSetBottom",
+			"type": "number",
+			"desc": "",
+			"show": false,
+			"sid": 186481744405895
+		},
+		{
+			"name": "MusicChange",
+			"type": "string",
+			"desc": "",
+			"show": false,
+			"sid": 494281192236729
+		},
+		{
+			"name": "PipeWarping",
+			"type": "boolean",
+			"desc": "",
+			"show": false,
+			"sid": 883150529849045
+		},
+		{
+			"name": "RemYoshiCoins",
+			"type": "number",
+			"desc": "",
+			"show": false,
+			"sid": 521896170770941
+		},
+		{
+			"name": "TimeReminder",
+			"type": "number",
+			"desc": "",
+			"show": false,
+			"sid": 307271298332573
+		},
+		{
+			"name": "RememberTime",
+			"type": "boolean",
+			"desc": "not added yet.",
+			"show": false,
+			"sid": 652839627573388
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 250,
+						"height": 250,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 9098791,
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 250,
+						"height": 250,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 6644736,
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 676771271479114,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

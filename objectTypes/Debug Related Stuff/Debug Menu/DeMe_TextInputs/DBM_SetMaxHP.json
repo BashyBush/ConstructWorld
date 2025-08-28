@@ -1,0 +1,9 @@
+{
+	"name": "DBM_SetMaxHP",
+	"plugin-id": "TextBox",
+	"sid": 814331125798930,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": []
+}

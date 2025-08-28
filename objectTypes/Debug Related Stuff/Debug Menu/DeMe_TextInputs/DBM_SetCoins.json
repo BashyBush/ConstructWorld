@@ -1,0 +1,9 @@
+{
+	"name": "DBM_SetCoins",
+	"plugin-id": "TextBox",
+	"sid": 908886306804773,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": []
+}

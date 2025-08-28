@@ -1,0 +1,370 @@
+{
+	"name": "TitleScreen",
+	"layers": [
+		{
+			"name": "Layer 0",
+			"overriden": 0,
+			"subLayers": [],
+			"instances": [
+				{
+					"type": "Title_selection",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 19,
+					"sid": 586274312675007,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 102,
+						"y": 373.5909206719548,
+						"width": 105.87906541220981,
+						"height": 27.972332917184303,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Title_TextOptions",
+					"properties": {
+						"text": "Start Game\nOptions\nExit",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 14,
+						"line-height": 4.25,
+						"bold": false,
+						"italic": false,
+						"color": [
+							0,
+							0,
+							0,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 20,
+					"sid": 161517153028079,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 54,
+						"y": 333,
+						"width": 224,
+						"height": 123,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Title_System",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 26,
+					"sid": 197831153836068,
+					"tags": "",
+					"instanceVariables": {
+						"Title_MenuSelection": 0,
+						"Title_MenuMaxSelection": 0,
+						"Title_MenuState": 0,
+						"Title_AllowMovement": 1
+					},
+					"behaviors": {},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": -59,
+						"y": 5,
+						"width": 60.158110772016045,
+						"height": 60.158110772016045,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "ShowFPS",
+					"properties": {
+						"text": "FPS: 00",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 10,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": false,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 41,
+					"sid": 579506317821096,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": -3,
+						"y": -27,
+						"width": 64.96671445302695,
+						"height": 20.060707091035795,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "DevLog",
+					"properties": {
+						"text": "added/fixes from last build\n- 4:3 Mode (WIP, breaks sub-room camera if in the same \n  layout I guess lol. check options if it's enabled by me lol)\n- Pipe Layout Warping\n- Fixed Big Mario Shrinking animation not working.\n- Dying now brings you to the World Map (unless 0 lifes)\n- Bonus Points (no the bonus stage doesn't exist yet)\n\nthings i still need (or could) to do still lmao \n- Fireballs actually doing something\n- Rewrite the enemy damage system \n- fix a tiny bit of animation bugs",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 12,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 219,
+					"sid": 726274965389218,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 13,
+						"y": -266,
+						"width": 408,
+						"height": 249.99852454152045,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "DevLog",
+					"properties": {
+						"text": "known bugs\n- ducking or spinning to hit blocks won't work most of the time\n- enemy hitbox might be a bit weird.\n- mushrooms won't pause their position when growing up from small\n- big to fire mario transition doesn't exist yet and uses small to \n  big mario instead as a placeholder.\n- animations break if Mario is standing on clouds/platforms you\n  can jump through and land\n\n  there probably a few bugs i forgot to list but if you see any\n  report them to me with info on how to do said bug ig lol\n\n\n\nthings i need to add/fix\n- Fireballs still need to damage enemies\n- Being able to pick up stuff. (like the p switch)\n- accurate map path. (you can free-move atm)\n- shell falling down when pausing.",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 11,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 285,
+					"sid": 925748410867171,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 426,
+						"y": -268,
+						"width": 408,
+						"height": 524.9985245415205,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "DevLog",
+					"properties": {
+						"text": "Build Date: whenever i do a tester build lol.",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 11,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 882,
+					"sid": 871603616089247,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 10,
+						"y": 453,
+						"width": 389,
+						"height": 19.998524541520453,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				}
+			],
+			"sid": 901308431127870,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"isInitiallyInteractive": true,
+			"isHTMLElementsLayer": false,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				0.7450980392156863,
+				0.6941176470588235,
+				0.6941176470588235,
+				1
+			],
+			"isTransparent": false,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"renderingMode": "3d",
+			"drawOrder": "z-order",
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"zElevation": 0,
+			"global": false
+		}
+	],
+	"scene-graphs-folder-root": {
+		"items": [],
+		"subfolders": []
+	},
+	"sid": 870466906289995,
+	"nonworld-instances": [],
+	"effectTypes": [],
+	"width": 854,
+	"height": 480,
+	"unboundedScrolling": false,
+	"vpX": 0.5,
+	"vpY": 0.5,
+	"projection": "perspective",
+	"eventSheet": "TitleScreen Events"
+}

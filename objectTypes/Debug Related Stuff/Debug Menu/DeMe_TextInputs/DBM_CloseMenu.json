@@ -1,0 +1,9 @@
+{
+	"name": "DBM_CloseMenu",
+	"plugin-id": "Button",
+	"sid": 916971280815320,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": []
+}

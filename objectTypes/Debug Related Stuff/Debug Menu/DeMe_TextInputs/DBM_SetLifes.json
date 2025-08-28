@@ -1,0 +1,9 @@
+{
+	"name": "DBM_SetLifes",
+	"plugin-id": "TextBox",
+	"sid": 559380999253488,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": []
+}

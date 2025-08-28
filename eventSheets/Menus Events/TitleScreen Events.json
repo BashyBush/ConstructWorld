@@ -1,0 +1,705 @@
+{
+	"name": "TitleScreen Events",
+	"events": [
+		{
+			"eventType": "comment",
+			"text": "SURPRISE! \nNo Global Variables here. Check Title_System if you want to mess around with the variables"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 421888905152894
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 895347477570042,
+					"parameters": {
+						"variable": "Lifes",
+						"value": "5"
+					}
+				},
+				{
+					"id": "set-x",
+					"objectClass": "Title_selection",
+					"sid": 110147188861807,
+					"parameters": {
+						"x": "Title_TextOptions.X+48"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "WM_LevelPoints",
+					"sid": 258477042446860,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				}
+			],
+			"sid": 850510344488826,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [
+						{
+							"type": "comment",
+							"text": "we dont need theses "
+						},
+						{
+							"id": "reset-eventvar",
+							"objectClass": "System",
+							"sid": 616763010830819,
+							"parameters": {
+								"variable": "CheckpointX"
+							}
+						},
+						{
+							"id": "reset-eventvar",
+							"objectClass": "System",
+							"sid": 858554710303497,
+							"parameters": {
+								"variable": "CheckpointY"
+							}
+						},
+						{
+							"id": "reset-eventvar",
+							"objectClass": "System",
+							"sid": 720832739507903,
+							"parameters": {
+								"variable": "SaveTimeMinute"
+							}
+						},
+						{
+							"id": "reset-eventvar",
+							"objectClass": "System",
+							"sid": 864324424239669,
+							"parameters": {
+								"variable": "SaveTimeSeconds"
+							}
+						}
+					],
+					"sid": 266522823109403
+				}
+			]
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Title Menu Text Sel Setup",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Title_System",
+							"sid": 896778739766001,
+							"parameters": {
+								"instance-variable": "Title_MenuState",
+								"comparison": 0,
+								"value": "-1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "Title_TextOptions",
+							"sid": 116240070965257,
+							"parameters": {
+								"text": "\"Placeholder1\nPlaceholder2\nPlaceholder3\nPlaceholder\""
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Title_System",
+							"sid": 421478132809661,
+							"parameters": {
+								"instance-variable": "Title_MenuMaxSelection",
+								"value": "3"
+							}
+						}
+					],
+					"sid": 857054706236232,
+					"disabled": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Title_System",
+							"sid": 802743375136852,
+							"parameters": {
+								"instance-variable": "Title_MenuState",
+								"comparison": 0,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "Title_TextOptions",
+							"sid": 354843519935986,
+							"parameters": {
+								"text": "\"Start\nOptions\nExit\""
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Title_System",
+							"sid": 205891153196608,
+							"parameters": {
+								"instance-variable": "Title_MenuMaxSelection",
+								"value": "2"
+							}
+						}
+					],
+					"sid": 505667321806893
+				}
+			],
+			"sid": 548618792702740
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Title Keyboard/Controller Setup",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 214404030287288,
+							"parameters": {
+								"key": 40
+							}
+						},
+						{
+							"id": "on-button-pressed",
+							"objectClass": "Gamepad",
+							"sid": 935126988780740,
+							"parameters": {
+								"gamepad": "0",
+								"button": "d-pad-down"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 775404853960890,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Title_System",
+									"sid": 156723873666588,
+									"parameters": {
+										"instance-variable": "Title_MenuSelection",
+										"comparison": 5,
+										"value": "Title_System.Title_MenuMaxSelection"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Title_System",
+									"sid": 932068843636083,
+									"parameters": {
+										"instance-variable": "Title_MenuSelection",
+										"value": "0"
+									}
+								}
+							],
+							"sid": 503408186081128
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 987583681909892
+								}
+							],
+							"actions": [
+								{
+									"id": "add-to-instvar",
+									"objectClass": "Title_System",
+									"sid": 873491558909172,
+									"parameters": {
+										"instance-variable": "Title_MenuSelection",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 966169126720659
+						}
+					],
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 689891725987262,
+							"parameters": {
+								"key": 38
+							}
+						},
+						{
+							"id": "on-button-pressed",
+							"objectClass": "Gamepad",
+							"sid": 769910423315926,
+							"parameters": {
+								"gamepad": "0",
+								"button": "d-pad-up"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 506514041706769,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Title_System",
+									"sid": 107522110618273,
+									"parameters": {
+										"instance-variable": "Title_MenuSelection",
+										"comparison": 3,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Title_System",
+									"sid": 172639482738058,
+									"parameters": {
+										"instance-variable": "Title_MenuSelection",
+										"value": "Title_System.Title_MenuMaxSelection"
+									}
+								}
+							],
+							"sid": 750079138884421
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 330473600581409
+								}
+							],
+							"actions": [
+								{
+									"id": "add-to-instvar",
+									"objectClass": "Title_System",
+									"sid": 173935686409616,
+									"parameters": {
+										"instance-variable": "Title_MenuSelection",
+										"value": "-1"
+									}
+								}
+							],
+							"sid": 705983253361628
+						}
+					],
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 705160927642322,
+							"parameters": {
+								"key": 13
+							}
+						},
+						{
+							"id": "on-button-pressed",
+							"objectClass": "Gamepad",
+							"sid": 805438412644295,
+							"parameters": {
+								"gamepad": "0",
+								"button": "button-a"
+							}
+						},
+						{
+							"id": "on-button-pressed",
+							"objectClass": "Gamepad",
+							"sid": 349206016322000,
+							"parameters": {
+								"gamepad": "0",
+								"button": "start-menu"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 743102584137118,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Title_System",
+									"sid": 910094070689928,
+									"parameters": {
+										"instance-variable": "Title_AllowMovement",
+										"comparison": 0,
+										"value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "signal",
+									"objectClass": "System",
+									"sid": 637546848433271,
+									"parameters": {
+										"tag": "\"TitleSelected\""
+									}
+								}
+							],
+							"sid": 321125484713791
+						}
+					],
+					"isOrBlock": true
+				}
+			],
+			"sid": 257495129932035
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Title Option Highlighted",
+			"description": "Probably the only messy thing in this project unless I find a way to do this better.",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Title_System",
+							"sid": 431713189783647,
+							"parameters": {
+								"instance-variable": "Title_MenuState",
+								"comparison": 0,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 447828836588082,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Title_System",
+									"sid": 211363810611352,
+									"parameters": {
+										"instance-variable": "Title_MenuSelection",
+										"comparison": 0,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-y",
+									"objectClass": "Title_selection",
+									"sid": 188478095941747,
+									"parameters": {
+										"y": "345.59"
+									}
+								}
+							],
+							"sid": 956341448741422
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Title_System",
+									"sid": 617804740339303,
+									"parameters": {
+										"instance-variable": "Title_MenuSelection",
+										"comparison": 0,
+										"value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-y",
+									"objectClass": "Title_selection",
+									"sid": 816633543022001,
+									"parameters": {
+										"y": "373.59"
+									}
+								}
+							],
+							"sid": 941107103343333
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Title_System",
+									"sid": 356398248260788,
+									"parameters": {
+										"instance-variable": "Title_MenuSelection",
+										"comparison": 0,
+										"value": "2"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-y",
+									"objectClass": "Title_selection",
+									"sid": 567383260987031,
+									"parameters": {
+										"y": "401.59"
+									}
+								}
+							],
+							"sid": 586228781493696
+						}
+					]
+				}
+			],
+			"sid": 692080312368169
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Title Option Selected Setup",
+			"description": "\"You did something so il do something for you\"",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "comment",
+					"text": "This is where the fun begins"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-signal",
+							"objectClass": "System",
+							"sid": 842833430586706,
+							"parameters": {
+								"tag": "\"TitleSelected\""
+							}
+						}
+					],
+					"actions": [],
+					"sid": 535112198030063,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Title_System",
+									"sid": 524479186037284,
+									"parameters": {
+										"instance-variable": "Title_MenuState",
+										"comparison": 0,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 229883549183818,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Title_System",
+											"sid": 939243975792803,
+											"parameters": {
+												"instance-variable": "Title_MenuSelection",
+												"comparison": 0,
+												"value": "0"
+											}
+										}
+									],
+									"actions": [
+										{
+											"type": "comment",
+											"text": "temp fix for now related to pausing"
+										},
+										{
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 549850632296212,
+											"parameters": {
+												"seconds": "0.05",
+												"use-timescale": true
+											}
+										},
+										{
+											"id": "go-to-layout",
+											"objectClass": "System",
+											"sid": 712011310221050,
+											"parameters": {
+												"layout": "WorldMap"
+											}
+										}
+									],
+									"sid": 679452233554354
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Title_System",
+											"sid": 981479728517171,
+											"parameters": {
+												"instance-variable": "Title_MenuSelection",
+												"comparison": 0,
+												"value": "1"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "go-to-layout",
+											"objectClass": "System",
+											"sid": 865187265205234,
+											"disabled": true,
+											"parameters": {
+												"layout": "SettingsScreen"
+											}
+										},
+										{
+											"id": "alert",
+											"objectClass": "Browser",
+											"sid": 408845911765787,
+											"parameters": {
+												"message": "\"i would let you in but there barely anything here that useful. sorry lol\""
+											}
+										}
+									],
+									"sid": 989399304060263
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Title_System",
+											"sid": 577627181826887,
+											"parameters": {
+												"instance-variable": "Title_MenuSelection",
+												"comparison": 0,
+												"value": "2"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "close",
+											"objectClass": "Browser",
+											"sid": 152546361649191
+										}
+									],
+									"sid": 461429839230553
+								}
+							]
+						}
+					]
+				}
+			],
+			"sid": 372736761495742
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Title FPS Setting",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 833624707019629,
+							"parameters": {
+								"variable": "InGameSetting_ShowFPS",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "ShowFPS",
+							"sid": 322554938327799,
+							"parameters": {
+								"text": "\"FPS: \" & fps"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "ShowFPS",
+							"sid": 337995657105734,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "ShowFPS",
+							"sid": 151857112009007,
+							"parameters": {
+								"x": "1.228936",
+								"y": "0.456469"
+							}
+						}
+					],
+					"sid": 133142896738210
+				}
+			],
+			"sid": 710070253144967
+		}
+	],
+	"sid": 814205933326607
+}

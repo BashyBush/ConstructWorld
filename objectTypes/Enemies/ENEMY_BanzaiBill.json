@@ -1,0 +1,78 @@
+{
+	"name": "ENEMY_BanzaiBill",
+	"plugin-id": "Sprite",
+	"sid": 675449562066471,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Bullet",
+			"name": "Bullet",
+			"sid": 946710242241801
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 128,
+						"height": 128,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 8945494,
+						"collisionPoly": {
+							"points": [
+								0.4375,
+								0,
+								1,
+								0,
+								1,
+								1,
+								0.4375,
+								1,
+								0.296875,
+								0.953125,
+								0.203125,
+								0.90625,
+								0.078125,
+								0.78125,
+								0.03125,
+								0.6875,
+								0,
+								0.578125,
+								0,
+								0.421875,
+								0.03125,
+								0.3125,
+								0.078125,
+								0.21875,
+								0.203125,
+								0.09375,
+								0.296875,
+								0.046875
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 479036753014828,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

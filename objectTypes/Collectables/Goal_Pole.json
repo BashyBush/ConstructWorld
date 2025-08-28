@@ -1,0 +1,68 @@
+{
+	"name": "Goal_Pole",
+	"plugin-id": "Sprite",
+	"sid": 527112340873648,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [
+		{
+			"name": "SecretExit",
+			"type": "boolean",
+			"desc": "If ticked. A different Path will apear on the MAP",
+			"show": true,
+			"sid": 681034295073304
+		},
+		{
+			"name": "UpOrDown",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 553931785859170
+		},
+		{
+			"name": "BonusPoints",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 171005294045265
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Sin",
+			"name": "Sine",
+			"sid": 523635123198989
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 64,
+						"height": 16,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 7527426,
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 910572378318862,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

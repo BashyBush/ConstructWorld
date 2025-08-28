@@ -1,0 +1,393 @@
+{
+	"name": "WM_MarioWalking",
+	"plugin-id": "Sprite",
+	"sid": 882214197980294,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [
+		{
+			"name": "InCamLock",
+			"type": "number",
+			"desc": "(NOT USED) Extra checks to make sure the camera doesn't move more often than usual. I wouldn't really recommend screwing around with this variable unless needed.",
+			"show": false,
+			"sid": 169683943665823
+		},
+		{
+			"name": "HP",
+			"type": "number",
+			"desc": "How much hits the player can take. ",
+			"show": true,
+			"sid": 691006898065084
+		},
+		{
+			"name": "MaxHP",
+			"type": "number",
+			"desc": "Checks how much HP the player can hold.",
+			"show": true,
+			"sid": 231987025317028
+		},
+		{
+			"name": "EnemyCombo",
+			"type": "number",
+			"desc": "Resets back to 0 when landing on ground",
+			"show": false,
+			"sid": 388744942501584
+		},
+		{
+			"name": "AnimationState",
+			"type": "string",
+			"desc": "ugh",
+			"show": false,
+			"sid": 950511570840691
+		},
+		{
+			"name": "TimertilRunning",
+			"type": "number",
+			"desc": "",
+			"show": false,
+			"sid": 920179734956055
+		},
+		{
+			"name": "AnimationRem",
+			"type": "string",
+			"desc": "used mostly for when mario gets or loses a powerup ",
+			"show": false,
+			"sid": 941034741233012
+		},
+		{
+			"name": "DumbSpinCheck",
+			"type": "boolean",
+			"desc": "dumb hack idc",
+			"show": false,
+			"sid": 726644110498772
+		},
+		{
+			"name": "InPipe",
+			"type": "boolean",
+			"desc": "",
+			"show": false,
+			"sid": 730025695017464
+		},
+		{
+			"name": "CourseClear",
+			"type": "boolean",
+			"desc": "",
+			"show": false,
+			"sid": 926458824337024
+		},
+		{
+			"name": "CourseClearState",
+			"type": "number",
+			"desc": "",
+			"show": false,
+			"sid": 768661311873386
+		},
+		{
+			"name": "JumpTimerHigh",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 496150374170326
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 16,
+						"height": 32,
+						"originX": 0.5,
+						"originY": 0,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 9826225,
+						"collisionPoly": {
+							"points": [
+								0,
+								0.375,
+								0.9375,
+								0.375,
+								0.9375,
+								1,
+								0,
+								1
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 16,
+						"height": 32,
+						"originX": 0.5,
+						"originY": 0,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 142678,
+						"collisionPoly": {
+							"points": [
+								0.0625,
+								0.375,
+								0.9375,
+								0.375,
+								0.9375,
+								1,
+								0.0625,
+								1
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 434826178114869,
+				"name": "Small_Walking",
+				"isLooping": true,
+				"isPingPong": false,
+				"repeatCount": 999,
+				"repeatTo": 0,
+				"speed": 8
+			},
+			{
+				"frames": [
+					{
+						"width": 16,
+						"height": 32,
+						"originX": 0.5,
+						"originY": 0,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 2934468,
+						"collisionPoly": {
+							"points": [
+								0.0625,
+								0.125,
+								1,
+								0.125,
+								1,
+								1,
+								0.0625,
+								1
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 16,
+						"height": 32,
+						"originX": 0.5,
+						"originY": 0,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 4712845,
+						"collisionPoly": {
+							"points": [
+								0.0625,
+								0.125,
+								1,
+								0.125,
+								1,
+								1,
+								0.0625,
+								1
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 16,
+						"height": 32,
+						"originX": 0.5,
+						"originY": 0,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 3400612,
+						"collisionPoly": {
+							"points": [
+								0.0625,
+								0.125,
+								1,
+								0.125,
+								1,
+								1,
+								0.0625,
+								1
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 16,
+						"height": 32,
+						"originX": 0.5,
+						"originY": 0,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 3233860,
+						"collisionPoly": {
+							"points": [
+								0.0625,
+								0.125,
+								1,
+								0.125,
+								1,
+								1,
+								0.0625,
+								1
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 964506478638530,
+				"name": "Big_Walking",
+				"isLooping": true,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 8
+			},
+			{
+				"frames": [
+					{
+						"width": 16,
+						"height": 32,
+						"originX": 0.5,
+						"originY": 0,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 9643939,
+						"collisionPoly": {
+							"points": [
+								0.0625,
+								0.125,
+								1,
+								0.125,
+								1,
+								1,
+								0.0625,
+								1
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 16,
+						"height": 32,
+						"originX": 0.5,
+						"originY": 0,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 6480586,
+						"collisionPoly": {
+							"points": [
+								0.0625,
+								0.125,
+								1,
+								0.125,
+								1,
+								1,
+								0.0625,
+								1
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 16,
+						"height": 32,
+						"originX": 0.5,
+						"originY": 0,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 4516722,
+						"collisionPoly": {
+							"points": [
+								0.0625,
+								0.125,
+								1,
+								0.125,
+								1,
+								1,
+								0.0625,
+								1
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 16,
+						"height": 32,
+						"originX": 0.5,
+						"originY": 0,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 9341024,
+						"collisionPoly": {
+							"points": [
+								0.0625,
+								0.125,
+								1,
+								0.125,
+								1,
+								1,
+								0.0625,
+								1
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 907721128149064,
+				"name": "Fire_Walking",
+				"isLooping": true,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 8
+			}
+		],
+		"subfolders": []
+	}
+}

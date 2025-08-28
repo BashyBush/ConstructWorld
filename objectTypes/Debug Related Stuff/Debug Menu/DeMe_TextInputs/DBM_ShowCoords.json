@@ -1,0 +1,9 @@
+{
+	"name": "DBM_ShowCoords",
+	"plugin-id": "Button",
+	"sid": 575158930909025,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": []
+}

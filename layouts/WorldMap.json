@@ -1,0 +1,1774 @@
+{
+	"name": "WorldMap",
+	"layers": [
+		{
+			"name": "BackGround",
+			"overriden": 0,
+			"subLayers": [],
+			"instances": [
+				{
+					"type": "PlaceHolder",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Default",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 291,
+					"sid": 348704024183383,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 426.9820555564798,
+						"y": 264.8988160778181,
+						"width": 565.7307035485038,
+						"height": 369.7726328772914,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							0.7411764705882353,
+							0.7411764705882353,
+							0.7411764705882353,
+							0.25
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				}
+			],
+			"sid": 764300771734784,
+			"effectTypes": [
+				{
+					"effectId": "waterbg",
+					"name": "WaterBackground",
+					"instance": {
+						"isEnabled": true,
+						"parameters": {
+							"speed": 0.01,
+							"x-speed": 0.3,
+							"y-speed": 0.3,
+							"intensity": 3,
+							"frequency": 4,
+							"angle": 7,
+							"delta": 20,
+							"reflectivity": 400,
+							"emboss": 0.3
+						}
+					}
+				},
+				{
+					"effectId": "pixellate",
+					"name": "Pixellate",
+					"instance": {
+						"isEnabled": true,
+						"parameters": {
+							"size": 1
+						}
+					}
+				}
+			],
+			"isInitiallyVisible": true,
+			"isInitiallyInteractive": true,
+			"isHTMLElementsLayer": false,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				0.3686274509803922,
+				0.3686274509803922,
+				0.3686274509803922,
+				1
+			],
+			"isTransparent": true,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"renderingMode": "3d",
+			"drawOrder": "z-order",
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"zElevation": 0,
+			"global": false
+		},
+		{
+			"name": "Test",
+			"overriden": 0,
+			"subLayers": [],
+			"instances": [
+				{
+					"type": "PART_TestYellowBlockLaunch",
+					"properties": {
+						"rate": 3,
+						"spray-cone": 1,
+						"type": "continuous-spray",
+						"object": -1,
+						"initially-visible": true,
+						"live-preview": false,
+						"speed": 485,
+						"size": 32,
+						"opacity": 100,
+						"grow-rate": 0,
+						"x-randomiser": 0,
+						"y-randomiser": 0,
+						"initial-speed-randomiser": 0,
+						"size-randomiser": 0,
+						"grow-rate-randomiser": 0,
+						"acceleration": -150,
+						"gravity": 100,
+						"angle-randomiser": 0,
+						"life-speed-randomiser": 0,
+						"opacity-randomiser": 0,
+						"destroy-mode": "timeout-expired",
+						"timeout": 1.5
+					},
+					"uid": 194,
+					"sid": 206186292715046,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 352,
+						"y": 592,
+						"width": 100,
+						"height": 100,
+						"originX": 0,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 5.497787143782138,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "PART_TestYellowBlockLaunch",
+					"properties": {
+						"rate": 3,
+						"spray-cone": 1,
+						"type": "continuous-spray",
+						"object": -1,
+						"initially-visible": true,
+						"live-preview": false,
+						"speed": 485,
+						"size": 32,
+						"opacity": 100,
+						"grow-rate": 0,
+						"x-randomiser": 0,
+						"y-randomiser": 0,
+						"initial-speed-randomiser": 0,
+						"size-randomiser": 0,
+						"grow-rate-randomiser": 0,
+						"acceleration": -150,
+						"gravity": 100,
+						"angle-randomiser": 0,
+						"life-speed-randomiser": 0,
+						"opacity-randomiser": 0,
+						"destroy-mode": "timeout-expired",
+						"timeout": 1.5
+					},
+					"uid": 872,
+					"sid": 971432835594549,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 352,
+						"y": 592,
+						"width": 100,
+						"height": 100,
+						"originX": 0,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 4.71238898038469,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "PART_TestYellowBlockLaunch",
+					"properties": {
+						"rate": 3,
+						"spray-cone": 1,
+						"type": "continuous-spray",
+						"object": -1,
+						"initially-visible": true,
+						"live-preview": false,
+						"speed": 485,
+						"size": 32,
+						"opacity": 100,
+						"grow-rate": 0,
+						"x-randomiser": 0,
+						"y-randomiser": 0,
+						"initial-speed-randomiser": 0,
+						"size-randomiser": 0,
+						"grow-rate-randomiser": 0,
+						"acceleration": -150,
+						"gravity": 100,
+						"angle-randomiser": 0,
+						"life-speed-randomiser": 0,
+						"opacity-randomiser": 0,
+						"destroy-mode": "timeout-expired",
+						"timeout": 1.5
+					},
+					"uid": 873,
+					"sid": 925894127022563,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 352,
+						"y": 592,
+						"width": 100,
+						"height": 100,
+						"originX": 0,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 3.9269908169872414,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "PART_TestYellowBlockLaunch",
+					"properties": {
+						"rate": 3,
+						"spray-cone": 1,
+						"type": "continuous-spray",
+						"object": -1,
+						"initially-visible": true,
+						"live-preview": false,
+						"speed": 485,
+						"size": 32,
+						"opacity": 100,
+						"grow-rate": 0,
+						"x-randomiser": 0,
+						"y-randomiser": 0,
+						"initial-speed-randomiser": 0,
+						"size-randomiser": 0,
+						"grow-rate-randomiser": 0,
+						"acceleration": -150,
+						"gravity": 100,
+						"angle-randomiser": 0,
+						"life-speed-randomiser": 0,
+						"opacity-randomiser": 0,
+						"destroy-mode": "timeout-expired",
+						"timeout": 1.5
+					},
+					"uid": 874,
+					"sid": 296476828978111,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 352,
+						"y": 592,
+						"width": 100,
+						"height": 100,
+						"originX": 0,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "PART_TestYellowBlockLaunch",
+					"properties": {
+						"rate": 3,
+						"spray-cone": 1,
+						"type": "continuous-spray",
+						"object": -1,
+						"initially-visible": true,
+						"live-preview": false,
+						"speed": 485,
+						"size": 32,
+						"opacity": 100,
+						"grow-rate": 0,
+						"x-randomiser": 0,
+						"y-randomiser": 0,
+						"initial-speed-randomiser": 0,
+						"size-randomiser": 0,
+						"grow-rate-randomiser": 0,
+						"acceleration": -150,
+						"gravity": 100,
+						"angle-randomiser": 0,
+						"life-speed-randomiser": 0,
+						"opacity-randomiser": 0,
+						"destroy-mode": "timeout-expired",
+						"timeout": 1.5
+					},
+					"uid": 875,
+					"sid": 910235082229529,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 352,
+						"y": 592,
+						"width": 100,
+						"height": 100,
+						"originX": 0,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 2.353081072717881,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "PART_TestYellowBlockLaunch",
+					"properties": {
+						"rate": 3,
+						"spray-cone": 1,
+						"type": "continuous-spray",
+						"object": -1,
+						"initially-visible": true,
+						"live-preview": false,
+						"speed": 485,
+						"size": 32,
+						"opacity": 100,
+						"grow-rate": 0,
+						"x-randomiser": 0,
+						"y-randomiser": 0,
+						"initial-speed-randomiser": 0,
+						"size-randomiser": 0,
+						"grow-rate-randomiser": 0,
+						"acceleration": -150,
+						"gravity": 100,
+						"angle-randomiser": 0,
+						"life-speed-randomiser": 0,
+						"opacity-randomiser": 0,
+						"destroy-mode": "timeout-expired",
+						"timeout": 1.5
+					},
+					"uid": 876,
+					"sid": 282332237139471,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 352,
+						"y": 592,
+						"width": 100,
+						"height": 100,
+						"originX": 0,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 1.5676829093204319,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "PART_TestYellowBlockLaunch",
+					"properties": {
+						"rate": 3,
+						"spray-cone": 1,
+						"type": "continuous-spray",
+						"object": -1,
+						"initially-visible": true,
+						"live-preview": false,
+						"speed": 485,
+						"size": 32,
+						"opacity": 100,
+						"grow-rate": 0,
+						"x-randomiser": 0,
+						"y-randomiser": 0,
+						"initial-speed-randomiser": 0,
+						"size-randomiser": 0,
+						"grow-rate-randomiser": 0,
+						"acceleration": -150,
+						"gravity": 100,
+						"angle-randomiser": 0,
+						"life-speed-randomiser": 0,
+						"opacity-randomiser": 0,
+						"destroy-mode": "timeout-expired",
+						"timeout": 1.5
+					},
+					"uid": 877,
+					"sid": 409254597000079,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 352,
+						"y": 592,
+						"width": 100,
+						"height": 100,
+						"originX": 0,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0.7822847459229836,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "PART_TestYellowBlockLaunch",
+					"properties": {
+						"rate": 3,
+						"spray-cone": 1,
+						"type": "continuous-spray",
+						"object": -1,
+						"initially-visible": true,
+						"live-preview": false,
+						"speed": 485,
+						"size": 32,
+						"opacity": 100,
+						"grow-rate": 0,
+						"x-randomiser": 0,
+						"y-randomiser": 0,
+						"initial-speed-randomiser": 0,
+						"size-randomiser": 0,
+						"grow-rate-randomiser": 0,
+						"acceleration": -150,
+						"gravity": 100,
+						"angle-randomiser": 0,
+						"life-speed-randomiser": 0,
+						"opacity-randomiser": 0,
+						"destroy-mode": "timeout-expired",
+						"timeout": 1.5
+					},
+					"uid": 878,
+					"sid": 152623104699608,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 352,
+						"y": 592,
+						"width": 100,
+						"height": 100,
+						"originX": 0,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 3.1384792361153284,
+						"zElevation": 0
+					}
+				}
+			],
+			"sid": 751256951849849,
+			"effectTypes": [],
+			"isInitiallyVisible": false,
+			"isInitiallyInteractive": true,
+			"isHTMLElementsLayer": false,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				0.3686274509803922,
+				0.3686274509803922,
+				0.3686274509803922,
+				1
+			],
+			"isTransparent": true,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"renderingMode": "3d",
+			"drawOrder": "z-order",
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"zElevation": 0,
+			"global": false
+		},
+		{
+			"name": "MapPath",
+			"overriden": 0,
+			"subLayers": [],
+			"instances": [
+				{
+					"type": "WM_WorldPath",
+					"properties": {
+						"initially-visible": true,
+						"tile-width": 16,
+						"tile-height": 16,
+						"tile-x-offset": 0,
+						"tile-y-offset": 0,
+						"tile-x-spacing": 0,
+						"tile-y-spacing": 0,
+						"tile-x-drawing-offset": 0,
+						"tile-y-drawing-offset": 0,
+						"drawing-mode": "top-to-right"
+					},
+					"uid": 1250,
+					"sid": 484478946521075,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"ownData": {
+						"tilemapData": {
+							"width": 106,
+							"height": 60,
+							"max-width": 159,
+							"max-height": 90,
+							"data": "2356x0,47,91,88x0,49,93,88x0,26v,26,88x0,26v,26,88x0,26v,26,88x0,115,137,79x0,47,47v,3x67,47,47v,72,94,116,80x0,47h,47hv,3x68,47h,47hv,73,95,86x0,4,26,88x0,4,26,88x0,4,26,88x0,4,26,88x0,5,27,89x0,28,50,72,72v,2x72,91v,91,82x0,29,51,73,73v,2x73,91hv,91h,10689x0"
+						},
+						"tile-width": 16,
+						"tile-height": 16,
+						"tile-x-offset": 0,
+						"tile-y-offset": 0,
+						"tile-x-spacing": 0,
+						"tile-y-spacing": 0
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 0,
+						"y": 0,
+						"width": 1708,
+						"height": 960,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"zElevation": 0
+					}
+				}
+			],
+			"sid": 162266565336050,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"isInitiallyInteractive": true,
+			"isHTMLElementsLayer": false,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				0.3686274509803922,
+				0.3686274509803922,
+				0.3686274509803922,
+				1
+			],
+			"isTransparent": true,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"renderingMode": "3d",
+			"drawOrder": "z-order",
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"zElevation": 0,
+			"global": false
+		},
+		{
+			"name": "Extra Objects",
+			"overriden": 0,
+			"subLayers": [],
+			"instances": [
+				{
+					"type": "DevLog",
+					"properties": {
+						"text": "Layout not finished yet.",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 16,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"horizontal-alignment": "center",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 1046,
+					"sid": 631041183329445,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 320,
+						"y": -32,
+						"width": 240,
+						"height": 32,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				}
+			],
+			"sid": 981050056740983,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"isInitiallyInteractive": true,
+			"isHTMLElementsLayer": false,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				0.3686274509803922,
+				0.3686274509803922,
+				0.3686274509803922,
+				1
+			],
+			"isTransparent": true,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"renderingMode": "3d",
+			"drawOrder": "z-order",
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"zElevation": 0,
+			"global": false
+		},
+		{
+			"name": "LevelMarkers",
+			"overriden": 0,
+			"subLayers": [],
+			"instances": [
+				{
+					"type": "WM_LevelPoints",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "SingleExit",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 221,
+					"sid": 369246246397728,
+					"tags": "",
+					"instanceVariables": {
+						"LevelName": "YOSHI ISLAND 1",
+						"LevelID": "Test_YoshiIsland1",
+						"SkipMarioStartScreen": false,
+						"Completed": false,
+						"SecertCompleted": false,
+						"Locked": false,
+						"NormalMove": "",
+						"SecertMove": ""
+					},
+					"behaviors": {},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 432,
+						"y": 272,
+						"width": 32,
+						"height": 32,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "WM_LevelPoints",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "SingleExit",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 289,
+					"sid": 977841796835288,
+					"tags": "",
+					"instanceVariables": {
+						"LevelName": "goes back to title lol.\nnot much else to say...",
+						"LevelID": "TitleScreen",
+						"SkipMarioStartScreen": true,
+						"Completed": false,
+						"SecertCompleted": false,
+						"Locked": false,
+						"NormalMove": "",
+						"SecertMove": ""
+					},
+					"behaviors": {},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 432,
+						"y": 144,
+						"width": 32,
+						"height": 32,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "WM_LevelPoints",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "SingleExit",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 294,
+					"sid": 660633463981072,
+					"tags": "",
+					"instanceVariables": {
+						"LevelName": "Going out of bounds I see...",
+						"LevelID": "",
+						"SkipMarioStartScreen": false,
+						"Completed": false,
+						"SecertCompleted": false,
+						"Locked": false,
+						"NormalMove": "",
+						"SecertMove": ""
+					},
+					"behaviors": {},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 432,
+						"y": 464,
+						"width": 576,
+						"height": 32,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "WM_LevelPoints",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "SingleExit",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 295,
+					"sid": 620110818661337,
+					"tags": "",
+					"instanceVariables": {
+						"LevelName": "Going out of bounds I see...",
+						"LevelID": "",
+						"SkipMarioStartScreen": false,
+						"Completed": false,
+						"SecertCompleted": false,
+						"Locked": false,
+						"NormalMove": "",
+						"SecertMove": ""
+					},
+					"behaviors": {},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 432,
+						"y": 64,
+						"width": 576,
+						"height": 32,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "WM_LevelPoints",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "SingleExit",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 296,
+					"sid": 961823443232553,
+					"tags": "",
+					"instanceVariables": {
+						"LevelName": "Going out of bounds I see...",
+						"LevelID": "",
+						"SkipMarioStartScreen": false,
+						"Completed": false,
+						"SecertCompleted": false,
+						"Locked": false,
+						"NormalMove": "",
+						"SecertMove": ""
+					},
+					"behaviors": {},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 128,
+						"y": 264,
+						"width": 32,
+						"height": 368,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "WM_LevelPoints",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "SingleExit",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 297,
+					"sid": 741297239223547,
+					"tags": "",
+					"instanceVariables": {
+						"LevelName": "Going out of bounds I see...",
+						"LevelID": "",
+						"SkipMarioStartScreen": false,
+						"Completed": false,
+						"SecertCompleted": false,
+						"Locked": false,
+						"NormalMove": "",
+						"SecertMove": ""
+					},
+					"behaviors": {},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 720,
+						"y": 272,
+						"width": 32,
+						"height": 368,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "WM_LevelPoints",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "MultipleExits",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 298,
+					"sid": 102604408150298,
+					"tags": "",
+					"instanceVariables": {
+						"LevelName": "Tutorial WIP",
+						"LevelID": "Tutorial",
+						"SkipMarioStartScreen": true,
+						"Completed": false,
+						"SecertCompleted": false,
+						"Locked": false,
+						"NormalMove": "Down",
+						"SecertMove": "Right"
+					},
+					"behaviors": {},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 528,
+						"y": 208,
+						"width": 32,
+						"height": 32,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "WM_LevelPoints",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "SingleExit",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 299,
+					"sid": 207834924328036,
+					"tags": "",
+					"instanceVariables": {
+						"LevelName": "the old and broken test level that i dont use xd",
+						"LevelID": "Test Level (dont use lmao)",
+						"SkipMarioStartScreen": false,
+						"Completed": false,
+						"SecertCompleted": false,
+						"Locked": false,
+						"NormalMove": "",
+						"SecertMove": ""
+					},
+					"behaviors": {},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 368,
+						"y": 352,
+						"width": 32,
+						"height": 32,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "WM_LevelPoints",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "YellowButton",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 301,
+					"sid": 531633434806272,
+					"tags": "",
+					"instanceVariables": {
+						"LevelName": "YELLOW SWITCH PALACE\n",
+						"LevelID": "Test_YellowSwitchPalace",
+						"SkipMarioStartScreen": false,
+						"Completed": false,
+						"SecertCompleted": false,
+						"Locked": false,
+						"NormalMove": "",
+						"SecertMove": ""
+					},
+					"behaviors": {},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 640,
+						"y": 320,
+						"width": 32,
+						"height": 32,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "WM_LevelPoints",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "CastleBig",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 499,
+					"sid": 907639456433034,
+					"tags": "",
+					"instanceVariables": {
+						"LevelName": "you think its a castle but its YOSHI ISLAND 1",
+						"LevelID": "Test_YoshiIsland1",
+						"SkipMarioStartScreen": false,
+						"Completed": false,
+						"SecertCompleted": false,
+						"Locked": false,
+						"NormalMove": "",
+						"SecertMove": ""
+					},
+					"behaviors": {},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 304,
+						"y": 208,
+						"width": 32,
+						"height": 64,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "WM_LevelPoints",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "SingleExit",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 1177,
+					"sid": 861829218614971,
+					"tags": "",
+					"instanceVariables": {
+						"LevelName": "(invalid id checker)\ntotally real level",
+						"LevelID": "Test_YoshiIsland21",
+						"SkipMarioStartScreen": false,
+						"Completed": false,
+						"SecertCompleted": false,
+						"Locked": false,
+						"NormalMove": "",
+						"SecertMove": ""
+					},
+					"behaviors": {},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 672,
+						"y": 112,
+						"width": 32,
+						"height": 32,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				}
+			],
+			"sid": 526259461105187,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"isInitiallyInteractive": true,
+			"isHTMLElementsLayer": false,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				0.3686274509803922,
+				0.3686274509803922,
+				0.3686274509803922,
+				1
+			],
+			"isTransparent": true,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"renderingMode": "3d",
+			"drawOrder": "z-order",
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"zElevation": 0,
+			"global": true
+		},
+		{
+			"name": "Mario himself",
+			"overriden": 0,
+			"subLayers": [],
+			"instances": [
+				{
+					"type": "WM_Mario",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "MovingDown",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 283,
+					"sid": 383342766034385,
+					"tags": "",
+					"instanceVariables": {
+						"AllowMovement": true,
+						"MoveN": false,
+						"MoveE": false,
+						"MoveW": false,
+						"MoveS": false
+					},
+					"behaviors": {
+						"TileMovement": {
+							"properties": {
+								"grid-width": 16,
+								"grid-height": 16,
+								"grid-offset-x": 0,
+								"grid-offset-y": 0,
+								"speed-x": 100,
+								"speed-y": 100,
+								"enabled": true,
+								"default-controls": true,
+								"isometric": false
+							}
+						},
+						"MoveTo": {
+							"properties": {
+								"max-speed": 100,
+								"acceleration": 0,
+								"deceleration": 0,
+								"rotate-speed": 0,
+								"set-angle": false,
+								"stop-on-solids": false,
+								"enabled": true
+							}
+						}
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 528,
+						"y": 112,
+						"width": 32,
+						"height": 32,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Camera",
+					"properties": {
+						"initially-visible": false,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 292,
+					"sid": 378463525717841,
+					"tags": "2072",
+					"instanceVariables": {
+						"FollowPlayer": true,
+						"CamLockXZone1": 0,
+						"CamLockXZone2": 0,
+						"CamLockYZone1": 0,
+						"CamLockYZone2": 0,
+						"StartFade": false,
+						"StartPixelFade": false,
+						"StartCCFade": false,
+						"FadeOpacity": 0,
+						"FadeSetting": "",
+						"PixelFadeOpacity": 1,
+						"PixelFadeSetting": "",
+						"CCFadeOpacity": 0,
+						"CCFadeSetting": ""
+					},
+					"behaviors": {
+						"ScrollTo": {
+							"properties": {
+								"enabled": false
+							}
+						},
+						"MoveTo": {
+							"properties": {
+								"max-speed": 200,
+								"acceleration": 600,
+								"deceleration": 600,
+								"rotate-speed": 0,
+								"set-angle": true,
+								"stop-on-solids": false,
+								"enabled": true
+							}
+						}
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": -48,
+						"y": 144,
+						"width": 49.90960238150271,
+						"height": 49.90960238150271,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							0.25
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				}
+			],
+			"sid": 696354743601771,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"isInitiallyInteractive": true,
+			"isHTMLElementsLayer": false,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				0.3686274509803922,
+				0.3686274509803922,
+				0.3686274509803922,
+				1
+			],
+			"isTransparent": true,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"renderingMode": "3d",
+			"drawOrder": "z-order",
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"zElevation": 0,
+			"global": false
+		},
+		{
+			"name": "Boarder",
+			"overriden": 0,
+			"subLayers": [],
+			"instances": [
+				{
+					"type": "WM_Boarder",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Default",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 282,
+					"sid": 338977342355363,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 426.99650266691805,
+						"y": 239.993865,
+						"width": 854,
+						"height": 480,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "WM_MarioWalking",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Small_Walking",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 284,
+					"sid": 271238031072164,
+					"tags": "",
+					"instanceVariables": {
+						"InCamLock": 0,
+						"HP": 0,
+						"MaxHP": 0,
+						"EnemyCombo": 0,
+						"AnimationState": "",
+						"TimertilRunning": 0,
+						"AnimationRem": "",
+						"DumbSpinCheck": false,
+						"InPipe": false,
+						"CourseClear": false,
+						"CourseClearState": 0,
+						"JumpTimerHigh": 0
+					},
+					"behaviors": {},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 176,
+						"y": 12,
+						"width": 32,
+						"height": 64,
+						"originX": 0.5,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "FONT_MarioLifes",
+					"properties": {
+						"text": "*00",
+						"enable-bbcode": true,
+						"character-width": 16,
+						"character-height": 16,
+						"character-set": "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!.,:-=*",
+						"spacing-data": "",
+						"scale": 1,
+						"character-spacing": 1,
+						"line-height": 0,
+						"horizontal-alignment": "left",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 286,
+					"sid": 378227962626123,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 208,
+						"y": 60,
+						"width": 50.36777207185804,
+						"height": 16,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "FONT_LevelName",
+					"properties": {
+						"text": "Level Name Here",
+						"enable-bbcode": true,
+						"character-width": 16,
+						"character-height": 16,
+						"character-set": "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz#!.-,?()'1234567890",
+						"spacing-data": "",
+						"scale": 1,
+						"character-spacing": 0.5,
+						"line-height": 0,
+						"horizontal-alignment": "left",
+						"vertical-alignment": "bottom",
+						"wrapping": "word",
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 287,
+					"sid": 301302075033117,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 304,
+						"y": 45.8855366268223,
+						"width": 400,
+						"height": 32,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				}
+			],
+			"sid": 633818232776747,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"isInitiallyInteractive": true,
+			"isHTMLElementsLayer": false,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				0.3686274509803922,
+				0.3686274509803922,
+				0.3686274509803922,
+				1
+			],
+			"isTransparent": true,
+			"parallaxX": 0,
+			"parallaxY": 0,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"renderingMode": "3d",
+			"drawOrder": "z-order",
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"zElevation": 0,
+			"global": false
+		},
+		{
+			"name": "Fade",
+			"overriden": 0,
+			"subLayers": [],
+			"instances": [],
+			"sid": 460937040846933,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"isInitiallyInteractive": true,
+			"isHTMLElementsLayer": false,
+			"color": [
+				1,
+				1,
+				1,
+				0
+			],
+			"backgroundColor": [
+				0,
+				0,
+				0,
+				1
+			],
+			"isTransparent": false,
+			"parallaxX": 0,
+			"parallaxY": 0,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"renderingMode": "3d",
+			"drawOrder": "z-order",
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"zElevation": 0,
+			"global": false
+		},
+		{
+			"name": "DebugInformation",
+			"overriden": 0,
+			"subLayers": [],
+			"instances": [
+				{
+					"type": "WM_DebugInfo",
+					"properties": {
+						"text": "Debug Info\nLevel ID:\nCompleted: \nS-Completed:\nSkip Mario Start:",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 10,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"text-direction": "ltr",
+						"icon-set": -1,
+						"initially-visible": false,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 1251,
+					"sid": 521764031083302,
+					"tags": "",
+					"instanceVariables": {
+						"GetLevelID": "",
+						"IsCompleted": "",
+						"IsSecertComplete": "",
+						"IsSkipMarioStart": ""
+					},
+					"behaviors": {},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 144,
+						"y": 80,
+						"width": 304,
+						"height": 96,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				}
+			],
+			"sid": 802543982906776,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"isInitiallyInteractive": true,
+			"isHTMLElementsLayer": false,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				0.3686274509803922,
+				0.3686274509803922,
+				0.3686274509803922,
+				1
+			],
+			"isTransparent": true,
+			"parallaxX": 0,
+			"parallaxY": 0,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"renderingMode": "3d",
+			"drawOrder": "z-order",
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"zElevation": 0,
+			"global": false
+		},
+		{
+			"name": "MarioStart",
+			"overriden": 0,
+			"subLayers": [],
+			"instances": [
+				{
+					"type": "WM_MarioStart",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 293,
+					"sid": 417859246661781,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 427,
+						"y": 240,
+						"width": 224,
+						"height": 32,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				}
+			],
+			"sid": 562726136462529,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"isInitiallyInteractive": true,
+			"isHTMLElementsLayer": false,
+			"color": [
+				1,
+				1,
+				1,
+				0
+			],
+			"backgroundColor": [
+				0.3686274509803922,
+				0.3686274509803922,
+				0.3686274509803922,
+				1
+			],
+			"isTransparent": true,
+			"parallaxX": 0,
+			"parallaxY": 0,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"renderingMode": "3d",
+			"drawOrder": "z-order",
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"zElevation": 0,
+			"global": false
+		}
+	],
+	"scene-graphs-folder-root": {
+		"items": [],
+		"subfolders": []
+	},
+	"sid": 782384499344392,
+	"nonworld-instances": [],
+	"effectTypes": [],
+	"width": 1708,
+	"height": 960,
+	"unboundedScrolling": false,
+	"vpX": 0.5,
+	"vpY": 0.5,
+	"projection": "perspective",
+	"eventSheet": "WorldMapEvent"
+}

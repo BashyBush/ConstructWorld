@@ -1,0 +1,39 @@
+{
+	"name": "WM_DebugInfo",
+	"plugin-id": "Text",
+	"sid": 168874681854631,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [
+		{
+			"name": "GetLevelID",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 217455003310386
+		},
+		{
+			"name": "IsCompleted",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 130908669720072
+		},
+		{
+			"name": "IsSecertComplete",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 846180429178438
+		},
+		{
+			"name": "IsSkipMarioStart",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 941137179151213
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": []
+}

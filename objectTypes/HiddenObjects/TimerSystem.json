@@ -1,0 +1,90 @@
+{
+	"name": "TimerSystem",
+	"plugin-id": "Sprite",
+	"sid": 471784063033246,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [
+		{
+			"name": "Minutes",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 857723602389634
+		},
+		{
+			"name": "Seconds",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 215613472282218
+		},
+		{
+			"name": "PauseTimer",
+			"type": "boolean",
+			"desc": "If ticked. Timer Pauses. Simple enough",
+			"show": true,
+			"sid": 213324501683006
+		},
+		{
+			"name": "TimeAttackMode",
+			"type": "boolean",
+			"desc": "Not quite sure if I'm adding this. Maybe though.",
+			"show": true,
+			"sid": 510532113776226
+		},
+		{
+			"name": "TimeLimiter",
+			"type": "number",
+			"desc": "Once the timer hits 0 the player dies.",
+			"show": true,
+			"sid": 329230249519554
+		},
+		{
+			"name": "EnableTimeLimit",
+			"type": "boolean",
+			"desc": "Timer will be stuck on 000 if enabled",
+			"show": true,
+			"sid": 241360978565299
+		},
+		{
+			"name": "CountdownType",
+			"type": "number",
+			"desc": "1 = Moden (timer goes down each second) 0.5 = Classic (timer goes down two times faster like in the original SMW)",
+			"show": true,
+			"sid": 646136699899837
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 250,
+						"height": 250,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 4994159,
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 990452415869779,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

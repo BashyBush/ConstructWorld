@@ -1,0 +1,1108 @@
+{
+	"projectFormatVersion": 1,
+	"savedWithRelease": 44300,
+	"name": "Construct World (smw but in consturct 3 ig lol)",
+	"runtime": "c3",
+	"useWorker": "auto",
+	"bundleAddons": true,
+	"usedAddons": [
+		{
+			"type": "plugin",
+			"id": "Audio",
+			"name": "Audio",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Browser",
+			"name": "Browser",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Button",
+			"name": "Button",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Keyboard",
+			"name": "Keyboard",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "LocalStorage",
+			"name": "Local storage",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Mouse",
+			"name": "Mouse",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "NodeWebkit",
+			"name": "NW.js",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Particles",
+			"name": "Particles",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Sprite",
+			"name": "Sprite",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Spritefont2",
+			"name": "Sprite font",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Text",
+			"name": "Text",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "TextBox",
+			"name": "Text input",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "TiledBg",
+			"name": "Tiled Background",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Tilemap",
+			"name": "Tilemap",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "gamepad",
+			"name": "Gamepad",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Bullet",
+			"name": "Bullet",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Flash",
+			"name": "Flash",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "MoveTo",
+			"name": "Move To",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Physics",
+			"name": "Physics",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Platform",
+			"name": "Platform",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Sin",
+			"name": "Sine",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "TileMovement",
+			"name": "Tile movement",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "jumpthru",
+			"name": "Jump-thru",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "scrollto",
+			"name": "Scroll To",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "skymen_tiled_sprite",
+			"name": "tiled_sprite",
+			"author": "skymen",
+			"bundled": true,
+			"version": "1.0.0.7"
+		},
+		{
+			"type": "behavior",
+			"id": "solid",
+			"name": "Solid",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "effect",
+			"id": "pixellate",
+			"name": "Pixellate",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "effect",
+			"id": "waterbg",
+			"name": "Water background",
+			"author": "Viktor Korsun",
+			"bundled": false
+		}
+	],
+	"uniqueId": "73irljn0r6t",
+	"objectTypes": {
+		"items": [
+			"Player1",
+			"Ground",
+			"PlaceHolder",
+			"TestDamage",
+			"Player_FireBall",
+			"Water",
+			"KeyHole",
+			"KeyHoleAnimation"
+		],
+		"subfolders": [
+			{
+				"items": [
+					"Debug_Coords"
+				],
+				"subfolders": [
+					{
+						"items": [
+							"DBM_BG",
+							"DBM_GiantText",
+							"DBM_InfoText",
+							"DBM_NoControllerSupport"
+						],
+						"subfolders": [
+							{
+								"items": [
+									"DBM_SetHP",
+									"DBM_SetMaxHP",
+									"DBM_CloseMenu",
+									"DBM_FCheckpointX",
+									"DBM_FCheckpointY",
+									"DBM_ShowCameraObject",
+									"DBM_ShowCoords",
+									"DBM_Noclip",
+									"DBM_SetScore",
+									"DBM_SetCoins",
+									"DBM_SetLifes",
+									"DBM_SetTimeLimit",
+									"DBM_EnableTimeLimit"
+								],
+								"subfolders": [],
+								"name": "DeMe_TextInputs"
+							}
+						],
+						"name": "Debug Menu"
+					}
+				],
+				"name": "Debug Related Stuff"
+			},
+			{
+				"items": [
+					"Keyboard",
+					"LocalStorage",
+					"Gamepad",
+					"Browser",
+					"NWjs",
+					"Mouse",
+					"Audio"
+				],
+				"subfolders": [],
+				"name": "Plugins"
+			},
+			{
+				"items": [
+					"HudText",
+					"DevLog",
+					"ShowFPS",
+					"FONT_Template",
+					"HUD_MarioLifes",
+					"FONT_MarioLifes",
+					"HUD_CoinsScore",
+					"FONT_CoinsScore",
+					"HUD_YCBP",
+					"HUD_Time",
+					"FONT_TimeLimit",
+					"HUD_ItemHolder",
+					"HUD_CourseClear",
+					"FONT_CourseClear",
+					"HUD_CircleZoomInEffectThing",
+					"FONT_BonusPoints",
+					"FONT_CCBonusPoints"
+				],
+				"subfolders": [
+					{
+						"items": [
+							"PA_PauseGUI",
+							"PA_PauseText",
+							"PA_Highlighted"
+						],
+						"subfolders": [],
+						"name": "PauseGUI"
+					},
+					{
+						"items": [
+							"FONT_MessageBox",
+							"HUD_TextBox"
+						],
+						"subfolders": [],
+						"name": "MessageBoxThingy"
+					}
+				],
+				"name": "Hud Objects"
+			},
+			{
+				"items": [
+					"EventTrigger",
+					"SetLevelId",
+					"Camera",
+					"TimerSystem",
+					"PauseSystem",
+					"Pipe_Teleporter",
+					"Pipe_Teleporter_Exit",
+					"Invisible_Slope",
+					"PipeLayoutWarpSetup"
+				],
+				"subfolders": [],
+				"name": "HiddenObjects"
+			},
+			{
+				"items": [],
+				"subfolders": [
+					{
+						"items": [
+							"PA_TakenScreenshot"
+						],
+						"subfolders": [],
+						"name": "PauseScreenObjects"
+					},
+					{
+						"items": [
+							"Settings_System",
+							"Settings_TextOptions",
+							"Settings_Description",
+							"Settings_ImageShowcase",
+							"Settings_ImageBoarder"
+						],
+						"subfolders": [],
+						"name": "Settings Objects"
+					},
+					{
+						"items": [
+							"Title_selection",
+							"Title_TextOptions",
+							"Title_System"
+						],
+						"subfolders": [],
+						"name": "Title Objects"
+					},
+					{
+						"items": [
+							"GaOv_Game",
+							"GaOv_Over"
+						],
+						"subfolders": [],
+						"name": "GameOver Objects"
+					},
+					{
+						"items": [
+							"INVALID_TextReason",
+							"INVALID_lol",
+							"INVALID_DebugInformation"
+						],
+						"subfolders": [],
+						"name": "InvalidLayout Objects"
+					},
+					{
+						"items": [
+							"SPSC_Presents"
+						],
+						"subfolders": [],
+						"name": "SplashScreen Objects"
+					}
+				],
+				"name": "Menus"
+			},
+			{
+				"items": [
+					"testenemy",
+					"ENEMY_Rex",
+					"ENEMY_BanzaiBill"
+				],
+				"subfolders": [],
+				"name": "Enemies"
+			},
+			{
+				"items": [
+					"BG_GoalPoleLeft",
+					"BG_GoalPoleRight",
+					"BG_ChPoLeft",
+					"BG_ChPoRight"
+				],
+				"subfolders": [
+					{
+						"items": [
+							"BG_CaveInsideTop",
+							"BG_CaveInsideMiddle",
+							"BG_CaveInsideBottom"
+						],
+						"subfolders": [],
+						"name": "CaveInside"
+					}
+				],
+				"name": "BackgroundsObjects"
+			},
+			{
+				"items": [
+					"Coin",
+					"YoshiCoins",
+					"Goal_Pole",
+					"GoalORB",
+					"Checkpoint",
+					"PSwitch"
+				],
+				"subfolders": [
+					{
+						"items": [
+							"GiantSwitch"
+						],
+						"subfolders": [],
+						"name": "ButtonSwitches"
+					}
+				],
+				"name": "Collectables"
+			},
+			{
+				"items": [
+					"Rotating_Block",
+					"Empty_Block",
+					"Hard_Block",
+					"Question_Block",
+					"Message_Block",
+					"Cloud_Block",
+					"Yellow_Switch_Block",
+					"Spike_Block"
+				],
+				"subfolders": [],
+				"name": "Blocks"
+			},
+			{
+				"items": [
+					"Mushroom",
+					"1up",
+					"FireFlower"
+				],
+				"subfolders": [],
+				"name": "Powerups"
+			},
+			{
+				"items": [
+					"Test_Tilemap",
+					"Test_Tilemapslope",
+					"Test_TilemapSlopes",
+					"Test_Underground",
+					"General_Pipes",
+					"Test_BonusTiles",
+					"General_PipeLaunchers"
+				],
+				"subfolders": [
+					{
+						"items": [
+							"OW_GroundBGTileset",
+							"OW_GroundTileset",
+							"OW_GroundLongSlop",
+							"OW_GroungShortSlop"
+						],
+						"subfolders": [],
+						"name": "Overworld"
+					},
+					{
+						"items": [
+							"WM_WorldPath"
+						],
+						"subfolders": [],
+						"name": "WorldMap"
+					}
+				],
+				"name": "Tiles"
+			},
+			{
+				"items": [
+					"BG_Overworld1",
+					"BG_Bonus"
+				],
+				"subfolders": [],
+				"name": "Backgrounds"
+			},
+			{
+				"items": [
+					"WM_Boarder",
+					"WM_Mario",
+					"WM_LevelPoints",
+					"WM_MarioWalking",
+					"FONT_LevelName",
+					"WM_MarioStart",
+					"PART_TestYellowBlockLaunch",
+					"WM_DebugInfo"
+				],
+				"subfolders": [],
+				"name": "WorldMapStuff"
+			},
+			{
+				"items": [
+					"SNESSuperMarioWorldYoshisIsland",
+					"SNESSuperMarioWorldYoshisIsland1SubArea",
+					"SNESSuperMarioWorldYellowSwitchPalace",
+					"SNESSuperMarioWorldYellowSwitchPalace2"
+				],
+				"subfolders": [],
+				"name": "TempBGs"
+			},
+			{
+				"items": [
+					"PART_PointGivenSprites",
+					"PART_CoinBlock",
+					"PART_Kick"
+				],
+				"subfolders": [],
+				"name": "Particles"
+			},
+			{
+				"items": [
+					"PICKUP_Shell",
+					"Trampoline",
+					"Key"
+				],
+				"subfolders": [],
+				"name": "HoldItems"
+			}
+		]
+	},
+	"functionsName": "Functions",
+	"autosaveData": null,
+	"containers": [],
+	"families": {
+		"items": [
+			"DamageableObjects",
+			"Enemies",
+			"Blocks",
+			"Powerups",
+			"Collectables",
+			"Tiles",
+			"HoldItems"
+		],
+		"subfolders": []
+	},
+	"layouts": {
+		"items": [
+			"STARTUP",
+			"WorldMap"
+		],
+		"subfolders": [
+			{
+				"items": [
+					"Test Level (dont use lmao)",
+					"Test_YoshiIsland1",
+					"Test_YellowSwitchPalace",
+					"Test_LevelPipeWarpExample",
+					"Tutorial"
+				],
+				"subfolders": [],
+				"name": "Levels"
+			},
+			{
+				"items": [
+					"TitleScreen",
+					"SettingsScreen",
+					"GameOver",
+					"InvalidLayoutID"
+				],
+				"subfolders": [],
+				"name": "Menus"
+			}
+		]
+	},
+	"eventSheets": {
+		"items": [
+			"In-Game Events",
+			"SETUPONBOOT",
+			"WorldMapEvent"
+		],
+		"subfolders": [
+			{
+				"items": [
+					"TitleScreen Events",
+					"Settings",
+					"GameOverScene",
+					"InvalidLayout"
+				],
+				"subfolders": [],
+				"name": "Menus Events"
+			}
+		]
+	},
+	"rootFileFolders": {
+		"script": {
+			"items": [],
+			"subfolders": []
+		},
+		"sound": {
+			"items": [
+				{
+					"name": "jump.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 369182789433097,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "coin.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 534524088527306,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "grow.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 588063355992938,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "item-get.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 313157573477180,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "coin-special.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 881525266846454,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "bump.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 923656874185298,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "powerup.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 439503828288392,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "reserved-item.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 438062261529446,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "pipe.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 661206285217457,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "sprout-item.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 678689788857839,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "spin.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 648391223313777,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "shatter.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 941250856554236,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "stomp.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 964692460098614,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "checkpoint.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 461632400778638,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "1up.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 432664068737939,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "messagebox.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 473140605408118,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "smw_reserve_item_store.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 935388734100493,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "fade-out.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 927793768770675,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "drumrollend.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 306565435241961,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "drumrollloop.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 709306967600935,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "drumrollstart.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 974241819284212,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "super-stomp.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 217850362746720,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "HurryUp.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 708574013558297,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "bullet.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 121771394534841,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "spring.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 153029364665223,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "smw_keyhole_exit.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 102355796495855,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "smw_fireball.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 799001911947092,
+					"file-info": {
+						"purpose": "none"
+					}
+				}
+			],
+			"subfolders": [
+				{
+					"items": [
+						{
+							"name": "map-unlock.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 250337843477365,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "map-castle-demolish.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 774445814228574,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "map-menu.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 741686724102602,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "map-spot.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 887783032788935,
+							"file-info": {
+								"purpose": "none"
+							}
+						}
+					],
+					"subfolders": [],
+					"name": "WorldMap SF"
+				}
+			]
+		},
+		"music": {
+			"items": [
+				{
+					"name": "smw_lost_a_life.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 245393953596472,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "smw_game_over.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 801834157571871,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "smw_course_clear.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 148212103376362,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Overworld.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 641370695567636,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Underground.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 374672920145267,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "smw_fortress_clear.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 561772009118185,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "P_Switch.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 705848046973470,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Bonus_Room.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 979842211528150,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "SOR2-Dreamer.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 558024988758334,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "placeholder_map_audio.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 757419270456619,
+					"file-info": {
+						"purpose": "none"
+					}
+				}
+			],
+			"subfolders": []
+		},
+		"video": {
+			"items": [],
+			"subfolders": []
+		},
+		"font": {
+			"items": [],
+			"subfolders": []
+		},
+		"icon": {
+			"items": [
+				{
+					"name": "icon-16.png",
+					"type": "image/png",
+					"sid": 224162279736855,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-32.png",
+					"type": "image/png",
+					"sid": 567227241382544,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-64.png",
+					"type": "image/png",
+					"sid": 653386766551928,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-128.png",
+					"type": "image/png",
+					"sid": 218717740883542,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-256.png",
+					"type": "image/png",
+					"sid": 252906035414014,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-512.png",
+					"type": "image/png",
+					"sid": 217436045868802,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "loading-logo.png",
+					"type": "image/png",
+					"sid": 268421193037015,
+					"icon-info": {
+						"purpose": "loading-logo"
+					}
+				}
+			],
+			"subfolders": []
+		},
+		"general": {
+			"items": [
+				{
+					"name": "SNES - Super Mario World - Mario.png",
+					"type": "image/png",
+					"sid": 636822303107944,
+					"file-info": {
+						"purpose": "none"
+					}
+				}
+			],
+			"subfolders": []
+		}
+	},
+	"timelines": {
+		"items": [
+			"Timeline 1"
+		],
+		"subfolders": [
+			{
+				"items": [],
+				"subfolders": []
+			}
+		]
+	},
+	"flowcharts": {
+		"items": [
+			"Flowchart 1"
+		],
+		"subfolders": []
+	},
+	"properties": {
+		"description": "A *somewhat* accurate port of SMW to Construct 3",
+		"version": "Beta",
+		"autoIncrementVersion": false,
+		"author": "Bashy Bush",
+		"authorEmail": "",
+		"authorWebsite": "",
+		"appId": "",
+		"pixelRounding": false,
+		"zAxisScale": "normalized",
+		"fov": 0.7853981633974483,
+		"useLoaderLayout": false,
+		"fullscreenMode": "letterbox-scale",
+		"fullscreenQuality": "high",
+		"viewportFit": "auto",
+		"backgroundColor": [
+			0,
+			0,
+			0,
+			0
+		],
+		"splashColor": [
+			1,
+			1,
+			1,
+			0
+		],
+		"useThemeColor": false,
+		"themeColor": [
+			1,
+			1,
+			1,
+			0
+		],
+		"orientations": "landscape",
+		"webgpu": "auto",
+		"gpuPreference": "high-performance",
+		"scriptsType": "module",
+		"framerateMode": "vsync",
+		"sampling": "nearest",
+		"downscaling": "medium",
+		"renderingMode": "auto",
+		"anisotropicFiltering": "auto",
+		"zNear": 1,
+		"zFar": 10000,
+		"maxSpriteSheetSize": 2048,
+		"loaderStyle": "splash",
+		"preloadSounds": true,
+		"cordovaiOSScheme": "app",
+		"cordovaAndroidScheme": "https",
+		"exportFileStructure": "folders",
+		"uidAllocationMode": "increment"
+	},
+	"viewportWidth": 854,
+	"viewportHeight": 480,
+	"firstLayout": "STARTUP"
+}

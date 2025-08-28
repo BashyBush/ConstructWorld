@@ -1,0 +1,9 @@
+{
+	"name": "DBM_SetScore",
+	"plugin-id": "TextBox",
+	"sid": 513192486540500,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": []
+}

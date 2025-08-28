@@ -1,0 +1,14 @@
+{
+	"name": "Tiles",
+	"plugin-id": "Tilemap",
+	"sid": 572530482743443,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"OW_GroundTileset",
+		"Test_Underground",
+		"General_Pipes",
+		"General_PipeLaunchers"
+	]
+}

@@ -1,0 +1,23 @@
+{
+	"name": "BG_Overworld1",
+	"plugin-id": "TiledBg",
+	"sid": 571875408142754,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"image": {
+		"width": 512,
+		"height": 432,
+		"originX": 0.5,
+		"originY": 0.5,
+		"originalSource": "",
+		"exportFormat": "lossless",
+		"exportQuality": 0.8,
+		"fileType": "image/png",
+		"imageSpriteId": 3800381,
+		"useCollisionPoly": true,
+		"tag": ""
+	}
+}

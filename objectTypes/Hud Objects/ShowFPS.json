@@ -1,0 +1,10 @@
+{
+	"name": "ShowFPS",
+	"plugin-id": "Text",
+	"sid": 529642076076652,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": []
+}

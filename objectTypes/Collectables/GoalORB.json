@@ -1,0 +1,55 @@
+{
+	"name": "GoalORB",
+	"plugin-id": "Sprite",
+	"sid": 603185970881880,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [
+		{
+			"name": "MarioGoalMove",
+			"type": "boolean",
+			"desc": "If checked. Mario will move like if he hit the goal pose.",
+			"show": true,
+			"sid": 339700709221536
+		},
+		{
+			"name": "SecretExit",
+			"type": "boolean",
+			"desc": "If ticked. A different Path will apear on the MAP",
+			"show": true,
+			"sid": 315533588259382
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 32,
+						"height": 32,
+						"originX": 0.5,
+						"originY": 0.53125,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 1433625,
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 840667201267421,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

@@ -1,0 +1,108 @@
+{
+	"name": "HUD_CourseClear",
+	"plugin-id": "Sprite",
+	"sid": 679342185900348,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [
+		{
+			"name": "StartScoreTotal",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 642542172571077
+		},
+		{
+			"name": "StartBonusTotal",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 617527296674432
+		},
+		{
+			"name": "TimeBonus",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 481796347773217
+		},
+		{
+			"name": "GoalBonus",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 741148850040896
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 208,
+						"height": 144,
+						"originX": 0.5,
+						"originY": 0.5069444444444444,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 3507104,
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 924981674100552,
+				"name": "WithoutBonus",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			},
+			{
+				"frames": [
+					{
+						"width": 208,
+						"height": 144,
+						"originX": 0.5,
+						"originY": 0.5069444444444444,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 2781332,
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 208,
+						"height": 144,
+						"originX": 0.5,
+						"originY": 0.5069444444444444,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 2268943,
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 280202421027022,
+				"name": "WithBonus",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			}
+		],
+		"subfolders": []
+	}
+}

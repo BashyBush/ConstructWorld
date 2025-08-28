@@ -1,0 +1,18 @@
+{
+	"name": "Blocks",
+	"plugin-id": "Sprite",
+	"sid": 520263491599422,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"Rotating_Block",
+		"Empty_Block",
+		"Hard_Block",
+		"Message_Block",
+		"Question_Block",
+		"Cloud_Block",
+		"Yellow_Switch_Block",
+		"Spike_Block"
+	]
+}

@@ -1,0 +1,88 @@
+{
+	"name": "Enemies",
+	"plugin-id": "Sprite",
+	"sid": 230306929631961,
+	"instanceVariables": [
+		{
+			"name": "HP",
+			"type": "number",
+			"desc": "How much damage it takes to kill",
+			"show": true,
+			"sid": 697947478264835
+		},
+		{
+			"name": "State",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 565411181575203
+		},
+		{
+			"name": "HPDamage",
+			"type": "number",
+			"desc": "How much damage the player will take",
+			"show": true,
+			"sid": 149799807737674
+		},
+		{
+			"name": "WIP_TurnNearEdge",
+			"type": "boolean",
+			"desc": "If ticked. Enemies will turn around when they reach a edge.",
+			"show": true,
+			"sid": 120658433360590
+		},
+		{
+			"name": "DoEnemyFlash",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 659199674279086
+		},
+		{
+			"name": "OneHitKillSpin",
+			"type": "boolean",
+			"desc": "Enemy will kill no matter what HP is set if player spin jumped on said enemy.",
+			"show": true,
+			"sid": 774663241842698
+		},
+		{
+			"name": "DontTurn",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 637043144735980
+		},
+		{
+			"name": "DontMove",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 506800697173844
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Platform",
+			"name": "Platform",
+			"sid": 909128991693540
+		},
+		{
+			"behaviorId": "Flash",
+			"name": "Flash",
+			"sid": 469405819892501
+		},
+		{
+			"behaviorId": "Physics",
+			"name": "Physics",
+			"sid": 873332246818600
+		}
+	],
+	"effectTypes": [],
+	"members": [
+		"testenemy",
+		"ENEMY_Rex",
+		"ENEMY_BanzaiBill",
+		"PICKUP_Shell",
+		"Spike_Block"
+	]
+}

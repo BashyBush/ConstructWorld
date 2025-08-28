@@ -1,0 +1,9 @@
+{
+	"name": "DBM_SetTimeLimit",
+	"plugin-id": "TextBox",
+	"sid": 543351915984948,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": []
+}

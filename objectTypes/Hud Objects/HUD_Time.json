@@ -1,0 +1,55 @@
+{
+	"name": "HUD_Time",
+	"plugin-id": "Sprite",
+	"sid": 883778908389614,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [
+		{
+			"name": "Timer",
+			"type": "number",
+			"desc": "Once the timer hits 0 the player dies.",
+			"show": true,
+			"sid": 797786113309531
+		},
+		{
+			"name": "EnableTimer",
+			"type": "boolean",
+			"desc": "Timer will be stuck on 000 if enabled",
+			"show": true,
+			"sid": 963442345607974
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 48,
+						"height": 32,
+						"originX": 0.5,
+						"originY": 0.53125,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 334216,
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 212848824918428,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

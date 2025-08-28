@@ -1,0 +1,411 @@
+{
+	"name": "GameOverScene",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "TimeUP_RememberStage",
+			"type": "string",
+			"initialValue": "",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 481978771022033
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 967068402611665
+				}
+			],
+			"actions": [],
+			"sid": 360054893996384,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 134433117559456,
+							"parameters": {
+								"variable": "TimeUP_RememberStage",
+								"comparison": 0,
+								"value": "\"\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 117748232546684,
+							"parameters": {
+								"audio-file": "smw_game_over",
+								"loop": "not-looping",
+								"volume": "-5",
+								"stereo-pan": "0",
+								"tag-optional": "\"GameOver\""
+							}
+						},
+						{
+							"id": "move-to-position",
+							"objectClass": "GaOv_Game",
+							"sid": 421837425111967,
+							"behaviorType": "MoveTo",
+							"parameters": {
+								"x": "426.981357",
+								"y": "241.009527",
+								"mode": "direct"
+							}
+						},
+						{
+							"id": "move-to-position",
+							"objectClass": "GaOv_Over",
+							"sid": 336051187041278,
+							"behaviorType": "MoveTo",
+							"parameters": {
+								"x": "427.00919",
+								"y": "241.009527",
+								"mode": "direct"
+							}
+						}
+					],
+					"sid": 903932078486887
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 256325494988471,
+							"parameters": {
+								"variable": "TimeUP_RememberStage",
+								"comparison": 0,
+								"value": "\"\""
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "GaOv_Game",
+							"sid": 163188560969169,
+							"parameters": {
+								"animation": "\"Time\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "GaOv_Over",
+							"sid": 260100487016716,
+							"parameters": {
+								"animation": "\"Up!\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "move-to-position",
+							"objectClass": "GaOv_Game",
+							"sid": 962498990251112,
+							"behaviorType": "MoveTo",
+							"parameters": {
+								"x": "426.981357",
+								"y": "241.009527",
+								"mode": "direct"
+							}
+						},
+						{
+							"id": "move-to-position",
+							"objectClass": "GaOv_Over",
+							"sid": 882882868921419,
+							"behaviorType": "MoveTo",
+							"parameters": {
+								"x": "427.00919",
+								"y": "241.009527",
+								"mode": "direct"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 927256949546952,
+							"parameters": {
+								"seconds": "4",
+								"use-timescale": true
+							}
+						},
+						{
+							"id": "signal",
+							"objectClass": "System",
+							"sid": 506398196472279,
+							"parameters": {
+								"tag": "\"RetryLevel\""
+							}
+						}
+					],
+					"sid": 485511412241616
+				},
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "set-group-active",
+							"objectClass": "System",
+							"sid": 975988446695347,
+							"parameters": {
+								"group-name": "\"SMW Hud Stuff\"",
+								"state": "activated"
+							}
+						},
+						{
+							"id": "set-group-active",
+							"objectClass": "System",
+							"sid": 563030173812280,
+							"parameters": {
+								"group-name": "\"Player System\"",
+								"state": "activated"
+							}
+						},
+						{
+							"id": "set-group-active",
+							"objectClass": "System",
+							"sid": 990071636833294,
+							"parameters": {
+								"group-name": "\"Timer System\"",
+								"state": "activated"
+							}
+						},
+						{
+							"id": "set-group-active",
+							"objectClass": "System",
+							"sid": 539232898789303,
+							"parameters": {
+								"group-name": "\"Object Systems\"",
+								"state": "activated"
+							}
+						},
+						{
+							"id": "set-group-active",
+							"objectClass": "System",
+							"sid": 113670053984436,
+							"parameters": {
+								"group-name": "\"Event Systems\"",
+								"state": "toggle-active"
+							}
+						},
+						{
+							"id": "set-group-active",
+							"objectClass": "System",
+							"sid": 833050199540009,
+							"parameters": {
+								"group-name": "\"Enemies System\"",
+								"state": "activated"
+							}
+						}
+					],
+					"sid": 231078590862221
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 610909821791932
+				}
+			],
+			"actions": [
+				{
+					"id": "set-layer-opacity",
+					"objectClass": "System",
+					"sid": 200917769791416,
+					"parameters": {
+						"layer": "0",
+						"opacity": "GaOv_Game.FadeOpacity"
+					}
+				}
+			],
+			"sid": 600979538213244,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-ended",
+							"objectClass": "Audio",
+							"sid": 107693950081962,
+							"parameters": {
+								"tag": "\"GameOver\""
+							}
+						},
+						{
+							"id": "on-signal",
+							"objectClass": "System",
+							"sid": 840650688916050,
+							"parameters": {
+								"tag": "\"RetryLevel\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "GaOv_Game",
+							"sid": 279146114780488,
+							"parameters": {
+								"instance-variable": "Start_That_Fade",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 467325448032090,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "GaOv_Game",
+							"sid": 563715311071858,
+							"parameters": {
+								"instance-variable": "Start_That_Fade"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "subtract-from-instvar",
+							"objectClass": "GaOv_Game",
+							"sid": 147912993708810,
+							"parameters": {
+								"instance-variable": "FadeOpacity",
+								"value": "5"
+							}
+						}
+					],
+					"sid": 103621668031577
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-layer-opacity",
+					"objectClass": "System",
+					"sid": 103459684930510,
+					"parameters": {
+						"layer": "0",
+						"comparison": 0,
+						"opacity": "0"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 565495133505816,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 242263540490048,
+							"parameters": {
+								"variable": "TimeUP_RememberStage",
+								"comparison": 0,
+								"value": "\"\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 440846756055891,
+							"parameters": {
+								"seconds": "0.5",
+								"use-timescale": true
+							}
+						},
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 660234729182403,
+							"parameters": {
+								"layout": "TitleScreen"
+							}
+						}
+					],
+					"sid": 525056671037372
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 323429003009941,
+							"parameters": {
+								"variable": "TimeUP_RememberStage",
+								"comparison": 0,
+								"value": "\"\""
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 403417414226242,
+							"parameters": {
+								"seconds": "0.5",
+								"use-timescale": true
+							}
+						},
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 738063094693226,
+							"parameters": {
+								"layout": "WorldMap"
+							}
+						},
+						{
+							"id": "go-to-layout-by-name",
+							"objectClass": "System",
+							"sid": 629144885264667,
+							"disabled": true,
+							"parameters": {
+								"layout": "TimeUP_RememberStage"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 681018753781930,
+							"parameters": {
+								"variable": "TimeUP_RememberStage",
+								"value": "\"\""
+							}
+						}
+					],
+					"sid": 460526485562654,
+					"isOrBlock": true
+				}
+			]
+		}
+	],
+	"sid": 840528932052818
+}

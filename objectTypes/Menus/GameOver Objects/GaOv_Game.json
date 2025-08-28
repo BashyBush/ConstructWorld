@@ -1,0 +1,86 @@
+{
+	"name": "GaOv_Game",
+	"plugin-id": "Sprite",
+	"sid": 172894776547151,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [
+		{
+			"name": "FadeOpacity",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 316757265414687
+		},
+		{
+			"name": "Start_That_Fade",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 295431125753228
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "MoveTo",
+			"name": "MoveTo",
+			"sid": 688036579042439
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 68,
+						"height": 32,
+						"originX": 1.1764705882352942,
+						"originY": 0.53125,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 5654249,
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 593965463995634,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			},
+			{
+				"frames": [
+					{
+						"width": 68,
+						"height": 32,
+						"originX": 1.384083044982699,
+						"originY": 0.53125,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 9455603,
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 460559976791701,
+				"name": "Time",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

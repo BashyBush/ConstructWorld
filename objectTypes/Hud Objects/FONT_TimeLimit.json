@@ -1,0 +1,23 @@
+{
+	"name": "FONT_TimeLimit",
+	"plugin-id": "Spritefont2",
+	"sid": 865764487185468,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"image": {
+		"width": 128,
+		"height": 256,
+		"originX": 0.5,
+		"originY": 0.5,
+		"originalSource": "",
+		"exportFormat": "lossless",
+		"exportQuality": 0.8,
+		"fileType": "image/png",
+		"imageSpriteId": 6929346,
+		"useCollisionPoly": true,
+		"tag": ""
+	}
+}

@@ -1,0 +1,14 @@
+{
+	"name": "Collectables",
+	"plugin-id": "Sprite",
+	"sid": 503368909489069,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"Coin",
+		"YoshiCoins",
+		"GoalORB",
+		"Goal_Pole"
+	]
+}

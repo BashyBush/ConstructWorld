@@ -1,0 +1,16 @@
+{
+	"name": "HudText",
+	"plugin-id": "Text",
+	"sid": 868756111988295,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "MoveTo",
+			"name": "MoveTo",
+			"sid": 272350746679722
+		}
+	],
+	"effectTypes": []
+}

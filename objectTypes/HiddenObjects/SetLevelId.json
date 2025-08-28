@@ -1,0 +1,83 @@
+{
+	"name": "SetLevelId",
+	"plugin-id": "Sprite",
+	"sid": 434143255121615,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [
+		{
+			"name": "LevelID",
+			"type": "number",
+			"desc": "Set the correct Level ID",
+			"show": true,
+			"sid": 526609774430507
+		},
+		{
+			"name": "YoshiCoinsCollected",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 858496853238499
+		},
+		{
+			"name": "MusicPlayer",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 713894099880621
+		},
+		{
+			"name": "PSwitchRemMusic",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 437859935638181
+		},
+		{
+			"name": "NoMusicWarp",
+			"type": "boolean",
+			"desc": "",
+			"show": false,
+			"sid": 723938481496397
+		},
+		{
+			"name": "MusicLoopBack",
+			"type": "number",
+			"desc": "(WIP) If a song you set doesn't have a perfect loop. Use this to attempt one",
+			"show": true,
+			"sid": 551194504138464
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 250,
+						"height": 250,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 3246340,
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 443949865161463,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

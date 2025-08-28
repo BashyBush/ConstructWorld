@@ -1,0 +1,2200 @@
+{
+	"name": "WorldMapEvent",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "WM_RememberMarioX",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 759097933637460
+		},
+		{
+			"eventType": "variable",
+			"name": "WM_RememberMarioY",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 519662949603690
+		},
+		{
+			"eventType": "variable",
+			"name": "WM_LevelCompletedCheck",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "checks if the level was actually completed",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 603363741118897
+		},
+		{
+			"eventType": "variable",
+			"name": "WM_LevelWasSecertExit",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "another check if the goal was a secert exit.",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 516055948828342
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 912332759098617,
+					"parameters": {
+						"variable": "DebugMode",
+						"comparison": 0,
+						"value": "1"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-visible",
+					"objectClass": "WM_DebugInfo",
+					"sid": 643551468926917,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "WM_DebugInfo",
+					"sid": 429414672483399,
+					"parameters": {
+						"text": "\"Debug Info\r\nLevel ID: \" & WM_DebugInfo.GetLevelID & \"\r\nCompleted: \" & WM_DebugInfo.IsCompleted & \"\r\nS-Completed: \" & WM_DebugInfo.IsSecertComplete & \"\nSkip Mario Start: \" & WM_DebugInfo.IsSkipMarioStart"
+					}
+				}
+			],
+			"sid": 597888954620444,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "WM_Mario",
+							"sid": 293726164808237,
+							"parameters": {
+								"object": "WM_LevelPoints"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "WM_DebugInfo",
+							"sid": 680820253895183,
+							"parameters": {
+								"instance-variable": "GetLevelID",
+								"value": "WM_LevelPoints.LevelID"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "WM_DebugInfo",
+							"sid": 449918011218792,
+							"parameters": {
+								"instance-variable": "IsCompleted",
+								"value": "WM_LevelPoints.Completed"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "WM_DebugInfo",
+							"sid": 256394682141214,
+							"parameters": {
+								"instance-variable": "IsSecertComplete",
+								"value": "WM_LevelPoints.SecertCompleted"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "WM_DebugInfo",
+							"sid": 812216144347331,
+							"parameters": {
+								"instance-variable": "IsSkipMarioStart",
+								"value": "WM_LevelPoints.SkipMarioStartScreen"
+							}
+						}
+					],
+					"sid": 915949587789962
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 357250502037628
+						},
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "WM_Mario",
+							"sid": 594036022139357,
+							"parameters": {
+								"object": "WM_LevelPoints"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "WM_DebugInfo",
+							"sid": 420439173638734,
+							"parameters": {
+								"instance-variable": "GetLevelID",
+								"value": "\"N/A\""
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "WM_DebugInfo",
+							"sid": 125103946558831,
+							"parameters": {
+								"instance-variable": "IsCompleted",
+								"value": "\"N/A\""
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "WM_DebugInfo",
+							"sid": 136863626658563,
+							"parameters": {
+								"instance-variable": "IsSecertComplete",
+								"value": "\"N/A\""
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "WM_DebugInfo",
+							"sid": 910923923381754,
+							"parameters": {
+								"instance-variable": "IsSkipMarioStart",
+								"value": "\"N/A\""
+							}
+						}
+					],
+					"sid": 190754040282170
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 238814897111373
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 809443272552212,
+					"parameters": {
+						"variable": "InGameSetting_4by3Mode"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 993300230437254,
+					"parameters": {
+						"seconds": "0.01",
+						"use-timescale": true
+					}
+				},
+				{
+					"id": "set-canvas-size",
+					"objectClass": "System",
+					"sid": 111496536009998,
+					"parameters": {
+						"width": "640",
+						"height": "480"
+					}
+				}
+			],
+			"sid": 367361052803578
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 717772524186357
+				}
+			],
+			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 393234224862686,
+					"parameters": {
+						"audio-file": "placeholder_map_audio",
+						"loop": "looping",
+						"volume": "-10",
+						"stereo-pan": "0",
+						"tag-optional": "\"BG\""
+					}
+				},
+				{
+					"id": "set-canvas-size",
+					"objectClass": "System",
+					"sid": 889202277287124,
+					"parameters": {
+						"width": "854",
+						"height": "480"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "WM_LevelPoints",
+					"sid": 387655626181793,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "move-to-layer",
+					"objectClass": "WM_LevelPoints",
+					"sid": 417950548585738,
+					"parameters": {
+						"layer": "\"LevelMarkers\""
+					}
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "WM_Mario",
+					"sid": 330574469757578,
+					"parameters": {
+						"instance-variable": "AllowMovement",
+						"value": "false"
+					}
+				},
+				{
+					"id": "set-enabled",
+					"objectClass": "WM_Mario",
+					"sid": 801095081726302,
+					"behaviorType": "TileMovement",
+					"parameters": {
+						"state": "disabled"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "FONT_MarioLifes",
+					"sid": 249201338800415,
+					"parameters": {
+						"text": "\"*\" & Lifes"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Camera",
+					"sid": 271605471868684,
+					"parameters": {
+						"instance-variable": "FadeOpacity",
+						"value": "100"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Camera",
+					"sid": 270395995992624,
+					"parameters": {
+						"instance-variable": "FadeSetting",
+						"value": "\"Out\""
+					}
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "Camera",
+					"sid": 480029281816478,
+					"parameters": {
+						"instance-variable": "StartFade",
+						"value": "true"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 755419746992009,
+					"parameters": {
+						"seconds": "0.01",
+						"use-timescale": true
+					}
+				},
+				{
+					"id": "stop",
+					"objectClass": "Audio",
+					"sid": 417590844407941,
+					"parameters": {
+						"tag": "\"Pick\""
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 516055964106684,
+					"parameters": {
+						"seconds": "0.49",
+						"use-timescale": true
+					}
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "WM_Mario",
+					"sid": 483352806147668,
+					"parameters": {
+						"instance-variable": "AllowMovement",
+						"value": "true"
+					}
+				},
+				{
+					"id": "set-enabled",
+					"objectClass": "WM_Mario",
+					"sid": 413954391799519,
+					"behaviorType": "TileMovement",
+					"parameters": {
+						"state": "enabled"
+					}
+				}
+			],
+			"sid": 689000460813716,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 871048296949665,
+							"parameters": {
+								"variable": "WM_LevelCompletedCheck"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 290964426794917,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "WM_Mario",
+									"sid": 615720732936689,
+									"parameters": {
+										"object": "WM_LevelPoints"
+									}
+								},
+								{
+									"id": "is-animation-playing",
+									"objectClass": "WM_LevelPoints",
+									"sid": 625509887579185,
+									"parameters": {
+										"animation": "\"YellowButton\""
+									}
+								},
+								{
+									"id": "compare-animation-frame",
+									"objectClass": "WM_LevelPoints",
+									"sid": 109721028322882,
+									"parameters": {
+										"comparison": 0,
+										"number": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "WM_Mario",
+									"sid": 806577501244108,
+									"parameters": {
+										"instance-variable": "AllowMovement",
+										"value": "false"
+									}
+								},
+								{
+									"id": "set-enabled",
+									"objectClass": "WM_Mario",
+									"sid": 430944665318249,
+									"behaviorType": "TileMovement",
+									"parameters": {
+										"state": "disabled"
+									}
+								},
+								{
+									"type": "comment",
+									"text": "no block flying exists so this is disabled for now"
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 768524900098773,
+									"disabled": true,
+									"parameters": {
+										"seconds": "3",
+										"use-timescale": true
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "WM_LevelPoints",
+									"sid": 687940130622416,
+									"parameters": {
+										"instance-variable": "Locked",
+										"value": "true"
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "WM_LevelPoints",
+									"sid": 184283577812732,
+									"parameters": {
+										"instance-variable": "Completed",
+										"value": "true"
+									}
+								},
+								{
+									"id": "set-animation-frame",
+									"objectClass": "WM_LevelPoints",
+									"sid": 440606023668631,
+									"parameters": {
+										"frame-number": "1"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 582404997418762,
+									"parameters": {
+										"seconds": "0.5",
+										"use-timescale": true
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "WM_Mario",
+									"sid": 270337969217803,
+									"parameters": {
+										"instance-variable": "AllowMovement",
+										"value": "true"
+									}
+								},
+								{
+									"id": "set-enabled",
+									"objectClass": "WM_Mario",
+									"sid": 626044497228488,
+									"behaviorType": "TileMovement",
+									"parameters": {
+										"state": "enabled"
+									}
+								}
+							],
+							"sid": 688837515053821
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 553982643835705
+								},
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "WM_Mario",
+									"sid": 578701592136026,
+									"parameters": {
+										"object": "WM_LevelPoints"
+									}
+								},
+								{
+									"id": "is-animation-playing",
+									"objectClass": "WM_LevelPoints",
+									"sid": 896230542027582,
+									"parameters": {
+										"animation": "\"CastleBig\""
+									}
+								},
+								{
+									"id": "compare-animation-frame",
+									"objectClass": "WM_LevelPoints",
+									"sid": 309769306271692,
+									"parameters": {
+										"comparison": 0,
+										"number": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "WM_Mario",
+									"sid": 294538849882734,
+									"parameters": {
+										"instance-variable": "AllowMovement",
+										"value": "false"
+									}
+								},
+								{
+									"id": "set-enabled",
+									"objectClass": "WM_Mario",
+									"sid": 740573024650533,
+									"behaviorType": "TileMovement",
+									"parameters": {
+										"state": "disabled"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 447545642485168,
+									"parameters": {
+										"seconds": "0.5",
+										"use-timescale": true
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "WM_LevelPoints",
+									"sid": 357923207177372,
+									"disabled": true,
+									"parameters": {
+										"instance-variable": "Locked",
+										"value": "true"
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "WM_LevelPoints",
+									"sid": 433233931657523,
+									"parameters": {
+										"instance-variable": "Completed",
+										"value": "true"
+									}
+								},
+								{
+									"id": "set-animation-frame",
+									"objectClass": "WM_LevelPoints",
+									"sid": 618134932474030,
+									"parameters": {
+										"frame-number": "1"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 322948954856282,
+									"parameters": {
+										"seconds": "0.5",
+										"use-timescale": true
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "WM_Mario",
+									"sid": 460339479562520,
+									"parameters": {
+										"instance-variable": "AllowMovement",
+										"value": "true"
+									}
+								},
+								{
+									"id": "set-enabled",
+									"objectClass": "WM_Mario",
+									"sid": 935088108444220,
+									"behaviorType": "TileMovement",
+									"parameters": {
+										"state": "enabled"
+									}
+								}
+							],
+							"sid": 382330512740794
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 177962464148607
+								},
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "WM_Mario",
+									"sid": 488812053806030,
+									"parameters": {
+										"object": "WM_LevelPoints"
+									}
+								},
+								{
+									"id": "is-animation-playing",
+									"objectClass": "WM_LevelPoints",
+									"sid": 578722075609353,
+									"parameters": {
+										"animation": "\"YellowButton\""
+									},
+									"isInverted": true
+								},
+								{
+									"id": "is-animation-playing",
+									"objectClass": "WM_LevelPoints",
+									"sid": 655029927579672,
+									"parameters": {
+										"animation": "\"CastleBig\""
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [],
+							"sid": 591353781770561,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 764310316549190,
+											"parameters": {
+												"variable": "WM_LevelCompletedCheck"
+											}
+										},
+										{
+											"id": "compare-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 646510780814644,
+											"parameters": {
+												"variable": "WM_LevelWasSecertExit"
+											},
+											"isInverted": true
+										}
+									],
+									"actions": [
+										{
+											"id": "set-boolean-instvar",
+											"objectClass": "WM_LevelPoints",
+											"sid": 504923350084915,
+											"parameters": {
+												"instance-variable": "Completed",
+												"value": "true"
+											}
+										},
+										{
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 108527284040728,
+											"parameters": {
+												"seconds": "0.01",
+												"use-timescale": true
+											}
+										},
+										{
+											"id": "set-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 341945188443269,
+											"parameters": {
+												"variable": "WM_LevelCompletedCheck",
+												"value": "false"
+											}
+										}
+									],
+									"sid": 975633507121382
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 905703604871233,
+											"parameters": {
+												"variable": "WM_LevelCompletedCheck"
+											}
+										},
+										{
+											"id": "compare-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 596627967317192,
+											"parameters": {
+												"variable": "WM_LevelWasSecertExit"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-boolean-instvar",
+											"objectClass": "WM_LevelPoints",
+											"sid": 884165095529991,
+											"parameters": {
+												"instance-variable": "SecertCompleted",
+												"value": "true"
+											}
+										},
+										{
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 161799872040604,
+											"parameters": {
+												"seconds": "0.01",
+												"use-timescale": true
+											}
+										},
+										{
+											"id": "set-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 886373583776304,
+											"parameters": {
+												"variable": "WM_LevelWasSecertExit",
+												"value": "false"
+											}
+										}
+									],
+									"sid": 465632862621272
+								}
+							]
+						}
+					],
+					"isOrBlock": true
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 919964839406035
+				}
+			],
+			"actions": [
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 940286872772815,
+					"parameters": {
+						"seconds": "0.51",
+						"use-timescale": true
+					}
+				}
+			],
+			"sid": 792628670565127,
+			"disabled": true
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 209300843449274
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 378054594190940,
+					"parameters": {
+						"variable": "WM_RememberMarioX",
+						"comparison": 1,
+						"value": "0"
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 689663803019645,
+					"parameters": {
+						"variable": "WM_RememberMarioY",
+						"comparison": 1,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-grid-position",
+					"objectClass": "WM_Mario",
+					"sid": 210599546253607,
+					"behaviorType": "TileMovement",
+					"parameters": {
+						"x": "WM_RememberMarioX/16",
+						"y": "WM_RememberMarioY/16",
+						"instant": "instant"
+					}
+				}
+			],
+			"sid": 389331646541937
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Selecting Stage",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "WM_Mario",
+							"sid": 606462672157953,
+							"parameters": {
+								"object": "WM_LevelPoints"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "FONT_LevelName",
+							"sid": 284116476769113,
+							"parameters": {
+								"text": "WM_LevelPoints.LevelName"
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 392493843193733,
+							"parameters": {
+								"audio-file": "map-spot",
+								"loop": "not-looping",
+								"volume": "-5",
+								"stereo-pan": "0",
+								"tag-optional": "\"Pick\""
+							}
+						}
+					],
+					"sid": 900117400084347
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "WM_Mario",
+							"sid": 543207769890067,
+							"parameters": {
+								"object": "WM_LevelPoints"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "FONT_LevelName",
+							"sid": 311194527355756,
+							"parameters": {
+								"text": "\"\""
+							}
+						}
+					],
+					"sid": 164394813276759
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 722633796263140,
+							"parameters": {
+								"key": 13
+							}
+						},
+						{
+							"id": "on-button-pressed",
+							"objectClass": "Gamepad",
+							"sid": 501086843318258,
+							"parameters": {
+								"gamepad": "0",
+								"button": "button-a"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 284884434871408,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "WM_Mario",
+									"sid": 569234405053380,
+									"parameters": {
+										"object": "WM_LevelPoints"
+									}
+								},
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "WM_LevelPoints",
+									"sid": 836645541342347,
+									"parameters": {
+										"instance-variable": "LevelID",
+										"comparison": 1,
+										"value": "\"\""
+									}
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "WM_LevelPoints",
+									"sid": 358005825423574,
+									"parameters": {
+										"instance-variable": "Locked"
+									},
+									"isInverted": true
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "WM_Mario",
+									"sid": 789720847195143,
+									"parameters": {
+										"instance-variable": "AllowMovement"
+									}
+								},
+								{
+									"id": "is-moving",
+									"objectClass": "WM_Mario",
+									"sid": 622273784971199,
+									"behaviorType": "TileMovement",
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "fade-volume",
+									"objectClass": "Audio",
+									"sid": 508695164900886,
+									"parameters": {
+										"tag": "\"BG\"",
+										"db": "-100",
+										"duration": "0.85",
+										"ending": "stop"
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "WM_Mario",
+									"sid": 336959153104031,
+									"parameters": {
+										"instance-variable": "AllowMovement",
+										"value": "false"
+									}
+								},
+								{
+									"id": "set-enabled",
+									"objectClass": "WM_Mario",
+									"sid": 547207231356271,
+									"behaviorType": "TileMovement",
+									"parameters": {
+										"state": "disabled"
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "WM_Mario",
+									"sid": 528235595778744,
+									"parameters": {
+										"animation": "\"Start\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Camera",
+									"sid": 626302998486757,
+									"parameters": {
+										"instance-variable": "StartPixelFade",
+										"value": "true"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Camera",
+									"sid": 285298219611932,
+									"parameters": {
+										"instance-variable": "PixelFadeSetting",
+										"value": "\"In\""
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Camera",
+									"sid": 435708035264521,
+									"parameters": {
+										"instance-variable": "FadeSetting",
+										"value": "\"In\""
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Camera",
+									"sid": 678258803570372,
+									"parameters": {
+										"instance-variable": "StartFade",
+										"value": "true"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 880751467914722,
+									"parameters": {
+										"variable": "WM_RememberMarioX",
+										"value": "WM_Mario.X"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 531082752118580,
+									"parameters": {
+										"variable": "WM_RememberMarioY",
+										"value": "WM_Mario.Y"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 455057898979205,
+									"parameters": {
+										"seconds": "1",
+										"use-timescale": true
+									}
+								}
+							],
+							"sid": 474095504241040,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "WM_LevelPoints",
+											"sid": 729384921709622,
+											"parameters": {
+												"instance-variable": "SkipMarioStartScreen"
+											},
+											"isInverted": true
+										}
+									],
+									"actions": [
+										{
+											"id": "set-layer-opacity",
+											"objectClass": "System",
+											"sid": 181544525781788,
+											"parameters": {
+												"layer": "\"MarioStart\"",
+												"opacity": "100"
+											}
+										},
+										{
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 477216313874262,
+											"parameters": {
+												"seconds": "1",
+												"use-timescale": true
+											}
+										},
+										{
+											"id": "set-layer-opacity",
+											"objectClass": "System",
+											"sid": 343351435090785,
+											"parameters": {
+												"layer": "\"MarioStart\"",
+												"opacity": "0"
+											}
+										},
+										{
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 299070390756735,
+											"parameters": {
+												"seconds": "0.5",
+												"use-timescale": true
+											}
+										},
+										{
+											"id": "set-boolean-instvar",
+											"objectClass": "Camera",
+											"sid": 206174751648403,
+											"parameters": {
+												"instance-variable": "StartPixelFade",
+												"value": "false"
+											}
+										},
+										{
+											"id": "set-layer-effect-parameter",
+											"objectClass": "System",
+											"sid": 183635562939736,
+											"parameters": {
+												"layer": "\"Background\"",
+												"effect": "\"Pixellate\"",
+												"parameter-index": "0",
+												"value": "1"
+											}
+										},
+										{
+											"id": "go-to-layout-by-name",
+											"objectClass": "System",
+											"sid": 777144727351727,
+											"parameters": {
+												"layout": "WM_LevelPoints.LevelID"
+											}
+										},
+										{
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 754949384281711,
+											"parameters": {
+												"seconds": "2",
+												"use-timescale": true
+											}
+										},
+										{
+											"type": "comment",
+											"text": "goes to a different layout if the inputted layout on a level point is invailded"
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 219784210101948,
+											"parameters": {
+												"variable": "INVALID_LIDError",
+												"value": "WM_LevelPoints.LevelID"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 714778035995599,
+											"parameters": {
+												"variable": "INVALID_REASON",
+												"value": "\"Invalid World Level ID\""
+											}
+										},
+										{
+											"id": "go-to-layout",
+											"objectClass": "System",
+											"sid": 960557777559426,
+											"parameters": {
+												"layout": "InvalidLayoutID"
+											}
+										}
+									],
+									"sid": 382235668605741
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 345124149030986
+										}
+									],
+									"actions": [
+										{
+											"id": "set-boolean-instvar",
+											"objectClass": "Camera",
+											"sid": 796303636681610,
+											"parameters": {
+												"instance-variable": "StartPixelFade",
+												"value": "false"
+											}
+										},
+										{
+											"id": "set-layer-effect-parameter",
+											"objectClass": "System",
+											"sid": 330094423800467,
+											"parameters": {
+												"layer": "\"Background\"",
+												"effect": "\"Pixellate\"",
+												"parameter-index": "0",
+												"value": "1"
+											}
+										},
+										{
+											"id": "go-to-layout-by-name",
+											"objectClass": "System",
+											"sid": 310133130080323,
+											"parameters": {
+												"layout": "WM_LevelPoints.LevelID"
+											}
+										},
+										{
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 136460884447292,
+											"parameters": {
+												"seconds": "2",
+												"use-timescale": true
+											}
+										},
+										{
+											"type": "comment",
+											"text": "goes to a different layout if the inputted layout on a level point is invailded"
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 435050345661890,
+											"parameters": {
+												"variable": "INVALID_LIDError",
+												"value": "WM_LevelPoints.LevelID"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 286003705152630,
+											"parameters": {
+												"variable": "INVALID_REASON",
+												"value": "\"Invalid World Level ID\""
+											}
+										},
+										{
+											"id": "go-to-layout",
+											"objectClass": "System",
+											"sid": 802601059970274,
+											"parameters": {
+												"layout": "InvalidLayoutID"
+											}
+										}
+									],
+									"sid": 743916233090500
+								}
+							]
+						}
+					],
+					"isOrBlock": true
+				}
+			],
+			"sid": 269575904002909
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "MarioAnimations",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "WM_Mario",
+							"sid": 150025089707462,
+							"parameters": {
+								"instance-variable": "AllowMovement"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 834517268077837,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-moving-direction",
+									"objectClass": "WM_Mario",
+									"sid": 144924255546828,
+									"behaviorType": "TileMovement",
+									"parameters": {
+										"direction": "down"
+									}
+								},
+								{
+									"id": "is-moving",
+									"objectClass": "WM_Mario",
+									"sid": 115929759164356,
+									"behaviorType": "TileMovement",
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "WM_Mario",
+									"sid": 214156495955011,
+									"parameters": {
+										"animation": "\"MovingDown\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 635609267161829,
+							"isOrBlock": true
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-moving-direction",
+									"objectClass": "WM_Mario",
+									"sid": 780015690651117,
+									"behaviorType": "TileMovement",
+									"parameters": {
+										"direction": "up"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "WM_Mario",
+									"sid": 672771983233307,
+									"parameters": {
+										"animation": "\"MovingUp\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 983923999765362
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-moving-direction",
+									"objectClass": "WM_Mario",
+									"sid": 757878940323220,
+									"behaviorType": "TileMovement",
+									"parameters": {
+										"direction": "left"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "WM_Mario",
+									"sid": 870721443536902,
+									"parameters": {
+										"animation": "\"MovingLeft\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 542270529648870
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-moving-direction",
+									"objectClass": "WM_Mario",
+									"sid": 496844272496167,
+									"behaviorType": "TileMovement",
+									"parameters": {
+										"direction": "right"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "WM_Mario",
+									"sid": 781972124527155,
+									"parameters": {
+										"animation": "\"MovingRight\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 267800961173497
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 815825274747358,
+							"parameters": {
+								"variable": "CurrentHP",
+								"comparison": 0,
+								"value": "2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "WM_MarioWalking",
+							"sid": 359375918568275,
+							"parameters": {
+								"animation": "\"Big_Walking\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 832295784670997
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 655021329633036,
+							"parameters": {
+								"variable": "CurrentHP",
+								"comparison": 0,
+								"value": "3"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "WM_MarioWalking",
+							"sid": 570180373977724,
+							"parameters": {
+								"animation": "\"Fire_Walking\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 312908841258567
+				}
+			],
+			"sid": 725674819852719
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "WM_CameraFade",
+			"description": "imported from in-game events",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-signal",
+							"objectClass": "System",
+							"sid": 284178730803267,
+							"parameters": {
+								"tag": "\"LevelRestart\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-layer-opacity",
+							"objectClass": "System",
+							"sid": 719052286674733,
+							"parameters": {
+								"layer": "\"Fade\"",
+								"opacity": "1"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Camera",
+							"sid": 560895949810625,
+							"parameters": {
+								"instance-variable": "FadeSetting",
+								"value": "\"In\""
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Camera",
+							"sid": 506649585367124,
+							"parameters": {
+								"instance-variable": "StartFade",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 456975333126041
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "Camera",
+							"sid": 150643303667379,
+							"parameters": {
+								"instance-variable": "StartFade"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-layer-opacity",
+							"objectClass": "System",
+							"sid": 525430793802777,
+							"parameters": {
+								"layer": "\"Fade\"",
+								"opacity": "Camera.FadeOpacity"
+							}
+						}
+					],
+					"sid": 515074003477146,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Camera",
+									"sid": 974508936496359,
+									"parameters": {
+										"instance-variable": "FadeSetting",
+										"comparison": 0,
+										"value": "\"In\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "add-to-instvar",
+									"objectClass": "Camera",
+									"sid": 972365211921795,
+									"parameters": {
+										"instance-variable": "FadeOpacity",
+										"value": "3"
+									}
+								}
+							],
+							"sid": 608119949147157,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-layer-opacity",
+											"objectClass": "System",
+											"sid": 111503193564057,
+											"parameters": {
+												"layer": "\"Fade\"",
+												"comparison": 5,
+												"opacity": "99.5"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-boolean-instvar",
+											"objectClass": "Camera",
+											"sid": 718648260150538,
+											"parameters": {
+												"instance-variable": "StartFade",
+												"value": "false"
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "Camera",
+											"sid": 665844484511976,
+											"parameters": {
+												"instance-variable": "FadeSetting",
+												"value": "\"\""
+											}
+										}
+									],
+									"sid": 281299278444193
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Camera",
+									"sid": 730399188940275,
+									"parameters": {
+										"instance-variable": "FadeSetting",
+										"comparison": 0,
+										"value": "\"Out\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "subtract-from-instvar",
+									"objectClass": "Camera",
+									"sid": 296507341079530,
+									"parameters": {
+										"instance-variable": "FadeOpacity",
+										"value": "5"
+									}
+								}
+							],
+							"sid": 794518211336218,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-layer-opacity",
+											"objectClass": "System",
+											"sid": 857129010503003,
+											"parameters": {
+												"layer": "\"Fade\"",
+												"comparison": 3,
+												"opacity": "5"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-boolean-instvar",
+											"objectClass": "Camera",
+											"sid": 794172642659563,
+											"parameters": {
+												"instance-variable": "StartFade",
+												"value": "false"
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "Camera",
+											"sid": 735029666080067,
+											"parameters": {
+												"instance-variable": "FadeSetting",
+												"value": "\"\""
+											}
+										}
+									],
+									"sid": 597722524307874
+								}
+							]
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "Camera",
+							"sid": 651152773919120,
+							"parameters": {
+								"instance-variable": "StartPixelFade"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-layer-effect-parameter",
+							"objectClass": "System",
+							"sid": 501788170717134,
+							"parameters": {
+								"layer": "\"BackGround\"",
+								"effect": "\"Pixellate\"",
+								"parameter-index": "0",
+								"value": "Camera.PixelFadeOpacity"
+							}
+						}
+					],
+					"sid": 886488686418651,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Camera",
+									"sid": 607200260608168,
+									"parameters": {
+										"instance-variable": "PixelFadeSetting",
+										"comparison": 0,
+										"value": "\"In\""
+									}
+								}
+							],
+							"actions": [],
+							"sid": 535383185339086,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Camera",
+											"sid": 429375078017687,
+											"disabled": true,
+											"parameters": {
+												"instance-variable": "PixelFadeOpacity",
+												"comparison": 1,
+												"value": "24"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "add-to-instvar",
+											"objectClass": "Camera",
+											"sid": 417527664775466,
+											"parameters": {
+												"instance-variable": "PixelFadeOpacity",
+												"value": "1"
+											}
+										}
+									],
+									"sid": 677209825573771
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Camera",
+											"sid": 156891832717098,
+											"parameters": {
+												"instance-variable": "PixelFadeOpacity",
+												"comparison": 5,
+												"value": "23.5"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-enabled",
+											"objectClass": "Player1",
+											"sid": 492279159248312,
+											"disabled": true,
+											"behaviorType": "Platform",
+											"parameters": {
+												"state": "enabled"
+											}
+										},
+										{
+											"id": "set-boolean-instvar",
+											"objectClass": "Camera",
+											"sid": 487513940212223,
+											"parameters": {
+												"instance-variable": "StartPixelFade",
+												"value": "false"
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "PauseSystem",
+											"sid": 820156535053000,
+											"disabled": true,
+											"parameters": {
+												"instance-variable": "CanPause",
+												"value": "1"
+											}
+										}
+									],
+									"sid": 307505729906418,
+									"disabled": true
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Camera",
+									"sid": 560799465459954,
+									"parameters": {
+										"instance-variable": "PixelFadeSetting",
+										"comparison": 0,
+										"value": "\"Out\""
+									}
+								}
+							],
+							"actions": [],
+							"sid": 712965113993467,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Camera",
+											"sid": 677372022100820,
+											"parameters": {
+												"instance-variable": "PixelFadeOpacity",
+												"comparison": 1,
+												"value": "0.5"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "subtract-from-instvar",
+											"objectClass": "Camera",
+											"sid": 620238045114268,
+											"parameters": {
+												"instance-variable": "PixelFadeOpacity",
+												"value": "0.5"
+											}
+										}
+									],
+									"sid": 800094856768205
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Camera",
+											"sid": 809713063161015,
+											"parameters": {
+												"instance-variable": "PixelFadeOpacity",
+												"comparison": 0,
+												"value": "0.5"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-boolean-instvar",
+											"objectClass": "Camera",
+											"sid": 437670590455700,
+											"parameters": {
+												"instance-variable": "StartPixelFade",
+												"value": "false"
+											}
+										}
+									],
+									"sid": 569856239740862
+								}
+							]
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "Camera",
+							"sid": 766182275306705,
+							"parameters": {
+								"instance-variable": "StartCCFade"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-layer-opacity",
+							"objectClass": "System",
+							"sid": 158377866035363,
+							"parameters": {
+								"layer": "\"CC_Fade\"",
+								"opacity": "Camera.CCFadeOpacity"
+							}
+						}
+					],
+					"sid": 661838731370460,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Camera",
+									"sid": 319894249912100,
+									"parameters": {
+										"instance-variable": "CCFadeSetting",
+										"comparison": 0,
+										"value": "\"In\""
+									}
+								}
+							],
+							"actions": [],
+							"sid": 445628464298811,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Camera",
+											"sid": 547061329639597,
+											"parameters": {
+												"instance-variable": "CCFadeOpacity",
+												"comparison": 1,
+												"value": "100"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "add-to-instvar",
+											"objectClass": "Camera",
+											"sid": 503959835450544,
+											"parameters": {
+												"instance-variable": "CCFadeOpacity",
+												"value": "2"
+											}
+										}
+									],
+									"sid": 235335398411401
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Camera",
+											"sid": 997292455927973,
+											"parameters": {
+												"instance-variable": "CCFadeOpacity",
+												"comparison": 4,
+												"value": "100"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-boolean-instvar",
+											"objectClass": "Camera",
+											"sid": 971640708696958,
+											"parameters": {
+												"instance-variable": "StartCCFade",
+												"value": "false"
+											}
+										}
+									],
+									"sid": 653512989991348
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Camera",
+									"sid": 219269110386002,
+									"parameters": {
+										"instance-variable": "CCFadeSetting",
+										"comparison": 0,
+										"value": "\"Out\""
+									}
+								}
+							],
+							"actions": [],
+							"sid": 836952328809561,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Camera",
+											"sid": 208140308704330,
+											"parameters": {
+												"instance-variable": "CCFadeOpacity",
+												"comparison": 1,
+												"value": "5"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "subtract-from-instvar",
+											"objectClass": "Camera",
+											"sid": 573772775503247,
+											"parameters": {
+												"instance-variable": "CCFadeOpacity",
+												"value": "2"
+											}
+										}
+									],
+									"sid": 438034658820257
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Camera",
+											"sid": 532770995413229,
+											"parameters": {
+												"instance-variable": "CCFadeOpacity",
+												"comparison": 2,
+												"value": "0"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-boolean-instvar",
+											"objectClass": "Camera",
+											"sid": 690075811362012,
+											"parameters": {
+												"instance-variable": "StartCCFade",
+												"value": "false"
+											}
+										}
+									],
+									"sid": 451420565704525
+								}
+							]
+						}
+					]
+				}
+			],
+			"sid": 432258031039752
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "WM_Controller Support",
+			"description": "funny enough when i'm writing this. you still cant use a controller to play a stage lmao",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "WM_Mario",
+							"sid": 138025670629591,
+							"parameters": {
+								"instance-variable": "AllowMovement"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 873317423035635,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-button-down",
+									"objectClass": "Gamepad",
+									"sid": 572126381566863,
+									"parameters": {
+										"gamepad": "0",
+										"button": "d-pad-up"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "simulate-control",
+									"objectClass": "WM_Mario",
+									"sid": 890495310459782,
+									"behaviorType": "TileMovement",
+									"parameters": {
+										"control": "up"
+									}
+								}
+							],
+							"sid": 983169448783425
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-button-down",
+									"objectClass": "Gamepad",
+									"sid": 842210924536731,
+									"parameters": {
+										"gamepad": "0",
+										"button": "d-pad-down"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "simulate-control",
+									"objectClass": "WM_Mario",
+									"sid": 198827058780362,
+									"behaviorType": "TileMovement",
+									"parameters": {
+										"control": "down"
+									}
+								}
+							],
+							"sid": 600492137840423
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-button-down",
+									"objectClass": "Gamepad",
+									"sid": 880760800306330,
+									"parameters": {
+										"gamepad": "0",
+										"button": "d-pad-left"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "simulate-control",
+									"objectClass": "WM_Mario",
+									"sid": 256130243341543,
+									"behaviorType": "TileMovement",
+									"parameters": {
+										"control": "left"
+									}
+								}
+							],
+							"sid": 331932520765684
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-button-down",
+									"objectClass": "Gamepad",
+									"sid": 157210027691241,
+									"parameters": {
+										"gamepad": "0",
+										"button": "d-pad-right"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "simulate-control",
+									"objectClass": "WM_Mario",
+									"sid": 134580595374357,
+									"behaviorType": "TileMovement",
+									"parameters": {
+										"control": "right"
+									}
+								}
+							],
+							"sid": 854216884392326
+						}
+					]
+				}
+			],
+			"sid": 868195795623877
+		}
+	],
+	"sid": 124582047518197
+}

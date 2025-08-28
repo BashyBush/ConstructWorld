@@ -1,0 +1,18 @@
+{
+	"name": "INVALID_TextReason",
+	"plugin-id": "Text",
+	"sid": 391862669616672,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [
+		{
+			"name": "ErrorReason",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 449542618876444
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": []
+}

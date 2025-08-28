@@ -1,0 +1,90 @@
+{
+	"name": "PauseSystem",
+	"plugin-id": "Sprite",
+	"sid": 111994950249782,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [
+		{
+			"name": "PA_MenuSelection",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 583933975782172
+		},
+		{
+			"name": "PA_MenuAllow",
+			"type": "number",
+			"desc": "Checks if the player can change options",
+			"show": true,
+			"sid": 520731220866537
+		},
+		{
+			"name": "CanPause",
+			"type": "number",
+			"desc": "Check if the Player is Allowed to either Pause the game or not.",
+			"show": true,
+			"sid": 152302258440038
+		},
+		{
+			"name": "PlayerFlashTimer",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 590698146629832
+		},
+		{
+			"name": "EnemiesFlashTimer",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 132488087003225
+		},
+		{
+			"name": "DEBUG_NoClip",
+			"type": "boolean",
+			"desc": "For Debugging.",
+			"show": true,
+			"sid": 370150993747277
+		},
+		{
+			"name": "PlaDeadDownSpeed",
+			"type": "boolean",
+			"desc": "mostly used for when the player dies and when they go down. you can pretty much ignore this.",
+			"show": true,
+			"sid": 377507447461177
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 250,
+						"height": 250,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 6455571,
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 368221019847009,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

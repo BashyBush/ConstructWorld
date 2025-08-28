@@ -1,0 +1,145 @@
+{
+	"name": "Coin",
+	"plugin-id": "Sprite",
+	"sid": 723150377642171,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [
+		{
+			"name": "IsInvisible",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 476336096368944
+		},
+		{
+			"name": "WasBlock",
+			"type": "string",
+			"desc": "If empty. Coin will still stay AS a coin after the P-Switch ends",
+			"show": true,
+			"sid": 822075325751929
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 16,
+						"height": 16,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 2120843,
+						"collisionPoly": {
+							"points": [
+								0.125,
+								0,
+								0.875,
+								0,
+								0.875,
+								0.5,
+								0.125,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 16,
+						"height": 16,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 5255063,
+						"collisionPoly": {
+							"points": [
+								0.125,
+								0,
+								0.875,
+								0,
+								0.875,
+								0.5,
+								0.125,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 16,
+						"height": 16,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 3347617,
+						"collisionPoly": {
+							"points": [
+								0.125,
+								0,
+								0.875,
+								0,
+								0.875,
+								0.5,
+								0.125,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 16,
+						"height": 16,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 6406122,
+						"collisionPoly": {
+							"points": [
+								0.125,
+								0,
+								0.875,
+								0,
+								0.875,
+								0.5,
+								0.125,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 129692727176567,
+				"name": "Animation 1",
+				"isLooping": true,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

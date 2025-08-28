@@ -1,0 +1,9 @@
+{
+	"name": "DBM_ShowCameraObject",
+	"plugin-id": "Button",
+	"sid": 364685935557460,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": []
+}

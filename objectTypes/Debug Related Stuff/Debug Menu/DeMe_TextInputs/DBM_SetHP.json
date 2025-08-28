@@ -1,0 +1,9 @@
+{
+	"name": "DBM_SetHP",
+	"plugin-id": "TextBox",
+	"sid": 979160278804728,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": []
+}

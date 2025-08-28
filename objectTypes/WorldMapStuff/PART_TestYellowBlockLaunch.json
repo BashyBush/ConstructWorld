@@ -1,0 +1,23 @@
+{
+	"name": "PART_TestYellowBlockLaunch",
+	"plugin-id": "Particles",
+	"sid": 706670319319861,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"image": {
+		"width": 24,
+		"height": 24,
+		"originX": 0.5,
+		"originY": 0.5,
+		"originalSource": "",
+		"exportFormat": "lossless",
+		"exportQuality": 0.8,
+		"fileType": "image/png",
+		"imageSpriteId": 1504519,
+		"useCollisionPoly": true,
+		"tag": ""
+	}
+}

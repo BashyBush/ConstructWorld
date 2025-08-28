@@ -1,0 +1,110 @@
+{
+	"name": "HUD_ItemHolder",
+	"plugin-id": "Sprite",
+	"sid": 513458499103540,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [
+		{
+			"name": "Item_Holding",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 667868020908044
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 56,
+						"height": 56,
+						"originX": 0.5,
+						"originY": 0.5178571428571429,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 4795054,
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 122508553335370,
+				"name": "None",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			},
+			{
+				"frames": [
+					{
+						"width": 56,
+						"height": 56,
+						"originX": 0.5,
+						"originY": 0.5178571428571429,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 2032314,
+						"collisionPoly": {
+							"points": [
+								0,
+								0.017857142857142856,
+								1,
+								0.017857142857142856,
+								1,
+								1,
+								0,
+								1
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 374460987816755,
+				"name": "Mushroom",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			},
+			{
+				"frames": [
+					{
+						"width": 56,
+						"height": 56,
+						"originX": 0.5,
+						"originY": 0.5178571428571429,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 2993903,
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 638944422386747,
+				"name": "FireFlower",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

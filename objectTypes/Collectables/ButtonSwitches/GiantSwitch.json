@@ -1,0 +1,115 @@
+{
+	"name": "GiantSwitch",
+	"plugin-id": "Sprite",
+	"sid": 268337668463692,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [
+		{
+			"name": "SwitchType",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 227187953102689
+		},
+		{
+			"name": "MessageText",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 251493908756243
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "solid",
+			"name": "Solid",
+			"sid": 596942844535490
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 64,
+						"height": 64,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 769170,
+						"collisionPoly": {
+							"points": [
+								0.375,
+								0,
+								0.625,
+								0,
+								0.71875,
+								0.03125,
+								0.78125,
+								0.0625,
+								0.90625,
+								0.1875,
+								1,
+								0.375,
+								1,
+								1,
+								0,
+								1,
+								0,
+								0.375,
+								0.09375,
+								0.1875,
+								0.21875,
+								0.0625,
+								0.28125,
+								0.03125
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 64,
+						"height": 64,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 888819,
+						"collisionPoly": {
+							"points": [
+								0,
+								0.5,
+								1,
+								0.5,
+								1,
+								1,
+								0,
+								1
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 581579993889687,
+				"name": "YellowSwitch",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			}
+		],
+		"subfolders": []
+	}
+}

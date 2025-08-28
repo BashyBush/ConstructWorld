@@ -1,0 +1,48 @@
+{
+	"name": "EventTrigger",
+	"plugin-id": "Sprite",
+	"sid": 506574065704723,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [
+		{
+			"name": "StartEvent",
+			"type": "number",
+			"desc": "Once the player touches this object. Depending what the set Value is will start a scripted event.",
+			"show": true,
+			"sid": 955807774946897
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 212,
+						"height": 32,
+						"originX": 0.8160377358490566,
+						"originY": -0.25,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 6479291,
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 627389196215170,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

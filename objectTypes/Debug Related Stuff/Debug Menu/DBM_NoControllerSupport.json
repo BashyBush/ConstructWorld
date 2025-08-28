@@ -1,0 +1,52 @@
+{
+	"name": "DBM_NoControllerSupport",
+	"plugin-id": "Sprite",
+	"sid": 186787351580351,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 250,
+						"height": 100,
+						"originX": 0.488,
+						"originY": 1.24,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 600978,
+						"collisionPoly": {
+							"points": [
+								0,
+								0,
+								0.984,
+								0,
+								0.984,
+								0.99,
+								0,
+								0.99
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 771657820049788,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

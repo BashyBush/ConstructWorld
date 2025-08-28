@@ -1,0 +1,130 @@
+{
+	"name": "Pipe_Teleporter",
+	"plugin-id": "Sprite",
+	"sid": 891301336546708,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [
+		{
+			"name": "Pipe_SwitchLayout",
+			"type": "string",
+			"desc": "WIP - If a vaild Layout name is set. All X * Y cords (both direction and camera set) will transfer to another level (layout) NOTE: CHECKPOINTS WILL NOT WORK IF ON ANOTHER LAYOUT.",
+			"show": true,
+			"sid": 795588332233753
+		},
+		{
+			"name": "Pipe_XDirection",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 241982092365015
+		},
+		{
+			"name": "Pipe_YDirection",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 878049196407670
+		},
+		{
+			"name": "Pipe_GoingInto",
+			"type": "string",
+			"desc": "How Mario will go into for example Setting the Value will make mario go DOWN the pipe ",
+			"show": true,
+			"sid": 223783085672623
+		},
+		{
+			"name": "Pipe_ExitingPipe",
+			"type": "string",
+			"desc": "How Mario will EXIT the pipe when going inside the pipe.",
+			"show": true,
+			"sid": 781734563363836
+		},
+		{
+			"name": "Pipe_CamXSetLeft",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 377878342278000
+		},
+		{
+			"name": "Pipe_CamXSetRight",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 522393527790322
+		},
+		{
+			"name": "Pipe_CamYSetTop",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 559990984152044
+		},
+		{
+			"name": "Pipe_CamYSetBottom",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 253823165449609
+		},
+		{
+			"name": "Pipe_MusicChange",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 487978812865243
+		},
+		{
+			"name": "Pipe_SW_RemTime",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 185789653220436
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 64,
+						"height": 32,
+						"originX": 0.5,
+						"originY": 0.5625,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 2411748,
+						"collisionPoly": {
+							"points": [
+								0.5,
+								0,
+								0.5,
+								0,
+								0.5,
+								1,
+								0.5,
+								1
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 313551816124939,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

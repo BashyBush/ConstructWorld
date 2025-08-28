@@ -1,0 +1,69 @@
+{
+	"name": "Title_System",
+	"plugin-id": "Sprite",
+	"sid": 234469153188891,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [
+		{
+			"name": "Title_MenuSelection",
+			"type": "number",
+			"desc": "Checks on what option the player is on.",
+			"show": true,
+			"sid": 410451246948563
+		},
+		{
+			"name": "Title_MenuMaxSelection",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 308232234719280
+		},
+		{
+			"name": "Title_MenuState",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 998978799577587
+		},
+		{
+			"name": "Title_AllowMovement",
+			"type": "number",
+			"desc": "If set to 0. User cannot select or switch option",
+			"show": true,
+			"sid": 422328663224487
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 250,
+						"height": 250,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 5286082,
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 663669749928187,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

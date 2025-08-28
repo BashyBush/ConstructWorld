@@ -1,0 +1,19 @@
+{
+	"name": "DamageableObjects",
+	"plugin-id": "Sprite",
+	"sid": 642253863821531,
+	"instanceVariables": [
+		{
+			"name": "HPDamage",
+			"type": "number",
+			"desc": "How much HP the player will lose. (not programmed yet)",
+			"show": true,
+			"sid": 684152346956389
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"TestDamage"
+	]
+}

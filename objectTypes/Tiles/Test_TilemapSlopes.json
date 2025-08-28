@@ -1,0 +1,30 @@
+{
+	"name": "Test_TilemapSlopes",
+	"plugin-id": "Tilemap",
+	"sid": 987307377950879,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "solid",
+			"name": "Solid",
+			"sid": 662790304298056
+		}
+	],
+	"effectTypes": [],
+	"image": {
+		"width": 256,
+		"height": 256,
+		"originX": 0.5,
+		"originY": 0.5,
+		"originalSource": "",
+		"exportFormat": "lossless",
+		"exportQuality": 0.8,
+		"fileType": "image/png",
+		"imageSpriteId": 2227043,
+		"useCollisionPoly": true,
+		"tag": ""
+	},
+	"tile-collision-polys": {}
+}

@@ -1,0 +1,37 @@
+{
+	"name": "Powerups",
+	"plugin-id": "Sprite",
+	"sid": 315416892845519,
+	"instanceVariables": [
+		{
+			"name": "SpawnedFromItemHolder",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 736250475871714
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Flash",
+			"name": "Flash",
+			"sid": 300705733579673
+		},
+		{
+			"behaviorId": "MoveTo",
+			"name": "ItemHolderDrop",
+			"sid": 659889947164895
+		},
+		{
+			"behaviorId": "Platform",
+			"name": "Movement",
+			"sid": 827322354214166
+		}
+	],
+	"effectTypes": [],
+	"members": [
+		"Mushroom",
+		"1up",
+		"FireFlower"
+	]
+}

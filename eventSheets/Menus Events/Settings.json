@@ -1,0 +1,800 @@
+{
+	"name": "Settings",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "InGameSetting_ShowFPS",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "Shows the current FPS on the top right on almost all layouts",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 490809376485277
+		},
+		{
+			"eventType": "variable",
+			"name": "InGameSetting_4by3Mode",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "If set to enable. Game will be in 4:3. Set Camera Zone might break because of this. ONLY enable this if you're game want's to be ON 4:3 and NOT 16:9. Not recommended to be turned on when currently played because of this. Only turn on if you truely want the game to be 4:3 due to me not really intrested fixing stuff from switching from 16:9 to 4:3 mid-game at the current moment. The importent and default UI (not main menu or the settings layout atm) that comes with this engine has events set if this is set to be on so you don't really need to change them to support 4:3 unless you're making a custom UI for them.",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 961569854387228
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Settings Keyboard/Controller Setup",
+			"description": "imported from the title screen event lol",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 635715544681614,
+							"parameters": {
+								"key": 40
+							}
+						},
+						{
+							"id": "on-button-pressed",
+							"objectClass": "Gamepad",
+							"sid": 967918508582264,
+							"parameters": {
+								"gamepad": "0",
+								"button": "d-pad-down"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 544748769139764,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Settings_System",
+									"sid": 750425048888618,
+									"parameters": {
+										"instance-variable": "Title_MenuSelection",
+										"comparison": 5,
+										"value": "Settings_System.Title_MenuMaxSelection"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Settings_System",
+									"sid": 978440960485576,
+									"parameters": {
+										"instance-variable": "Title_MenuSelection",
+										"value": "0"
+									}
+								}
+							],
+							"sid": 230310425690942
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 524506286528459
+								}
+							],
+							"actions": [
+								{
+									"id": "add-to-instvar",
+									"objectClass": "Settings_System",
+									"sid": 533446895429816,
+									"parameters": {
+										"instance-variable": "Title_MenuSelection",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 251508847700387
+						}
+					],
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 157024938647616,
+							"parameters": {
+								"key": 38
+							}
+						},
+						{
+							"id": "on-button-pressed",
+							"objectClass": "Gamepad",
+							"sid": 672550705130550,
+							"parameters": {
+								"gamepad": "0",
+								"button": "d-pad-up"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 621769517323987,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Settings_System",
+									"sid": 241861932306333,
+									"parameters": {
+										"instance-variable": "Title_MenuSelection",
+										"comparison": 3,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Settings_System",
+									"sid": 894416285031079,
+									"parameters": {
+										"instance-variable": "Title_MenuSelection",
+										"value": "Settings_System.Title_MenuMaxSelection"
+									}
+								}
+							],
+							"sid": 585905850396999
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 308356787655900
+								}
+							],
+							"actions": [
+								{
+									"id": "add-to-instvar",
+									"objectClass": "Settings_System",
+									"sid": 363814116584817,
+									"parameters": {
+										"instance-variable": "Title_MenuSelection",
+										"value": "-1"
+									}
+								}
+							],
+							"sid": 375803122658715
+						}
+					],
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 563889958351728,
+							"parameters": {
+								"key": 13
+							}
+						},
+						{
+							"id": "on-button-pressed",
+							"objectClass": "Gamepad",
+							"sid": 921996970862447,
+							"parameters": {
+								"gamepad": "0",
+								"button": "button-a"
+							}
+						},
+						{
+							"id": "on-button-pressed",
+							"objectClass": "Gamepad",
+							"sid": 935432058474190,
+							"parameters": {
+								"gamepad": "0",
+								"button": "start-menu"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 613136832938191,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Settings_System",
+									"sid": 787918388369410,
+									"parameters": {
+										"instance-variable": "Title_AllowMovement",
+										"comparison": 0,
+										"value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "signal",
+									"objectClass": "System",
+									"sid": 430494518511569,
+									"parameters": {
+										"tag": "\"TitleSelected\""
+									}
+								}
+							],
+							"sid": 646936611104977
+						}
+					],
+					"isOrBlock": true
+				}
+			],
+			"sid": 882110475888481
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Settings Option Highlighted",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Settings_System",
+							"sid": 501947288343501,
+							"parameters": {
+								"instance-variable": "Title_MenuSelection",
+								"comparison": 0,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-y",
+							"objectClass": "Title_selection",
+							"sid": 897807625436060,
+							"parameters": {
+								"y": "133"
+							}
+						}
+					],
+					"sid": 923734981565399
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Settings_System",
+							"sid": 708574976423470,
+							"parameters": {
+								"instance-variable": "Title_MenuSelection",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-y",
+							"objectClass": "Title_selection",
+							"sid": 841821008545616,
+							"parameters": {
+								"y": "163"
+							}
+						}
+					],
+					"sid": 175063112047643
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Settings_System",
+							"sid": 323390702152431,
+							"parameters": {
+								"instance-variable": "Title_MenuSelection",
+								"comparison": 0,
+								"value": "Settings_System.Title_MenuMaxSelection"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-y",
+							"objectClass": "Title_selection",
+							"sid": 759557043085934,
+							"parameters": {
+								"y": "369"
+							}
+						}
+					],
+					"sid": 942930828773050
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Settings_System",
+							"sid": 993473654616239,
+							"parameters": {
+								"instance-variable": "Title_MenuState",
+								"comparison": 0,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 234880280101596,
+					"disabled": true
+				}
+			],
+			"sid": 582637973449868
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Settings Descriptions",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Settings_System",
+							"sid": 749473774995555,
+							"disabled": true,
+							"parameters": {
+								"instance-variable": "Title_MenuSelection",
+								"comparison": 0,
+								"value": "-1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "Settings_Description",
+							"sid": 940468173702847,
+							"parameters": {
+								"text": "\"Placeholder\""
+							}
+						}
+					],
+					"sid": 153427882447581
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-any-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 285427630304105
+						},
+						{
+							"id": "on-any-button-pressed",
+							"objectClass": "Gamepad",
+							"sid": 284443832666437,
+							"parameters": {
+								"gamepad": "0"
+							}
+						},
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 124260182246831
+						}
+					],
+					"actions": [],
+					"sid": 120558019910415,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Settings_System",
+									"sid": 502352666836319,
+									"parameters": {
+										"instance-variable": "Title_MenuSelection",
+										"comparison": 1,
+										"value": "Settings_System.Title_MenuMaxSelection"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation-frame",
+									"objectClass": "Settings_ImageShowcase",
+									"sid": 842130430845715,
+									"parameters": {
+										"frame-number": "Settings_System.Title_MenuSelection"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "Settings_ImageShowcase",
+									"sid": 467362540857151,
+									"parameters": {
+										"visibility": "visible"
+									}
+								}
+							],
+							"sid": 620736988903503
+						}
+					],
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Settings_System",
+							"sid": 679488736977691,
+							"parameters": {
+								"instance-variable": "Title_MenuSelection",
+								"comparison": 0,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "Settings_Description",
+							"sid": 192588162344808,
+							"parameters": {
+								"text": "\"Shows the current FPS on the top right of the screen.\""
+							}
+						}
+					],
+					"sid": 608688732579218
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Settings_System",
+							"sid": 926278849862800,
+							"parameters": {
+								"instance-variable": "Title_MenuSelection",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "Settings_Description",
+							"sid": 808739733869082,
+							"parameters": {
+								"text": "\"this does nothing lol\""
+							}
+						}
+					],
+					"sid": 555811451294741
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Settings_System",
+							"sid": 716735500533043,
+							"parameters": {
+								"instance-variable": "Title_MenuSelection",
+								"comparison": 0,
+								"value": "Settings_System.Title_MenuMaxSelection"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "Settings_Description",
+							"sid": 506693807388172,
+							"parameters": {
+								"text": "\"Returns to the menu.\""
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Settings_ImageShowcase",
+							"sid": 532203393600151,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 805311880415270
+				}
+			],
+			"sid": 853935689142427
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Settings Option Selected Setup",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-signal",
+							"objectClass": "System",
+							"sid": 120611214577727,
+							"parameters": {
+								"tag": "\"TitleSelected\""
+							}
+						}
+					],
+					"actions": [],
+					"sid": 462797105284889,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Settings_System",
+									"sid": 472610501584884,
+									"parameters": {
+										"instance-variable": "Title_MenuSelection",
+										"comparison": 0,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 368091240588462,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 322005074380833,
+											"parameters": {
+												"variable": "InGameSetting_ShowFPS",
+												"comparison": 0,
+												"value": "0"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 636949862304459,
+											"parameters": {
+												"seconds": "0.01",
+												"use-timescale": true
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 452117150637047,
+											"parameters": {
+												"variable": "InGameSetting_ShowFPS",
+												"value": "1"
+											}
+										},
+										{
+											"id": "set-item",
+											"objectClass": "LocalStorage",
+											"sid": 583936987368908,
+											"parameters": {
+												"key": "\"ShowFPS\"",
+												"value": "\"1\""
+											}
+										}
+									],
+									"sid": 153224238300014
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 916291581700801,
+											"parameters": {
+												"variable": "InGameSetting_ShowFPS",
+												"comparison": 0,
+												"value": "1"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 980714096899238,
+											"parameters": {
+												"seconds": "0.01",
+												"use-timescale": true
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 831564741564936,
+											"parameters": {
+												"variable": "InGameSetting_ShowFPS",
+												"value": "0"
+											}
+										},
+										{
+											"id": "set-item",
+											"objectClass": "LocalStorage",
+											"sid": 757524759101526,
+											"parameters": {
+												"key": "\"ShowFPS\"",
+												"value": "\"0\""
+											}
+										},
+										{
+											"id": "set-visible",
+											"objectClass": "ShowFPS",
+											"sid": 603574197903894,
+											"parameters": {
+												"visibility": "invisible"
+											}
+										}
+									],
+									"sid": 208692829637456
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Settings_System",
+									"sid": 505917585030419,
+									"parameters": {
+										"instance-variable": "Title_MenuSelection",
+										"comparison": 0,
+										"value": "Settings_System.Title_MenuMaxSelection"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "go-to-layout",
+									"objectClass": "System",
+									"sid": 948176300543153,
+									"parameters": {
+										"layout": "TitleScreen"
+									}
+								}
+							],
+							"sid": 264308230348413
+						}
+					]
+				}
+			],
+			"sid": 987199997380463
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Option FPS Setting",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 523987230018800,
+							"parameters": {
+								"variable": "InGameSetting_ShowFPS",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "ShowFPS",
+							"sid": 416675161150130,
+							"parameters": {
+								"text": "\"FPS: \" & fps"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "ShowFPS",
+							"sid": 389797229243278,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "ShowFPS",
+							"sid": 235884656179622,
+							"parameters": {
+								"x": "1.228936",
+								"y": "0.456469"
+							}
+						}
+					],
+					"sid": 548113343614511
+				}
+			],
+			"sid": 704636557191502
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "Player1",
+					"sid": 649595826093015,
+					"parameters": {
+						"instance-variable": "HoldingItem"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [],
+			"sid": 206879840728085
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "else",
+					"objectClass": "System",
+					"sid": 447754619457916
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "Player1",
+					"sid": 186356949408402,
+					"parameters": {
+						"instance-variable": "HoldingItem"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 555005587788755
+		}
+	],
+	"sid": 543041216365030
+}

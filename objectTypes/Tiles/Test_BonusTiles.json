@@ -1,0 +1,30 @@
+{
+	"name": "Test_BonusTiles",
+	"plugin-id": "Tilemap",
+	"sid": 861581995574491,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "solid",
+			"name": "Solid",
+			"sid": 160747738704989
+		}
+	],
+	"effectTypes": [],
+	"image": {
+		"width": 352,
+		"height": 224,
+		"originX": 0.5,
+		"originY": 0.5,
+		"originalSource": "",
+		"exportFormat": "lossless",
+		"exportQuality": 0.8,
+		"fileType": "image/png",
+		"imageSpriteId": 5383914,
+		"useCollisionPoly": true,
+		"tag": ""
+	},
+	"tile-collision-polys": {}
+}

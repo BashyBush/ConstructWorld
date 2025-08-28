@@ -1,0 +1,34 @@
+{
+	"name": "HoldItems",
+	"plugin-id": "Sprite",
+	"sid": 102426229498667,
+	"instanceVariables": [
+		{
+			"name": "BeingHeld",
+			"type": "boolean",
+			"desc": "",
+			"show": false,
+			"sid": 101036365696673
+		},
+		{
+			"name": "CanBeHeld",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 981263087335167
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Platform",
+			"name": "Throwing",
+			"sid": 942166318505301
+		}
+	],
+	"effectTypes": [],
+	"members": [
+		"PICKUP_Shell",
+		"Trampoline",
+		"Key"
+	]
+}

@@ -1,0 +1,150 @@
+{
+	"name": "Camera",
+	"plugin-id": "Sprite",
+	"sid": 664259393406938,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [
+		{
+			"name": "FollowPlayer",
+			"type": "boolean",
+			"desc": "Makes the camera follow the player",
+			"show": true,
+			"sid": 289144861106913
+		},
+		{
+			"name": "CamLockXZone1",
+			"type": "number",
+			"desc": "Stops the camera from moving at the first X position (set 0 to disable)",
+			"show": true,
+			"sid": 366505256180496
+		},
+		{
+			"name": "CamLockXZone2",
+			"type": "number",
+			"desc": "Stops the camera from moving at the second X position (set 0 to disable)",
+			"show": true,
+			"sid": 451234596642945
+		},
+		{
+			"name": "CamLockYZone1",
+			"type": "number",
+			"desc": "Stops the camera from moving at the first Y position (set 0 to disable)",
+			"show": true,
+			"sid": 186755099676533
+		},
+		{
+			"name": "CamLockYZone2",
+			"type": "number",
+			"desc": "Stops the camera from moving at the second Y position (set 0 to disable)",
+			"show": true,
+			"sid": 952098605748797
+		},
+		{
+			"name": "StartFade",
+			"type": "boolean",
+			"desc": "",
+			"show": false,
+			"sid": 408968034989072
+		},
+		{
+			"name": "StartPixelFade",
+			"type": "boolean",
+			"desc": "",
+			"show": false,
+			"sid": 624906469606984
+		},
+		{
+			"name": "StartCCFade",
+			"type": "boolean",
+			"desc": "",
+			"show": false,
+			"sid": 215125970222169
+		},
+		{
+			"name": "FadeOpacity",
+			"type": "number",
+			"desc": "",
+			"show": false,
+			"sid": 201969259448450
+		},
+		{
+			"name": "FadeSetting",
+			"type": "string",
+			"desc": "",
+			"show": false,
+			"sid": 823920599990123
+		},
+		{
+			"name": "PixelFadeOpacity",
+			"type": "number",
+			"desc": "Stops at 1",
+			"show": false,
+			"sid": 687820394266372
+		},
+		{
+			"name": "PixelFadeSetting",
+			"type": "string",
+			"desc": "",
+			"show": false,
+			"sid": 214665095437144
+		},
+		{
+			"name": "CCFadeOpacity",
+			"type": "number",
+			"desc": "Use mostly for Course Clears",
+			"show": false,
+			"sid": 328293194449401
+		},
+		{
+			"name": "CCFadeSetting",
+			"type": "string",
+			"desc": "",
+			"show": false,
+			"sid": 264770720173501
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "scrollto",
+			"name": "ScrollTo",
+			"sid": 604915419026108
+		},
+		{
+			"behaviorId": "MoveTo",
+			"name": "MoveTo",
+			"sid": 305538231873448
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 250,
+						"height": 250,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 1114232,
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 726888543610510,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

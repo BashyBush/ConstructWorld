@@ -10,4 +10,4 @@ Why? Simple. I was pretty much bored and nothing else.
 
 # Requirements.
 - A active Construct 3 Subscription.
-␣␣␣␣␣-␣The free version will not work due to the project using way over the event limit.
+*The free version will not work due to the project using way over the event limit.

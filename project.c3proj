@@ -1,7 +1,7 @@
 {
 	"projectFormatVersion": 1,
 	"savedWithRelease": 44300,
-	"name": "Construct World (smw but in consturct 3 ig lol)",
+	"name": "Construct World",
 	"runtime": "c3",
 	"useWorker": "auto",
 	"bundleAddons": true,
@@ -1037,7 +1037,7 @@
 		"autoIncrementVersion": false,
 		"author": "Bashy Bush",
 		"authorEmail": "",
-		"authorWebsite": "",
+		"authorWebsite": "https://github.com/BashyBush/ConstructWorld",
 		"appId": "",
 		"pixelRounding": false,
 		"zAxisScale": "normalized",

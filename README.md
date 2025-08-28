@@ -12,4 +12,4 @@ During the making of this. I had one goal in mind. Try to make things as accurat
 # Requirements.
 - Either a Active Construct 3 Subscription or a Access Code.
     - The free version will **NOT** work due to the project using way over the event limit.
-- test
+- [Tiled Sprite Plugin](https://www.construct.net/en/make-games/addons/1185/tiled-sprite) (this __should__ come included with this project but if it doesn't download the plugin here)

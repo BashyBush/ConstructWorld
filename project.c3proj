@@ -1020,16 +1020,7 @@
 			"subfolders": []
 		},
 		"general": {
-			"items": [
-				{
-					"name": "SNES - Super Mario World - Mario.png",
-					"type": "image/png",
-					"sid": 636822303107944,
-					"file-info": {
-						"purpose": "none"
-					}
-				}
-			],
+			"items": [],
 			"subfolders": []
 		}
 	},

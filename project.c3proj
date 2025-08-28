@@ -563,7 +563,8 @@
 					"Test_YoshiIsland1",
 					"Test_YellowSwitchPalace",
 					"Test_LevelPipeWarpExample",
-					"Tutorial"
+					"Tutorial",
+					"Test_YoshiIsland1TEST"
 				],
 				"subfolders": [],
 				"name": "Levels"

@@ -34,5 +34,7 @@ That why i'm releasing the project in the current state it is. I might continue 
 - I made a Pull Request for a bug fix or a improvement for something. Will you add it into the engine?
    - To be quite honest it depends. I'm quite new to GitHub (at the time at writing this) so maybe it depends I guess..?
 
+If you have any other questions that isn't mentioned here. 
+You can DM any questions through Discord at "bashybush"
 
 ### nintendo please don't murder me thanks.

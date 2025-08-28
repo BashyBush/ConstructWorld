@@ -9,7 +9,9 @@ Why? Simple. I was pretty much bored and nothing else.
 Some stuff from SMW like most of Mario Movement, Blocks, Some enemies, (tbh probably like one lmao) etc..
 During the making of this. I had one goal in mind. Try to make things as accurate as possible. Not quite everything will be fully accurate but things like Mario himself controls mostly like how he does in SMW. (hopefully lol.)
 
+However some things like a few enemies, Fire Mario, The World map and some other objects I might've forgotten is completely unfinished. Expect problems with these. (also expect sprites that I haven't removed that aint from SMW but from me as placeholders lol)
+
 # Requirements.
 - Either a Active Construct 3 Subscription or a Access Code.
     - The free version will **NOT** work due to the project using way over the event limit.
-- [Tiled Sprite Plugin](https://www.construct.net/en/make-games/addons/1185/tiled-sprite) (this __should__ come included with this project but if it doesn't download the plugin here)
+- [Tiled Sprite Plugin](https://www.construct.net/en/make-games/addons/1185/tiled-sprite) (this _should_ come included with this project but if it doesn't download the plugin here)

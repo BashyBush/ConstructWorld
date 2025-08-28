@@ -10,7 +10,7 @@ During the making of this. I had one goal in mind. Try to make things as accurat
 
 However some things like a few enemies, Fire Mario, The World map and some other objects I might've forgotten is completely unfinished. Expect problems with these. (also expect sprites that I haven't removed that aint from SMW but from me as placeholders lol)
 
-## Why release it now in a unfinish state?
+## Why release it now in a unfinished state?
 To be quite honest. I'm not sure if i'll keep working on this project since I been busy with other things and plus most of this project was made while I had a access code to use all of Construct 3's features and that soon enough I might not have access to it anymore. (unless I buy a subscription for one)
 
 That why i'm releasing the project in the current state it is. I might continue working on this but that hugely depends on if I have the time to work on this and if I also still have access to Construct 3's features.
@@ -23,6 +23,8 @@ That why i'm releasing the project in the current state it is. I might continue 
 ## Quick QNA Section (incase)
 - Will you still continue with this project even after this release?
    - Depends if I have the time to continue working on this and to also fix the current problems with this project.
+- Can I try out this without compiling?
+   - Sure! Check the releases to download the current public build.
 - Can I use this for a fan-game?
    - Sure I guess. There will be some things that are left unfinished at the moment (like fire mario for example) but if you want to still use this eitherway then sure! Just aleast credit me if you do plan on using this engine.
 - Does this include things like Cape Mario or Yoshi?

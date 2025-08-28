@@ -11,5 +11,5 @@ During the making of this. I had one goal in mind. Try to make things as accurat
 
 # Requirements.
 - Either a Active Construct 3 Subscription or a Access Code.
-* The free version will **NOT** work due to the project using way over the event limit.
+    - The free version will **NOT** work due to the project using way over the event limit.
 -

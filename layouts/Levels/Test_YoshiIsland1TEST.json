@@ -424,48 +424,7 @@
 					"name": "BGTemp",
 					"overriden": 0,
 					"subLayers": [],
-					"instances": [
-						{
-							"type": "SNESSuperMarioWorldYoshisIsland",
-							"properties": {
-								"initially-visible": true,
-								"initial-animation": "Default",
-								"initial-frame": 0,
-								"enable-collisions": true,
-								"live-preview": false
-							},
-							"uid": 1418,
-							"sid": 359269898270501,
-							"tags": "",
-							"instanceVariables": {},
-							"behaviors": {
-								"Solid": {
-									"properties": {
-										"enabled": false,
-										"tags": ""
-									}
-								}
-							},
-							"showing": true,
-							"locked": false,
-							"world": {
-								"x": 5120,
-								"y": 48,
-								"width": 10240,
-								"height": 864,
-								"originX": 0.5,
-								"originY": 0.5,
-								"color": [
-									1,
-									1,
-									1,
-									1
-								],
-								"angle": 0,
-								"zElevation": 0
-							}
-						}
-					],
+					"instances": [],
 					"sid": 947252547797058,
 					"effectTypes": [],
 					"isInitiallyVisible": true,

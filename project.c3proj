@@ -508,16 +508,6 @@
 			},
 			{
 				"items": [
-					"SNESSuperMarioWorldYoshisIsland",
-					"SNESSuperMarioWorldYoshisIsland1SubArea",
-					"SNESSuperMarioWorldYellowSwitchPalace",
-					"SNESSuperMarioWorldYellowSwitchPalace2"
-				],
-				"subfolders": [],
-				"name": "TempBGs"
-			},
-			{
-				"items": [
 					"PART_PointGivenSprites",
 					"PART_CoinBlock",
 					"PART_Kick"

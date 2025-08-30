@@ -33,7 +33,7 @@ That why i'm releasing the project in the current state it is. I might continue 
 - Wait. Why are there objects that didn't even came from SMW?
    - When I started this project. I used a pre-existing project of my own that had some things already added like the pause menu, a Timer and a different Test level. Some of these I reused here but some didn't however I never bothered to remove these during the making of this project just incase one day I needed them. Be aware that these old things are probably even more broken.
 - I found a bug! Can I still report it for a fix?
-   - If I have the free time. I'll probably check what it is and see if I can fix it... I'm not quite sure if i'll keep rebuilding a playable build for these fixes but they should appear on the current source code in this git. (I made a list for any bugs that I known at the moment. You can view them [here](KnownBugs.txt))
+   - If I have the free time. I'll probably check what it is and see if I can fix it... I'm not quite sure if i'll keep rebuilding a playable build for these fixes but they should appear on the current source code in this git.   (I made a list for any bugs that I known at the moment. You can view them [here](KnownBugs.txt))
 - I made a Pull Request for a bug fix or a improvement for something. Will you add it into the engine?
    - To be quite honest it depends really. I'm quite new to GitHub (at the time at writing this) so maybe I guess..?
 

@@ -38,6 +38,9 @@ That why i'm releasing the project in the current state it is. I might continue 
 - I made a Pull Request for a bug fix or a improvement for something. Will you add it into the engine?
    - To be quite honest it depends really. I'm quite new to GitHub (at the time at writing this) so maybe I guess..?
 
+## Extra Notes
+- The current compiled build in releases will most than likely be outdated due to me updating the source code to include more fixes and features. You should be able to test the current state of this engine without compiling by just downloading the source code. Opening the project folder on Construct 3 and just test running it. (this should also work for free trials aswell however I haven't tested this yet)
+
 If you have any other questions that isn't mentioned here. 
 You can DM any questions through Discord at "bashybush"
 

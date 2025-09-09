@@ -8118,69 +8118,12 @@
 																			}
 																		},
 																		{
-																			"id": "add-to-eventvar",
-																			"objectClass": "System",
-																			"sid": 177209106553705,
-																			"disabled": true,
-																			"parameters": {
-																				"variable": "Score",
-																				"value": "200"
-																			}
-																		},
-																		{
-																			"id": "create-object",
-																			"objectClass": "System",
-																			"sid": 581363234041256,
-																			"parameters": {
-																				"object-to-create": "PART_PointGivenSprites",
-																				"layer": "14",
-																				"x": "ENEMY_Rex.X",
-																				"y": "ENEMY_Rex.Y+16",
-																				"create-hierarchy": false,
-																				"template-name": "\"\""
-																			}
-																		},
-																		{
-																			"id": "set-animation",
-																			"objectClass": "PART_PointGivenSprites",
-																			"sid": 390207373038285,
-																			"parameters": {
-																				"animation": "\"200\"",
-																				"from": "beginning"
-																			}
-																		},
-																		{
-																			"id": "move-to-position",
-																			"objectClass": "PART_PointGivenSprites",
-																			"sid": 916744848094718,
-																			"behaviorType": "MoveTo",
-																			"parameters": {
-																				"x": "Self.X",
-																				"y": "Self.Y-40",
-																				"mode": "direct"
-																			}
-																		},
-																		{
 																			"id": "signal",
 																			"objectClass": "System",
 																			"sid": 789421327800310,
 																			"parameters": {
 																				"tag": "\"ComboCheck\""
 																			}
-																		},
-																		{
-																			"id": "wait",
-																			"objectClass": "System",
-																			"sid": 445951726211263,
-																			"parameters": {
-																				"seconds": "0.85",
-																				"use-timescale": true
-																			}
-																		},
-																		{
-																			"id": "destroy",
-																			"objectClass": "PART_PointGivenSprites",
-																			"sid": 445955829455383
 																		}
 																	],
 																	"sid": 939268574197649
@@ -8221,69 +8164,12 @@
 																	}
 																},
 																{
-																	"id": "add-to-eventvar",
-																	"objectClass": "System",
-																	"sid": 477305701622233,
-																	"disabled": true,
-																	"parameters": {
-																		"variable": "Score",
-																		"value": "200"
-																	}
-																},
-																{
-																	"id": "create-object",
-																	"objectClass": "System",
-																	"sid": 762459964175402,
-																	"parameters": {
-																		"object-to-create": "PART_PointGivenSprites",
-																		"layer": "14",
-																		"x": "ENEMY_Rex.X",
-																		"y": "ENEMY_Rex.Y+16",
-																		"create-hierarchy": false,
-																		"template-name": "\"\""
-																	}
-																},
-																{
-																	"id": "move-to-position",
-																	"objectClass": "PART_PointGivenSprites",
-																	"sid": 909427182794687,
-																	"behaviorType": "MoveTo",
-																	"parameters": {
-																		"x": "Self.X",
-																		"y": "Self.Y-40",
-																		"mode": "direct"
-																	}
-																},
-																{
-																	"id": "set-animation",
-																	"objectClass": "PART_PointGivenSprites",
-																	"sid": 747890210927089,
-																	"parameters": {
-																		"animation": "\"200\"",
-																		"from": "beginning"
-																	}
-																},
-																{
 																	"id": "signal",
 																	"objectClass": "System",
 																	"sid": 179790153680059,
 																	"parameters": {
 																		"tag": "\"ComboCheck\""
 																	}
-																},
-																{
-																	"id": "wait",
-																	"objectClass": "System",
-																	"sid": 737521500595126,
-																	"parameters": {
-																		"seconds": "0.85",
-																		"use-timescale": true
-																	}
-																},
-																{
-																	"id": "destroy",
-																	"objectClass": "PART_PointGivenSprites",
-																	"sid": 313756862848591
 																}
 															],
 															"sid": 430293357495524
@@ -8580,60 +8466,12 @@
 															}
 														},
 														{
-															"id": "add-to-eventvar",
+															"id": "signal",
 															"objectClass": "System",
-															"sid": 670659927751239,
+															"sid": 224381840345556,
 															"parameters": {
-																"variable": "Score",
-																"value": "200"
+																"tag": "\"ComboCheck\""
 															}
-														},
-														{
-															"id": "create-object",
-															"objectClass": "System",
-															"sid": 800450047188609,
-															"parameters": {
-																"object-to-create": "PART_PointGivenSprites",
-																"layer": "14",
-																"x": "ENEMY_BanzaiBill.X",
-																"y": "ENEMY_BanzaiBill.Y+16",
-																"create-hierarchy": false,
-																"template-name": "\"\""
-															}
-														},
-														{
-															"id": "set-animation",
-															"objectClass": "PART_PointGivenSprites",
-															"sid": 900322086187812,
-															"parameters": {
-																"animation": "\"200\"",
-																"from": "beginning"
-															}
-														},
-														{
-															"id": "move-to-position",
-															"objectClass": "PART_PointGivenSprites",
-															"sid": 132187051801192,
-															"behaviorType": "MoveTo",
-															"parameters": {
-																"x": "Self.X",
-																"y": "Self.Y-40",
-																"mode": "direct"
-															}
-														},
-														{
-															"id": "wait",
-															"objectClass": "System",
-															"sid": 709729038942818,
-															"parameters": {
-																"seconds": "0.85",
-																"use-timescale": true
-															}
-														},
-														{
-															"id": "destroy",
-															"objectClass": "PART_PointGivenSprites",
-															"sid": 360802004824935
 														},
 														{
 															"id": "wait",
@@ -8713,7 +8551,7 @@
 							"eventType": "group",
 							"disabled": false,
 							"title": "KoopaShell",
-							"description": "",
+							"description": "oh god",
 							"isActiveOnStart": true,
 							"children": [
 								{
@@ -28619,9 +28457,55 @@
 					}
 				}
 			],
-			"actions": [],
+			"actions": [
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 974827881805620,
+					"parameters": {
+						"object-to-create": "PART_PointGivenSprites",
+						"layer": "14",
+						"x": "Player1.X",
+						"y": "Player1.Y+16",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "move-to-position",
+					"objectClass": "PART_PointGivenSprites",
+					"sid": 690313383437035,
+					"behaviorType": "MoveTo",
+					"parameters": {
+						"x": "Self.X",
+						"y": "Self.Y-40",
+						"mode": "direct"
+					}
+				}
+			],
 			"sid": 360808260726590,
 			"children": [
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 603150291880125,
+							"parameters": {
+								"seconds": "0.85",
+								"use-timescale": true
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "PART_PointGivenSprites",
+							"sid": 259340808120581
+						}
+					],
+					"sid": 180071061006777
+				},
 				{
 					"eventType": "block",
 					"conditions": [

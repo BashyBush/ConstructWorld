@@ -11700,372 +11700,6 @@
 				{
 					"eventType": "group",
 					"disabled": false,
-					"title": "Level Reset Stuff",
-					"description": "from dying... you know?",
-					"isActiveOnStart": true,
-					"children": [
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "on-signal",
-									"objectClass": "System",
-									"sid": 353800944745513,
-									"parameters": {
-										"tag": "\"LevelRestart\""
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-layer-opacity",
-									"objectClass": "System",
-									"sid": 968314089771017,
-									"parameters": {
-										"layer": "\"Fade\"",
-										"opacity": "1"
-									}
-								},
-								{
-									"id": "set-instvar-value",
-									"objectClass": "Camera",
-									"sid": 451504850960982,
-									"parameters": {
-										"instance-variable": "FadeSetting",
-										"value": "\"In\""
-									}
-								},
-								{
-									"id": "set-boolean-instvar",
-									"objectClass": "Camera",
-									"sid": 896321406685673,
-									"parameters": {
-										"instance-variable": "StartFade",
-										"value": "true"
-									}
-								},
-								{
-									"id": "wait",
-									"objectClass": "System",
-									"sid": 781809054034536,
-									"parameters": {
-										"seconds": "1.0",
-										"use-timescale": true
-									}
-								},
-								{
-									"id": "stop",
-									"objectClass": "Audio",
-									"sid": 233303185760676,
-									"parameters": {
-										"tag": "\"BG\""
-									}
-								},
-								{
-									"id": "go-to-layout",
-									"objectClass": "System",
-									"sid": 700248274037526,
-									"disabled": true,
-									"parameters": {
-										"layout": "WorldMap"
-									}
-								},
-								{
-									"id": "restart-layout",
-									"objectClass": "System",
-									"sid": 560565824305778
-								}
-							],
-							"sid": 708107218130192
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "on-signal",
-									"objectClass": "System",
-									"sid": 196665932696629,
-									"parameters": {
-										"tag": "\"LevelRestartDeath\""
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-layer-opacity",
-									"objectClass": "System",
-									"sid": 727466718478588,
-									"parameters": {
-										"layer": "\"Fade\"",
-										"opacity": "1"
-									}
-								},
-								{
-									"id": "set-instvar-value",
-									"objectClass": "Camera",
-									"sid": 618683297076271,
-									"parameters": {
-										"instance-variable": "FadeSetting",
-										"value": "\"In\""
-									}
-								},
-								{
-									"id": "set-boolean-instvar",
-									"objectClass": "Camera",
-									"sid": 923621444289227,
-									"parameters": {
-										"instance-variable": "StartFade",
-										"value": "true"
-									}
-								},
-								{
-									"id": "wait",
-									"objectClass": "System",
-									"sid": 926899617660735,
-									"parameters": {
-										"seconds": "0.5",
-										"use-timescale": true
-									}
-								}
-							],
-							"sid": 538652467639396,
-							"children": [
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "is-animation-playing",
-											"objectClass": "Player1",
-											"sid": 912402026731550,
-											"parameters": {
-												"animation": "\"Dead\""
-											}
-										}
-									],
-									"actions": [
-										{
-											"id": "wait",
-											"objectClass": "System",
-											"sid": 636686934040756,
-											"parameters": {
-												"seconds": "0.5",
-												"use-timescale": true
-											}
-										},
-										{
-											"id": "subtract-from-eventvar",
-											"objectClass": "System",
-											"sid": 614052703444877,
-											"parameters": {
-												"variable": "Lifes",
-												"value": "1"
-											}
-										}
-									],
-									"sid": 919693770569308,
-									"children": [
-										{
-											"eventType": "block",
-											"conditions": [
-												{
-													"id": "compare-eventvar",
-													"objectClass": "System",
-													"sid": 541332144247167,
-													"parameters": {
-														"variable": "Lifes",
-														"comparison": 4,
-														"value": "0"
-													}
-												}
-											],
-											"actions": [],
-											"sid": 755472364491478,
-											"children": [
-												{
-													"eventType": "block",
-													"conditions": [
-														{
-															"id": "is-boolean-instance-variable-set",
-															"objectClass": "TimerSystem",
-															"sid": 170027981966881,
-															"parameters": {
-																"instance-variable": "EnableTimeLimit"
-															}
-														},
-														{
-															"id": "compare-instance-variable",
-															"objectClass": "TimerSystem",
-															"sid": 579890872081796,
-															"parameters": {
-																"instance-variable": "TimeLimiter",
-																"comparison": 0,
-																"value": "-1"
-															}
-														}
-													],
-													"actions": [
-														{
-															"id": "set-eventvar-value",
-															"objectClass": "System",
-															"sid": 871354901063096,
-															"parameters": {
-																"variable": "TimeUP_RememberStage",
-																"value": "LayoutName"
-															}
-														},
-														{
-															"id": "go-to-layout",
-															"objectClass": "System",
-															"sid": 742242604210711,
-															"parameters": {
-																"layout": "GameOver"
-															}
-														}
-													],
-													"sid": 655798347758693
-												},
-												{
-													"eventType": "block",
-													"conditions": [
-														{
-															"id": "else",
-															"objectClass": "System",
-															"sid": 693649607930297
-														}
-													],
-													"actions": [
-														{
-															"id": "set-group-active",
-															"objectClass": "System",
-															"sid": 720669616799896,
-															"parameters": {
-																"group-name": "\"SMW Hud Stuff\"",
-																"state": "activated"
-															}
-														},
-														{
-															"id": "set-group-active",
-															"objectClass": "System",
-															"sid": 466290998407622,
-															"parameters": {
-																"group-name": "\"Player System\"",
-																"state": "activated"
-															}
-														},
-														{
-															"id": "set-group-active",
-															"objectClass": "System",
-															"sid": 847290262275364,
-															"parameters": {
-																"group-name": "\"Timer System\"",
-																"state": "activated"
-															}
-														},
-														{
-															"id": "set-group-active",
-															"objectClass": "System",
-															"sid": 198124164353456,
-															"parameters": {
-																"group-name": "\"Object Systems\"",
-																"state": "activated"
-															}
-														},
-														{
-															"id": "set-group-active",
-															"objectClass": "System",
-															"sid": 870390985066244,
-															"parameters": {
-																"group-name": "\"Event Systems\"",
-																"state": "activated"
-															}
-														},
-														{
-															"id": "set-group-active",
-															"objectClass": "System",
-															"sid": 843226382572986,
-															"parameters": {
-																"group-name": "\"Camera\"",
-																"state": "activated"
-															}
-														},
-														{
-															"id": "set-group-active",
-															"objectClass": "System",
-															"sid": 770387473197784,
-															"parameters": {
-																"group-name": "\"Enemies System\"",
-																"state": "activated"
-															}
-														},
-														{
-															"id": "stop",
-															"objectClass": "Audio",
-															"sid": 798700715944876,
-															"parameters": {
-																"tag": "\"BG\""
-															}
-														},
-														{
-															"id": "go-to-layout",
-															"objectClass": "System",
-															"sid": 820475184845147,
-															"parameters": {
-																"layout": "WorldMap"
-															}
-														},
-														{
-															"id": "restart-layout",
-															"objectClass": "System",
-															"sid": 877661533504882,
-															"disabled": true
-														}
-													],
-													"sid": 252242041167511
-												}
-											]
-										},
-										{
-											"eventType": "block",
-											"conditions": [
-												{
-													"id": "else",
-													"objectClass": "System",
-													"sid": 185626372172339
-												},
-												{
-													"id": "compare-eventvar",
-													"objectClass": "System",
-													"sid": 946866989195233,
-													"parameters": {
-														"variable": "Lifes",
-														"comparison": 0,
-														"value": "0"
-													}
-												}
-											],
-											"actions": [
-												{
-													"id": "go-to-layout",
-													"objectClass": "System",
-													"sid": 194468557966356,
-													"parameters": {
-														"layout": "GameOver"
-													}
-												}
-											],
-											"sid": 820111534303570
-										}
-									],
-									"isOrBlock": true
-								}
-							]
-						}
-					],
-					"sid": 399082625276188
-				},
-				{
-					"eventType": "group",
-					"disabled": false,
 					"title": "Player Movement/Animation",
 					"description": "Movement guys come on. (also probably full up with ALOT of duck-tape. im sorry.)",
 					"isActiveOnStart": true,
@@ -12077,7 +11711,7 @@
 						{
 							"eventType": "group",
 							"disabled": false,
-							"title": "Idle/Walk/Duck/LookUp/FireShoot/Skid",
+							"title": "Idle/Walk/Duck/LookUp/FireShoot/Skid/Turning",
 							"description": "",
 							"isActiveOnStart": true,
 							"children": [
@@ -13226,6 +12860,17 @@
 														"comparison": 1,
 														"second-value": "0"
 													}
+												},
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "Player1",
+													"sid": 653062592885862,
+													"parameters": {
+														"instance-variable": "AnimationState",
+														"comparison": 0,
+														"value": "\"Spinning\""
+													},
+													"isInverted": true
 												}
 											],
 											"actions": [
@@ -13561,6 +13206,17 @@
 														"comparison": 1,
 														"second-value": "0"
 													}
+												},
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "Player1",
+													"sid": 602201798631103,
+													"parameters": {
+														"instance-variable": "AnimationState",
+														"comparison": 0,
+														"value": "\"Spinning\""
+													},
+													"isInverted": true
 												}
 											],
 											"actions": [
@@ -19430,6 +19086,372 @@
 				}
 			],
 			"sid": 663976389770036
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Level Reset Stuff",
+			"description": "from dying... you know?",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-signal",
+							"objectClass": "System",
+							"sid": 353800944745513,
+							"parameters": {
+								"tag": "\"LevelRestart\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-layer-opacity",
+							"objectClass": "System",
+							"sid": 968314089771017,
+							"parameters": {
+								"layer": "\"Fade\"",
+								"opacity": "1"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Camera",
+							"sid": 451504850960982,
+							"parameters": {
+								"instance-variable": "FadeSetting",
+								"value": "\"In\""
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Camera",
+							"sid": 896321406685673,
+							"parameters": {
+								"instance-variable": "StartFade",
+								"value": "true"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 781809054034536,
+							"parameters": {
+								"seconds": "1.0",
+								"use-timescale": true
+							}
+						},
+						{
+							"id": "stop",
+							"objectClass": "Audio",
+							"sid": 233303185760676,
+							"parameters": {
+								"tag": "\"BG\""
+							}
+						},
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 700248274037526,
+							"disabled": true,
+							"parameters": {
+								"layout": "WorldMap"
+							}
+						},
+						{
+							"id": "restart-layout",
+							"objectClass": "System",
+							"sid": 560565824305778
+						}
+					],
+					"sid": 708107218130192
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-signal",
+							"objectClass": "System",
+							"sid": 196665932696629,
+							"parameters": {
+								"tag": "\"LevelRestartDeath\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-layer-opacity",
+							"objectClass": "System",
+							"sid": 727466718478588,
+							"parameters": {
+								"layer": "\"Fade\"",
+								"opacity": "1"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Camera",
+							"sid": 618683297076271,
+							"parameters": {
+								"instance-variable": "FadeSetting",
+								"value": "\"In\""
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Camera",
+							"sid": 923621444289227,
+							"parameters": {
+								"instance-variable": "StartFade",
+								"value": "true"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 926899617660735,
+							"parameters": {
+								"seconds": "0.5",
+								"use-timescale": true
+							}
+						}
+					],
+					"sid": 538652467639396,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-animation-playing",
+									"objectClass": "Player1",
+									"sid": 912402026731550,
+									"parameters": {
+										"animation": "\"Dead\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 636686934040756,
+									"parameters": {
+										"seconds": "0.5",
+										"use-timescale": true
+									}
+								},
+								{
+									"id": "subtract-from-eventvar",
+									"objectClass": "System",
+									"sid": 614052703444877,
+									"parameters": {
+										"variable": "Lifes",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 919693770569308,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 541332144247167,
+											"parameters": {
+												"variable": "Lifes",
+												"comparison": 4,
+												"value": "0"
+											}
+										}
+									],
+									"actions": [],
+									"sid": 755472364491478,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "is-boolean-instance-variable-set",
+													"objectClass": "TimerSystem",
+													"sid": 170027981966881,
+													"parameters": {
+														"instance-variable": "EnableTimeLimit"
+													}
+												},
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "TimerSystem",
+													"sid": 579890872081796,
+													"parameters": {
+														"instance-variable": "TimeLimiter",
+														"comparison": 0,
+														"value": "-1"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 871354901063096,
+													"parameters": {
+														"variable": "TimeUP_RememberStage",
+														"value": "LayoutName"
+													}
+												},
+												{
+													"id": "go-to-layout",
+													"objectClass": "System",
+													"sid": 742242604210711,
+													"parameters": {
+														"layout": "GameOver"
+													}
+												}
+											],
+											"sid": 655798347758693
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "else",
+													"objectClass": "System",
+													"sid": 693649607930297
+												}
+											],
+											"actions": [
+												{
+													"id": "set-group-active",
+													"objectClass": "System",
+													"sid": 720669616799896,
+													"parameters": {
+														"group-name": "\"SMW Hud Stuff\"",
+														"state": "activated"
+													}
+												},
+												{
+													"id": "set-group-active",
+													"objectClass": "System",
+													"sid": 466290998407622,
+													"parameters": {
+														"group-name": "\"Player System\"",
+														"state": "activated"
+													}
+												},
+												{
+													"id": "set-group-active",
+													"objectClass": "System",
+													"sid": 847290262275364,
+													"parameters": {
+														"group-name": "\"Timer System\"",
+														"state": "activated"
+													}
+												},
+												{
+													"id": "set-group-active",
+													"objectClass": "System",
+													"sid": 198124164353456,
+													"parameters": {
+														"group-name": "\"Object Systems\"",
+														"state": "activated"
+													}
+												},
+												{
+													"id": "set-group-active",
+													"objectClass": "System",
+													"sid": 870390985066244,
+													"parameters": {
+														"group-name": "\"Event Systems\"",
+														"state": "activated"
+													}
+												},
+												{
+													"id": "set-group-active",
+													"objectClass": "System",
+													"sid": 843226382572986,
+													"parameters": {
+														"group-name": "\"Camera\"",
+														"state": "activated"
+													}
+												},
+												{
+													"id": "set-group-active",
+													"objectClass": "System",
+													"sid": 770387473197784,
+													"parameters": {
+														"group-name": "\"Enemies System\"",
+														"state": "activated"
+													}
+												},
+												{
+													"id": "stop",
+													"objectClass": "Audio",
+													"sid": 798700715944876,
+													"parameters": {
+														"tag": "\"BG\""
+													}
+												},
+												{
+													"id": "go-to-layout",
+													"objectClass": "System",
+													"sid": 820475184845147,
+													"parameters": {
+														"layout": "WorldMap"
+													}
+												},
+												{
+													"id": "restart-layout",
+													"objectClass": "System",
+													"sid": 877661533504882,
+													"disabled": true
+												}
+											],
+											"sid": 252242041167511
+										}
+									]
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 185626372172339
+										},
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 946866989195233,
+											"parameters": {
+												"variable": "Lifes",
+												"comparison": 0,
+												"value": "0"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "go-to-layout",
+											"objectClass": "System",
+											"sid": 194468557966356,
+											"parameters": {
+												"layout": "GameOver"
+											}
+										}
+									],
+									"sid": 820111534303570
+								}
+							],
+							"isOrBlock": true
+						}
+					]
+				}
+			],
+			"sid": 399082625276188
 		},
 		{
 			"eventType": "group",

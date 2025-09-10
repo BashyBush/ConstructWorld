@@ -11700,6 +11700,372 @@
 				{
 					"eventType": "group",
 					"disabled": false,
+					"title": "Level Reset Stuff",
+					"description": "from dying... you know?",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-signal",
+									"objectClass": "System",
+									"sid": 353800944745513,
+									"parameters": {
+										"tag": "\"LevelRestart\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-layer-opacity",
+									"objectClass": "System",
+									"sid": 968314089771017,
+									"parameters": {
+										"layer": "\"Fade\"",
+										"opacity": "1"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Camera",
+									"sid": 451504850960982,
+									"parameters": {
+										"instance-variable": "FadeSetting",
+										"value": "\"In\""
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Camera",
+									"sid": 896321406685673,
+									"parameters": {
+										"instance-variable": "StartFade",
+										"value": "true"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 781809054034536,
+									"parameters": {
+										"seconds": "1.0",
+										"use-timescale": true
+									}
+								},
+								{
+									"id": "stop",
+									"objectClass": "Audio",
+									"sid": 233303185760676,
+									"parameters": {
+										"tag": "\"BG\""
+									}
+								},
+								{
+									"id": "go-to-layout",
+									"objectClass": "System",
+									"sid": 700248274037526,
+									"disabled": true,
+									"parameters": {
+										"layout": "WorldMap"
+									}
+								},
+								{
+									"id": "restart-layout",
+									"objectClass": "System",
+									"sid": 560565824305778
+								}
+							],
+							"sid": 708107218130192
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-signal",
+									"objectClass": "System",
+									"sid": 196665932696629,
+									"parameters": {
+										"tag": "\"LevelRestartDeath\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-layer-opacity",
+									"objectClass": "System",
+									"sid": 727466718478588,
+									"parameters": {
+										"layer": "\"Fade\"",
+										"opacity": "1"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Camera",
+									"sid": 618683297076271,
+									"parameters": {
+										"instance-variable": "FadeSetting",
+										"value": "\"In\""
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Camera",
+									"sid": 923621444289227,
+									"parameters": {
+										"instance-variable": "StartFade",
+										"value": "true"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 926899617660735,
+									"parameters": {
+										"seconds": "0.5",
+										"use-timescale": true
+									}
+								}
+							],
+							"sid": 538652467639396,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-animation-playing",
+											"objectClass": "Player1",
+											"sid": 912402026731550,
+											"parameters": {
+												"animation": "\"Dead\""
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 636686934040756,
+											"parameters": {
+												"seconds": "0.5",
+												"use-timescale": true
+											}
+										},
+										{
+											"id": "subtract-from-eventvar",
+											"objectClass": "System",
+											"sid": 614052703444877,
+											"parameters": {
+												"variable": "Lifes",
+												"value": "1"
+											}
+										}
+									],
+									"sid": 919693770569308,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 541332144247167,
+													"parameters": {
+														"variable": "Lifes",
+														"comparison": 4,
+														"value": "0"
+													}
+												}
+											],
+											"actions": [],
+											"sid": 755472364491478,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "is-boolean-instance-variable-set",
+															"objectClass": "TimerSystem",
+															"sid": 170027981966881,
+															"parameters": {
+																"instance-variable": "EnableTimeLimit"
+															}
+														},
+														{
+															"id": "compare-instance-variable",
+															"objectClass": "TimerSystem",
+															"sid": 579890872081796,
+															"parameters": {
+																"instance-variable": "TimeLimiter",
+																"comparison": 0,
+																"value": "-1"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-eventvar-value",
+															"objectClass": "System",
+															"sid": 871354901063096,
+															"parameters": {
+																"variable": "TimeUP_RememberStage",
+																"value": "LayoutName"
+															}
+														},
+														{
+															"id": "go-to-layout",
+															"objectClass": "System",
+															"sid": 742242604210711,
+															"parameters": {
+																"layout": "GameOver"
+															}
+														}
+													],
+													"sid": 655798347758693
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "else",
+															"objectClass": "System",
+															"sid": 693649607930297
+														}
+													],
+													"actions": [
+														{
+															"id": "set-group-active",
+															"objectClass": "System",
+															"sid": 720669616799896,
+															"parameters": {
+																"group-name": "\"SMW Hud Stuff\"",
+																"state": "activated"
+															}
+														},
+														{
+															"id": "set-group-active",
+															"objectClass": "System",
+															"sid": 466290998407622,
+															"parameters": {
+																"group-name": "\"Player System\"",
+																"state": "activated"
+															}
+														},
+														{
+															"id": "set-group-active",
+															"objectClass": "System",
+															"sid": 847290262275364,
+															"parameters": {
+																"group-name": "\"Timer System\"",
+																"state": "activated"
+															}
+														},
+														{
+															"id": "set-group-active",
+															"objectClass": "System",
+															"sid": 198124164353456,
+															"parameters": {
+																"group-name": "\"Object Systems\"",
+																"state": "activated"
+															}
+														},
+														{
+															"id": "set-group-active",
+															"objectClass": "System",
+															"sid": 870390985066244,
+															"parameters": {
+																"group-name": "\"Event Systems\"",
+																"state": "activated"
+															}
+														},
+														{
+															"id": "set-group-active",
+															"objectClass": "System",
+															"sid": 843226382572986,
+															"parameters": {
+																"group-name": "\"Camera\"",
+																"state": "activated"
+															}
+														},
+														{
+															"id": "set-group-active",
+															"objectClass": "System",
+															"sid": 770387473197784,
+															"parameters": {
+																"group-name": "\"Enemies System\"",
+																"state": "activated"
+															}
+														},
+														{
+															"id": "stop",
+															"objectClass": "Audio",
+															"sid": 798700715944876,
+															"parameters": {
+																"tag": "\"BG\""
+															}
+														},
+														{
+															"id": "go-to-layout",
+															"objectClass": "System",
+															"sid": 820475184845147,
+															"parameters": {
+																"layout": "WorldMap"
+															}
+														},
+														{
+															"id": "restart-layout",
+															"objectClass": "System",
+															"sid": 877661533504882,
+															"disabled": true
+														}
+													],
+													"sid": 252242041167511
+												}
+											]
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "else",
+													"objectClass": "System",
+													"sid": 185626372172339
+												},
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 946866989195233,
+													"parameters": {
+														"variable": "Lifes",
+														"comparison": 0,
+														"value": "0"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "go-to-layout",
+													"objectClass": "System",
+													"sid": 194468557966356,
+													"parameters": {
+														"layout": "GameOver"
+													}
+												}
+											],
+											"sid": 820111534303570
+										}
+									],
+									"isOrBlock": true
+								}
+							]
+						}
+					],
+					"sid": 399082625276188
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
 					"title": "Player Movement/Animation",
 					"description": "Movement guys come on. (also probably full up with ALOT of duck-tape. im sorry.)",
 					"isActiveOnStart": true,
@@ -17644,6 +18010,369 @@
 						}
 					],
 					"sid": 443161086757631
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-signal",
+							"objectClass": "System",
+							"sid": 172094133815573,
+							"parameters": {
+								"tag": "\"ComboCheck\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 763451960692286,
+							"parameters": {
+								"object-to-create": "PART_PointGivenSprites",
+								"layer": "14",
+								"x": "Player1.X",
+								"y": "Player1.Y+16",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "move-to-position",
+							"objectClass": "PART_PointGivenSprites",
+							"sid": 978055278530917,
+							"behaviorType": "MoveTo",
+							"parameters": {
+								"x": "Self.X",
+								"y": "Self.Y-40",
+								"mode": "direct"
+							}
+						}
+					],
+					"sid": 853991359393040,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 310933027602421,
+									"parameters": {
+										"seconds": "0.85",
+										"use-timescale": true
+									}
+								},
+								{
+									"id": "destroy",
+									"objectClass": "PART_PointGivenSprites",
+									"sid": 945556409819907
+								}
+							],
+							"sid": 985031115903408
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Player1",
+									"sid": 821310821053462,
+									"parameters": {
+										"instance-variable": "EnemyCombo",
+										"comparison": 0,
+										"value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "add-to-eventvar",
+									"objectClass": "System",
+									"sid": 394789837263497,
+									"parameters": {
+										"variable": "Score",
+										"value": "200"
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "PART_PointGivenSprites",
+									"sid": 157901125922941,
+									"parameters": {
+										"animation": "\"200\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 484669729200323
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Player1",
+									"sid": 211565473785295,
+									"parameters": {
+										"instance-variable": "EnemyCombo",
+										"comparison": 0,
+										"value": "2"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "PART_PointGivenSprites",
+									"sid": 295192012329191,
+									"parameters": {
+										"animation": "\"400\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "add-to-eventvar",
+									"objectClass": "System",
+									"sid": 908439231438138,
+									"parameters": {
+										"variable": "Score",
+										"value": "400"
+									}
+								}
+							],
+							"sid": 898233986502404
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Player1",
+									"sid": 583003282710363,
+									"parameters": {
+										"instance-variable": "EnemyCombo",
+										"comparison": 0,
+										"value": "3"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "PART_PointGivenSprites",
+									"sid": 851646089585977,
+									"parameters": {
+										"animation": "\"800\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "add-to-eventvar",
+									"objectClass": "System",
+									"sid": 207973932581031,
+									"parameters": {
+										"variable": "Score",
+										"value": "800"
+									}
+								}
+							],
+							"sid": 528259763554676
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Player1",
+									"sid": 193770025636180,
+									"parameters": {
+										"instance-variable": "EnemyCombo",
+										"comparison": 0,
+										"value": "4"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "PART_PointGivenSprites",
+									"sid": 117485392187216,
+									"parameters": {
+										"animation": "\"1000\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "add-to-eventvar",
+									"objectClass": "System",
+									"sid": 928356910276106,
+									"parameters": {
+										"variable": "Score",
+										"value": "1000"
+									}
+								}
+							],
+							"sid": 785748189070916
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Player1",
+									"sid": 572270379743733,
+									"parameters": {
+										"instance-variable": "EnemyCombo",
+										"comparison": 0,
+										"value": "5"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "PART_PointGivenSprites",
+									"sid": 874206466055110,
+									"parameters": {
+										"animation": "\"2000\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "add-to-eventvar",
+									"objectClass": "System",
+									"sid": 716201595445412,
+									"parameters": {
+										"variable": "Score",
+										"value": "2000"
+									}
+								}
+							],
+							"sid": 203297686881223
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Player1",
+									"sid": 692992389492399,
+									"parameters": {
+										"instance-variable": "EnemyCombo",
+										"comparison": 0,
+										"value": "6"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "PART_PointGivenSprites",
+									"sid": 513102912489765,
+									"parameters": {
+										"animation": "\"4000\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "add-to-eventvar",
+									"objectClass": "System",
+									"sid": 487657580204198,
+									"parameters": {
+										"variable": "Score",
+										"value": "4000"
+									}
+								}
+							],
+							"sid": 506400219577881
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Player1",
+									"sid": 397361544946190,
+									"parameters": {
+										"instance-variable": "EnemyCombo",
+										"comparison": 0,
+										"value": "7"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "PART_PointGivenSprites",
+									"sid": 648846195611051,
+									"parameters": {
+										"animation": "\"8000\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "add-to-eventvar",
+									"objectClass": "System",
+									"sid": 807275003432084,
+									"parameters": {
+										"variable": "Score",
+										"value": "8000"
+									}
+								}
+							],
+							"sid": 268109643780584
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Player1",
+									"sid": 741702898615005,
+									"parameters": {
+										"instance-variable": "EnemyCombo",
+										"comparison": 5,
+										"value": "8"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "PART_PointGivenSprites",
+									"sid": 149846782381195,
+									"parameters": {
+										"animation": "\"1UP\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "add-to-eventvar",
+									"objectClass": "System",
+									"sid": 525598977338572,
+									"parameters": {
+										"variable": "Lifes",
+										"value": "1"
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 431502215010558,
+									"parameters": {
+										"audio-file": "1up",
+										"loop": "not-looping",
+										"volume": "-5",
+										"stereo-pan": "0",
+										"tag-optional": "\"SF\""
+									}
+								}
+							],
+							"sid": 351259384592064
+						}
+					]
 				}
 			],
 			"sid": 285897023238991
@@ -17662,362 +18391,6 @@
 					"description": "",
 					"isActiveOnStart": true,
 					"children": [
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "on-signal",
-									"objectClass": "System",
-									"sid": 960685339176551,
-									"parameters": {
-										"tag": "\"LevelRestart\""
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-layer-opacity",
-									"objectClass": "System",
-									"sid": 280739922069654,
-									"parameters": {
-										"layer": "\"Fade\"",
-										"opacity": "1"
-									}
-								},
-								{
-									"id": "set-instvar-value",
-									"objectClass": "Camera",
-									"sid": 852423031742579,
-									"parameters": {
-										"instance-variable": "FadeSetting",
-										"value": "\"In\""
-									}
-								},
-								{
-									"id": "set-boolean-instvar",
-									"objectClass": "Camera",
-									"sid": 366767152169318,
-									"parameters": {
-										"instance-variable": "StartFade",
-										"value": "true"
-									}
-								},
-								{
-									"id": "wait",
-									"objectClass": "System",
-									"sid": 735876738528399,
-									"parameters": {
-										"seconds": "1.0",
-										"use-timescale": true
-									}
-								},
-								{
-									"id": "stop",
-									"objectClass": "Audio",
-									"sid": 658048606381102,
-									"parameters": {
-										"tag": "\"BG\""
-									}
-								},
-								{
-									"id": "go-to-layout",
-									"objectClass": "System",
-									"sid": 224940070016000,
-									"disabled": true,
-									"parameters": {
-										"layout": "WorldMap"
-									}
-								},
-								{
-									"id": "restart-layout",
-									"objectClass": "System",
-									"sid": 505063362188113
-								}
-							],
-							"sid": 193369904700726
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "on-signal",
-									"objectClass": "System",
-									"sid": 785000085515670,
-									"parameters": {
-										"tag": "\"LevelRestartDeath\""
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-layer-opacity",
-									"objectClass": "System",
-									"sid": 428239771954233,
-									"parameters": {
-										"layer": "\"Fade\"",
-										"opacity": "1"
-									}
-								},
-								{
-									"id": "set-instvar-value",
-									"objectClass": "Camera",
-									"sid": 200484930284872,
-									"parameters": {
-										"instance-variable": "FadeSetting",
-										"value": "\"In\""
-									}
-								},
-								{
-									"id": "set-boolean-instvar",
-									"objectClass": "Camera",
-									"sid": 845862816397375,
-									"parameters": {
-										"instance-variable": "StartFade",
-										"value": "true"
-									}
-								},
-								{
-									"id": "wait",
-									"objectClass": "System",
-									"sid": 809920660112117,
-									"parameters": {
-										"seconds": "0.5",
-										"use-timescale": true
-									}
-								}
-							],
-							"sid": 853090319666191,
-							"children": [
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "is-animation-playing",
-											"objectClass": "Player1",
-											"sid": 781025371434497,
-											"parameters": {
-												"animation": "\"Dead\""
-											}
-										}
-									],
-									"actions": [
-										{
-											"id": "wait",
-											"objectClass": "System",
-											"sid": 411647996572154,
-											"parameters": {
-												"seconds": "0.5",
-												"use-timescale": true
-											}
-										},
-										{
-											"id": "subtract-from-eventvar",
-											"objectClass": "System",
-											"sid": 145222587527383,
-											"parameters": {
-												"variable": "Lifes",
-												"value": "1"
-											}
-										}
-									],
-									"sid": 684096002482910,
-									"children": [
-										{
-											"eventType": "block",
-											"conditions": [
-												{
-													"id": "compare-eventvar",
-													"objectClass": "System",
-													"sid": 560028379947779,
-													"parameters": {
-														"variable": "Lifes",
-														"comparison": 4,
-														"value": "0"
-													}
-												}
-											],
-											"actions": [],
-											"sid": 778945085526899,
-											"children": [
-												{
-													"eventType": "block",
-													"conditions": [
-														{
-															"id": "is-boolean-instance-variable-set",
-															"objectClass": "TimerSystem",
-															"sid": 939509957329182,
-															"parameters": {
-																"instance-variable": "EnableTimeLimit"
-															}
-														},
-														{
-															"id": "compare-instance-variable",
-															"objectClass": "TimerSystem",
-															"sid": 612747659056385,
-															"parameters": {
-																"instance-variable": "TimeLimiter",
-																"comparison": 0,
-																"value": "-1"
-															}
-														}
-													],
-													"actions": [
-														{
-															"id": "set-eventvar-value",
-															"objectClass": "System",
-															"sid": 301485296038244,
-															"parameters": {
-																"variable": "TimeUP_RememberStage",
-																"value": "LayoutName"
-															}
-														},
-														{
-															"id": "go-to-layout",
-															"objectClass": "System",
-															"sid": 179516229945267,
-															"parameters": {
-																"layout": "GameOver"
-															}
-														}
-													],
-													"sid": 316245778510671
-												},
-												{
-													"eventType": "block",
-													"conditions": [
-														{
-															"id": "else",
-															"objectClass": "System",
-															"sid": 230685561715080
-														}
-													],
-													"actions": [
-														{
-															"id": "set-group-active",
-															"objectClass": "System",
-															"sid": 968749847911905,
-															"parameters": {
-																"group-name": "\"SMW Hud Stuff\"",
-																"state": "activated"
-															}
-														},
-														{
-															"id": "set-group-active",
-															"objectClass": "System",
-															"sid": 286411788808452,
-															"parameters": {
-																"group-name": "\"Player System\"",
-																"state": "activated"
-															}
-														},
-														{
-															"id": "set-group-active",
-															"objectClass": "System",
-															"sid": 892042848076569,
-															"parameters": {
-																"group-name": "\"Timer System\"",
-																"state": "activated"
-															}
-														},
-														{
-															"id": "set-group-active",
-															"objectClass": "System",
-															"sid": 214634320521409,
-															"parameters": {
-																"group-name": "\"Object Systems\"",
-																"state": "activated"
-															}
-														},
-														{
-															"id": "set-group-active",
-															"objectClass": "System",
-															"sid": 821541192223267,
-															"parameters": {
-																"group-name": "\"Event Systems\"",
-																"state": "activated"
-															}
-														},
-														{
-															"id": "set-group-active",
-															"objectClass": "System",
-															"sid": 333369967304304,
-															"parameters": {
-																"group-name": "\"Camera\"",
-																"state": "activated"
-															}
-														},
-														{
-															"id": "set-group-active",
-															"objectClass": "System",
-															"sid": 293385688520944,
-															"parameters": {
-																"group-name": "\"Enemies System\"",
-																"state": "activated"
-															}
-														},
-														{
-															"id": "stop",
-															"objectClass": "Audio",
-															"sid": 916333552371715,
-															"parameters": {
-																"tag": "\"BG\""
-															}
-														},
-														{
-															"id": "go-to-layout",
-															"objectClass": "System",
-															"sid": 381574909064607,
-															"parameters": {
-																"layout": "WorldMap"
-															}
-														},
-														{
-															"id": "restart-layout",
-															"objectClass": "System",
-															"sid": 801614996818981,
-															"disabled": true
-														}
-													],
-													"sid": 591006457401592
-												}
-											]
-										},
-										{
-											"eventType": "block",
-											"conditions": [
-												{
-													"id": "else",
-													"objectClass": "System",
-													"sid": 619571742853675
-												},
-												{
-													"id": "compare-eventvar",
-													"objectClass": "System",
-													"sid": 848580341635467,
-													"parameters": {
-														"variable": "Lifes",
-														"comparison": 0,
-														"value": "0"
-													}
-												}
-											],
-											"actions": [
-												{
-													"id": "go-to-layout",
-													"objectClass": "System",
-													"sid": 243069636121786,
-													"parameters": {
-														"layout": "GameOver"
-													}
-												}
-											],
-											"sid": 839623600453005
-										}
-									],
-									"isOrBlock": true
-								}
-							]
-						},
 						{
 							"eventType": "block",
 							"conditions": [
@@ -28440,373 +28813,6 @@
 			"isActiveOnStart": true,
 			"children": [],
 			"sid": 382828342385402
-		},
-		{
-			"eventType": "comment",
-			"text": "Combo Poitns (WIP)"
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-signal",
-					"objectClass": "System",
-					"sid": 516880219113131,
-					"parameters": {
-						"tag": "\"ComboCheck\""
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "create-object",
-					"objectClass": "System",
-					"sid": 974827881805620,
-					"parameters": {
-						"object-to-create": "PART_PointGivenSprites",
-						"layer": "14",
-						"x": "Player1.X",
-						"y": "Player1.Y+16",
-						"create-hierarchy": false,
-						"template-name": "\"\""
-					}
-				},
-				{
-					"id": "move-to-position",
-					"objectClass": "PART_PointGivenSprites",
-					"sid": 690313383437035,
-					"behaviorType": "MoveTo",
-					"parameters": {
-						"x": "Self.X",
-						"y": "Self.Y-40",
-						"mode": "direct"
-					}
-				}
-			],
-			"sid": 360808260726590,
-			"children": [
-				{
-					"eventType": "block",
-					"conditions": [],
-					"actions": [
-						{
-							"id": "wait",
-							"objectClass": "System",
-							"sid": 603150291880125,
-							"parameters": {
-								"seconds": "0.85",
-								"use-timescale": true
-							}
-						},
-						{
-							"id": "destroy",
-							"objectClass": "PART_PointGivenSprites",
-							"sid": 259340808120581
-						}
-					],
-					"sid": 180071061006777
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "compare-instance-variable",
-							"objectClass": "Player1",
-							"sid": 806277420630702,
-							"parameters": {
-								"instance-variable": "EnemyCombo",
-								"comparison": 0,
-								"value": "1"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "add-to-eventvar",
-							"objectClass": "System",
-							"sid": 364260644990552,
-							"parameters": {
-								"variable": "Score",
-								"value": "200"
-							}
-						},
-						{
-							"id": "set-animation",
-							"objectClass": "PART_PointGivenSprites",
-							"sid": 187112729371981,
-							"parameters": {
-								"animation": "\"200\"",
-								"from": "beginning"
-							}
-						}
-					],
-					"sid": 847529959872624
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "compare-instance-variable",
-							"objectClass": "Player1",
-							"sid": 598724936745287,
-							"parameters": {
-								"instance-variable": "EnemyCombo",
-								"comparison": 0,
-								"value": "2"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-animation",
-							"objectClass": "PART_PointGivenSprites",
-							"sid": 900771789875904,
-							"parameters": {
-								"animation": "\"400\"",
-								"from": "beginning"
-							}
-						},
-						{
-							"id": "add-to-eventvar",
-							"objectClass": "System",
-							"sid": 914315995516617,
-							"parameters": {
-								"variable": "Score",
-								"value": "400"
-							}
-						}
-					],
-					"sid": 523350008264382
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "compare-instance-variable",
-							"objectClass": "Player1",
-							"sid": 369405343193848,
-							"parameters": {
-								"instance-variable": "EnemyCombo",
-								"comparison": 0,
-								"value": "3"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-animation",
-							"objectClass": "PART_PointGivenSprites",
-							"sid": 489655577341184,
-							"parameters": {
-								"animation": "\"800\"",
-								"from": "beginning"
-							}
-						},
-						{
-							"id": "add-to-eventvar",
-							"objectClass": "System",
-							"sid": 291741603595414,
-							"parameters": {
-								"variable": "Score",
-								"value": "800"
-							}
-						}
-					],
-					"sid": 673247105556183
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "compare-instance-variable",
-							"objectClass": "Player1",
-							"sid": 147400033377275,
-							"parameters": {
-								"instance-variable": "EnemyCombo",
-								"comparison": 0,
-								"value": "4"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-animation",
-							"objectClass": "PART_PointGivenSprites",
-							"sid": 344048608957858,
-							"parameters": {
-								"animation": "\"1000\"",
-								"from": "beginning"
-							}
-						},
-						{
-							"id": "add-to-eventvar",
-							"objectClass": "System",
-							"sid": 314741190027037,
-							"parameters": {
-								"variable": "Score",
-								"value": "1000"
-							}
-						}
-					],
-					"sid": 472644624183994
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "compare-instance-variable",
-							"objectClass": "Player1",
-							"sid": 972427530645642,
-							"parameters": {
-								"instance-variable": "EnemyCombo",
-								"comparison": 0,
-								"value": "5"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-animation",
-							"objectClass": "PART_PointGivenSprites",
-							"sid": 617729412862363,
-							"parameters": {
-								"animation": "\"2000\"",
-								"from": "beginning"
-							}
-						},
-						{
-							"id": "add-to-eventvar",
-							"objectClass": "System",
-							"sid": 975818087081505,
-							"parameters": {
-								"variable": "Score",
-								"value": "2000"
-							}
-						}
-					],
-					"sid": 496223743530688
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "compare-instance-variable",
-							"objectClass": "Player1",
-							"sid": 217429457643421,
-							"parameters": {
-								"instance-variable": "EnemyCombo",
-								"comparison": 0,
-								"value": "6"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-animation",
-							"objectClass": "PART_PointGivenSprites",
-							"sid": 112806664490713,
-							"parameters": {
-								"animation": "\"4000\"",
-								"from": "beginning"
-							}
-						},
-						{
-							"id": "add-to-eventvar",
-							"objectClass": "System",
-							"sid": 826764070880475,
-							"parameters": {
-								"variable": "Score",
-								"value": "4000"
-							}
-						}
-					],
-					"sid": 429549588509010
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "compare-instance-variable",
-							"objectClass": "Player1",
-							"sid": 806655699700988,
-							"parameters": {
-								"instance-variable": "EnemyCombo",
-								"comparison": 0,
-								"value": "7"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-animation",
-							"objectClass": "PART_PointGivenSprites",
-							"sid": 878826747009955,
-							"parameters": {
-								"animation": "\"8000\"",
-								"from": "beginning"
-							}
-						},
-						{
-							"id": "add-to-eventvar",
-							"objectClass": "System",
-							"sid": 113817423543631,
-							"parameters": {
-								"variable": "Score",
-								"value": "8000"
-							}
-						}
-					],
-					"sid": 569004595337228
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "compare-instance-variable",
-							"objectClass": "Player1",
-							"sid": 243265628563760,
-							"parameters": {
-								"instance-variable": "EnemyCombo",
-								"comparison": 5,
-								"value": "8"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-animation",
-							"objectClass": "PART_PointGivenSprites",
-							"sid": 370023175841538,
-							"parameters": {
-								"animation": "\"1UP\"",
-								"from": "beginning"
-							}
-						},
-						{
-							"id": "add-to-eventvar",
-							"objectClass": "System",
-							"sid": 445323492157648,
-							"parameters": {
-								"variable": "Lifes",
-								"value": "1"
-							}
-						},
-						{
-							"id": "play",
-							"objectClass": "Audio",
-							"sid": 512322097404860,
-							"parameters": {
-								"audio-file": "1up",
-								"loop": "not-looping",
-								"volume": "-5",
-								"stereo-pan": "0",
-								"tag-optional": "\"SF\""
-							}
-						}
-					],
-					"sid": 804573582742369
-				}
-			]
 		}
 	],
 	"sid": 795943327228075

@@ -105,7 +105,7 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 9826225,
+						"imageSpriteId": 959351,
 						"collisionPoly": {
 							"points": [
 								0,
@@ -168,7 +168,7 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 2934468,
+						"imageSpriteId": 3108097,
 						"collisionPoly": {
 							"points": [
 								0.0625,
@@ -236,32 +236,6 @@
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
-					},
-					{
-						"width": 16,
-						"height": 32,
-						"originX": 0.5,
-						"originY": 0,
-						"originalSource": "",
-						"exportFormat": "lossless",
-						"exportQuality": 0.8,
-						"fileType": "image/png",
-						"imageSpriteId": 3233860,
-						"collisionPoly": {
-							"points": [
-								0.0625,
-								0.125,
-								1,
-								0.125,
-								1,
-								1,
-								0.0625,
-								1
-							]
-						},
-						"useCollisionPoly": true,
-						"duration": 1,
-						"tag": ""
 					}
 				],
 				"sid": 964506478638530,
@@ -283,7 +257,7 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 9643939,
+						"imageSpriteId": 8533915,
 						"collisionPoly": {
 							"points": [
 								0.0625,
@@ -336,32 +310,6 @@
 						"exportQuality": 0.8,
 						"fileType": "image/png",
 						"imageSpriteId": 4516722,
-						"collisionPoly": {
-							"points": [
-								0.0625,
-								0.125,
-								1,
-								0.125,
-								1,
-								1,
-								0.0625,
-								1
-							]
-						},
-						"useCollisionPoly": true,
-						"duration": 1,
-						"tag": ""
-					},
-					{
-						"width": 16,
-						"height": 32,
-						"originX": 0.5,
-						"originY": 0,
-						"originalSource": "",
-						"exportFormat": "lossless",
-						"exportQuality": 0.8,
-						"fileType": "image/png",
-						"imageSpriteId": 9341024,
 						"collisionPoly": {
 							"points": [
 								0.0625,

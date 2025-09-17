@@ -19,6 +19,7 @@ That why i'm releasing the project in the current state it is. I might continue 
 ## Requirements.
 - Either a Active Construct 3 Subscription or through a Access Code to unlock all Construct 3's Features.
    - The free version will **NOT** work due to the project using way over the event limit.
+- Any Construct3 versions before v450 (due to the removal of NW.js and SDK v1 support.)
 - [Tiled Sprite Plugin](https://www.construct.net/en/make-games/addons/1185/tiled-sprite) (this _should_ come included with this project but if it doesn't download the plugin here)
 
 ## Quick Q&A Section

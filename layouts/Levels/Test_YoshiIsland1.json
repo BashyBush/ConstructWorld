@@ -6767,7 +6767,8 @@
 						"CourseClearState": 0,
 						"JumpTimerHigh": 0.3,
 						"HoldingItem": false,
-						"InWater": false
+						"InWater": false,
+						"ShotFireBall": false
 					},
 					"behaviors": {
 						"Platform": {

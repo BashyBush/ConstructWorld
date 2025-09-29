@@ -149,7 +149,7 @@
 			"eventType": "variable",
 			"name": "CurrentHP",
 			"type": "number",
-			"initialValue": "1",
+			"initialValue": "3",
 			"comment": "dont set anywhere under 1 or else shit will break lmao",
 			"isStatic": false,
 			"isConstant": false,
@@ -9631,6 +9631,15 @@
 											],
 											"actions": [
 												{
+													"id": "set-boolean-instvar",
+													"objectClass": "Player1",
+													"sid": 762897007297616,
+													"parameters": {
+														"instance-variable": "ShotFireBall",
+														"value": "true"
+													}
+												},
+												{
 													"id": "set-instvar-value",
 													"objectClass": "Player1",
 													"sid": 922238575231945,
@@ -9765,6 +9774,31 @@
 														}
 													],
 													"sid": 352845436797234
+												},
+												{
+													"eventType": "block",
+													"conditions": [],
+													"actions": [
+														{
+															"id": "wait",
+															"objectClass": "System",
+															"sid": 904519098621547,
+															"parameters": {
+																"seconds": "0.1",
+																"use-timescale": true
+															}
+														},
+														{
+															"id": "set-boolean-instvar",
+															"objectClass": "Player1",
+															"sid": 826575915541590,
+															"parameters": {
+																"instance-variable": "ShotFireBall",
+																"value": "false"
+															}
+														}
+													],
+													"sid": 579593906183128
 												}
 											]
 										}
@@ -11737,6 +11771,15 @@
 												"instance-variable": "InPipe"
 											},
 											"isInverted": true
+										},
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "Player1",
+											"sid": 657868152643351,
+											"parameters": {
+												"instance-variable": "ShotFireBall"
+											},
+											"isInverted": true
 										}
 									],
 									"actions": [],
@@ -12795,47 +12838,6 @@
 										},
 										{
 											"eventType": "comment",
-											"text": "Shooting fireball"
-										},
-										{
-											"eventType": "block",
-											"conditions": [
-												{
-													"id": "compare-instance-variable",
-													"objectClass": "Player1",
-													"sid": 958715131892149,
-													"parameters": {
-														"instance-variable": "HP",
-														"comparison": 0,
-														"value": "3"
-													}
-												},
-												{
-													"id": "compare-instance-variable",
-													"objectClass": "Player1",
-													"sid": 170632466288235,
-													"parameters": {
-														"instance-variable": "AnimationState",
-														"comparison": 0,
-														"value": "\"Fire_Shoot\""
-													}
-												}
-											],
-											"actions": [
-												{
-													"id": "set-animation",
-													"objectClass": "Player1",
-													"sid": 974402255387656,
-													"parameters": {
-														"animation": "\"Fire_Shoot\"",
-														"from": "beginning"
-													}
-												}
-											],
-											"sid": 734757861703380
-										},
-										{
-											"eventType": "comment",
 											"text": "Turning & Skidding"
 										},
 										{
@@ -13528,6 +13530,60 @@
 											]
 										}
 									]
+								},
+								{
+									"eventType": "comment",
+									"text": "Shooting fireball"
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 223007587647313
+										},
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Player1",
+											"sid": 958715131892149,
+											"parameters": {
+												"instance-variable": "HP",
+												"comparison": 0,
+												"value": "3"
+											}
+										},
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Player1",
+											"sid": 170632466288235,
+											"parameters": {
+												"instance-variable": "AnimationState",
+												"comparison": 0,
+												"value": "\"Fire_Shoot\""
+											}
+										},
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "Player1",
+											"sid": 554947794398286,
+											"parameters": {
+												"instance-variable": "ShotFireBall"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation",
+											"objectClass": "Player1",
+											"sid": 974402255387656,
+											"parameters": {
+												"animation": "\"Fire_Shoot\"",
+												"from": "beginning"
+											}
+										}
+									],
+									"sid": 734757861703380
 								},
 								{
 									"eventType": "block",

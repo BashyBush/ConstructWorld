@@ -51,7 +51,7 @@
 			"eventType": "variable",
 			"name": "CheckpointX",
 			"type": "number",
-			"initialValue": "6434",
+			"initialValue": "0",
 			"comment": "set 0 to disabled",
 			"isStatic": false,
 			"isConstant": false,
@@ -149,7 +149,7 @@
 			"eventType": "variable",
 			"name": "CurrentHP",
 			"type": "number",
-			"initialValue": "3",
+			"initialValue": "1",
 			"comment": "dont set anywhere under 1 or else shit will break lmao",
 			"isStatic": false,
 			"isConstant": false,
@@ -8231,7 +8231,7 @@
 							"eventType": "group",
 							"disabled": false,
 							"title": "BanzaiBill",
-							"description": "",
+							"description": "i left this broken for too long lmao",
 							"isActiveOnStart": true,
 							"children": [
 								{

@@ -10789,21 +10789,12 @@
 											"eventType": "block",
 											"conditions": [
 												{
-													"id": "on-button-pressed",
+													"id": "is-button-down",
 													"objectClass": "Gamepad",
-													"sid": 456315688038383,
+													"sid": 338793155248340,
 													"parameters": {
 														"gamepad": "0",
 														"button": "button-a"
-													}
-												},
-												{
-													"id": "on-button-pressed",
-													"objectClass": "Gamepad",
-													"sid": 781832130396421,
-													"parameters": {
-														"gamepad": "0",
-														"button": "d-pad-up"
 													}
 												}
 											],
@@ -10816,10 +10807,116 @@
 													"parameters": {
 														"control": "jump"
 													}
+												},
+												{
+													"id": "set-jump-strength",
+													"objectClass": "Player1",
+													"sid": 631040902109237,
+													"behaviorType": "Platform",
+													"parameters": {
+														"jump-strength": "475"
+													}
 												}
 											],
 											"sid": 843605676902438,
 											"isOrBlock": true
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "on-button-pressed",
+													"objectClass": "Gamepad",
+													"sid": 687484928879216,
+													"parameters": {
+														"gamepad": "0",
+														"button": "button-b"
+													}
+												},
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "Player1",
+													"sid": 219879646674098,
+													"parameters": {
+														"instance-variable": "AnimationState",
+														"comparison": 0,
+														"value": "\"Jumping\""
+													},
+													"isInverted": true
+												},
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "Player1",
+													"sid": 640339302818821,
+													"parameters": {
+														"instance-variable": "AnimationState",
+														"comparison": 0,
+														"value": "\"Duck\""
+													},
+													"isInverted": true
+												},
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "Player1",
+													"sid": 867705835126762,
+													"parameters": {
+														"instance-variable": "AnimationState",
+														"comparison": 0,
+														"value": "\"RunJumping\""
+													},
+													"isInverted": true
+												},
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "Player1",
+													"sid": 814917810543971,
+													"parameters": {
+														"instance-variable": "AnimationState",
+														"comparison": 0,
+														"value": "\"Falling\""
+													},
+													"isInverted": true
+												},
+												{
+													"id": "is-boolean-instance-variable-set",
+													"objectClass": "Player1",
+													"sid": 965246853791976,
+													"parameters": {
+														"instance-variable": "HoldingItem"
+													},
+													"isInverted": true
+												}
+											],
+											"actions": [
+												{
+													"id": "set-jump-strength",
+													"objectClass": "Player1",
+													"sid": 732974069036572,
+													"behaviorType": "Platform",
+													"parameters": {
+														"jump-strength": "550"
+													}
+												},
+												{
+													"id": "simulate-control",
+													"objectClass": "Player1",
+													"sid": 473397521849956,
+													"behaviorType": "Platform",
+													"parameters": {
+														"control": "jump"
+													}
+												},
+												{
+													"id": "set-instvar-value",
+													"objectClass": "Player1",
+													"sid": 213861839709701,
+													"parameters": {
+														"instance-variable": "AnimationState",
+														"value": "\"Spining\""
+													}
+												}
+											],
+											"sid": 351736118614070
 										},
 										{
 											"eventType": "block",
@@ -10839,13 +10936,93 @@
 													"id": "simulate-control",
 													"objectClass": "Player1",
 													"sid": 958896314151943,
+													"disabled": true,
 													"behaviorType": "Platform",
 													"parameters": {
 														"control": "left"
 													}
 												}
 											],
-											"sid": 133074651972184
+											"sid": 133074651972184,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-instance-variable",
+															"objectClass": "Player1",
+															"sid": 644450040664004,
+															"parameters": {
+																"instance-variable": "AnimationState",
+																"comparison": 0,
+																"value": "\"Duck\""
+															},
+															"isInverted": true
+														}
+													],
+													"actions": [
+														{
+															"id": "simulate-control",
+															"objectClass": "Player1",
+															"sid": 820238371252327,
+															"behaviorType": "Platform",
+															"parameters": {
+																"control": "left"
+															}
+														}
+													],
+													"sid": 868231156329863
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "else",
+															"objectClass": "System",
+															"sid": 109894357726312
+														},
+														{
+															"id": "compare-instance-variable",
+															"objectClass": "Player1",
+															"sid": 885656329642016,
+															"parameters": {
+																"instance-variable": "AnimationState",
+																"comparison": 0,
+																"value": "\"Duck\""
+															}
+														}
+													],
+													"actions": [],
+													"sid": 449900576162010,
+													"children": [
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "is-on-floor",
+																	"objectClass": "Player1",
+																	"sid": 847659093166358,
+																	"behaviorType": "Platform",
+																	"isInverted": true
+																}
+															],
+															"actions": [
+																{
+																	"id": "simulate-control",
+																	"objectClass": "Player1",
+																	"sid": 214274569697378,
+																	"behaviorType": "Platform",
+																	"parameters": {
+																		"control": "left"
+																	}
+																}
+															],
+															"sid": 765114816631235,
+															"isOrBlock": true
+														}
+													]
+												}
+											]
 										},
 										{
 											"eventType": "block",
@@ -10865,13 +11042,93 @@
 													"id": "simulate-control",
 													"objectClass": "Player1",
 													"sid": 794229255930204,
+													"disabled": true,
 													"behaviorType": "Platform",
 													"parameters": {
 														"control": "right"
 													}
 												}
 											],
-											"sid": 995361693850617
+											"sid": 995361693850617,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-instance-variable",
+															"objectClass": "Player1",
+															"sid": 910979576650297,
+															"parameters": {
+																"instance-variable": "AnimationState",
+																"comparison": 0,
+																"value": "\"Duck\""
+															},
+															"isInverted": true
+														}
+													],
+													"actions": [
+														{
+															"id": "simulate-control",
+															"objectClass": "Player1",
+															"sid": 860261149047733,
+															"behaviorType": "Platform",
+															"parameters": {
+																"control": "right"
+															}
+														}
+													],
+													"sid": 531933199686038
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "else",
+															"objectClass": "System",
+															"sid": 813106501633817
+														},
+														{
+															"id": "compare-instance-variable",
+															"objectClass": "Player1",
+															"sid": 453666038594412,
+															"parameters": {
+																"instance-variable": "AnimationState",
+																"comparison": 0,
+																"value": "\"Duck\""
+															}
+														}
+													],
+													"actions": [],
+													"sid": 671009608372736,
+													"children": [
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "is-on-floor",
+																	"objectClass": "Player1",
+																	"sid": 175066570900793,
+																	"behaviorType": "Platform",
+																	"isInverted": true
+																}
+															],
+															"actions": [
+																{
+																	"id": "simulate-control",
+																	"objectClass": "Player1",
+																	"sid": 163918930603925,
+																	"behaviorType": "Platform",
+																	"parameters": {
+																		"control": "right"
+																	}
+																}
+															],
+															"sid": 900707320967421,
+															"isOrBlock": true
+														}
+													]
+												}
+											]
 										},
 										{
 											"eventType": "block",
@@ -10897,6 +11154,31 @@
 												}
 											],
 											"sid": 887520227725412
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "on-button-pressed",
+													"objectClass": "Gamepad",
+													"sid": 113689246096153,
+													"parameters": {
+														"gamepad": "0",
+														"button": "back-view"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "signal",
+													"objectClass": "System",
+													"sid": 248343255673878,
+													"parameters": {
+														"tag": "\"DropThatItem\""
+													}
+												}
+											],
+											"sid": 439652324720245
 										}
 									],
 									"sid": 422516248004601

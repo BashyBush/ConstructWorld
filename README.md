@@ -41,7 +41,7 @@ That why i'm releasing the project in the current state it is. I might continue 
 
 ## Extra Notes
 - The current compiled build in releases will most than likely be outdated due to me updating the source code to include more fixes and features. You should be able to test the current state of this engine without compiling by just downloading the source code. Opening the project folder on Construct 3 and just test running it. (this should also work for free trials aswell however I haven't tested this yet)
-- This engine may be bugged on certan timed events IF the monitor refresh rate is higher than 60. Use this [plugin](https://www.construct.net/en/make-games/addons/1188/limit-fps) if you want to limit the FPS since base construct does not include a fps limiter.
+- This engine may be bugged on certan timed events IF the monitor refresh rate is higher than 60. Use this [plugin](https://www.construct.net/en/make-games/addons/1188/limit-fps) if you want to limit the FPS since  Construct 3 does not include a fps limiter. (aleast for versions before v450 if they do add it in a newer update)
 
 If you have any other questions that isn't mentioned here. 
 You can DM any questions through Discord at "bashybush"

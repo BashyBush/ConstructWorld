@@ -1,0 +1,167 @@
+{
+	"name": "Door",
+	"plugin-id": "Sprite",
+	"sid": 147837935255769,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [
+		{
+			"name": "Door_SwitchLayout",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 233330806785556
+		},
+		{
+			"name": "Door_XDirection",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 419666063985558
+		},
+		{
+			"name": "Door_YDirection",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 345853676396500
+		},
+		{
+			"name": "Door_CamXSetLeft",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 482924430770686
+		},
+		{
+			"name": "Door_CamXSetRight",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 732351568781074
+		},
+		{
+			"name": "Door_CamYSetTop",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 668700503172702
+		},
+		{
+			"name": "Door_CamYSetBottom",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 774279787718870
+		},
+		{
+			"name": "Door_MusicChange",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 961649691229352
+		},
+		{
+			"name": "Door_SW_RemTime",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 646406410965728
+		},
+		{
+			"name": "Door_PSwitchDoor",
+			"type": "boolean",
+			"desc": "If enabled. Door will be invisible til a P-switch is activated",
+			"show": true,
+			"sid": 863271811399557
+		},
+		{
+			"name": "Door_PSwitchActive",
+			"type": "boolean",
+			"desc": "",
+			"show": false,
+			"sid": 739326628830851
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 32,
+						"height": 64,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 5602585,
+						"collisionPoly": {
+							"points": [
+								0.5,
+								0,
+								0.5,
+								0,
+								0.5,
+								1,
+								0.5,
+								1
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 382413446535501,
+				"name": "Normal",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			},
+			{
+				"frames": [
+					{
+						"width": 32,
+						"height": 64,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 9504009,
+						"collisionPoly": {
+							"points": [
+								0.5,
+								0,
+								0.5,
+								0,
+								0.5,
+								1,
+								0.5,
+								1
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 989496615115732,
+				"name": "BlueDoor",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

@@ -1,0 +1,132 @@
+{
+	"name": "DoorLayoutWarpSetup",
+	"plugin-id": "Sprite",
+	"sid": 323948015360032,
+	"isGlobal": true,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [
+		{
+			"name": "X_Direction",
+			"type": "number",
+			"desc": "",
+			"show": false,
+			"sid": 441568569181710
+		},
+		{
+			"name": "Y_Direction",
+			"type": "number",
+			"desc": "",
+			"show": false,
+			"sid": 588153229266328
+		},
+		{
+			"name": "CamXSetLeft",
+			"type": "number",
+			"desc": "",
+			"show": false,
+			"sid": 878889710912918
+		},
+		{
+			"name": "CamXSetRight",
+			"type": "number",
+			"desc": "",
+			"show": false,
+			"sid": 450878899918154
+		},
+		{
+			"name": "CamYSetTop",
+			"type": "number",
+			"desc": "",
+			"show": false,
+			"sid": 418780602936146
+		},
+		{
+			"name": "CamYSetBottom",
+			"type": "number",
+			"desc": "",
+			"show": false,
+			"sid": 534000213171131
+		},
+		{
+			"name": "MusicChange",
+			"type": "string",
+			"desc": "",
+			"show": false,
+			"sid": 178604354183879
+		},
+		{
+			"name": "DoorWarping",
+			"type": "boolean",
+			"desc": "",
+			"show": false,
+			"sid": 271979442053283
+		},
+		{
+			"name": "RemYoshiCoins",
+			"type": "number",
+			"desc": "",
+			"show": false,
+			"sid": 622610191898922
+		},
+		{
+			"name": "TimeReminder",
+			"type": "number",
+			"desc": "",
+			"show": false,
+			"sid": 493680531156899
+		},
+		{
+			"name": "RememberTime",
+			"type": "boolean",
+			"desc": "not added yet.",
+			"show": false,
+			"sid": 842137115870435
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 250,
+						"height": 250,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 2741853,
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 250,
+						"height": 250,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 9580558,
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 944467880450725,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

@@ -1152,6 +1152,55 @@
 			],
 			"instances": [
 				{
+					"type": "Door",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Normal",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 101,
+					"sid": 596292008823023,
+					"tags": "",
+					"instanceVariables": {
+						"Door_SwitchLayout": "Test_YoshiIsland1TEST",
+						"Door_XDirection": 3056,
+						"Door_YDirection": 320,
+						"Door_CamXSetLeft": 0,
+						"Door_CamXSetRight": 0,
+						"Door_CamYSetTop": 0,
+						"Door_CamYSetBottom": 0,
+						"Door_MusicChange": "Overworld",
+						"Door_SW_RemTime": false,
+						"Door_PSwitchDoor": false,
+						"Door_PSwitchActive": false
+					},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 596292008823023,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 432,
+						"y": 320,
+						"width": 32,
+						"height": 64,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
 					"type": "Player1",
 					"properties": {
 						"initially-visible": true,

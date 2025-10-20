@@ -214,7 +214,8 @@
 			"Player_FireBall",
 			"Water",
 			"KeyHole",
-			"KeyHoleAnimation"
+			"KeyHoleAnimation",
+			"Door"
 		],
 		"subfolders": [
 			{
@@ -319,7 +320,8 @@
 					"Pipe_Teleporter",
 					"Pipe_Teleporter_Exit",
 					"Invisible_Slope",
-					"PipeLayoutWarpSetup"
+					"PipeLayoutWarpSetup",
+					"DoorLayoutWarpSetup"
 				],
 				"subfolders": [],
 				"name": "HiddenObjects"
@@ -809,6 +811,14 @@
 					"name": "smw_fireball.webm",
 					"type": "audio/webm; codecs=opus",
 					"sid": 799001911947092,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "smw_door_opens.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 535727932436323,
 					"file-info": {
 						"purpose": "none"
 					}

@@ -167,6 +167,16 @@
 		},
 		{
 			"eventType": "variable",
+			"name": "DoorWarping",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 580995320975913
+		},
+		{
+			"eventType": "variable",
 			"name": "CurrentItemHeld",
 			"type": "string",
 			"initialValue": "None",
@@ -544,6 +554,39 @@
 						{
 							"id": "compare-boolean-eventvar",
 							"objectClass": "System",
+							"sid": 159726664049025,
+							"parameters": {
+								"variable": "DoorWarping"
+							}
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "DoorLayoutWarpSetup",
+							"sid": 741437596652504,
+							"parameters": {
+								"instance-variable": "RememberTime"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "TimerSystem",
+							"sid": 701273774387087,
+							"parameters": {
+								"instance-variable": "TimeLimiter",
+								"value": "PipeLayoutWarpSetup.TimeReminder"
+							}
+						}
+					],
+					"sid": 866144621262466
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
 							"sid": 869625414664759,
 							"parameters": {
 								"variable": "PipeWarping"
@@ -900,6 +943,267 @@
 								}
 							],
 							"sid": 790606133913995
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 359341008813474,
+							"parameters": {
+								"variable": "DoorWarping"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "play-by-name",
+							"objectClass": "Audio",
+							"sid": 593331767529096,
+							"parameters": {
+								"folder": "music",
+								"audio-file-name": "DoorLayoutWarpSetup.MusicChange",
+								"loop": "looping",
+								"volume": "-5",
+								"stereo-pan": "0",
+								"tag-optional": "\"BG\""
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "HUD_YCBP",
+							"sid": 129013851081665,
+							"parameters": {
+								"frame-number": "DoorLayoutWarpSetup.RemYoshiCoins"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "SetLevelId",
+							"sid": 568997239806226,
+							"parameters": {
+								"instance-variable": "YoshiCoinsCollected",
+								"value": "DoorLayoutWarpSetup.RemYoshiCoins"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 292020100597951,
+							"parameters": {
+								"variable": "DoorWarping",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "Player1",
+							"sid": 383820632644635,
+							"parameters": {
+								"x": "DoorLayoutWarpSetup.X_Direction",
+								"y": "DoorLayoutWarpSetup.Y_Direction"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Camera",
+							"sid": 233159453065736,
+							"parameters": {
+								"instance-variable": "CamLockXZone1",
+								"value": "DoorLayoutWarpSetup.CamXSetLeft"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Camera",
+							"sid": 733816504737241,
+							"parameters": {
+								"instance-variable": "CamLockXZone2",
+								"value": "DoorLayoutWarpSetup.CamXSetRight"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Camera",
+							"sid": 449535387507569,
+							"parameters": {
+								"instance-variable": "CamLockYZone1",
+								"value": "DoorLayoutWarpSetup.CamYSetTop"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Camera",
+							"sid": 430668314960999,
+							"parameters": {
+								"instance-variable": "CamLockYZone2",
+								"value": "DoorLayoutWarpSetup.CamYSetBottom"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 495101685379455,
+							"parameters": {
+								"seconds": "0.54",
+								"use-timescale": true
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "DoorLayoutWarpSetup",
+							"sid": 671738762701666,
+							"parameters": {
+								"instance-variable": "DoorWarping",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "PauseSystem",
+							"sid": 982338647836073,
+							"parameters": {
+								"instance-variable": "CanPause",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-collisions-enabled",
+							"objectClass": "Player1",
+							"sid": 162173780062055,
+							"parameters": {
+								"collisions": "enabled"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Player1",
+							"sid": 789280314656793,
+							"parameters": {
+								"instance-variable": "InPipe",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-enabled",
+							"objectClass": "Player1",
+							"sid": 497065710492165,
+							"behaviorType": "Platform",
+							"parameters": {
+								"state": "enabled"
+							}
+						}
+					],
+					"sid": 332663739182821,
+					"children": [
+						{
+							"eventType": "comment",
+							"text": "reset pipe layout variable stuff"
+						},
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "DoorLayoutWarpSetup",
+									"sid": 472489498510888,
+									"parameters": {
+										"instance-variable": "X_Direction",
+										"value": "0"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "DoorLayoutWarpSetup",
+									"sid": 432182722864683,
+									"parameters": {
+										"instance-variable": "Y_Direction",
+										"value": "0"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "DoorLayoutWarpSetup",
+									"sid": 976705364109084,
+									"parameters": {
+										"instance-variable": "CamXSetLeft",
+										"value": "0"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "DoorLayoutWarpSetup",
+									"sid": 965007550102024,
+									"parameters": {
+										"instance-variable": "CamXSetRight",
+										"value": "0"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "DoorLayoutWarpSetup",
+									"sid": 976678397771376,
+									"parameters": {
+										"instance-variable": "CamYSetTop",
+										"value": "0"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "DoorLayoutWarpSetup",
+									"sid": 321039528980024,
+									"parameters": {
+										"instance-variable": "CamYSetBottom",
+										"value": "0"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "DoorLayoutWarpSetup",
+									"sid": 888475104089653,
+									"parameters": {
+										"instance-variable": "MusicChange",
+										"value": "\"\""
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "DoorLayoutWarpSetup",
+									"sid": 894790375863289,
+									"parameters": {
+										"instance-variable": "TimeReminder",
+										"value": "0"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "DoorLayoutWarpSetup",
+									"sid": 349579775554771,
+									"parameters": {
+										"instance-variable": "RemYoshiCoins",
+										"value": "0"
+									}
+								},
+								{
+									"id": "destroy",
+									"objectClass": "DoorLayoutWarpSetup",
+									"sid": 530498620950633
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 268915999061016,
+									"parameters": {
+										"variable": "CurrentHP",
+										"value": "0"
+									}
+								}
+							],
+							"sid": 616621126710097
 						}
 					]
 				},
@@ -5571,6 +5875,1087 @@
 						}
 					],
 					"sid": 441607002392922
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "Door System",
+					"description": "Similar to how Pipes work.",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "group",
+							"disabled": false,
+							"title": "Door_PSwitch",
+							"description": "",
+							"isActiveOnStart": true,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "Door",
+											"sid": 976330307320926,
+											"parameters": {
+												"instance-variable": "Door_PSwitchDoor"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation",
+											"objectClass": "Door",
+											"sid": 447513335028553,
+											"parameters": {
+												"animation": "\"BlueDoor\"",
+												"from": "beginning"
+											}
+										}
+									],
+									"sid": 171068681753086,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "is-boolean-instance-variable-set",
+													"objectClass": "Door",
+													"sid": 348812717254450,
+													"parameters": {
+														"instance-variable": "Door_PSwitchActive"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-visible",
+													"objectClass": "Door",
+													"sid": 929620669089350,
+													"parameters": {
+														"visibility": "visible"
+													}
+												},
+												{
+													"id": "set-collisions-enabled",
+													"objectClass": "Door",
+													"sid": 140655837725189,
+													"parameters": {
+														"collisions": "enabled"
+													}
+												}
+											],
+											"sid": 387510641972917
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "else",
+													"objectClass": "System",
+													"sid": 527657476865926
+												},
+												{
+													"id": "is-boolean-instance-variable-set",
+													"objectClass": "Door",
+													"sid": 236661465837138,
+													"parameters": {
+														"instance-variable": "Door_PSwitchActive"
+													},
+													"isInverted": true
+												}
+											],
+											"actions": [
+												{
+													"id": "set-visible",
+													"objectClass": "Door",
+													"sid": 310783018538453,
+													"parameters": {
+														"visibility": "invisible"
+													}
+												},
+												{
+													"id": "set-collisions-enabled",
+													"objectClass": "Door",
+													"sid": 266087063019384,
+													"parameters": {
+														"collisions": "disabled"
+													}
+												}
+											],
+											"sid": 237316841823900
+										}
+									]
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-signal",
+											"objectClass": "System",
+											"sid": 442290252196459,
+											"parameters": {
+												"tag": "\"PSwitchSwap\""
+											}
+										},
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "Door",
+											"sid": 417750449537831,
+											"parameters": {
+												"instance-variable": "Door_PSwitchDoor"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-boolean-instvar",
+											"objectClass": "Door",
+											"sid": 325727243202424,
+											"parameters": {
+												"instance-variable": "Door_PSwitchActive",
+												"value": "true"
+											}
+										},
+										{
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 351517157073799,
+											"parameters": {
+												"seconds": "11",
+												"use-timescale": true
+											}
+										},
+										{
+											"id": "set-boolean-instvar",
+											"objectClass": "Door",
+											"sid": 595965471778388,
+											"parameters": {
+												"instance-variable": "Door_PSwitchActive",
+												"value": "false"
+											}
+										}
+									],
+									"sid": 135767806136151
+								}
+							],
+							"sid": 357460632693238
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-signal",
+									"objectClass": "System",
+									"sid": 781211962773720,
+									"parameters": {
+										"tag": "\"EnteringDoor\""
+									}
+								},
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "Player1",
+									"sid": 601007492100319,
+									"parameters": {
+										"object": "Door"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 997649928647171,
+									"parameters": {
+										"audio-file": "smw_door_opens",
+										"loop": "not-looping",
+										"volume": "-5",
+										"stereo-pan": "0",
+										"tag-optional": "\"\""
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "PauseSystem",
+									"sid": 103532886553474,
+									"parameters": {
+										"instance-variable": "CanPause",
+										"value": "0"
+									}
+								},
+								{
+									"id": "set-collisions-enabled",
+									"objectClass": "Player1",
+									"sid": 871805971439995,
+									"parameters": {
+										"collisions": "enabled"
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Player1",
+									"sid": 541378488140681,
+									"parameters": {
+										"instance-variable": "CourseClear",
+										"value": "true"
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Player1",
+									"sid": 782808181758499,
+									"parameters": {
+										"instance-variable": "InPipe",
+										"value": "true"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Camera",
+									"sid": 302410686660884,
+									"parameters": {
+										"instance-variable": "PixelFadeSetting",
+										"value": "\"In\""
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Camera",
+									"sid": 109059747909628,
+									"parameters": {
+										"instance-variable": "FadeSetting",
+										"value": "\"In\""
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Camera",
+									"sid": 835564183206612,
+									"parameters": {
+										"instance-variable": "StartFade",
+										"value": "true"
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Camera",
+									"sid": 986426112662643,
+									"parameters": {
+										"instance-variable": "StartPixelFade",
+										"value": "true"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 329552698942651,
+									"parameters": {
+										"seconds": "1.1",
+										"use-timescale": true
+									}
+								},
+								{
+									"id": "signal",
+									"objectClass": "System",
+									"sid": 888523645452744,
+									"parameters": {
+										"tag": "\"DoorMusicCheck\""
+									}
+								},
+								{
+									"id": "signal",
+									"objectClass": "System",
+									"sid": 709324180682284,
+									"parameters": {
+										"tag": "\"DoorCamZoneCheck\""
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 153508269603031,
+									"parameters": {
+										"seconds": "0.6",
+										"use-timescale": true
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 757431489827105,
+									"parameters": {
+										"audio-file": "coin",
+										"loop": "not-looping",
+										"volume": "-5",
+										"stereo-pan": "0",
+										"tag-optional": "\"\""
+									}
+								},
+								{
+									"id": "signal",
+									"objectClass": "System",
+									"sid": 768226999858135,
+									"disabled": true,
+									"parameters": {
+										"tag": "\"Door_Teleporter\""
+									}
+								}
+							],
+							"sid": 252049271465038,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Door",
+											"sid": 315435597512287,
+											"parameters": {
+												"instance-variable": "Door_SwitchLayout",
+												"comparison": 0,
+												"value": "\"\""
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-enabled",
+											"objectClass": "Player1",
+											"sid": 434888005899610,
+											"behaviorType": "Platform",
+											"parameters": {
+												"state": "disabled"
+											}
+										},
+										{
+											"id": "set-position",
+											"objectClass": "Player1",
+											"sid": 760908000901622,
+											"parameters": {
+												"x": "Door.Door_XDirection",
+												"y": "Door.Door_YDirection"
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "Camera",
+											"sid": 777102811765505,
+											"parameters": {
+												"instance-variable": "FadeSetting",
+												"value": "\"Out\""
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "Camera",
+											"sid": 229634528226860,
+											"parameters": {
+												"instance-variable": "PixelFadeSetting",
+												"value": "\"Out\""
+											}
+										},
+										{
+											"id": "set-boolean-instvar",
+											"objectClass": "Camera",
+											"sid": 690538248087362,
+											"parameters": {
+												"instance-variable": "StartPixelFade",
+												"value": "true"
+											}
+										},
+										{
+											"id": "set-boolean-instvar",
+											"objectClass": "Camera",
+											"sid": 695183737400600,
+											"parameters": {
+												"instance-variable": "StartFade",
+												"value": "true"
+											}
+										},
+										{
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 537596236236332,
+											"parameters": {
+												"seconds": "0.25",
+												"use-timescale": true
+											}
+										},
+										{
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 798287628345836,
+											"parameters": {
+												"seconds": "0.65",
+												"use-timescale": true
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "PauseSystem",
+											"sid": 215420350120361,
+											"parameters": {
+												"instance-variable": "CanPause",
+												"value": "1"
+											}
+										},
+										{
+											"id": "set-enabled",
+											"objectClass": "Player1",
+											"sid": 144073222508493,
+											"behaviorType": "Platform",
+											"parameters": {
+												"state": "enabled"
+											}
+										},
+										{
+											"id": "set-collisions-enabled",
+											"objectClass": "Player1",
+											"sid": 968636760218641,
+											"parameters": {
+												"collisions": "enabled"
+											}
+										},
+										{
+											"id": "set-boolean-instvar",
+											"objectClass": "Player1",
+											"sid": 188828880217996,
+											"parameters": {
+												"instance-variable": "InPipe",
+												"value": "false"
+											}
+										},
+										{
+											"id": "set-boolean-instvar",
+											"objectClass": "Player1",
+											"sid": 563768784020398,
+											"parameters": {
+												"instance-variable": "CourseClear",
+												"value": "false"
+											}
+										}
+									],
+									"sid": 831324797428232
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 490894133058193
+										},
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Door",
+											"sid": 552657047586745,
+											"parameters": {
+												"instance-variable": "Door_SwitchLayout",
+												"comparison": 1,
+												"value": "\"\""
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "create-object",
+											"objectClass": "System",
+											"sid": 816518749850410,
+											"parameters": {
+												"object-to-create": "DoorLayoutWarpSetup",
+												"layer": "\"Main Objects\"",
+												"x": "161.031023",
+												"y": "-38.796275",
+												"create-hierarchy": false,
+												"template-name": "\"\""
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "DoorLayoutWarpSetup",
+											"sid": 599279050541941,
+											"parameters": {
+												"instance-variable": "X_Direction",
+												"value": "Door.Door_XDirection"
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "DoorLayoutWarpSetup",
+											"sid": 417799087767984,
+											"parameters": {
+												"instance-variable": "Y_Direction",
+												"value": "Door.Door_YDirection"
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "DoorLayoutWarpSetup",
+											"sid": 189936943832669,
+											"parameters": {
+												"instance-variable": "CamXSetLeft",
+												"value": "Door.Door_CamXSetLeft"
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "DoorLayoutWarpSetup",
+											"sid": 646374671762094,
+											"parameters": {
+												"instance-variable": "CamXSetRight",
+												"value": "Door.Door_CamXSetRight"
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "DoorLayoutWarpSetup",
+											"sid": 476267034407406,
+											"parameters": {
+												"instance-variable": "CamYSetTop",
+												"value": "Door.Door_CamYSetTop"
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "DoorLayoutWarpSetup",
+											"sid": 514252837022225,
+											"parameters": {
+												"instance-variable": "CamYSetBottom",
+												"value": "Door.Door_CamYSetBottom"
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "DoorLayoutWarpSetup",
+											"sid": 377349763120607,
+											"parameters": {
+												"instance-variable": "MusicChange",
+												"value": "Door.Door_MusicChange"
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "DoorLayoutWarpSetup",
+											"sid": 142391890808046,
+											"parameters": {
+												"instance-variable": "TimeReminder",
+												"value": "TimerSystem.TimeLimiter"
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "DoorLayoutWarpSetup",
+											"sid": 109390435588948,
+											"parameters": {
+												"instance-variable": "RemYoshiCoins",
+												"value": "SetLevelId.YoshiCoinsCollected"
+											}
+										},
+										{
+											"id": "set-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 910765414669897,
+											"parameters": {
+												"variable": "DoorWarping",
+												"value": "true"
+											}
+										},
+										{
+											"id": "set-boolean-instvar",
+											"objectClass": "DoorLayoutWarpSetup",
+											"sid": 891687835738679,
+											"parameters": {
+												"instance-variable": "DoorWarping",
+												"value": "true"
+											}
+										},
+										{
+											"id": "stop-all",
+											"objectClass": "Audio",
+											"sid": 918313029437263
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 500630839252664,
+											"parameters": {
+												"variable": "CurrentHP",
+												"value": "Player1.HP"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 170543400322851,
+											"parameters": {
+												"variable": "CurrentItemHeld",
+												"value": "HUD_ItemHolder.Item_Holding"
+											}
+										},
+										{
+											"id": "signal",
+											"objectClass": "System",
+											"sid": 800848258388358,
+											"parameters": {
+												"tag": "\"WipeCheckPoint\""
+											}
+										}
+									],
+									"sid": 563466265907877,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "is-boolean-instance-variable-set",
+													"objectClass": "DoorLayoutWarpSetup",
+													"sid": 998807692709353,
+													"parameters": {
+														"instance-variable": "RememberTime"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-boolean-instvar",
+													"objectClass": "DoorLayoutWarpSetup",
+													"sid": 652880728477587,
+													"parameters": {
+														"instance-variable": "RememberTime",
+														"value": "true"
+													}
+												},
+												{
+													"id": "set-instvar-value",
+													"objectClass": "DoorLayoutWarpSetup",
+													"sid": 784475155352572,
+													"parameters": {
+														"instance-variable": "TimeReminder",
+														"value": "TimerSystem.TimeLimiter"
+													}
+												},
+												{
+													"id": "wait",
+													"objectClass": "System",
+													"sid": 629478790425481,
+													"parameters": {
+														"seconds": "0.1",
+														"use-timescale": true
+													}
+												},
+												{
+													"id": "go-to-layout-by-name",
+													"objectClass": "System",
+													"sid": 903907178627285,
+													"parameters": {
+														"layout": "Door.Door_SwitchLayout"
+													}
+												},
+												{
+													"id": "wait",
+													"objectClass": "System",
+													"sid": 939608946961564,
+													"parameters": {
+														"seconds": "2",
+														"use-timescale": true
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 512972607256539,
+													"parameters": {
+														"variable": "INVALID_REASON",
+														"value": "Door.Door_SwitchLayout"
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 721829020188705,
+													"parameters": {
+														"variable": "INVALID_REASON",
+														"value": "\"Invalid Door Layout\""
+													}
+												},
+												{
+													"id": "go-to-layout",
+													"objectClass": "System",
+													"sid": 770199131473212,
+													"parameters": {
+														"layout": "InvalidLayoutID"
+													}
+												}
+											],
+											"sid": 193689995439301
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "else",
+													"objectClass": "System",
+													"sid": 166352206091627
+												},
+												{
+													"id": "is-boolean-instance-variable-set",
+													"objectClass": "DoorLayoutWarpSetup",
+													"sid": 355780769028688,
+													"parameters": {
+														"instance-variable": "RememberTime"
+													},
+													"isInverted": true
+												}
+											],
+											"actions": [
+												{
+													"id": "wait",
+													"objectClass": "System",
+													"sid": 686863763944698,
+													"parameters": {
+														"seconds": "0.1",
+														"use-timescale": true
+													}
+												},
+												{
+													"id": "go-to-layout-by-name",
+													"objectClass": "System",
+													"sid": 230419869101542,
+													"parameters": {
+														"layout": "Door.Door_SwitchLayout"
+													}
+												},
+												{
+													"id": "wait",
+													"objectClass": "System",
+													"sid": 419581987465634,
+													"parameters": {
+														"seconds": "2",
+														"use-timescale": true
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 520828254959996,
+													"parameters": {
+														"variable": "INVALID_LIDError",
+														"value": "Door.Door_SwitchLayout"
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 222544386353300,
+													"parameters": {
+														"variable": "INVALID_REASON",
+														"value": "\"Invalid Door Layout\""
+													}
+												},
+												{
+													"id": "go-to-layout",
+													"objectClass": "System",
+													"sid": 768587455724613,
+													"parameters": {
+														"layout": "InvalidLayoutID"
+													}
+												}
+											],
+											"sid": 732200691364046
+										}
+									]
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-signal",
+									"objectClass": "System",
+									"sid": 912208272678718,
+									"parameters": {
+										"tag": "\"Door_Teleporter\""
+									}
+								},
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "Player1",
+									"sid": 300004324003346,
+									"parameters": {
+										"object": "Door"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 210614751127401
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-signal",
+									"objectClass": "System",
+									"sid": 522072176425889,
+									"parameters": {
+										"tag": "\"DoorCamZoneCheck\""
+									}
+								}
+							],
+							"actions": [],
+							"sid": 280278218633089,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-overlapping-another-object",
+											"objectClass": "Player1",
+											"sid": 662757023666170,
+											"parameters": {
+												"object": "Door"
+											}
+										}
+									],
+									"actions": [],
+									"sid": 191781169620059,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "Door",
+													"sid": 684930355824003,
+													"parameters": {
+														"instance-variable": "Door_CamXSetLeft",
+														"comparison": 1,
+														"value": "0"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-instvar-value",
+													"objectClass": "Camera",
+													"sid": 766487638843521,
+													"parameters": {
+														"instance-variable": "CamLockXZone1",
+														"value": "Door.Door_CamXSetLeft"
+													}
+												}
+											],
+											"sid": 850668715434852
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "Door",
+													"sid": 381244040882408,
+													"parameters": {
+														"instance-variable": "Door_CamXSetRight",
+														"comparison": 1,
+														"value": "0"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-instvar-value",
+													"objectClass": "Camera",
+													"sid": 981783798118666,
+													"parameters": {
+														"instance-variable": "CamLockXZone2",
+														"value": "Door.Door_CamXSetRight"
+													}
+												}
+											],
+											"sid": 635347353552075
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "Door",
+													"sid": 158651069700569,
+													"parameters": {
+														"instance-variable": "Door_CamYSetTop",
+														"comparison": 1,
+														"value": "0"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-instvar-value",
+													"objectClass": "Camera",
+													"sid": 853948768267890,
+													"parameters": {
+														"instance-variable": "CamLockYZone1",
+														"value": "Door.Door_CamYSetTop"
+													}
+												}
+											],
+											"sid": 123414413472444
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "Door",
+													"sid": 157856314690750,
+													"parameters": {
+														"instance-variable": "Door_CamYSetBottom",
+														"comparison": 1,
+														"value": "0"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-instvar-value",
+													"objectClass": "Camera",
+													"sid": 636766163688608,
+													"parameters": {
+														"instance-variable": "CamLockYZone2",
+														"value": "Door.Door_CamYSetBottom"
+													}
+												}
+											],
+											"sid": 246692800993962
+										}
+									]
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-signal",
+									"objectClass": "System",
+									"sid": 943119103669021,
+									"parameters": {
+										"tag": "\"DoorMusicCheck\""
+									}
+								}
+							],
+							"actions": [],
+							"sid": 638492145902282,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Door",
+											"sid": 774502720404359,
+											"parameters": {
+												"instance-variable": "Door_MusicChange",
+												"comparison": 1,
+												"value": "\"\""
+											}
+										},
+										{
+											"id": "is-overlapping-another-object",
+											"objectClass": "Player1",
+											"sid": 881241667142196,
+											"parameters": {
+												"object": "Door"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "stop",
+											"objectClass": "Audio",
+											"sid": 616909379911151,
+											"parameters": {
+												"tag": "\"BG\""
+											}
+										},
+										{
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 732865798206132,
+											"parameters": {
+												"seconds": "0.65",
+												"use-timescale": true
+											}
+										}
+									],
+									"sid": 197406259961456,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "Door",
+													"sid": 452172843397656,
+													"parameters": {
+														"instance-variable": "Door_SwitchLayout",
+														"comparison": 0,
+														"value": "\"\""
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "play-by-name",
+													"objectClass": "Audio",
+													"sid": 529447225525542,
+													"parameters": {
+														"folder": "music",
+														"audio-file-name": "Door.Door_MusicChange",
+														"loop": "looping",
+														"volume": "-5",
+														"stereo-pan": "0",
+														"tag-optional": "\"BG\""
+													}
+												}
+											],
+											"sid": 871238010159862,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-instance-variable",
+															"objectClass": "TimerSystem",
+															"sid": 430792279060200,
+															"parameters": {
+																"instance-variable": "TimeLimiter",
+																"comparison": 3,
+																"value": "100"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-playback-rate",
+															"objectClass": "Audio",
+															"sid": 640346220290562,
+															"parameters": {
+																"tag": "\"BG\"",
+																"playback-rate": "1.2"
+															}
+														}
+													],
+													"sid": 733320317192696
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					],
+					"sid": 413312454865409
 				},
 				{
 					"eventType": "group",
@@ -12027,7 +13412,7 @@
 						{
 							"eventType": "group",
 							"disabled": false,
-							"title": "Idle/Walk/Duck/LookUp/FireShoot/Skid/Turning",
+							"title": "Idle/Walk/Duck/LookUp/DoorEnter/FireShoot/Skid/Turning",
 							"description": "",
 							"isActiveOnStart": true,
 							"children": [
@@ -12601,7 +13986,7 @@
 										},
 										{
 											"eventType": "comment",
-											"text": "Look Up"
+											"text": "Look Up & Entering Doors"
 										},
 										{
 											"eventType": "block",
@@ -12642,218 +14027,269 @@
 													"isInverted": true
 												}
 											],
-											"actions": [
-												{
-													"id": "set-instvar-value",
-													"objectClass": "Player1",
-													"sid": 548041224951884,
-													"parameters": {
-														"instance-variable": "AnimationState",
-														"value": "\"LookUp\""
-													}
-												}
-											],
+											"actions": [],
 											"sid": 905864349955532,
 											"children": [
 												{
 													"eventType": "block",
 													"conditions": [
 														{
+															"id": "on-collision-with-another-object",
+															"objectClass": "Player1",
+															"sid": 438445928887210,
+															"parameters": {
+																"object": "Door"
+															}
+														},
+														{
 															"id": "is-boolean-instance-variable-set",
 															"objectClass": "Player1",
-															"sid": 202790772479560,
+															"sid": 575081936408713,
 															"parameters": {
-																"instance-variable": "HoldingItem"
+																"instance-variable": "InPipe"
 															},
 															"isInverted": true
 														}
 													],
-													"actions": [],
-													"sid": 824502040211889,
-													"children": [
+													"actions": [
 														{
-															"eventType": "block",
-															"conditions": [
-																{
-																	"id": "compare-instance-variable",
-																	"objectClass": "Player1",
-																	"sid": 501816591788940,
-																	"parameters": {
-																		"instance-variable": "HP",
-																		"comparison": 0,
-																		"value": "1"
-																	}
-																}
-															],
-															"actions": [
-																{
-																	"id": "set-animation",
-																	"objectClass": "Player1",
-																	"sid": 241292747184937,
-																	"parameters": {
-																		"animation": "\"Small_LookUp\"",
-																		"from": "beginning"
-																	}
-																}
-															],
-															"sid": 661795951806089
-														},
-														{
-															"eventType": "block",
-															"conditions": [
-																{
-																	"id": "compare-instance-variable",
-																	"objectClass": "Player1",
-																	"sid": 247333922654489,
-																	"parameters": {
-																		"instance-variable": "HP",
-																		"comparison": 0,
-																		"value": "2"
-																	}
-																}
-															],
-															"actions": [
-																{
-																	"id": "set-animation",
-																	"objectClass": "Player1",
-																	"sid": 757255611887765,
-																	"parameters": {
-																		"animation": "\"Big_LookUp\"",
-																		"from": "beginning"
-																	}
-																}
-															],
-															"sid": 245418083127981
-														},
-														{
-															"eventType": "block",
-															"conditions": [
-																{
-																	"id": "compare-instance-variable",
-																	"objectClass": "Player1",
-																	"sid": 843361033573883,
-																	"parameters": {
-																		"instance-variable": "HP",
-																		"comparison": 5,
-																		"value": "3"
-																	}
-																}
-															],
-															"actions": [
-																{
-																	"id": "set-animation",
-																	"objectClass": "Player1",
-																	"sid": 293277687324669,
-																	"parameters": {
-																		"animation": "\"Fire_LookUp\"",
-																		"from": "beginning"
-																	}
-																}
-															],
-															"sid": 286113786322806
+															"id": "signal",
+															"objectClass": "System",
+															"sid": 694315803629702,
+															"parameters": {
+																"tag": "\"EnteringDoor\""
+															}
 														}
-													]
+													],
+													"sid": 930243652975042
 												},
 												{
 													"eventType": "block",
 													"conditions": [
 														{
-															"id": "else",
-															"objectClass": "System",
-															"sid": 333623893309684
-														},
-														{
-															"id": "is-boolean-instance-variable-set",
+															"id": "is-overlapping-another-object",
 															"objectClass": "Player1",
-															"sid": 929523807245245,
+															"sid": 590932996512662,
 															"parameters": {
-																"instance-variable": "HoldingItem"
+																"object": "Door"
+															},
+															"isInverted": true
+														}
+													],
+													"actions": [
+														{
+															"id": "set-instvar-value",
+															"objectClass": "Player1",
+															"sid": 145251377941345,
+															"parameters": {
+																"instance-variable": "AnimationState",
+																"value": "\"LookUp\""
 															}
 														}
 													],
-													"actions": [],
-													"sid": 525617495147222,
+													"sid": 196512405854297,
 													"children": [
 														{
 															"eventType": "block",
 															"conditions": [
 																{
-																	"id": "compare-instance-variable",
+																	"id": "is-boolean-instance-variable-set",
 																	"objectClass": "Player1",
-																	"sid": 816076408775026,
+																	"sid": 110484238997559,
 																	"parameters": {
-																		"instance-variable": "HP",
-																		"comparison": 0,
-																		"value": "1"
-																	}
+																		"instance-variable": "HoldingItem"
+																	},
+																	"isInverted": true
 																}
 															],
-															"actions": [
+															"actions": [],
+															"sid": 553859724397063,
+															"children": [
 																{
-																	"id": "set-animation",
-																	"objectClass": "Player1",
-																	"sid": 366941188139053,
-																	"parameters": {
-																		"animation": "\"Small_LookUpP\"",
-																		"from": "beginning"
-																	}
+																	"eventType": "block",
+																	"conditions": [
+																		{
+																			"id": "compare-instance-variable",
+																			"objectClass": "Player1",
+																			"sid": 685254829426935,
+																			"parameters": {
+																				"instance-variable": "HP",
+																				"comparison": 0,
+																				"value": "1"
+																			}
+																		}
+																	],
+																	"actions": [
+																		{
+																			"id": "set-animation",
+																			"objectClass": "Player1",
+																			"sid": 866156028981698,
+																			"parameters": {
+																				"animation": "\"Small_LookUp\"",
+																				"from": "beginning"
+																			}
+																		}
+																	],
+																	"sid": 374779215642457
+																},
+																{
+																	"eventType": "block",
+																	"conditions": [
+																		{
+																			"id": "compare-instance-variable",
+																			"objectClass": "Player1",
+																			"sid": 809412169537938,
+																			"parameters": {
+																				"instance-variable": "HP",
+																				"comparison": 0,
+																				"value": "2"
+																			}
+																		}
+																	],
+																	"actions": [
+																		{
+																			"id": "set-animation",
+																			"objectClass": "Player1",
+																			"sid": 678593971517048,
+																			"parameters": {
+																				"animation": "\"Big_LookUp\"",
+																				"from": "beginning"
+																			}
+																		}
+																	],
+																	"sid": 430536052348493
+																},
+																{
+																	"eventType": "block",
+																	"conditions": [
+																		{
+																			"id": "compare-instance-variable",
+																			"objectClass": "Player1",
+																			"sid": 208490923246266,
+																			"parameters": {
+																				"instance-variable": "HP",
+																				"comparison": 5,
+																				"value": "3"
+																			}
+																		}
+																	],
+																	"actions": [
+																		{
+																			"id": "set-animation",
+																			"objectClass": "Player1",
+																			"sid": 718978913273315,
+																			"parameters": {
+																				"animation": "\"Fire_LookUp\"",
+																				"from": "beginning"
+																			}
+																		}
+																	],
+																	"sid": 804317182550029
 																}
-															],
-															"sid": 838812614931145
+															]
 														},
 														{
 															"eventType": "block",
 															"conditions": [
 																{
-																	"id": "compare-instance-variable",
-																	"objectClass": "Player1",
-																	"sid": 504691041494164,
-																	"parameters": {
-																		"instance-variable": "HP",
-																		"comparison": 0,
-																		"value": "2"
-																	}
-																}
-															],
-															"actions": [
+																	"id": "else",
+																	"objectClass": "System",
+																	"sid": 220814883196038
+																},
 																{
-																	"id": "set-animation",
+																	"id": "is-boolean-instance-variable-set",
 																	"objectClass": "Player1",
-																	"sid": 442608676370670,
+																	"sid": 481961092321275,
 																	"parameters": {
-																		"animation": "\"Big_LookUpP\"",
-																		"from": "beginning"
+																		"instance-variable": "HoldingItem"
 																	}
 																}
 															],
-															"sid": 130209025578170
-														},
-														{
-															"eventType": "block",
-															"conditions": [
+															"actions": [],
+															"sid": 160826117556472,
+															"children": [
 																{
-																	"id": "compare-instance-variable",
-																	"objectClass": "Player1",
-																	"sid": 572813860085297,
-																	"parameters": {
-																		"instance-variable": "HP",
-																		"comparison": 5,
-																		"value": "3"
-																	}
-																}
-															],
-															"actions": [
+																	"eventType": "block",
+																	"conditions": [
+																		{
+																			"id": "compare-instance-variable",
+																			"objectClass": "Player1",
+																			"sid": 739402530873218,
+																			"parameters": {
+																				"instance-variable": "HP",
+																				"comparison": 0,
+																				"value": "1"
+																			}
+																		}
+																	],
+																	"actions": [
+																		{
+																			"id": "set-animation",
+																			"objectClass": "Player1",
+																			"sid": 699219596300002,
+																			"parameters": {
+																				"animation": "\"Small_LookUpP\"",
+																				"from": "beginning"
+																			}
+																		}
+																	],
+																	"sid": 727074503792925
+																},
 																{
-																	"id": "set-animation",
-																	"objectClass": "Player1",
-																	"sid": 358066560500187,
-																	"parameters": {
-																		"animation": "\"Fire_LookUpP\"",
-																		"from": "beginning"
-																	}
+																	"eventType": "block",
+																	"conditions": [
+																		{
+																			"id": "compare-instance-variable",
+																			"objectClass": "Player1",
+																			"sid": 191940596149028,
+																			"parameters": {
+																				"instance-variable": "HP",
+																				"comparison": 0,
+																				"value": "2"
+																			}
+																		}
+																	],
+																	"actions": [
+																		{
+																			"id": "set-animation",
+																			"objectClass": "Player1",
+																			"sid": 806221466238525,
+																			"parameters": {
+																				"animation": "\"Big_LookUpP\"",
+																				"from": "beginning"
+																			}
+																		}
+																	],
+																	"sid": 702868693395151
+																},
+																{
+																	"eventType": "block",
+																	"conditions": [
+																		{
+																			"id": "compare-instance-variable",
+																			"objectClass": "Player1",
+																			"sid": 196139097069906,
+																			"parameters": {
+																				"instance-variable": "HP",
+																				"comparison": 5,
+																				"value": "3"
+																			}
+																		}
+																	],
+																	"actions": [
+																		{
+																			"id": "set-animation",
+																			"objectClass": "Player1",
+																			"sid": 241637789964813,
+																			"parameters": {
+																				"animation": "\"Fire_LookUpP\"",
+																				"from": "beginning"
+																			}
+																		}
+																	],
+																	"sid": 647309853079845
 																}
-															],
-															"sid": 586325734607002
+															]
 														}
 													]
 												}

@@ -6250,24 +6250,6 @@
 								{
 									"id": "set-group-active",
 									"objectClass": "System",
-									"sid": 715620832575701,
-									"parameters": {
-										"group-name": "\"SMW Hud Stuff\"",
-										"state": "deactivated"
-									}
-								},
-								{
-									"id": "set-group-active",
-									"objectClass": "System",
-									"sid": 453247771428311,
-									"parameters": {
-										"group-name": "\"Player System\"",
-										"state": "deactivated"
-									}
-								},
-								{
-									"id": "set-group-active",
-									"objectClass": "System",
 									"sid": 176532597329246,
 									"parameters": {
 										"group-name": "\"Timer System\"",
@@ -7067,7 +7049,7 @@
 								{
 									"id": "on-signal",
 									"objectClass": "System",
-									"sid": 943119103669021,
+									"sid": 306017343857663,
 									"parameters": {
 										"tag": "\"DoorMusicCheck\""
 									}
@@ -7137,7 +7119,7 @@
 												{
 													"id": "play-by-name",
 													"objectClass": "Audio",
-													"sid": 529447225525542,
+													"sid": 257855842753563,
 													"parameters": {
 														"folder": "music",
 														"audio-file-name": "Door.Door_MusicChange",

@@ -1046,9 +1046,18 @@
 						{
 							"id": "wait",
 							"objectClass": "System",
-							"sid": 495101685379455,
+							"sid": 264555788104714,
 							"parameters": {
-								"seconds": "0.54",
+								"seconds": "0.225",
+								"use-timescale": true
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 986137645028941,
+							"parameters": {
+								"seconds": "0.3",
 								"use-timescale": true
 							}
 						},
@@ -1094,6 +1103,60 @@
 							"behaviorType": "Platform",
 							"parameters": {
 								"state": "enabled"
+							}
+						},
+						{
+							"id": "set-group-active",
+							"objectClass": "System",
+							"sid": 769937104638070,
+							"parameters": {
+								"group-name": "\"SMW Hud Stuff\"",
+								"state": "activated"
+							}
+						},
+						{
+							"id": "set-group-active",
+							"objectClass": "System",
+							"sid": 416545625230676,
+							"parameters": {
+								"group-name": "\"Player System\"",
+								"state": "activated"
+							}
+						},
+						{
+							"id": "set-group-active",
+							"objectClass": "System",
+							"sid": 867337290963992,
+							"parameters": {
+								"group-name": "\"Timer System\"",
+								"state": "activated"
+							}
+						},
+						{
+							"id": "set-group-active",
+							"objectClass": "System",
+							"sid": 374394758489296,
+							"parameters": {
+								"group-name": "\"Object Systems\"",
+								"state": "activated"
+							}
+						},
+						{
+							"id": "set-group-active",
+							"objectClass": "System",
+							"sid": 895731070192130,
+							"parameters": {
+								"group-name": "\"Event Systems\"",
+								"state": "toggle-active"
+							}
+						},
+						{
+							"id": "set-group-active",
+							"objectClass": "System",
+							"sid": 432604976418929,
+							"parameters": {
+								"group-name": "\"Enemies System\"",
+								"state": "activated"
 							}
 						}
 					],
@@ -6146,6 +6209,69 @@
 									}
 								},
 								{
+									"id": "set-group-active",
+									"objectClass": "System",
+									"sid": 715620832575701,
+									"parameters": {
+										"group-name": "\"SMW Hud Stuff\"",
+										"state": "deactivated"
+									}
+								},
+								{
+									"id": "set-group-active",
+									"objectClass": "System",
+									"sid": 453247771428311,
+									"parameters": {
+										"group-name": "\"Player System\"",
+										"state": "deactivated"
+									}
+								},
+								{
+									"id": "set-group-active",
+									"objectClass": "System",
+									"sid": 176532597329246,
+									"parameters": {
+										"group-name": "\"Timer System\"",
+										"state": "deactivated"
+									}
+								},
+								{
+									"id": "set-group-active",
+									"objectClass": "System",
+									"sid": 545315235277210,
+									"parameters": {
+										"group-name": "\"Object Systems\"",
+										"state": "deactivated"
+									}
+								},
+								{
+									"id": "set-group-active",
+									"objectClass": "System",
+									"sid": 166084170383976,
+									"parameters": {
+										"group-name": "\"Event Systems\"",
+										"state": "deactivated"
+									}
+								},
+								{
+									"id": "set-group-active",
+									"objectClass": "System",
+									"sid": 512256176537653,
+									"parameters": {
+										"group-name": "\"Enemies System\"",
+										"state": "deactivated"
+									}
+								},
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 245695357851572,
+									"parameters": {
+										"layer": "\"CircleFade\"",
+										"visibility": "invisible"
+									}
+								},
+								{
 									"id": "wait",
 									"objectClass": "System",
 									"sid": 329552698942651,
@@ -6177,18 +6303,6 @@
 									"parameters": {
 										"seconds": "0.6",
 										"use-timescale": true
-									}
-								},
-								{
-									"id": "play",
-									"objectClass": "Audio",
-									"sid": 757431489827105,
-									"parameters": {
-										"audio-file": "coin",
-										"loop": "not-looping",
-										"volume": "-5",
-										"stereo-pan": "0",
-										"tag-optional": "\"\""
 									}
 								},
 								{
@@ -6275,19 +6389,82 @@
 										{
 											"id": "wait",
 											"objectClass": "System",
-											"sid": 537596236236332,
+											"sid": 572179856866773,
 											"parameters": {
-												"seconds": "0.25",
+												"seconds": "0.225",
 												"use-timescale": true
 											}
 										},
 										{
 											"id": "wait",
 											"objectClass": "System",
-											"sid": 798287628345836,
+											"sid": 648478536186568,
 											"parameters": {
-												"seconds": "0.65",
+												"seconds": "0.3",
 												"use-timescale": true
+											}
+										},
+										{
+											"id": "set-layer-visible",
+											"objectClass": "System",
+											"sid": 584868236634751,
+											"parameters": {
+												"layer": "\"CircleFade\"",
+												"visibility": "visible"
+											}
+										},
+										{
+											"id": "set-group-active",
+											"objectClass": "System",
+											"sid": 312614326208023,
+											"parameters": {
+												"group-name": "\"SMW Hud Stuff\"",
+												"state": "activated"
+											}
+										},
+										{
+											"id": "set-group-active",
+											"objectClass": "System",
+											"sid": 656152222388904,
+											"parameters": {
+												"group-name": "\"Player System\"",
+												"state": "activated"
+											}
+										},
+										{
+											"id": "set-group-active",
+											"objectClass": "System",
+											"sid": 993502511253697,
+											"parameters": {
+												"group-name": "\"Timer System\"",
+												"state": "activated"
+											}
+										},
+										{
+											"id": "set-group-active",
+											"objectClass": "System",
+											"sid": 100762318491978,
+											"parameters": {
+												"group-name": "\"Object Systems\"",
+												"state": "activated"
+											}
+										},
+										{
+											"id": "set-group-active",
+											"objectClass": "System",
+											"sid": 959427373348635,
+											"parameters": {
+												"group-name": "\"Event Systems\"",
+												"state": "toggle-active"
+											}
+										},
+										{
+											"id": "set-group-active",
+											"objectClass": "System",
+											"sid": 484103069394983,
+											"parameters": {
+												"group-name": "\"Enemies System\"",
+												"state": "activated"
 											}
 										},
 										{

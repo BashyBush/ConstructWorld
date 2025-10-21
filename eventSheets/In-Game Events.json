@@ -960,6 +960,11 @@
 					],
 					"actions": [
 						{
+							"id": "stop-animation",
+							"objectClass": "Enemies",
+							"sid": 108478722086002
+						},
+						{
 							"id": "play-by-name",
 							"objectClass": "Audio",
 							"sid": 593331767529096,
@@ -1157,6 +1162,30 @@
 							"parameters": {
 								"group-name": "\"Enemies System\"",
 								"state": "activated"
+							}
+						},
+						{
+							"id": "start-animation",
+							"objectClass": "Enemies",
+							"sid": 106730933687873,
+							"parameters": {
+								"from": "current-frame"
+							}
+						},
+						{
+							"id": "start-animation",
+							"objectClass": "Blocks",
+							"sid": 947405500974735,
+							"parameters": {
+								"from": "current-frame"
+							}
+						},
+						{
+							"id": "start-animation",
+							"objectClass": "Collectables",
+							"sid": 335779371720300,
+							"parameters": {
+								"from": "current-frame"
 							}
 						}
 					],
@@ -6263,6 +6292,11 @@
 									}
 								},
 								{
+									"id": "stop-animation",
+									"objectClass": "Enemies",
+									"sid": 553702997561904
+								},
+								{
 									"id": "set-layer-visible",
 									"objectClass": "System",
 									"sid": 245695357851572,
@@ -6465,6 +6499,14 @@
 											"parameters": {
 												"group-name": "\"Enemies System\"",
 												"state": "activated"
+											}
+										},
+										{
+											"id": "start-animation",
+											"objectClass": "Enemies",
+											"sid": 270129856079589,
+											"parameters": {
+												"from": "beginning"
 											}
 										},
 										{
@@ -9013,6 +9055,11 @@
 															"id": "stop-animation",
 															"objectClass": "Player1",
 															"sid": 883599807946090
+														},
+														{
+															"id": "stop-animation",
+															"objectClass": "Enemies",
+															"sid": 542256382336258
 														},
 														{
 															"id": "stop-animation",
@@ -23775,6 +23822,14 @@
 												},
 												{
 													"id": "start-animation",
+													"objectClass": "Enemies",
+													"sid": 913919664109698,
+													"parameters": {
+														"from": "current-frame"
+													}
+												},
+												{
+													"id": "start-animation",
 													"objectClass": "Collectables",
 													"sid": 138891223990245,
 													"parameters": {
@@ -27425,8 +27480,13 @@
 												},
 												{
 													"id": "stop-animation",
+													"objectClass": "Enemies",
+													"sid": 430940352976394
+												},
+												{
+													"id": "stop-animation",
 													"objectClass": "Collectables",
-													"sid": 283782564337755
+													"sid": 248353833379763
 												},
 												{
 													"id": "stop-animation",
@@ -27521,6 +27581,14 @@
 													"behaviorType": "Sine",
 													"parameters": {
 														"state": "active"
+													}
+												},
+												{
+													"id": "start-animation",
+													"objectClass": "Enemies",
+													"sid": 518416042226133,
+													"parameters": {
+														"from": "current-frame"
 													}
 												},
 												{
@@ -28159,6 +28227,11 @@
 												},
 												{
 													"id": "stop-animation",
+													"objectClass": "Enemies",
+													"sid": 200844138215001
+												},
+												{
+													"id": "stop-animation",
 													"objectClass": "Collectables",
 													"sid": 725317178872740
 												},
@@ -28246,6 +28319,14 @@
 													"parameters": {
 														"group-name": "\"Enemies System\"",
 														"state": "activated"
+													}
+												},
+												{
+													"id": "start-animation",
+													"objectClass": "Enemies",
+													"sid": 638987606365894,
+													"parameters": {
+														"from": "current-frame"
 													}
 												},
 												{

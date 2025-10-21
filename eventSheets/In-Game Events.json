@@ -6289,15 +6289,6 @@
 									"sid": 553702997561904
 								},
 								{
-									"id": "set-layer-visible",
-									"objectClass": "System",
-									"sid": 245695357851572,
-									"parameters": {
-										"layer": "\"CircleFade\"",
-										"visibility": "invisible"
-									}
-								},
-								{
 									"id": "wait",
 									"objectClass": "System",
 									"sid": 329552698942651,
@@ -6428,15 +6419,6 @@
 											"parameters": {
 												"seconds": "0.3",
 												"use-timescale": true
-											}
-										},
-										{
-											"id": "set-layer-visible",
-											"objectClass": "System",
-											"sid": 584868236634751,
-											"parameters": {
-												"layer": "\"CircleFade\"",
-												"visibility": "visible"
 											}
 										},
 										{

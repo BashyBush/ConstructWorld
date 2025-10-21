@@ -965,6 +965,16 @@
 							"sid": 108478722086002
 						},
 						{
+							"id": "stop-animation",
+							"objectClass": "Blocks",
+							"sid": 624795099615882
+						},
+						{
+							"id": "stop-animation",
+							"objectClass": "Collectables",
+							"sid": 718632126557028
+						},
+						{
 							"id": "play-by-name",
 							"objectClass": "Audio",
 							"sid": 593331767529096,
@@ -13245,6 +13255,21 @@
 															}
 														},
 														{
+															"id": "stop-animation",
+															"objectClass": "Enemies",
+															"sid": 441093377947193
+														},
+														{
+															"id": "stop-animation",
+															"objectClass": "Blocks",
+															"sid": 336873831933414
+														},
+														{
+															"id": "stop-animation",
+															"objectClass": "Collectables",
+															"sid": 361019784238686
+														},
+														{
 															"id": "set-animation",
 															"objectClass": "Player1",
 															"sid": 148481010593399,
@@ -13322,6 +13347,30 @@
 															"parameters": {
 																"group-name": "\"Enemies System\"",
 																"state": "activated"
+															}
+														},
+														{
+															"id": "start-animation",
+															"objectClass": "Enemies",
+															"sid": 368167395856588,
+															"parameters": {
+																"from": "current-frame"
+															}
+														},
+														{
+															"id": "start-animation",
+															"objectClass": "Blocks",
+															"sid": 151160694791435,
+															"parameters": {
+																"from": "current-frame"
+															}
+														},
+														{
+															"id": "start-animation",
+															"objectClass": "Collectables",
+															"sid": 864037254825306,
+															"parameters": {
+																"from": "current-frame"
 															}
 														},
 														{

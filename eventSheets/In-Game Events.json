@@ -11989,6 +11989,17 @@
 															"parameters": {
 																"key": 90
 															}
+														},
+														{
+															"id": "compare-instance-variable",
+															"objectClass": "Player1",
+															"sid": 168912707546657,
+															"parameters": {
+																"instance-variable": "AnimationState",
+																"comparison": 0,
+																"value": "\"Spining\""
+															},
+															"isInverted": true
 														}
 													],
 													"actions": [

@@ -11950,6 +11950,10 @@
 											"sid": 345584390747073
 										},
 										{
+											"eventType": "comment",
+											"text": "bad way to do this but whatever im trying... :("
+										},
+										{
 											"eventType": "block",
 											"conditions": [
 												{
@@ -12049,6 +12053,14 @@
 															"parameters": {
 																"seconds": "0.01",
 																"use-timescale": true
+															}
+														},
+														{
+															"id": "stop",
+															"objectClass": "Audio",
+															"sid": 891319247777032,
+															"parameters": {
+																"tag": "\"SF\""
 															}
 														},
 														{

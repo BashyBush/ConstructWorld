@@ -9594,16 +9594,11 @@
 											],
 											"actions": [
 												{
-													"type": "comment",
-													"text": "need to make the vector lower if not holding the jump button"
-												},
-												{
-													"id": "set-vector-y",
-													"objectClass": "Player1",
-													"sid": 174719786321359,
-													"behaviorType": "Platform",
+													"id": "signal",
+													"objectClass": "System",
+													"sid": 721827390371221,
 													"parameters": {
-														"vector-y": "-550"
+														"tag": "\"MarioEnemyJump\""
 													}
 												},
 												{
@@ -9765,7 +9760,7 @@
 														{
 															"id": "compare-instance-variable",
 															"objectClass": "ENEMY_Rex",
-															"sid": 456932685680014,
+															"sid": 197804477423397,
 															"parameters": {
 																"instance-variable": "HP",
 																"comparison": 0,
@@ -9777,10 +9772,10 @@
 														{
 															"id": "destroy",
 															"objectClass": "ENEMY_Rex",
-															"sid": 587059300719453
+															"sid": 958919154214337
 														}
 													],
-													"sid": 453944952966693
+													"sid": 489304821830632
 												}
 											]
 										},
@@ -9870,12 +9865,11 @@
 											],
 											"actions": [
 												{
-													"id": "set-vector-y",
-													"objectClass": "Player1",
-													"sid": 574321307760419,
-													"behaviorType": "Platform",
+													"id": "signal",
+													"objectClass": "System",
+													"sid": 496963001248298,
 													"parameters": {
-														"vector-y": "-550"
+														"tag": "\"MarioEnemyJump\""
 													}
 												},
 												{
@@ -10244,6 +10238,15 @@
 																			"sid": 687758797165783
 																		},
 																		{
+																			"id": "add-to-instvar",
+																			"objectClass": "Player1",
+																			"sid": 926126503835074,
+																			"parameters": {
+																				"instance-variable": "EnemyCombo",
+																				"value": "1"
+																			}
+																		},
+																		{
 																			"id": "play",
 																			"objectClass": "Audio",
 																			"sid": 216626551462129,
@@ -10256,68 +10259,12 @@
 																			}
 																		},
 																		{
-																			"id": "add-to-eventvar",
-																			"objectClass": "System",
-																			"sid": 839261873708207,
-																			"parameters": {
-																				"variable": "Score",
-																				"value": "200"
-																			}
-																		},
-																		{
-																			"id": "create-object",
-																			"objectClass": "System",
-																			"sid": 500404503632732,
-																			"parameters": {
-																				"object-to-create": "PART_PointGivenSprites",
-																				"layer": "14",
-																				"x": "PICKUP_Shell.X",
-																				"y": "PICKUP_Shell.Y+16",
-																				"create-hierarchy": false,
-																				"template-name": "\"\""
-																			}
-																		},
-																		{
-																			"id": "set-animation",
-																			"objectClass": "PART_PointGivenSprites",
-																			"sid": 728038650016193,
-																			"parameters": {
-																				"animation": "\"200\"",
-																				"from": "beginning"
-																			}
-																		},
-																		{
-																			"id": "move-to-position",
-																			"objectClass": "PART_PointGivenSprites",
-																			"sid": 851131494392135,
-																			"behaviorType": "MoveTo",
-																			"parameters": {
-																				"x": "Self.X",
-																				"y": "Self.Y-40",
-																				"mode": "direct"
-																			}
-																		},
-																		{
 																			"id": "signal",
 																			"objectClass": "System",
 																			"sid": 758748965498233,
 																			"parameters": {
 																				"tag": "\"ComboCheck\""
 																			}
-																		},
-																		{
-																			"id": "wait",
-																			"objectClass": "System",
-																			"sid": 463825582214523,
-																			"parameters": {
-																				"seconds": "0.85",
-																				"use-timescale": true
-																			}
-																		},
-																		{
-																			"id": "destroy",
-																			"objectClass": "PART_PointGivenSprites",
-																			"sid": 732060136504309
 																		}
 																	],
 																	"sid": 350039100465203
@@ -11156,238 +11103,283 @@
 									}
 								},
 								{
-									"id": "compare-instance-variable",
-									"objectClass": "Player1",
-									"sid": 373391142830787,
+									"id": "on-key-pressed",
+									"objectClass": "Keyboard",
+									"sid": 447676254511932,
 									"parameters": {
-										"instance-variable": "HP",
-										"comparison": 0,
-										"value": "3"
+										"key": 83
 									}
-								},
-								{
-									"id": "is-boolean-instance-variable-set",
-									"objectClass": "Player1",
-									"sid": 783790714468519,
-									"parameters": {
-										"instance-variable": "DumbSpinCheck"
-									},
-									"isInverted": true
-								},
-								{
-									"id": "is-boolean-instance-variable-set",
-									"objectClass": "Player1",
-									"sid": 987149701064432,
-									"parameters": {
-										"instance-variable": "CourseClear"
-									},
-									"isInverted": true
 								}
 							],
 							"actions": [],
 							"sid": 410704287482846,
 							"children": [
 								{
-									"eventType": "comment",
-									"text": "Ideas - Try to check if the Fireball Object exists twice and if it does exist prevent Mario from spawning another one. If a fireball goes off screen remove said fireball."
-								},
-								{
 									"eventType": "block",
-									"conditions": [],
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Player1",
+											"sid": 106674026971691,
+											"parameters": {
+												"instance-variable": "HP",
+												"comparison": 0,
+												"value": "3"
+											}
+										},
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "Player1",
+											"sid": 330525590887874,
+											"parameters": {
+												"instance-variable": "DumbSpinCheck"
+											},
+											"isInverted": true
+										},
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "Player1",
+											"sid": 136899593753229,
+											"parameters": {
+												"instance-variable": "CourseClear"
+											},
+											"isInverted": true
+										}
+									],
 									"actions": [],
-									"sid": 406293595612462,
+									"sid": 764418477248644,
 									"children": [
 										{
+											"eventType": "comment",
+											"text": "Ideas - Try to check if the Fireball Object exists twice and if it does exist prevent Mario from spawning another one. If a fireball goes off screen remove said fireball."
+										},
+										{
 											"eventType": "block",
-											"conditions": [
-												{
-													"id": "compare-two-values",
-													"objectClass": "System",
-													"sid": 289091368881631,
-													"parameters": {
-														"first-value": "Player_FireBall.Count",
-														"comparison": 4,
-														"second-value": "1"
-													},
-													"isInverted": true
-												}
-											],
-											"actions": [
-												{
-													"id": "set-boolean-instvar",
-													"objectClass": "Player1",
-													"sid": 762897007297616,
-													"parameters": {
-														"instance-variable": "ShotFireBall",
-														"value": "true"
-													}
-												},
-												{
-													"id": "set-instvar-value",
-													"objectClass": "Player1",
-													"sid": 922238575231945,
-													"parameters": {
-														"instance-variable": "AnimationState",
-														"value": "\"Fire_Shoot\""
-													}
-												},
-												{
-													"id": "create-object",
-													"objectClass": "System",
-													"sid": 560147974349366,
-													"parameters": {
-														"object-to-create": "Player_FireBall",
-														"layer": "\"Main Objects\"",
-														"x": "Player1.X",
-														"y": "Player1.Y+32",
-														"create-hierarchy": false,
-														"template-name": "\"\""
-													}
-												},
-												{
-													"id": "set-max-speed",
-													"objectClass": "Player_FireBall",
-													"sid": 153337116850474,
-													"behaviorType": "Platform",
-													"parameters": {
-														"max-speed": "350"
-													}
-												},
-												{
-													"id": "set-acceleration",
-													"objectClass": "Player_FireBall",
-													"sid": 888778546917270,
-													"behaviorType": "Platform",
-													"parameters": {
-														"acceleration": "10000"
-													}
-												},
-												{
-													"id": "set-deceleration",
-													"objectClass": "Player_FireBall",
-													"sid": 170222381042238,
-													"behaviorType": "Platform",
-													"parameters": {
-														"deceleration": "10000"
-													}
-												},
-												{
-													"id": "set-jump-strength",
-													"objectClass": "Player_FireBall",
-													"sid": 361728279769517,
-													"behaviorType": "Platform",
-													"parameters": {
-														"jump-strength": "250"
-													}
-												},
-												{
-													"id": "set-default-controls",
-													"objectClass": "Player_FireBall",
-													"sid": 480539157647507,
-													"behaviorType": "Platform",
-													"parameters": {
-														"default-controls": false
-													}
-												},
-												{
-													"id": "set-size",
-													"objectClass": "Player_FireBall",
-													"sid": 945762140603825,
-													"parameters": {
-														"width": "16",
-														"height": "16"
-													}
-												},
-												{
-													"id": "play",
-													"objectClass": "Audio",
-													"sid": 866443969840301,
-													"parameters": {
-														"audio-file": "smw_fireball",
-														"loop": "not-looping",
-														"volume": "-5",
-														"stereo-pan": "0",
-														"tag-optional": "\"SF\""
-													}
-												}
-											],
-											"sid": 433088822261842,
+											"conditions": [],
+											"actions": [],
+											"sid": 475510518276345,
 											"children": [
 												{
 													"eventType": "block",
 													"conditions": [
 														{
-															"id": "is-mirrored",
-															"objectClass": "Player1",
-															"sid": 751546891397083
-														}
-													],
-													"actions": [
-														{
-															"id": "set-instvar-value",
-															"objectClass": "Player_FireBall",
-															"sid": 658568549306721,
+															"id": "compare-two-values",
+															"objectClass": "System",
+															"sid": 370519663216909,
 															"parameters": {
-																"instance-variable": "MovingState",
-																"value": "\"Left\""
-															}
-														}
-													],
-													"sid": 597654129470682
-												},
-												{
-													"eventType": "block",
-													"conditions": [
-														{
-															"id": "is-mirrored",
-															"objectClass": "Player1",
-															"sid": 488194761852938,
+																"first-value": "Player_FireBall.Count",
+																"comparison": 4,
+																"second-value": "1"
+															},
 															"isInverted": true
 														}
 													],
 													"actions": [
 														{
-															"id": "set-instvar-value",
-															"objectClass": "Player_FireBall",
-															"sid": 721311209590828,
+															"id": "set-boolean-instvar",
+															"objectClass": "Player1",
+															"sid": 340128111170886,
 															"parameters": {
-																"instance-variable": "MovingState",
-																"value": "\"Right\""
-															}
-														}
-													],
-													"sid": 352845436797234
-												},
-												{
-													"eventType": "block",
-													"conditions": [],
-													"actions": [
-														{
-															"id": "wait",
-															"objectClass": "System",
-															"sid": 904519098621547,
-															"parameters": {
-																"seconds": "0.1",
-																"use-timescale": true
+																"instance-variable": "ShotFireBall",
+																"value": "true"
 															}
 														},
 														{
-															"id": "set-boolean-instvar",
+															"id": "set-instvar-value",
 															"objectClass": "Player1",
-															"sid": 826575915541590,
+															"sid": 413170954685222,
 															"parameters": {
-																"instance-variable": "ShotFireBall",
-																"value": "false"
+																"instance-variable": "AnimationState",
+																"value": "\"Fire_Shoot\""
+															}
+														},
+														{
+															"id": "create-object",
+															"objectClass": "System",
+															"sid": 908167873466567,
+															"parameters": {
+																"object-to-create": "Player_FireBall",
+																"layer": "\"Main Objects\"",
+																"x": "Player1.X",
+																"y": "Player1.Y+32",
+																"create-hierarchy": false,
+																"template-name": "\"\""
+															}
+														},
+														{
+															"id": "set-max-speed",
+															"objectClass": "Player_FireBall",
+															"sid": 285613750731746,
+															"behaviorType": "Platform",
+															"parameters": {
+																"max-speed": "350"
+															}
+														},
+														{
+															"id": "set-acceleration",
+															"objectClass": "Player_FireBall",
+															"sid": 658194988696313,
+															"behaviorType": "Platform",
+															"parameters": {
+																"acceleration": "10000"
+															}
+														},
+														{
+															"id": "set-deceleration",
+															"objectClass": "Player_FireBall",
+															"sid": 466162074480128,
+															"behaviorType": "Platform",
+															"parameters": {
+																"deceleration": "10000"
+															}
+														},
+														{
+															"id": "set-jump-strength",
+															"objectClass": "Player_FireBall",
+															"sid": 221128311552361,
+															"behaviorType": "Platform",
+															"parameters": {
+																"jump-strength": "250"
+															}
+														},
+														{
+															"id": "set-default-controls",
+															"objectClass": "Player_FireBall",
+															"sid": 830290163094806,
+															"behaviorType": "Platform",
+															"parameters": {
+																"default-controls": false
+															}
+														},
+														{
+															"id": "set-size",
+															"objectClass": "Player_FireBall",
+															"sid": 170819969047072,
+															"parameters": {
+																"width": "16",
+																"height": "16"
+															}
+														},
+														{
+															"id": "play",
+															"objectClass": "Audio",
+															"sid": 773407637774735,
+															"parameters": {
+																"audio-file": "smw_fireball",
+																"loop": "not-looping",
+																"volume": "-5",
+																"stereo-pan": "0",
+																"tag-optional": "\"SF\""
 															}
 														}
 													],
-													"sid": 579593906183128
+													"sid": 958250174522912,
+													"children": [
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "is-mirrored",
+																	"objectClass": "Player1",
+																	"sid": 735767745718805
+																}
+															],
+															"actions": [
+																{
+																	"id": "set-instvar-value",
+																	"objectClass": "Player_FireBall",
+																	"sid": 267752055243606,
+																	"parameters": {
+																		"instance-variable": "MovingState",
+																		"value": "\"Left\""
+																	}
+																}
+															],
+															"sid": 363000186224308
+														},
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "is-mirrored",
+																	"objectClass": "Player1",
+																	"sid": 182747719557682,
+																	"isInverted": true
+																}
+															],
+															"actions": [
+																{
+																	"id": "set-instvar-value",
+																	"objectClass": "Player_FireBall",
+																	"sid": 450797266159020,
+																	"parameters": {
+																		"instance-variable": "MovingState",
+																		"value": "\"Right\""
+																	}
+																}
+															],
+															"sid": 219301118121235
+														},
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "compare-instance-variable",
+																	"objectClass": "Player1",
+																	"sid": 772276613880318,
+																	"parameters": {
+																		"instance-variable": "TimertilRunning",
+																		"comparison": 3,
+																		"value": "75"
+																	}
+																}
+															],
+															"actions": [
+																{
+																	"id": "subtract-from-instvar",
+																	"objectClass": "Player1",
+																	"sid": 825140018458011,
+																	"parameters": {
+																		"instance-variable": "TimertilRunning",
+																		"value": "20"
+																	}
+																}
+															],
+															"sid": 442667121734490
+														},
+														{
+															"eventType": "block",
+															"conditions": [],
+															"actions": [
+																{
+																	"id": "wait",
+																	"objectClass": "System",
+																	"sid": 940022858970447,
+																	"parameters": {
+																		"seconds": "0.1",
+																		"use-timescale": true
+																	}
+																},
+																{
+																	"id": "set-boolean-instvar",
+																	"objectClass": "Player1",
+																	"sid": 889067814438259,
+																	"parameters": {
+																		"instance-variable": "ShotFireBall",
+																		"value": "false"
+																	}
+																}
+															],
+															"sid": 869580492665090
+														}
+													]
 												}
 											]
 										}
 									]
 								}
-							]
+							],
+							"isOrBlock": true
 						},
 						{
 							"eventType": "block",
@@ -11956,6 +11948,148 @@
 												}
 											],
 											"sid": 345584390747073
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "on-signal",
+													"objectClass": "System",
+													"sid": 697879845886970,
+													"parameters": {
+														"tag": "\"MarioEnemyJump\""
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-vector-y",
+													"objectClass": "Player1",
+													"sid": 146917184842316,
+													"disabled": true,
+													"behaviorType": "Platform",
+													"parameters": {
+														"vector-y": "Player1.Platform.VectorY/1"
+													}
+												}
+											],
+											"sid": 691528235668272,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "key-is-down",
+															"objectClass": "Keyboard",
+															"sid": 105816295786395,
+															"parameters": {
+																"key": 90
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-double-jump",
+															"objectClass": "Player1",
+															"sid": 417401960241412,
+															"behaviorType": "Platform",
+															"parameters": {
+																"state": "enabled"
+															}
+														},
+														{
+															"id": "set-double-jump",
+															"objectClass": "Player1",
+															"sid": 375710232856153,
+															"behaviorType": "Platform",
+															"parameters": {
+																"state": "enabled"
+															}
+														},
+														{
+															"id": "reset-double-jump",
+															"objectClass": "Player1",
+															"sid": 662194111352144,
+															"behaviorType": "Platform",
+															"parameters": {
+																"double-jump-allowed": true
+															}
+														},
+														{
+															"id": "set-vector-y",
+															"objectClass": "Player1",
+															"sid": 203726539482094,
+															"behaviorType": "Platform",
+															"parameters": {
+																"vector-y": "-635"
+															}
+														},
+														{
+															"id": "wait",
+															"objectClass": "System",
+															"sid": 880817467152756,
+															"parameters": {
+																"seconds": "0.01",
+																"use-timescale": true
+															}
+														},
+														{
+															"id": "simulate-control",
+															"objectClass": "Player1",
+															"sid": 482015001294533,
+															"behaviorType": "Platform",
+															"parameters": {
+																"control": "jump"
+															}
+														},
+														{
+															"id": "wait",
+															"objectClass": "System",
+															"sid": 498320554780120,
+															"parameters": {
+																"seconds": "0.01",
+																"use-timescale": true
+															}
+														},
+														{
+															"id": "set-double-jump",
+															"objectClass": "Player1",
+															"sid": 667521355970089,
+															"behaviorType": "Platform",
+															"parameters": {
+																"state": "disabled"
+															}
+														}
+													],
+													"sid": 197495910432703
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "else",
+															"objectClass": "System",
+															"sid": 312668574758054
+														}
+													],
+													"actions": [
+														{
+															"id": "set-vector-y",
+															"objectClass": "Player1",
+															"sid": 465857902237302,
+															"behaviorType": "Platform",
+															"parameters": {
+																"vector-y": "-350"
+															}
+														}
+													],
+													"sid": 948703001443938
+												}
+											]
+										},
+										{
+											"eventType": "comment",
+											"text": "currently it slows down mario when spin jumping like okay"
 										},
 										{
 											"eventType": "block",
@@ -30792,6 +30926,15 @@
 									"parameters": {
 										"animation": "\"Small\"",
 										"from": "beginning"
+									}
+								},
+								{
+									"id": "set-max-speed",
+									"objectClass": "ENEMY_Rex",
+									"sid": 968531603744131,
+									"behaviorType": "Platform",
+									"parameters": {
+										"max-speed": "100"
 									}
 								}
 							],

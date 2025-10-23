@@ -7163,9 +7163,9 @@
 					"sid": 688140571524999,
 					"tags": "",
 					"instanceVariables": {
-						"HP": 2,
+						"HP": 100,
 						"State": "Left",
-						"HPDamage": 1,
+						"HPDamage": 0,
 						"WIP_TurnNearEdge": false,
 						"DoEnemyFlash": false,
 						"OneHitKillSpin": true,

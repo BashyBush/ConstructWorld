@@ -20,6 +20,13 @@
 			"sid": 150222878868684
 		},
 		{
+			"name": "CameraXTimer",
+			"type": "number",
+			"desc": "use for accurate mode on camera state",
+			"show": false,
+			"sid": 589293656978581
+		},
+		{
 			"name": "CamLockXZone1",
 			"type": "number",
 			"desc": "Stops the camera from moving at the first X position (set 0 to disable)",
@@ -109,13 +116,6 @@
 			"desc": "",
 			"show": false,
 			"sid": 264770720173501
-		},
-		{
-			"name": "CameraXTimer",
-			"type": "number",
-			"desc": "use for accurate mode on camera state",
-			"show": false,
-			"sid": 589293656978581
 		}
 	],
 	"behaviorTypes": [

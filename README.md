@@ -1,5 +1,5 @@
 # Construct World
-An _attempt_ to port some of Super Mario World into Construct 3 *<sub>gif preview may be outdated.</sub>	*
+An _attempt_ to port some of Super Mario World into Construct 3. <sub>*gif preview may be outdated.*</sub>
 ![](/github/images/constructworldgameplay.gif)
 
 ## What is this exactly?

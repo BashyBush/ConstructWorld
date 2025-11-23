@@ -25,6 +25,7 @@ That why i'm releasing the project in the current state it is. I might continue 
 ## Quick Q&A Section
 - Will you still continue with this project even after this release?
    - Depends if I have the time to continue working on this and to also fix the current problems with this project.
+     (edit: still updating the project as of 23/11/2025)
 - Can I try out this without compiling?
    - Sure! Check the releases to download the current public build.
 - Can I use this for a fan-game?

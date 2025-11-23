@@ -1,7 +1,6 @@
 # Construct World
-An _attempt_ to port some of Super Mario World into Construct 3
+An _attempt_ to port some of Super Mario World into Construct 3 *<sub>gif preview may be outdated.</sub>	*
 ![](/github/images/constructworldgameplay.gif)
-<sub>gif preview may be outdated.</sub>	
 
 ## What is this exactly?
 This is pretty much a project where I attempted to port some or most of Mario World into Construct 3.

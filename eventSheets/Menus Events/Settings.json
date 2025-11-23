@@ -15,7 +15,7 @@
 			"eventType": "variable",
 			"name": "InGameSetting_4by3Mode",
 			"type": "boolean",
-			"initialValue": "false",
+			"initialValue": "true",
 			"comment": "If set to enable. Game will be in 4:3. Set Camera Zone might break because of this. ONLY enable this if you're game want's to be ON 4:3 and NOT 16:9. Not recommended to be turned on when currently played because of this. Only turn on if you truely want the game to be 4:3 due to me not really intrested fixing stuff from switching from 16:9 to 4:3 mid-game at the current moment. The importent and default UI (not main menu or the settings layout atm) that comes with this engine has events set if this is set to be on so you don't really need to change them to support 4:3 unless you're making a custom UI for them.",
 			"isStatic": false,
 			"isConstant": false,

@@ -758,6 +758,7 @@
 					"tags": "2072",
 					"instanceVariables": {
 						"FollowPlayer": true,
+						"CameraState": "Regular",
 						"CamLockXZone1": 0,
 						"CamLockXZone2": 0,
 						"CamLockYZone1": 0,
@@ -770,7 +771,8 @@
 						"PixelFadeOpacity": 1,
 						"PixelFadeSetting": "",
 						"CCFadeOpacity": 0,
-						"CCFadeSetting": ""
+						"CCFadeSetting": "",
+						"CameraXTimer": 0
 					},
 					"behaviors": {
 						"ScrollTo": {

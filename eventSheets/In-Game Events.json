@@ -2438,9 +2438,17 @@
 						{
 							"id": "set-text",
 							"objectClass": "Debug_Coords",
-							"sid": 400667115732466,
+							"sid": 456376971384381,
 							"parameters": {
-								"text": "\"Player X: \"& Player1.X & \"\nPlayer Y: \"& Player1.Y & \"\n\nCamera X \" & Camera.X & \"\nCamera Y \" & Camera.Y & \" \n\nPlayer Speed: \"& Player1.Platform.Speed & \"\nPlayer MAX-Speed: \" & Player1.Platform.MaxSpeed & \"\nPlayer X Vector: \" & Player1.Platform.VectorX & \"\nPlayer Y Vector: \" & Player1.Platform.VectorY & \"\nPlayer A-State: \" & Player1.AnimationState & \"\nPlayer A-Rem: \" & Player1.AnimationRem & \"\nPlayer Anim: \" & Player1.AnimationName & \"\nRun Timer: \" & Player1.TimertilRunning & \"\nWater: \" & Player1.InWater\n\r\n"
+								"text": "\"Player X: \"& Player1.X & \"\nPlayer Y: \"& Player1.Y & \"\n\nCamera X \" & Camera.X & \"\nCamera Y \" & Camera.Y & \" \nCam.M Speed: \" & Camera.MoveTo.MaxSpeed & \"\nCamera Offset: \" & Camera.CameraXTimer & \"\n\nPlayer Speed: \"& Player1.Platform.Speed & \"\nPlayer MAX-Speed: \" & Player1.Platform.MaxSpeed & \"\nPlayer X Vector: \" & Player1.Platform.VectorX & \"\nPlayer Y Vector: \" & Player1.Platform.VectorY & \"\nPlayer A-State: \" & Player1.AnimationState & \"\nPlayer A-Rem: \" & Player1.AnimationRem & \"\nPlayer Anim: \" & Player1.AnimationName & \"\nRun Timer: \" & Player1.TimertilRunning & \"\nWater: \" & Player1.InWater\n\r\n"
+							}
+						},
+						{
+							"id": "set-height",
+							"objectClass": "Debug_Coords",
+							"sid": 571217454553572,
+							"parameters": {
+								"height": "320"
 							}
 						}
 					],
@@ -21013,57 +21021,549 @@
 							"isInverted": true
 						}
 					],
-					"actions": [
-						{
-							"id": "set-position",
-							"objectClass": "Camera",
-							"sid": 925673689322589,
-							"parameters": {
-								"x": "lerp(Self.X, Player1.X, ChangeSmoothest)",
-								"y": "lerp(Self.Y, Player1.Y, ChangeSmoothest)"
-							}
-						}
-					],
+					"actions": [],
 					"sid": 114321543482060,
 					"children": [
 						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "compare-instance-variable",
-									"objectClass": "Player1",
-									"sid": 125821406353972,
-									"parameters": {
-										"instance-variable": "HP",
-										"comparison": 5,
-										"value": "2"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-position",
-									"objectClass": "Camera",
-									"sid": 320744669227068,
-									"parameters": {
-										"x": "lerp(Self.X, Player1.X, ChangeSmoothest)",
-										"y": "lerp(Self.Y, Player1.Y+18.019985, ChangeSmoothest)"
-									}
-								}
-							],
-							"sid": 911145429461678
+							"eventType": "comment",
+							"text": "WIP"
 						},
 						{
 							"eventType": "block",
 							"conditions": [
 								{
 									"id": "compare-instance-variable",
-									"objectClass": "Player1",
-									"sid": 852135359739871,
+									"objectClass": "Camera",
+									"sid": 484153773619396,
 									"parameters": {
-										"instance-variable": "HP",
-										"comparison": 3,
-										"value": "1"
+										"instance-variable": "CameraState",
+										"comparison": 0,
+										"value": "\"Accurate\""
+									}
+								}
+							],
+							"actions": [],
+							"sid": 915964935685196,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 479236276429946,
+											"parameters": {
+												"first-value": "Player1.Platform.VectorX",
+												"comparison": 4,
+												"second-value": "0"
+											}
+										},
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Camera",
+											"sid": 278730825296677,
+											"parameters": {
+												"instance-variable": "CameraXTimer",
+												"comparison": 0,
+												"value": "16"
+											},
+											"isInverted": true
+										}
+									],
+									"actions": [
+										{
+											"id": "add-to-instvar",
+											"objectClass": "Camera",
+											"sid": 750079213284394,
+											"parameters": {
+												"instance-variable": "CameraXTimer",
+												"value": "1"
+											}
+										}
+									],
+									"sid": 545520594114175,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "Camera",
+													"sid": 423961668638105,
+													"parameters": {
+														"instance-variable": "CameraXTimer",
+														"comparison": 0,
+														"value": "15"
+													}
+												},
+												{
+													"id": "is-moving",
+													"objectClass": "Camera",
+													"sid": 654830457723248,
+													"behaviorType": "MoveTo"
+												}
+											],
+											"actions": [
+												{
+													"id": "set-instvar-value",
+													"objectClass": "Camera",
+													"sid": 298876636111809,
+													"parameters": {
+														"instance-variable": "CameraXTimer",
+														"value": "15"
+													}
+												}
+											],
+											"sid": 962010783382321
+										}
+									]
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 238379302161323,
+											"parameters": {
+												"first-value": "Player1.Platform.VectorX",
+												"comparison": 2,
+												"second-value": "0"
+											}
+										},
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Camera",
+											"sid": 441697512447413,
+											"parameters": {
+												"instance-variable": "CameraXTimer",
+												"comparison": 0,
+												"value": "-16"
+											},
+											"isInverted": true
+										}
+									],
+									"actions": [
+										{
+											"id": "subtract-from-instvar",
+											"objectClass": "Camera",
+											"sid": 239417011715526,
+											"parameters": {
+												"instance-variable": "CameraXTimer",
+												"value": "1"
+											}
+										}
+									],
+									"sid": 251321435310828,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "Camera",
+													"sid": 735918172829987,
+													"parameters": {
+														"instance-variable": "CameraXTimer",
+														"comparison": 0,
+														"value": "-15"
+													}
+												},
+												{
+													"id": "is-moving",
+													"objectClass": "Camera",
+													"sid": 266587683906131,
+													"behaviorType": "MoveTo"
+												}
+											],
+											"actions": [
+												{
+													"id": "set-instvar-value",
+													"objectClass": "Camera",
+													"sid": 692092088759841,
+													"parameters": {
+														"instance-variable": "CameraXTimer",
+														"value": "15"
+													}
+												}
+											],
+											"sid": 728448064336321
+										}
+									]
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Camera",
+											"sid": 178941006202071,
+											"parameters": {
+												"instance-variable": "CameraXTimer",
+												"comparison": 0,
+												"value": "15"
+											}
+										},
+										{
+											"id": "compare-width",
+											"objectClass": "Player1",
+											"sid": 555885178023360,
+											"parameters": {
+												"comparison": 0,
+												"width": "32"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "move-to-position",
+											"objectClass": "Camera",
+											"sid": 395486385666957,
+											"behaviorType": "MoveTo",
+											"parameters": {
+												"x": "Player1.X+24",
+												"y": "Self.y",
+												"mode": "direct"
+											}
+										},
+										{
+											"id": "set-max-speed",
+											"objectClass": "Camera",
+											"sid": 944269424971615,
+											"disabled": true,
+											"behaviorType": "MoveTo",
+											"parameters": {
+												"max-speed": "600"
+											}
+										}
+									],
+									"sid": 776595977800417
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Camera",
+											"sid": 134231227859665,
+											"parameters": {
+												"instance-variable": "CameraXTimer",
+												"comparison": 0,
+												"value": "-15"
+											}
+										},
+										{
+											"id": "compare-width",
+											"objectClass": "Player1",
+											"sid": 648469429546814,
+											"parameters": {
+												"comparison": 0,
+												"width": "-32"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "move-to-position",
+											"objectClass": "Camera",
+											"sid": 983449289897240,
+											"behaviorType": "MoveTo",
+											"parameters": {
+												"x": "Player1.X-24",
+												"y": "Self.Y",
+												"mode": "direct"
+											}
+										},
+										{
+											"id": "set-max-speed",
+											"objectClass": "Camera",
+											"sid": 335744729792149,
+											"disabled": true,
+											"behaviorType": "MoveTo",
+											"parameters": {
+												"max-speed": "600"
+											}
+										}
+									],
+									"sid": 607523949612801
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Camera",
+											"sid": 989361589986590,
+											"parameters": {
+												"instance-variable": "CameraXTimer",
+												"comparison": 0,
+												"value": "-15"
+											}
+										}
+									],
+									"actions": [],
+									"sid": 496364311300881,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 153024298715173,
+													"parameters": {
+														"first-value": "Player1.Platform.Speed",
+														"comparison": 4,
+														"second-value": "150"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-max-speed",
+													"objectClass": "Camera",
+													"sid": 129297889504533,
+													"behaviorType": "MoveTo",
+													"parameters": {
+														"max-speed": "750"
+													}
+												}
+											],
+											"sid": 833911930228166,
+											"isOrBlock": true
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 971175705725203,
+													"parameters": {
+														"first-value": "Player1.Platform.Speed",
+														"comparison": 4,
+														"second-value": "155"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-max-speed",
+													"objectClass": "Camera",
+													"sid": 369444919444668,
+													"behaviorType": "MoveTo",
+													"parameters": {
+														"max-speed": "1350"
+													}
+												}
+											],
+											"sid": 855568062735029,
+											"isOrBlock": true
+										}
+									]
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Camera",
+											"sid": 381398740570989,
+											"parameters": {
+												"instance-variable": "CameraXTimer",
+												"comparison": 0,
+												"value": "15"
+											}
+										}
+									],
+									"actions": [],
+									"sid": 712602171773035,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 436998421282516,
+													"parameters": {
+														"first-value": "Player1.Platform.Speed",
+														"comparison": 2,
+														"second-value": "150"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-max-speed",
+													"objectClass": "Camera",
+													"sid": 641903201062998,
+													"behaviorType": "MoveTo",
+													"parameters": {
+														"max-speed": "750"
+													}
+												}
+											],
+											"sid": 165819691283230,
+											"isOrBlock": true
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 663751852691707,
+													"parameters": {
+														"first-value": "Player1.Platform.Speed",
+														"comparison": 4,
+														"second-value": "150"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-max-speed",
+													"objectClass": "Camera",
+													"sid": 547781658266087,
+													"behaviorType": "MoveTo",
+													"parameters": {
+														"max-speed": "1350"
+													}
+												}
+											],
+											"sid": 895267872724371,
+											"isOrBlock": true
+										}
+									]
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Camera",
+											"sid": 195736226022767,
+											"parameters": {
+												"instance-variable": "CameraXTimer",
+												"comparison": 0,
+												"value": "16"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-position",
+											"objectClass": "Camera",
+											"sid": 136098061966036,
+											"disabled": true,
+											"parameters": {
+												"x": "lerp(Self.X+16, Player1.X, ChangeSmoothest)",
+												"y": "lerp(Self.Y, Player1.Y, ChangeSmoothest)"
+											}
+										}
+									],
+									"sid": 462689647141358,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "is-moving",
+													"objectClass": "Camera",
+													"sid": 393488856480745,
+													"disabled": true,
+													"behaviorType": "MoveTo",
+													"isInverted": true
+												}
+											],
+											"actions": [
+												{
+													"id": "set-position",
+													"objectClass": "Camera",
+													"sid": 510466417200252,
+													"parameters": {
+														"x": "lerp(Self.X+16, Player1.X+16, ChangeSmoothest)",
+														"y": "lerp(Self.Y, Player1.Y, ChangeSmoothest)"
+													}
+												}
+											],
+											"sid": 917455695553500
+										}
+									]
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Camera",
+											"sid": 635439809533010,
+											"parameters": {
+												"instance-variable": "CameraXTimer",
+												"comparison": 0,
+												"value": "-16"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-position",
+											"objectClass": "Camera",
+											"sid": 740827518770279,
+											"disabled": true,
+											"parameters": {
+												"x": "lerp(Self.X-16, Player1.X, ChangeSmoothest)",
+												"y": "lerp(Self.Y, Player1.Y, ChangeSmoothest)"
+											}
+										}
+									],
+									"sid": 468342374599045,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "is-moving",
+													"objectClass": "Camera",
+													"sid": 509435931369444,
+													"disabled": true,
+													"behaviorType": "MoveTo",
+													"isInverted": true
+												}
+											],
+											"actions": [
+												{
+													"id": "set-position",
+													"objectClass": "Camera",
+													"sid": 425210432249931,
+													"parameters": {
+														"x": "lerp(Self.X-16, Player1.X-16, ChangeSmoothest)",
+														"y": "lerp(Self.Y, Player1.Y, ChangeSmoothest)"
+													}
+												}
+											],
+											"sid": 840974660116738
+										}
+									]
+								}
+							]
+						},
+						{
+							"eventType": "comment",
+							"text": ""
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Camera",
+									"sid": 429496533293743,
+									"parameters": {
+										"instance-variable": "CameraState",
+										"comparison": 0,
+										"value": "\"Regular\""
 									}
 								}
 							],
@@ -21071,14 +21571,70 @@
 								{
 									"id": "set-position",
 									"objectClass": "Camera",
-									"sid": 461386144500542,
+									"sid": 267321219604385,
 									"parameters": {
 										"x": "lerp(Self.X, Player1.X, ChangeSmoothest)",
 										"y": "lerp(Self.Y, Player1.Y, ChangeSmoothest)"
 									}
 								}
 							],
-							"sid": 410922788045383
+							"sid": 604738141053221,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Player1",
+											"sid": 738846196631502,
+											"parameters": {
+												"instance-variable": "HP",
+												"comparison": 5,
+												"value": "2"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-position",
+											"objectClass": "Camera",
+											"sid": 710836024424734,
+											"parameters": {
+												"x": "lerp(Self.X, Player1.X, ChangeSmoothest)",
+												"y": "lerp(Self.Y, Player1.Y+18.019985, ChangeSmoothest)"
+											}
+										}
+									],
+									"sid": 139029394599393
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Player1",
+											"sid": 321782382330884,
+											"parameters": {
+												"instance-variable": "HP",
+												"comparison": 3,
+												"value": "1"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-position",
+											"objectClass": "Camera",
+											"sid": 195727177877484,
+											"parameters": {
+												"x": "lerp(Self.X, Player1.X, ChangeSmoothest)",
+												"y": "lerp(Self.Y, Player1.Y, ChangeSmoothest)"
+											}
+										}
+									],
+									"sid": 521859270528214
+								}
+							]
 						},
 						{
 							"eventType": "block",

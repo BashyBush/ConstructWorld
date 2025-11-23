@@ -5062,7 +5062,7 @@
 				{
 					"type": "Camera",
 					"properties": {
-						"initially-visible": false,
+						"initially-visible": true,
 						"initial-animation": "Animation 1",
 						"initial-frame": 0,
 						"enable-collisions": true,
@@ -5073,6 +5073,7 @@
 					"tags": "2072",
 					"instanceVariables": {
 						"FollowPlayer": true,
+						"CameraState": "Accurate",
 						"CamLockXZone1": 0,
 						"CamLockXZone2": 9812,
 						"CamLockYZone1": 0,
@@ -5085,7 +5086,8 @@
 						"PixelFadeOpacity": 16,
 						"PixelFadeSetting": "",
 						"CCFadeOpacity": 0,
-						"CCFadeSetting": ""
+						"CCFadeSetting": "",
+						"CameraXTimer": 0
 					},
 					"behaviors": {
 						"ScrollTo": {
@@ -11330,7 +11332,7 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 611.276098651155,
+						"x": 595.276098651155,
 						"y": 3.8814626890049198,
 						"width": 239.72727272727286,
 						"height": 272,

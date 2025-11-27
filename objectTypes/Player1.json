@@ -1790,7 +1790,7 @@
 							{
 								"width": 16,
 								"height": 32,
-								"originX": 0.5625,
+								"originX": 0.5,
 								"originY": 0,
 								"originalSource": "",
 								"exportFormat": "lossless",
@@ -1842,7 +1842,7 @@
 							{
 								"width": 16,
 								"height": 32,
-								"originX": 0.5625,
+								"originX": 0.5,
 								"originY": 0,
 								"originalSource": "",
 								"exportFormat": "lossless",
@@ -2974,7 +2974,7 @@
 							{
 								"width": 16,
 								"height": 32,
-								"originX": 0.5625,
+								"originX": 0.5,
 								"originY": 0,
 								"originalSource": "",
 								"exportFormat": "lossless",
@@ -3026,7 +3026,7 @@
 							{
 								"width": 16,
 								"height": 32,
-								"originX": 0.5625,
+								"originX": 0.5,
 								"originY": 0,
 								"originalSource": "",
 								"exportFormat": "lossless",

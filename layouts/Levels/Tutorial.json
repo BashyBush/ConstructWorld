@@ -6840,6 +6840,7 @@
 					"instanceVariables": {
 						"FollowPlayer": true,
 						"CameraState": "Regular",
+						"CameraXTimer": 0,
 						"CamLockXZone1": 619,
 						"CamLockXZone2": 4212,
 						"CamLockYZone1": 0,
@@ -6852,8 +6853,7 @@
 						"PixelFadeOpacity": 16,
 						"PixelFadeSetting": "",
 						"CCFadeOpacity": 0,
-						"CCFadeSetting": "",
-						"CameraXTimer": 0
+						"CCFadeSetting": ""
 					},
 					"behaviors": {
 						"ScrollTo": {

@@ -26627,6 +26627,46 @@
 									"conditions": [],
 									"actions": [
 										{
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 723359694570699,
+											"parameters": {
+												"seconds": "1.0",
+												"use-timescale": true
+											}
+										},
+										{
+											"id": "set-blend-mode",
+											"objectClass": "KeyHoleAnimation",
+											"sid": 199840165281705,
+											"parameters": {
+												"blend-mode": "destination-out"
+											}
+										},
+										{
+											"id": "set-blend-mode",
+											"objectClass": "Player1",
+											"sid": 261201243108759,
+											"parameters": {
+												"blend-mode": "destination-over"
+											}
+										},
+										{
+											"id": "set-blend-mode",
+											"objectClass": "Key",
+											"sid": 934813060158245,
+											"parameters": {
+												"blend-mode": "destination-over"
+											}
+										}
+									],
+									"sid": 786756032447504
+								},
+								{
+									"eventType": "block",
+									"conditions": [],
+									"actions": [
+										{
 											"id": "set-boolean-eventvar",
 											"objectClass": "System",
 											"sid": 886342567852137,
@@ -26646,10 +26686,10 @@
 										{
 											"id": "create-object",
 											"objectClass": "System",
-											"sid": 901045687753703,
+											"sid": 720529747552622,
 											"parameters": {
 												"object-to-create": "KeyHoleAnimation",
-												"layer": "10",
+												"layer": "\"Blocks\"",
 												"x": "Player1.X",
 												"y": "Player1.Y-79",
 												"create-hierarchy": false,

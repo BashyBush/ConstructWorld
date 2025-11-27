@@ -11867,6 +11867,13 @@
 																	"id": "else",
 																	"objectClass": "System",
 																	"sid": 999650692710525
+																},
+																{
+																	"id": "is-double-jump-enabled",
+																	"objectClass": "Player1",
+																	"sid": 439938113303820,
+																	"behaviorType": "Platform",
+																	"isInverted": true
 																}
 															],
 															"actions": [
@@ -11894,6 +11901,13 @@
 															"id": "else",
 															"objectClass": "System",
 															"sid": 471816754158247
+														},
+														{
+															"id": "is-double-jump-enabled",
+															"objectClass": "Player1",
+															"sid": 112957519178755,
+															"behaviorType": "Platform",
+															"isInverted": true
 														}
 													],
 													"actions": [

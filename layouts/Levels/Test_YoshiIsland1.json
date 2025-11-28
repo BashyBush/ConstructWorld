@@ -1959,7 +1959,7 @@
 							"sid": 185076634980006,
 							"tags": "",
 							"instanceVariables": {
-								"ItemHolder": "Mushroom",
+								"ItemHolder": "FireMush",
 								"Invisible": false
 							},
 							"behaviors": {

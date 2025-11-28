@@ -7484,6 +7484,169 @@
 																{
 																	"id": "compare-instance-variable",
 																	"objectClass": "Rotating_Block",
+																	"sid": 967953260113758,
+																	"parameters": {
+																		"instance-variable": "ItemHolder",
+																		"comparison": 0,
+																		"value": "\"FireMush\""
+																	}
+																}
+															],
+															"actions": [
+																{
+																	"id": "play",
+																	"objectClass": "Audio",
+																	"sid": 441637298067944,
+																	"parameters": {
+																		"audio-file": "sprout-item",
+																		"loop": "not-looping",
+																		"volume": "-5",
+																		"stereo-pan": "0",
+																		"tag-optional": "\"\""
+																	}
+																}
+															],
+															"sid": 323877108695224,
+															"children": [
+																{
+																	"eventType": "block",
+																	"conditions": [
+																		{
+																			"id": "compare-instance-variable",
+																			"objectClass": "Player1",
+																			"sid": 661822943039960,
+																			"parameters": {
+																				"instance-variable": "HP",
+																				"comparison": 0,
+																				"value": "1"
+																			}
+																		}
+																	],
+																	"actions": [
+																		{
+																			"id": "create-object",
+																			"objectClass": "System",
+																			"sid": 757742993742729,
+																			"parameters": {
+																				"object-to-create": "Mushroom",
+																				"layer": "\"Main Objects\"",
+																				"x": "Rotating_Block.X",
+																				"y": "Rotating_Block.Y",
+																				"create-hierarchy": false,
+																				"template-name": "\"\""
+																			}
+																		},
+																		{
+																			"id": "move-to-bottom",
+																			"objectClass": "Mushroom",
+																			"sid": 155663619107360
+																		},
+																		{
+																			"id": "move-to-top",
+																			"objectClass": "Rotating_Block",
+																			"sid": 702020986132597
+																		},
+																		{
+																			"id": "set-boolean-instvar",
+																			"objectClass": "Mushroom",
+																			"sid": 407356254707045,
+																			"parameters": {
+																				"instance-variable": "CanMove",
+																				"value": "false"
+																			}
+																		},
+																		{
+																			"id": "move-to-position",
+																			"objectClass": "Mushroom",
+																			"sid": 620315104175456,
+																			"behaviorType": "MoveTo",
+																			"parameters": {
+																				"x": "Self.x",
+																				"y": "Self.Y-33",
+																				"mode": "direct"
+																			}
+																		},
+																		{
+																			"id": "wait",
+																			"objectClass": "System",
+																			"sid": 567652839900288,
+																			"parameters": {
+																				"seconds": "0.9",
+																				"use-timescale": true
+																			}
+																		},
+																		{
+																			"id": "set-boolean-instvar",
+																			"objectClass": "Mushroom",
+																			"sid": 707050767697401,
+																			"parameters": {
+																				"instance-variable": "CanMove",
+																				"value": "true"
+																			}
+																		}
+																	],
+																	"sid": 773376700705450
+																},
+																{
+																	"eventType": "block",
+																	"conditions": [
+																		{
+																			"id": "compare-instance-variable",
+																			"objectClass": "Player1",
+																			"sid": 573876422290545,
+																			"parameters": {
+																				"instance-variable": "HP",
+																				"comparison": 4,
+																				"value": "1"
+																			}
+																		}
+																	],
+																	"actions": [
+																		{
+																			"id": "create-object",
+																			"objectClass": "System",
+																			"sid": 628333690418442,
+																			"parameters": {
+																				"object-to-create": "FireFlower",
+																				"layer": "\"Main Objects\"",
+																				"x": "Rotating_Block.X",
+																				"y": "Rotating_Block.Y",
+																				"create-hierarchy": false,
+																				"template-name": "\"\""
+																			}
+																		},
+																		{
+																			"id": "move-to-bottom",
+																			"objectClass": "FireFlower",
+																			"sid": 692143323917936
+																		},
+																		{
+																			"id": "move-to-top",
+																			"objectClass": "Rotating_Block",
+																			"sid": 187820666723850
+																		},
+																		{
+																			"id": "move-to-position",
+																			"objectClass": "FireFlower",
+																			"sid": 824269989750558,
+																			"behaviorType": "MoveTo",
+																			"parameters": {
+																				"x": "Self.x",
+																				"y": "Self.Y-33",
+																				"mode": "direct"
+																			}
+																		}
+																	],
+																	"sid": 372670693512826
+																}
+															]
+														},
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "compare-instance-variable",
+																	"objectClass": "Rotating_Block",
 																	"sid": 794610009834273,
 																	"parameters": {
 																		"instance-variable": "ItemHolder",
@@ -8317,6 +8480,169 @@
 																}
 															],
 															"sid": 409628355611796
+														},
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "compare-instance-variable",
+																	"objectClass": "Question_Block",
+																	"sid": 658231079453916,
+																	"parameters": {
+																		"instance-variable": "ItemHolder",
+																		"comparison": 0,
+																		"value": "\"FireMush\""
+																	}
+																}
+															],
+															"actions": [
+																{
+																	"id": "play",
+																	"objectClass": "Audio",
+																	"sid": 570810653896671,
+																	"parameters": {
+																		"audio-file": "sprout-item",
+																		"loop": "not-looping",
+																		"volume": "-5",
+																		"stereo-pan": "0",
+																		"tag-optional": "\"\""
+																	}
+																}
+															],
+															"sid": 463102770103279,
+															"children": [
+																{
+																	"eventType": "block",
+																	"conditions": [
+																		{
+																			"id": "compare-instance-variable",
+																			"objectClass": "Player1",
+																			"sid": 284035116540916,
+																			"parameters": {
+																				"instance-variable": "HP",
+																				"comparison": 0,
+																				"value": "1"
+																			}
+																		}
+																	],
+																	"actions": [
+																		{
+																			"id": "create-object",
+																			"objectClass": "System",
+																			"sid": 165833780523341,
+																			"parameters": {
+																				"object-to-create": "Mushroom",
+																				"layer": "\"Main Objects\"",
+																				"x": "Question_Block.X",
+																				"y": "Question_Block.Y",
+																				"create-hierarchy": false,
+																				"template-name": "\"\""
+																			}
+																		},
+																		{
+																			"id": "move-to-bottom",
+																			"objectClass": "Mushroom",
+																			"sid": 728003305355690
+																		},
+																		{
+																			"id": "move-to-top",
+																			"objectClass": "Question_Block",
+																			"sid": 298157611006662
+																		},
+																		{
+																			"id": "set-boolean-instvar",
+																			"objectClass": "Mushroom",
+																			"sid": 259345428773257,
+																			"parameters": {
+																				"instance-variable": "CanMove",
+																				"value": "false"
+																			}
+																		},
+																		{
+																			"id": "move-to-position",
+																			"objectClass": "Mushroom",
+																			"sid": 594453864957576,
+																			"behaviorType": "MoveTo",
+																			"parameters": {
+																				"x": "Self.x",
+																				"y": "Self.Y-33",
+																				"mode": "direct"
+																			}
+																		},
+																		{
+																			"id": "wait",
+																			"objectClass": "System",
+																			"sid": 788140911966568,
+																			"parameters": {
+																				"seconds": "0.9",
+																				"use-timescale": true
+																			}
+																		},
+																		{
+																			"id": "set-boolean-instvar",
+																			"objectClass": "Mushroom",
+																			"sid": 998453370727827,
+																			"parameters": {
+																				"instance-variable": "CanMove",
+																				"value": "true"
+																			}
+																		}
+																	],
+																	"sid": 434741812011494
+																},
+																{
+																	"eventType": "block",
+																	"conditions": [
+																		{
+																			"id": "compare-instance-variable",
+																			"objectClass": "Player1",
+																			"sid": 362923370478720,
+																			"parameters": {
+																				"instance-variable": "HP",
+																				"comparison": 4,
+																				"value": "1"
+																			}
+																		}
+																	],
+																	"actions": [
+																		{
+																			"id": "create-object",
+																			"objectClass": "System",
+																			"sid": 435826076586168,
+																			"parameters": {
+																				"object-to-create": "FireFlower",
+																				"layer": "\"Main Objects\"",
+																				"x": "Question_Block.X",
+																				"y": "Question_Block.Y",
+																				"create-hierarchy": false,
+																				"template-name": "\"\""
+																			}
+																		},
+																		{
+																			"id": "move-to-bottom",
+																			"objectClass": "FireFlower",
+																			"sid": 791739895104514
+																		},
+																		{
+																			"id": "move-to-top",
+																			"objectClass": "Question_Block",
+																			"sid": 405607867867352
+																		},
+																		{
+																			"id": "move-to-position",
+																			"objectClass": "FireFlower",
+																			"sid": 281288595880280,
+																			"behaviorType": "MoveTo",
+																			"parameters": {
+																				"x": "Self.x",
+																				"y": "Self.Y-33",
+																				"mode": "direct"
+																			}
+																		}
+																	],
+																	"sid": 588097323595700
+																}
+															]
 														},
 														{
 															"eventType": "block",

@@ -9817,7 +9817,7 @@
 							"eventType": "group",
 							"disabled": false,
 							"title": "BanzaiBill",
-							"description": "i left this broken for too long lmao",
+							"description": "",
 							"isActiveOnStart": true,
 							"children": [
 								{
@@ -9826,7 +9826,7 @@
 										{
 											"id": "on-collision-with-another-object",
 											"objectClass": "Player1",
-											"sid": 939077751878410,
+											"sid": 555266061690791,
 											"parameters": {
 												"object": "ENEMY_BanzaiBill"
 											}
@@ -9834,13 +9834,13 @@
 										{
 											"id": "is-flashing",
 											"objectClass": "ENEMY_BanzaiBill",
-											"sid": 401552990693033,
+											"sid": 500615482726120,
 											"behaviorType": "Flash",
 											"isInverted": true
 										}
 									],
 									"actions": [],
-									"sid": 479143286331114,
+									"sid": 560420855425902,
 									"children": [
 										{
 											"eventType": "block",
@@ -9848,7 +9848,7 @@
 												{
 													"id": "compare-instance-variable",
 													"objectClass": "PauseSystem",
-													"sid": 360287495063605,
+													"sid": 741224518905658,
 													"parameters": {
 														"instance-variable": "PlayerFlashTimer",
 														"comparison": 2,
@@ -9858,13 +9858,13 @@
 												{
 													"id": "is-falling",
 													"objectClass": "Player1",
-													"sid": 371758636753040,
+													"sid": 376376672431002,
 													"behaviorType": "Platform"
 												},
 												{
 													"id": "compare-y",
 													"objectClass": "Player1",
-													"sid": 153379320493151,
+													"sid": 865604386046633,
 													"parameters": {
 														"comparison": 2,
 														"y-co-ordinate": "ENEMY_BanzaiBill.Y-0.001"
@@ -9875,7 +9875,7 @@
 												{
 													"id": "signal",
 													"objectClass": "System",
-													"sid": 496963001248298,
+													"sid": 696681798918196,
 													"parameters": {
 														"tag": "\"MarioEnemyJump\""
 													}
@@ -9883,14 +9883,14 @@
 												{
 													"id": "add-to-instvar",
 													"objectClass": "Player1",
-													"sid": 224971054469461,
+													"sid": 296624675167672,
 													"parameters": {
 														"instance-variable": "EnemyCombo",
 														"value": "1"
 													}
 												}
 											],
-											"sid": 351438416454402,
+											"sid": 439339846942047,
 											"children": [
 												{
 													"eventType": "block",
@@ -9898,7 +9898,7 @@
 														{
 															"id": "compare-instance-variable",
 															"objectClass": "ENEMY_BanzaiBill",
-															"sid": 378954059451508,
+															"sid": 218618013677028,
 															"parameters": {
 																"instance-variable": "HP",
 																"comparison": 4,
@@ -9910,14 +9910,14 @@
 														{
 															"id": "subtract-from-instvar",
 															"objectClass": "ENEMY_BanzaiBill",
-															"sid": 738518638411539,
+															"sid": 806294938750626,
 															"parameters": {
 																"instance-variable": "HP",
 																"value": "1"
 															}
 														}
 													],
-													"sid": 356907172895988,
+													"sid": 451816719691746,
 													"children": [
 														{
 															"eventType": "block",
@@ -9925,7 +9925,7 @@
 																{
 																	"id": "compare-instance-variable",
 																	"objectClass": "Player1",
-																	"sid": 659388612933337,
+																	"sid": 494944598771924,
 																	"parameters": {
 																		"instance-variable": "AnimationState",
 																		"comparison": 0,
@@ -9934,7 +9934,7 @@
 																}
 															],
 															"actions": [],
-															"sid": 386058871376858,
+															"sid": 837139811791819,
 															"children": [
 																{
 																	"eventType": "block",
@@ -9942,7 +9942,7 @@
 																		{
 																			"id": "is-boolean-instance-variable-set",
 																			"objectClass": "ENEMY_BanzaiBill",
-																			"sid": 864565033297563,
+																			"sid": 544608711233548,
 																			"parameters": {
 																				"instance-variable": "OneHitKillSpin"
 																			}
@@ -9952,12 +9952,12 @@
 																		{
 																			"id": "destroy",
 																			"objectClass": "ENEMY_BanzaiBill",
-																			"sid": 440521645423652
+																			"sid": 959522333312757
 																		},
 																		{
 																			"id": "play",
 																			"objectClass": "Audio",
-																			"sid": 432364252163826,
+																			"sid": 430397686328113,
 																			"parameters": {
 																				"audio-file": "super-stomp",
 																				"loop": "not-looping",
@@ -9967,7 +9967,7 @@
 																			}
 																		}
 																	],
-																	"sid": 996697656774635
+																	"sid": 650828826285659
 																}
 															]
 														},
@@ -9977,12 +9977,12 @@
 																{
 																	"id": "else",
 																	"objectClass": "System",
-																	"sid": 159225784895352
+																	"sid": 139481096084502
 																},
 																{
 																	"id": "compare-instance-variable",
 																	"objectClass": "Player1",
-																	"sid": 303103293819915,
+																	"sid": 214534924779640,
 																	"parameters": {
 																		"instance-variable": "AnimationState",
 																		"comparison": 0,
@@ -9995,7 +9995,7 @@
 																{
 																	"id": "play",
 																	"objectClass": "Audio",
-																	"sid": 523120198210531,
+																	"sid": 709243472126567,
 																	"parameters": {
 																		"audio-file": "stomp",
 																		"loop": "not-looping",
@@ -10005,7 +10005,7 @@
 																	}
 																}
 															],
-															"sid": 594411868785106
+															"sid": 382875864420926
 														}
 													]
 												},
@@ -10015,7 +10015,7 @@
 														{
 															"id": "compare-instance-variable",
 															"objectClass": "ENEMY_BanzaiBill",
-															"sid": 995373995349163,
+															"sid": 921106017756292,
 															"parameters": {
 																"instance-variable": "HP",
 																"comparison": 0,
@@ -10027,7 +10027,7 @@
 														{
 															"id": "set-collisions-enabled",
 															"objectClass": "ENEMY_BanzaiBill",
-															"sid": 327090464934782,
+															"sid": 503804220157901,
 															"parameters": {
 																"collisions": "disabled"
 															}
@@ -10035,7 +10035,7 @@
 														{
 															"id": "set-enabled",
 															"objectClass": "ENEMY_BanzaiBill",
-															"sid": 275287702169976,
+															"sid": 457734476812333,
 															"behaviorType": "Bullet",
 															"parameters": {
 																"state": "disabled"
@@ -10044,7 +10044,7 @@
 														{
 															"id": "set-enabled",
 															"objectClass": "ENEMY_BanzaiBill",
-															"sid": 644857855750364,
+															"sid": 679405783491061,
 															"behaviorType": "Physics",
 															"parameters": {
 																"mode": "enabled"
@@ -10053,7 +10053,7 @@
 														{
 															"id": "signal",
 															"objectClass": "System",
-															"sid": 224381840345556,
+															"sid": 848398034482607,
 															"parameters": {
 																"tag": "\"ComboCheck\""
 															}
@@ -10061,7 +10061,16 @@
 														{
 															"id": "wait",
 															"objectClass": "System",
-															"sid": 351726377089212,
+															"sid": 959206751945691,
+															"parameters": {
+																"seconds": "0.85",
+																"use-timescale": true
+															}
+														},
+														{
+															"id": "wait",
+															"objectClass": "System",
+															"sid": 752799440308506,
 															"parameters": {
 																"seconds": "1.15",
 																"use-timescale": true
@@ -10070,12 +10079,12 @@
 														{
 															"id": "destroy",
 															"objectClass": "ENEMY_BanzaiBill",
-															"sid": 236451739361802
+															"sid": 663449205184249
 														},
 														{
 															"id": "play",
 															"objectClass": "Audio",
-															"sid": 194998581891051,
+															"sid": 359876913577408,
 															"disabled": true,
 															"parameters": {
 																"audio-file": "stomp",
@@ -10088,7 +10097,7 @@
 														{
 															"id": "wait",
 															"objectClass": "System",
-															"sid": 886640930653358,
+															"sid": 757006675645147,
 															"disabled": true,
 															"parameters": {
 																"seconds": "2",
@@ -10098,39 +10107,39 @@
 														{
 															"id": "destroy",
 															"objectClass": "ENEMY_BanzaiBill",
-															"sid": 929217886631314,
+															"sid": 623431913755276,
 															"disabled": true
 														}
 													],
-													"sid": 685943265921303
-												},
-												{
-													"eventType": "block",
-													"conditions": [
-														{
-															"id": "else",
-															"objectClass": "System",
-															"sid": 296744897362958
-														}
-													],
-													"actions": [
-														{
-															"id": "signal",
-															"objectClass": "System",
-															"sid": 426147758992100,
-															"parameters": {
-																"tag": "\"GotDamaged\""
-															}
-														}
-													],
-													"sid": 806154618014696
+													"sid": 432927482556714
 												}
 											]
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "else",
+													"objectClass": "System",
+													"sid": 154852754056650
+												}
+											],
+											"actions": [
+												{
+													"id": "signal",
+													"objectClass": "System",
+													"sid": 338915465144121,
+													"parameters": {
+														"tag": "\"GotDamaged\""
+													}
+												}
+											],
+											"sid": 307166720497038
 										}
 									]
 								}
 							],
-							"sid": 100369755116093
+							"sid": 504182812030730
 						},
 						{
 							"eventType": "group",
@@ -13423,6 +13432,15 @@
 															"sid": 361019784238686
 														},
 														{
+															"id": "set-enabled",
+															"objectClass": "ENEMY_BanzaiBill",
+															"sid": 251456008072061,
+															"behaviorType": "Bullet",
+															"parameters": {
+																"state": "disabled"
+															}
+														},
+														{
 															"id": "set-animation",
 															"objectClass": "Player1",
 															"sid": 148481010593399,
@@ -13524,6 +13542,16 @@
 															"sid": 864037254825306,
 															"parameters": {
 																"from": "current-frame"
+															}
+														},
+														{
+															"id": "set-enabled",
+															"objectClass": "ENEMY_BanzaiBill",
+															"sid": 686194681782082,
+															"disabled": true,
+															"behaviorType": "Bullet",
+															"parameters": {
+																"state": "enabled"
 															}
 														},
 														{
@@ -19560,6 +19588,15 @@
 											"sid": 887561185524416
 										},
 										{
+											"id": "set-enabled",
+											"objectClass": "ENEMY_BanzaiBill",
+											"sid": 992858142768210,
+											"behaviorType": "Bullet",
+											"parameters": {
+												"state": "disabled"
+											}
+										},
+										{
 											"id": "play",
 											"objectClass": "Audio",
 											"sid": 692135686543400,
@@ -24881,6 +24918,15 @@
 											}
 										},
 										{
+											"id": "set-enabled",
+											"objectClass": "ENEMY_BanzaiBill",
+											"sid": 673761349942476,
+											"behaviorType": "Bullet",
+											"parameters": {
+												"state": "disabled"
+											}
+										},
+										{
 											"id": "stop-flashing",
 											"objectClass": "Player1",
 											"sid": 237203585194065,
@@ -25055,6 +25101,16 @@
 											"parameters": {
 												"group-name": "\"Enemies System\"",
 												"state": "activated"
+											}
+										},
+										{
+											"id": "set-enabled",
+											"objectClass": "ENEMY_BanzaiBill",
+											"sid": 986121164754294,
+											"disabled": true,
+											"behaviorType": "Bullet",
+											"parameters": {
+												"state": "enabled"
 											}
 										},
 										{
@@ -29387,6 +29443,109 @@
 									"eventType": "block",
 									"conditions": [
 										{
+											"id": "on-collision-with-another-object",
+											"objectClass": "1up",
+											"sid": 618251452587355,
+											"parameters": {
+												"object": "Blocks"
+											}
+										},
+										{
+											"id": "on-collision-with-another-object",
+											"objectClass": "1up",
+											"sid": 923401398374579,
+											"parameters": {
+												"object": "OW_GroundTileset"
+											}
+										}
+									],
+									"actions": [],
+									"sid": 312277229643376,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "is-by-wall",
+													"objectClass": "1up",
+													"sid": 756903008034628,
+													"behaviorType": "Movement",
+													"parameters": {
+														"side": "left"
+													}
+												},
+												{
+													"id": "is-by-wall",
+													"objectClass": "1up",
+													"sid": 563301499114741,
+													"behaviorType": "Movement",
+													"parameters": {
+														"side": "right"
+													}
+												}
+											],
+											"actions": [],
+											"sid": 834031935436733,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-instance-variable",
+															"objectClass": "1up",
+															"sid": 111753010623398,
+															"parameters": {
+																"instance-variable": "State",
+																"comparison": 0,
+																"value": "\"Right\""
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-instvar-value",
+															"objectClass": "1up",
+															"sid": 160736647553413,
+															"parameters": {
+																"instance-variable": "State",
+																"value": "\"Left\""
+															}
+														}
+													],
+													"sid": 779559107633980
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "else",
+															"objectClass": "System",
+															"sid": 387396706948883
+														}
+													],
+													"actions": [
+														{
+															"id": "set-instvar-value",
+															"objectClass": "1up",
+															"sid": 943708244948767,
+															"parameters": {
+																"instance-variable": "State",
+																"value": "\"Right\""
+															}
+														}
+													],
+													"sid": 190154529960628
+												}
+											],
+											"isOrBlock": true
+										}
+									],
+									"isOrBlock": true
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
 											"id": "is-boolean-instance-variable-set",
 											"objectClass": "1up",
 											"sid": 299551512860031,
@@ -29406,110 +29565,7 @@
 											}
 										}
 									],
-									"sid": 840230031732214,
-									"children": [
-										{
-											"eventType": "block",
-											"conditions": [
-												{
-													"id": "is-by-wall",
-													"objectClass": "1up",
-													"sid": 655752031006140,
-													"behaviorType": "Movement",
-													"parameters": {
-														"side": "left"
-													}
-												},
-												{
-													"id": "is-by-wall",
-													"objectClass": "1up",
-													"sid": 564571643210404,
-													"behaviorType": "Movement",
-													"parameters": {
-														"side": "right"
-													}
-												}
-											],
-											"actions": [],
-											"sid": 238771947069462,
-											"children": [
-												{
-													"eventType": "block",
-													"conditions": [
-														{
-															"id": "compare-instance-variable",
-															"objectClass": "1up",
-															"sid": 462193446605113,
-															"parameters": {
-																"instance-variable": "State",
-																"comparison": 0,
-																"value": "\"Right\""
-															}
-														}
-													],
-													"actions": [
-														{
-															"id": "set-instvar-value",
-															"objectClass": "1up",
-															"sid": 420166740456261,
-															"parameters": {
-																"instance-variable": "State",
-																"value": "\"Left\""
-															}
-														}
-													],
-													"sid": 579961466259317
-												},
-												{
-													"eventType": "block",
-													"conditions": [
-														{
-															"id": "else",
-															"objectClass": "System",
-															"sid": 411708260912926
-														}
-													],
-													"actions": [
-														{
-															"id": "set-instvar-value",
-															"objectClass": "1up",
-															"sid": 491647946741178,
-															"parameters": {
-																"instance-variable": "State",
-																"value": "\"Right\""
-															}
-														}
-													],
-													"sid": 665199311660721
-												}
-											],
-											"isOrBlock": true
-										},
-										{
-											"eventType": "block",
-											"conditions": [
-												{
-													"id": "on-collision-with-another-object",
-													"objectClass": "1up",
-													"sid": 372660907604822,
-													"parameters": {
-														"object": "Blocks"
-													}
-												},
-												{
-													"id": "on-collision-with-another-object",
-													"objectClass": "1up",
-													"sid": 292733208128688,
-													"parameters": {
-														"object": "OW_GroundTileset"
-													}
-												}
-											],
-											"actions": [],
-											"sid": 394955803213656,
-											"isOrBlock": true
-										}
-									]
+									"sid": 840230031732214
 								},
 								{
 									"eventType": "block",
@@ -29579,7 +29635,8 @@
 											}
 										}
 									],
-									"sid": 437497077839615
+									"sid": 437497077839615,
+									"disabled": true
 								},
 								{
 									"eventType": "block",
@@ -29623,7 +29680,8 @@
 											}
 										}
 									],
-									"sid": 761011947365713
+									"sid": 761011947365713,
+									"disabled": true
 								}
 							],
 							"sid": 504231461315457
@@ -31593,6 +31651,43 @@
 					"description": "",
 					"isActiveOnStart": true,
 					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-on-screen",
+									"objectClass": "ENEMY_BanzaiBill",
+									"sid": 829677344089219,
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-enabled",
+									"objectClass": "ENEMY_BanzaiBill",
+									"sid": 876918120026514,
+									"behaviorType": "Bullet",
+									"parameters": {
+										"state": "disabled"
+									}
+								}
+							],
+							"sid": 148157855096040,
+							"disabled": true
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 471556364318933
+								}
+							],
+							"actions": [],
+							"sid": 157135905212768,
+							"disabled": true
+						},
 						{
 							"eventType": "block",
 							"conditions": [

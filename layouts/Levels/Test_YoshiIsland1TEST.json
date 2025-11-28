@@ -7167,7 +7167,7 @@
 					"instanceVariables": {
 						"HP": 100,
 						"State": "Left",
-						"HPDamage": 0,
+						"HPDamage": 1,
 						"WIP_TurnNearEdge": false,
 						"DoEnemyFlash": false,
 						"OneHitKillSpin": true,

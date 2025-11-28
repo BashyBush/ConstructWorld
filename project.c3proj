@@ -419,7 +419,8 @@
 					"Goal_Pole",
 					"GoalORB",
 					"Checkpoint",
-					"PSwitch"
+					"PSwitch",
+					"EnemyCoin"
 				],
 				"subfolders": [
 					{

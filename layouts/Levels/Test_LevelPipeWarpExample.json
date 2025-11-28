@@ -936,6 +936,7 @@
 								"OneHitKillSpin": false,
 								"DontTurn": false,
 								"DontMove": true,
+								"FireBallHit": "",
 								"BeingHeld": false,
 								"CanBeHeld": false,
 								"Moving": false,

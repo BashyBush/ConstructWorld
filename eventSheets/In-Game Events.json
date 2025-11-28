@@ -28057,6 +28057,122 @@
 				{
 					"eventType": "group",
 					"disabled": false,
+					"title": "EnemyCoin",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-collision-with-another-object",
+									"objectClass": "Player1",
+									"sid": 381559426100105,
+									"parameters": {
+										"object": "EnemyCoin"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 833124708868258,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [],
+									"actions": [
+										{
+											"id": "destroy",
+											"objectClass": "EnemyCoin",
+											"sid": 669130689779480
+										},
+										{
+											"id": "add-to-eventvar",
+											"objectClass": "System",
+											"sid": 295165605746515,
+											"parameters": {
+												"variable": "Coins",
+												"value": "1"
+											}
+										},
+										{
+											"id": "add-to-eventvar",
+											"objectClass": "System",
+											"sid": 722973956054691,
+											"parameters": {
+												"variable": "Score",
+												"value": "200"
+											}
+										},
+										{
+											"id": "play",
+											"objectClass": "Audio",
+											"sid": 708163527665428,
+											"parameters": {
+												"audio-file": "coin",
+												"loop": "not-looping",
+												"volume": "-5",
+												"stereo-pan": "0",
+												"tag-optional": "\"SF\""
+											}
+										},
+										{
+											"id": "create-object",
+											"objectClass": "System",
+											"sid": 938956153584927,
+											"parameters": {
+												"object-to-create": "PART_PointGivenSprites",
+												"layer": "\"Main Objects\"",
+												"x": "Player1.X",
+												"y": "Player1.Y+16",
+												"create-hierarchy": false,
+												"template-name": "\"\""
+											}
+										},
+										{
+											"id": "set-animation",
+											"objectClass": "PART_PointGivenSprites",
+											"sid": 970045462295862,
+											"parameters": {
+												"animation": "\"200\"",
+												"from": "beginning"
+											}
+										},
+										{
+											"id": "move-to-position",
+											"objectClass": "PART_PointGivenSprites",
+											"sid": 436350007943679,
+											"behaviorType": "MoveTo",
+											"parameters": {
+												"x": "Self.X",
+												"y": "Self.Y-40",
+												"mode": "direct"
+											}
+										},
+										{
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 353985788543855,
+											"parameters": {
+												"seconds": "0.85",
+												"use-timescale": true
+											}
+										},
+										{
+											"id": "destroy",
+											"objectClass": "PART_PointGivenSprites",
+											"sid": 714228570444796
+										}
+									],
+									"sid": 331702021934155
+								}
+							]
+						}
+					],
+					"sid": 156539411677693
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
 					"title": "Powerups",
 					"description": "Growing Up Animation is here",
 					"isActiveOnStart": true,

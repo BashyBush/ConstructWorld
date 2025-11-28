@@ -58,6 +58,13 @@
 			"desc": "",
 			"show": true,
 			"sid": 506800697173844
+		},
+		{
+			"name": "FireBallHit",
+			"type": "string",
+			"desc": "empty val OR none = no damage \\ insta = insta kill + drop coin \\ damage = drop 1 hp",
+			"show": true,
+			"sid": 449009248050674
 		}
 	],
 	"behaviorTypes": [

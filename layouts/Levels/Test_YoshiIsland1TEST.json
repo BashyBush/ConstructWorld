@@ -7172,7 +7172,8 @@
 						"DoEnemyFlash": false,
 						"OneHitKillSpin": true,
 						"DontTurn": false,
-						"DontMove": false
+						"DontMove": false,
+						"FireBallHit": "insta"
 					},
 					"behaviors": {
 						"Platform": {
@@ -7480,7 +7481,8 @@
 						"DoEnemyFlash": true,
 						"OneHitKillSpin": false,
 						"DontTurn": true,
-						"DontMove": false
+						"DontMove": false,
+						"FireBallHit": "none"
 					},
 					"behaviors": {
 						"Platform": {
@@ -7565,7 +7567,8 @@
 						"DoEnemyFlash": false,
 						"OneHitKillSpin": true,
 						"DontTurn": false,
-						"DontMove": false
+						"DontMove": false,
+						"FireBallHit": "insta"
 					},
 					"behaviors": {
 						"Platform": {
@@ -7639,7 +7642,8 @@
 						"DoEnemyFlash": false,
 						"OneHitKillSpin": true,
 						"DontTurn": false,
-						"DontMove": false
+						"DontMove": false,
+						"FireBallHit": "insta"
 					},
 					"behaviors": {
 						"Platform": {
@@ -7713,7 +7717,8 @@
 						"DoEnemyFlash": false,
 						"OneHitKillSpin": true,
 						"DontTurn": false,
-						"DontMove": false
+						"DontMove": false,
+						"FireBallHit": "insta"
 					},
 					"behaviors": {
 						"Platform": {
@@ -7787,7 +7792,8 @@
 						"DoEnemyFlash": false,
 						"OneHitKillSpin": true,
 						"DontTurn": false,
-						"DontMove": false
+						"DontMove": false,
+						"FireBallHit": "insta"
 					},
 					"behaviors": {
 						"Platform": {
@@ -7861,7 +7867,8 @@
 						"DoEnemyFlash": false,
 						"OneHitKillSpin": true,
 						"DontTurn": false,
-						"DontMove": false
+						"DontMove": false,
+						"FireBallHit": "insta"
 					},
 					"behaviors": {
 						"Platform": {
@@ -7935,7 +7942,8 @@
 						"DoEnemyFlash": false,
 						"OneHitKillSpin": true,
 						"DontTurn": false,
-						"DontMove": false
+						"DontMove": false,
+						"FireBallHit": "insta"
 					},
 					"behaviors": {
 						"Platform": {
@@ -8009,7 +8017,8 @@
 						"DoEnemyFlash": false,
 						"OneHitKillSpin": true,
 						"DontTurn": false,
-						"DontMove": false
+						"DontMove": false,
+						"FireBallHit": "insta"
 					},
 					"behaviors": {
 						"Platform": {
@@ -8083,7 +8092,8 @@
 						"DoEnemyFlash": false,
 						"OneHitKillSpin": true,
 						"DontTurn": false,
-						"DontMove": false
+						"DontMove": false,
+						"FireBallHit": "insta"
 					},
 					"behaviors": {
 						"Platform": {
@@ -8157,7 +8167,8 @@
 						"DoEnemyFlash": false,
 						"OneHitKillSpin": true,
 						"DontTurn": false,
-						"DontMove": false
+						"DontMove": false,
+						"FireBallHit": "insta"
 					},
 					"behaviors": {
 						"Platform": {
@@ -8231,7 +8242,8 @@
 						"DoEnemyFlash": false,
 						"OneHitKillSpin": true,
 						"DontTurn": false,
-						"DontMove": false
+						"DontMove": false,
+						"FireBallHit": "insta"
 					},
 					"behaviors": {
 						"Platform": {
@@ -8305,7 +8317,8 @@
 						"DoEnemyFlash": false,
 						"OneHitKillSpin": true,
 						"DontTurn": false,
-						"DontMove": false
+						"DontMove": false,
+						"FireBallHit": "insta"
 					},
 					"behaviors": {
 						"Platform": {
@@ -8379,7 +8392,8 @@
 						"DoEnemyFlash": false,
 						"OneHitKillSpin": true,
 						"DontTurn": false,
-						"DontMove": false
+						"DontMove": false,
+						"FireBallHit": "insta"
 					},
 					"behaviors": {
 						"Platform": {
@@ -8453,7 +8467,8 @@
 						"DoEnemyFlash": false,
 						"OneHitKillSpin": true,
 						"DontTurn": false,
-						"DontMove": false
+						"DontMove": false,
+						"FireBallHit": "insta"
 					},
 					"behaviors": {
 						"Platform": {
@@ -8527,7 +8542,8 @@
 						"DoEnemyFlash": false,
 						"OneHitKillSpin": true,
 						"DontTurn": false,
-						"DontMove": false
+						"DontMove": false,
+						"FireBallHit": "insta"
 					},
 					"behaviors": {
 						"Platform": {
@@ -8601,7 +8617,8 @@
 						"DoEnemyFlash": false,
 						"OneHitKillSpin": true,
 						"DontTurn": false,
-						"DontMove": false
+						"DontMove": false,
+						"FireBallHit": "insta"
 					},
 					"behaviors": {
 						"Platform": {
@@ -8675,7 +8692,8 @@
 						"DoEnemyFlash": true,
 						"OneHitKillSpin": false,
 						"DontTurn": true,
-						"DontMove": false
+						"DontMove": false,
+						"FireBallHit": "none"
 					},
 					"behaviors": {
 						"Platform": {
@@ -8760,7 +8778,8 @@
 						"DoEnemyFlash": true,
 						"OneHitKillSpin": false,
 						"DontTurn": true,
-						"DontMove": false
+						"DontMove": false,
+						"FireBallHit": "none"
 					},
 					"behaviors": {
 						"Platform": {
@@ -8921,6 +8940,7 @@
 						"OneHitKillSpin": false,
 						"DontTurn": false,
 						"DontMove": true,
+						"FireBallHit": "insta",
 						"BeingHeld": false,
 						"CanBeHeld": false,
 						"Moving": false,
@@ -9014,6 +9034,7 @@
 						"OneHitKillSpin": false,
 						"DontTurn": false,
 						"DontMove": true,
+						"FireBallHit": "insta",
 						"BeingHeld": false,
 						"CanBeHeld": false,
 						"Moving": false,
@@ -9326,6 +9347,55 @@
 					"world": {
 						"x": 3056,
 						"y": 272,
+						"width": 32,
+						"height": 32,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "EnemyCoin",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 104,
+					"sid": 490028551600254,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {
+						"MoveTo": {
+							"properties": {
+								"max-speed": 200,
+								"acceleration": 0,
+								"deceleration": 0,
+								"rotate-speed": 0,
+								"set-angle": false,
+								"stop-on-solids": false,
+								"enabled": true
+							}
+						}
+					},
+					"instanceFolderItem": {
+						"sid": 490028551600254,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 288,
+						"y": 336,
 						"width": 32,
 						"height": 32,
 						"originX": 0.5,

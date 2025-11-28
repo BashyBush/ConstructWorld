@@ -4682,7 +4682,8 @@
 								"DoEnemyFlash": false,
 								"OneHitKillSpin": false,
 								"DontTurn": false,
-								"DontMove": false
+								"DontMove": false,
+								"FireBallHit": ""
 							},
 							"behaviors": {
 								"Platform": {
@@ -4762,7 +4763,8 @@
 								"DoEnemyFlash": false,
 								"OneHitKillSpin": false,
 								"DontTurn": false,
-								"DontMove": false
+								"DontMove": false,
+								"FireBallHit": ""
 							},
 							"behaviors": {
 								"Platform": {
@@ -5209,7 +5211,8 @@
 								"DoEnemyFlash": false,
 								"OneHitKillSpin": false,
 								"DontTurn": false,
-								"DontMove": false
+								"DontMove": false,
+								"FireBallHit": ""
 							},
 							"behaviors": {
 								"Platform": {
@@ -5289,7 +5292,8 @@
 								"DoEnemyFlash": false,
 								"OneHitKillSpin": false,
 								"DontTurn": false,
-								"DontMove": false
+								"DontMove": false,
+								"FireBallHit": ""
 							},
 							"behaviors": {
 								"Platform": {
@@ -5369,7 +5373,8 @@
 								"DoEnemyFlash": false,
 								"OneHitKillSpin": false,
 								"DontTurn": false,
-								"DontMove": false
+								"DontMove": false,
+								"FireBallHit": ""
 							},
 							"behaviors": {
 								"Platform": {
@@ -5449,7 +5454,8 @@
 								"DoEnemyFlash": false,
 								"OneHitKillSpin": false,
 								"DontTurn": false,
-								"DontMove": false
+								"DontMove": false,
+								"FireBallHit": ""
 							},
 							"behaviors": {
 								"Platform": {

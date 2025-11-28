@@ -1,15 +1,12 @@
 These are the known bugs/problems that I know about with Construct World.
-Last updated: 30/08/2025 01:46am GMT
+Last updated: 28/11/2025 5:46pm GMT
 
 Mario Related bugs
-- Mario can clip through invisible slopes if running.
+- Big & Fire Mario can clip through invisible slopes if running.
 - Running then letting go of either left or right while holding run will cause Mario to still be in the running animation and freezes on a frame until he fully stops moving.
-- Fire Mario is really unfinished and that some animations just does not work sometimes (like holding an item)
-- Fireballs doesn't do damage.
 
 Others 
 - World Map while somewhat finished. Most parts are unfinished.
-- Keyhole ending is unfinished
 - Some objects won't pause their animations when pausing.
-- Banazi Bills are unfinished.
 - Shells are known to randomly rotate if interacting with another shell
+- Shells are still not done btw.

@@ -4,12 +4,32 @@
 	"sid": 120641909250273,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
-	"instanceVariables": [],
+	"instanceVariables": [
+		{
+			"name": "State",
+			"type": "string",
+			"desc": "obious",
+			"show": true,
+			"sid": 419702497413751
+		},
+		{
+			"name": "CanMove",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 383840538206978
+		}
+	],
 	"behaviorTypes": [
+		{
+			"behaviorId": "Platform",
+			"name": "Platform",
+			"sid": 337055620888417
+		},
 		{
 			"behaviorId": "MoveTo",
 			"name": "MoveTo",
-			"sid": 613248528828622
+			"sid": 103433376944605
 		}
 	],
 	"effectTypes": [],
@@ -29,13 +49,13 @@
 						"imageSpriteId": 8950126,
 						"collisionPoly": {
 							"points": [
+								0.1875,
 								0,
-								0,
-								0,
-								0,
-								0,
-								0,
-								0,
+								0.1875,
+								1,
+								0.8125,
+								1,
+								0.8125,
 								0
 							]
 						},
@@ -53,6 +73,18 @@
 						"exportQuality": 0.8,
 						"fileType": "image/png",
 						"imageSpriteId": 5085129,
+						"collisionPoly": {
+							"points": [
+								0.1875,
+								0,
+								0.1875,
+								1,
+								0.8125,
+								1,
+								0.8125,
+								0
+							]
+						},
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
@@ -67,6 +99,18 @@
 						"exportQuality": 0.8,
 						"fileType": "image/png",
 						"imageSpriteId": 7755816,
+						"collisionPoly": {
+							"points": [
+								0.1875,
+								0,
+								0.1875,
+								1,
+								0.8125,
+								1,
+								0.8125,
+								0
+							]
+						},
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
@@ -81,6 +125,18 @@
 						"exportQuality": 0.8,
 						"fileType": "image/png",
 						"imageSpriteId": 7735466,
+						"collisionPoly": {
+							"points": [
+								0.1875,
+								0,
+								0.1875,
+								1,
+								0.8125,
+								1,
+								0.8125,
+								0
+							]
+						},
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""

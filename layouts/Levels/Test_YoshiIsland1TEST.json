@@ -4845,6 +4845,50 @@
 								"angle": 0,
 								"zElevation": 0
 							}
+						},
+						{
+							"type": "Hard_Block",
+							"properties": {
+								"initially-visible": true,
+								"initial-animation": "Animation 1",
+								"initial-frame": 0,
+								"enable-collisions": true,
+								"live-preview": false
+							},
+							"uid": 107,
+							"sid": 424534108677289,
+							"tags": "",
+							"instanceVariables": {},
+							"behaviors": {
+								"Solid": {
+									"properties": {
+										"enabled": true,
+										"tags": ""
+									}
+								}
+							},
+							"instanceFolderItem": {
+								"sid": 424534108677289,
+								"expanded": true
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": -160,
+								"y": 144,
+								"width": 32,
+								"height": 32,
+								"originX": 0.5,
+								"originY": 0.5,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"angle": 0,
+								"zElevation": 0
+							}
 						}
 					],
 					"sid": 720162968616241,
@@ -6197,8 +6241,8 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": -208,
-						"y": 176,
+						"x": -224,
+						"y": 192,
 						"width": 80,
 						"height": 32,
 						"originX": 0.5,
@@ -9373,15 +9417,32 @@
 					"uid": 104,
 					"sid": 490028551600254,
 					"tags": "",
-					"instanceVariables": {},
+					"instanceVariables": {
+						"State": "",
+						"CanMove": false
+					},
 					"behaviors": {
+						"Platform": {
+							"properties": {
+								"max-speed": 100,
+								"acceleration": 3000,
+								"deceleration": 0,
+								"jump-strength": 360,
+								"gravity": 1500,
+								"max-fall-speed": 1000,
+								"double-jump": false,
+								"jump-sustain": 0,
+								"default-controls": false,
+								"enabled": true
+							}
+						},
 						"MoveTo": {
 							"properties": {
 								"max-speed": 200,
-								"acceleration": 0,
-								"deceleration": 0,
+								"acceleration": 600,
+								"deceleration": 600,
 								"rotate-speed": 0,
-								"set-angle": false,
+								"set-angle": true,
 								"stop-on-solids": false,
 								"enabled": true
 							}
@@ -9394,8 +9455,8 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 288,
-						"y": 336,
+						"x": -144,
+						"y": 112,
 						"width": 32,
 						"height": 32,
 						"originX": 0.5,

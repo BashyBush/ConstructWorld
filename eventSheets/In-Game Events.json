@@ -11104,8 +11104,200 @@
 				{
 					"eventType": "group",
 					"disabled": false,
+					"title": "Fireball Damage",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-collision-with-another-object",
+									"objectClass": "Player_FireBall",
+									"sid": 695960816373536,
+									"parameters": {
+										"object": "Enemies"
+									}
+								},
+								{
+									"id": "is-on-screen",
+									"objectClass": "Enemies",
+									"sid": 465688594952212
+								}
+							],
+							"actions": [
+								{
+									"id": "destroy",
+									"objectClass": "Player_FireBall",
+									"sid": 976181651477364
+								}
+							],
+							"sid": 532310368624378,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Enemies",
+											"sid": 780644003620734,
+											"parameters": {
+												"instance-variable": "FireBallHit",
+												"comparison": 0,
+												"value": "\"none\""
+											}
+										},
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Enemies",
+											"sid": 266416959732737,
+											"parameters": {
+												"instance-variable": "FireBallHit",
+												"comparison": 0,
+												"value": "\"\""
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "play",
+											"objectClass": "Audio",
+											"sid": 665290588482921,
+											"parameters": {
+												"audio-file": "bump",
+												"loop": "not-looping",
+												"volume": "-5",
+												"stereo-pan": "0",
+												"tag-optional": "\"SF\""
+											}
+										}
+									],
+									"sid": 496339609365392,
+									"isOrBlock": true
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Enemies",
+											"sid": 974307462522364,
+											"parameters": {
+												"instance-variable": "FireBallHit",
+												"comparison": 0,
+												"value": "\"insta\""
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "play",
+											"objectClass": "Audio",
+											"sid": 914656790009150,
+											"parameters": {
+												"audio-file": "coin",
+												"loop": "not-looping",
+												"volume": "0",
+												"stereo-pan": "0",
+												"tag-optional": "\"\""
+											}
+										},
+										{
+											"id": "create-object",
+											"objectClass": "System",
+											"sid": 289611217727379,
+											"parameters": {
+												"object-to-create": "EnemyCoin",
+												"layer": "\"Main Objects\"",
+												"x": "Enemies.X",
+												"y": "Enemies.Y",
+												"create-hierarchy": false,
+												"template-name": "\"\""
+											}
+										},
+										{
+											"id": "destroy",
+											"objectClass": "Enemies",
+											"sid": 192283195999770
+										},
+										{
+											"id": "set-vector-y",
+											"objectClass": "EnemyCoin",
+											"sid": 231663079482823,
+											"behaviorType": "Platform",
+											"parameters": {
+												"vector-y": "-375"
+											}
+										}
+									],
+									"sid": 474407932445987,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "Player_FireBall",
+													"sid": 136165795575712,
+													"parameters": {
+														"instance-variable": "MovingState",
+														"comparison": 0,
+														"value": "\"Left\""
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-instvar-value",
+													"objectClass": "EnemyCoin",
+													"sid": 603955511515384,
+													"parameters": {
+														"instance-variable": "State",
+														"value": "\"Left\""
+													}
+												}
+											],
+											"sid": 123823616158017
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "Player_FireBall",
+													"sid": 555593539079184,
+													"parameters": {
+														"instance-variable": "MovingState",
+														"comparison": 0,
+														"value": "\"Right\""
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-instvar-value",
+													"objectClass": "EnemyCoin",
+													"sid": 328370398341983,
+													"parameters": {
+														"instance-variable": "State",
+														"value": "\"Right\""
+													}
+												}
+											],
+											"sid": 214336471573561
+										}
+									]
+								}
+							]
+						}
+					],
+					"sid": 690752992014744
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
 					"title": "Fireball Spawning/Despawning",
-					"description": "ugh tbh this probably aint the greatest tbh",
+					"description": "ugh tbh this probably aint the greatest tbh\nalso breaks when stuff pauses for some reason",
 					"isActiveOnStart": true,
 					"children": [
 						{
@@ -11757,6 +11949,38 @@
 								}
 							],
 							"sid": 371395192564047,
+							"isOrBlock": true
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-on-screen",
+									"objectClass": "Player_FireBall",
+									"sid": 856824847787022
+								}
+							],
+							"actions": [
+								{
+									"id": "set-default-controls",
+									"objectClass": "Player_FireBall",
+									"sid": 884571921019265,
+									"behaviorType": "Platform",
+									"parameters": {
+										"default-controls": false
+									}
+								},
+								{
+									"id": "set-default-controls",
+									"objectClass": "Player_FireBall",
+									"sid": 536657703350530,
+									"behaviorType": "Movement",
+									"parameters": {
+										"default-controls": false
+									}
+								}
+							],
+							"sid": 912868331936031,
 							"isOrBlock": true
 						}
 					],
@@ -24934,8 +25158,26 @@
 										},
 										{
 											"id": "set-enabled",
+											"objectClass": "Player_FireBall",
+											"sid": 144180379619528,
+											"behaviorType": "Platform",
+											"parameters": {
+												"state": "disabled"
+											}
+										},
+										{
+											"id": "set-enabled",
+											"objectClass": "Player_FireBall",
+											"sid": 711326004923768,
+											"behaviorType": "Movement",
+											"parameters": {
+												"state": "disabled"
+											}
+										},
+										{
+											"id": "set-enabled",
 											"objectClass": "Powerups",
-											"sid": 727832999939122,
+											"sid": 534425725129024,
 											"behaviorType": "Movement",
 											"parameters": {
 												"state": "disabled"
@@ -25111,6 +25353,24 @@
 											"behaviorType": "Bullet",
 											"parameters": {
 												"state": "enabled"
+											}
+										},
+										{
+											"id": "set-enabled",
+											"objectClass": "Player_FireBall",
+											"sid": 655485696649357,
+											"behaviorType": "Platform",
+											"parameters": {
+												"state": "disabled"
+											}
+										},
+										{
+											"id": "set-enabled",
+											"objectClass": "Player_FireBall",
+											"sid": 253242273755852,
+											"behaviorType": "Movement",
+											"parameters": {
+												"state": "disabled"
 											}
 										},
 										{
@@ -28067,14 +28327,14 @@
 								{
 									"id": "on-collision-with-another-object",
 									"objectClass": "Player1",
-									"sid": 381559426100105,
+									"sid": 938726121749044,
 									"parameters": {
 										"object": "EnemyCoin"
 									}
 								}
 							],
 							"actions": [],
-							"sid": 833124708868258,
+							"sid": 698907232203995,
 							"children": [
 								{
 									"eventType": "block",
@@ -28083,12 +28343,12 @@
 										{
 											"id": "destroy",
 											"objectClass": "EnemyCoin",
-											"sid": 669130689779480
+											"sid": 489960652957086
 										},
 										{
 											"id": "add-to-eventvar",
 											"objectClass": "System",
-											"sid": 295165605746515,
+											"sid": 436545451829712,
 											"parameters": {
 												"variable": "Coins",
 												"value": "1"
@@ -28097,7 +28357,7 @@
 										{
 											"id": "add-to-eventvar",
 											"objectClass": "System",
-											"sid": 722973956054691,
+											"sid": 369152429589221,
 											"parameters": {
 												"variable": "Score",
 												"value": "200"
@@ -28106,7 +28366,7 @@
 										{
 											"id": "play",
 											"objectClass": "Audio",
-											"sid": 708163527665428,
+											"sid": 629278270023996,
 											"parameters": {
 												"audio-file": "coin",
 												"loop": "not-looping",
@@ -28118,7 +28378,7 @@
 										{
 											"id": "create-object",
 											"objectClass": "System",
-											"sid": 938956153584927,
+											"sid": 707141818747199,
 											"parameters": {
 												"object-to-create": "PART_PointGivenSprites",
 												"layer": "\"Main Objects\"",
@@ -28131,7 +28391,7 @@
 										{
 											"id": "set-animation",
 											"objectClass": "PART_PointGivenSprites",
-											"sid": 970045462295862,
+											"sid": 305906341673457,
 											"parameters": {
 												"animation": "\"200\"",
 												"from": "beginning"
@@ -28140,7 +28400,7 @@
 										{
 											"id": "move-to-position",
 											"objectClass": "PART_PointGivenSprites",
-											"sid": 436350007943679,
+											"sid": 777608790385019,
 											"behaviorType": "MoveTo",
 											"parameters": {
 												"x": "Self.X",
@@ -28151,7 +28411,7 @@
 										{
 											"id": "wait",
 											"objectClass": "System",
-											"sid": 353985788543855,
+											"sid": 452855283518534,
 											"parameters": {
 												"seconds": "0.85",
 												"use-timescale": true
@@ -28160,12 +28420,292 @@
 										{
 											"id": "destroy",
 											"objectClass": "PART_PointGivenSprites",
-											"sid": 714228570444796
+											"sid": 449505289118480
 										}
 									],
-									"sid": 331702021934155
+									"sid": 690341173764561
 								}
 							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-landed",
+									"objectClass": "EnemyCoin",
+									"sid": 733704349826086,
+									"behaviorType": "Platform"
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 100142725497791,
+									"parameters": {
+										"first-value": "EnemyCoin.Platform.JumpStrength",
+										"comparison": 1,
+										"second-value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "simulate-control",
+									"objectClass": "EnemyCoin",
+									"sid": 429811074934965,
+									"behaviorType": "Platform",
+									"parameters": {
+										"control": "jump"
+									}
+								},
+								{
+									"id": "set-jump-strength",
+									"objectClass": "EnemyCoin",
+									"sid": 813026962346954,
+									"behaviorType": "Platform",
+									"parameters": {
+										"jump-strength": "Self.Platform.JumpStrength-80"
+									}
+								}
+							],
+							"sid": 695885788115539
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "EnemyCoin",
+									"sid": 746244132523685,
+									"parameters": {
+										"instance-variable": "State",
+										"comparison": 0,
+										"value": "\"Left\""
+									}
+								},
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "PauseSystem",
+									"sid": 661413487864440,
+									"parameters": {
+										"instance-variable": "CanPause",
+										"comparison": 3,
+										"value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "simulate-control",
+									"objectClass": "EnemyCoin",
+									"sid": 759446368988093,
+									"behaviorType": "Platform",
+									"parameters": {
+										"control": "left"
+									}
+								}
+							],
+							"sid": 625550100569882
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "EnemyCoin",
+									"sid": 682749982306894,
+									"parameters": {
+										"instance-variable": "State",
+										"comparison": 0,
+										"value": "\"Right\""
+									}
+								},
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "PauseSystem",
+									"sid": 933821023454239,
+									"parameters": {
+										"instance-variable": "CanPause",
+										"comparison": 3,
+										"value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "simulate-control",
+									"objectClass": "EnemyCoin",
+									"sid": 130889269690148,
+									"behaviorType": "Platform",
+									"parameters": {
+										"control": "right"
+									}
+								}
+							],
+							"sid": 184663068035477
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-collision-with-another-object",
+									"objectClass": "EnemyCoin",
+									"sid": 523647749427786,
+									"parameters": {
+										"object": "Blocks"
+									}
+								},
+								{
+									"id": "on-collision-with-another-object",
+									"objectClass": "EnemyCoin",
+									"sid": 386119565272395,
+									"parameters": {
+										"object": "OW_GroundTileset"
+									}
+								},
+								{
+									"id": "on-collision-with-another-object",
+									"objectClass": "EnemyCoin",
+									"sid": 763368171739763,
+									"parameters": {
+										"object": "General_Pipes"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 179382542598296,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-by-wall",
+											"objectClass": "EnemyCoin",
+											"sid": 720444772338160,
+											"behaviorType": "Platform",
+											"parameters": {
+												"side": "left"
+											}
+										},
+										{
+											"id": "is-by-wall",
+											"objectClass": "EnemyCoin",
+											"sid": 935188147917814,
+											"behaviorType": "Platform",
+											"parameters": {
+												"side": "right"
+											}
+										}
+									],
+									"actions": [],
+									"sid": 744776801021813,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "EnemyCoin",
+													"sid": 261103005957154,
+													"parameters": {
+														"instance-variable": "State",
+														"comparison": 0,
+														"value": "\"Right\""
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-instvar-value",
+													"objectClass": "EnemyCoin",
+													"sid": 912647920556574,
+													"parameters": {
+														"instance-variable": "State",
+														"value": "\"Left\""
+													}
+												}
+											],
+											"sid": 744462315976927
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "else",
+													"objectClass": "System",
+													"sid": 821312424938771
+												}
+											],
+											"actions": [
+												{
+													"id": "set-instvar-value",
+													"objectClass": "EnemyCoin",
+													"sid": 772683532620412,
+													"parameters": {
+														"instance-variable": "State",
+														"value": "\"Right\""
+													}
+												}
+											],
+											"sid": 767918224131106
+										}
+									],
+									"isOrBlock": true
+								}
+							],
+							"isOrBlock": true
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "EnemyCoin",
+									"sid": 187686894968233,
+									"parameters": {
+										"instance-variable": "CanMove"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-enabled",
+									"objectClass": "EnemyCoin",
+									"sid": 673233649661445,
+									"behaviorType": "Platform",
+									"parameters": {
+										"state": "enabled"
+									}
+								}
+							],
+							"sid": 454627644734684,
+							"disabled": true
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "EnemyCoin",
+									"sid": 468837904035374,
+									"parameters": {
+										"instance-variable": "CanMove"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-enabled",
+									"objectClass": "EnemyCoin",
+									"sid": 414003499223108,
+									"behaviorType": "Platform",
+									"parameters": {
+										"state": "disabled"
+									}
+								}
+							],
+							"sid": 694251893569282,
+							"disabled": true
 						}
 					],
 					"sid": 156539411677693
@@ -28441,6 +28981,24 @@
 													}
 												},
 												{
+													"id": "set-enabled",
+													"objectClass": "Player_FireBall",
+													"sid": 520325658662254,
+													"behaviorType": "Platform",
+													"parameters": {
+														"state": "disabled"
+													}
+												},
+												{
+													"id": "set-enabled",
+													"objectClass": "Player_FireBall",
+													"sid": 348591905416570,
+													"behaviorType": "Movement",
+													"parameters": {
+														"state": "disabled"
+													}
+												},
+												{
 													"id": "stop-animation",
 													"objectClass": "Enemies",
 													"sid": 430940352976394
@@ -28543,6 +29101,24 @@
 													"behaviorType": "Sine",
 													"parameters": {
 														"state": "active"
+													}
+												},
+												{
+													"id": "set-enabled",
+													"objectClass": "Player_FireBall",
+													"sid": 143316383679849,
+													"behaviorType": "Platform",
+													"parameters": {
+														"state": "enabled"
+													}
+												},
+												{
+													"id": "set-enabled",
+													"objectClass": "Player_FireBall",
+													"sid": 864931348177920,
+													"behaviorType": "Movement",
+													"parameters": {
+														"state": "enabled"
 													}
 												},
 												{
@@ -28727,6 +29303,14 @@
 											"sid": 932001520880715,
 											"parameters": {
 												"object": "Tiles"
+											}
+										},
+										{
+											"id": "on-collision-with-another-object",
+											"objectClass": "Mushroom",
+											"sid": 203301132773741,
+											"parameters": {
+												"object": "General_Pipes"
 											}
 										}
 									],
@@ -29203,6 +29787,24 @@
 													"sid": 275329394840369
 												},
 												{
+													"id": "set-enabled",
+													"objectClass": "Player_FireBall",
+													"sid": 340876265333340,
+													"behaviorType": "Platform",
+													"parameters": {
+														"state": "disabled"
+													}
+												},
+												{
+													"id": "set-enabled",
+													"objectClass": "Player_FireBall",
+													"sid": 942163161539628,
+													"behaviorType": "Movement",
+													"parameters": {
+														"state": "disabled"
+													}
+												},
+												{
 													"id": "set-animation",
 													"objectClass": "Player1",
 													"sid": 975168693910473,
@@ -29305,6 +29907,24 @@
 													"sid": 741073847605005,
 													"parameters": {
 														"from": "current-frame"
+													}
+												},
+												{
+													"id": "set-enabled",
+													"objectClass": "Player_FireBall",
+													"sid": 572535389398850,
+													"behaviorType": "Platform",
+													"parameters": {
+														"state": "enabled"
+													}
+												},
+												{
+													"id": "set-enabled",
+													"objectClass": "Player_FireBall",
+													"sid": 314345383961023,
+													"behaviorType": "Movement",
+													"parameters": {
+														"state": "enabled"
 													}
 												},
 												{
@@ -29572,6 +30192,14 @@
 											"sid": 923401398374579,
 											"parameters": {
 												"object": "OW_GroundTileset"
+											}
+										},
+										{
+											"id": "on-collision-with-another-object",
+											"objectClass": "1up",
+											"sid": 709357234386776,
+											"parameters": {
+												"object": "General_Pipes"
 											}
 										}
 									],

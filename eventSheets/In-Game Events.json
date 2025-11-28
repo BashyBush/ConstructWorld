@@ -31707,7 +31707,17 @@
 									}
 								}
 							],
-							"actions": [],
+							"actions": [
+								{
+									"id": "set-enabled",
+									"objectClass": "ENEMY_BanzaiBill",
+									"sid": 628910866126693,
+									"behaviorType": "Physics",
+									"parameters": {
+										"mode": "disabled"
+									}
+								}
+							],
 							"sid": 924446697919010,
 							"children": [
 								{
@@ -31716,7 +31726,7 @@
 										{
 											"id": "is-enabled",
 											"objectClass": "ENEMY_BanzaiBill",
-											"sid": 641019990208214,
+											"sid": 655677086382631,
 											"behaviorType": "Bullet",
 											"isInverted": true
 										}
@@ -31725,7 +31735,7 @@
 										{
 											"id": "play",
 											"objectClass": "Audio",
-											"sid": 268168416809220,
+											"sid": 466377928781468,
 											"parameters": {
 												"audio-file": "bullet",
 												"loop": "not-looping",
@@ -31737,14 +31747,14 @@
 										{
 											"id": "set-enabled",
 											"objectClass": "ENEMY_BanzaiBill",
-											"sid": 872604907889775,
+											"sid": 262308782811863,
 											"behaviorType": "Bullet",
 											"parameters": {
 												"state": "enabled"
 											}
 										}
 									],
-									"sid": 920017052396302
+									"sid": 653996894829682
 								}
 							]
 						}

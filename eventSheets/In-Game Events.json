@@ -11688,6 +11688,17 @@
 												"instance-variable": "CourseClear"
 											},
 											"isInverted": true
+										},
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Player1",
+											"sid": 537668376862255,
+											"parameters": {
+												"instance-variable": "AnimationState",
+												"comparison": 0,
+												"value": "\"Duck\""
+											},
+											"isInverted": true
 										}
 									],
 									"actions": [],

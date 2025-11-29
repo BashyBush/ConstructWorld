@@ -149,7 +149,7 @@
 			"eventType": "variable",
 			"name": "CurrentHP",
 			"type": "number",
-			"initialValue": "1",
+			"initialValue": "3",
 			"comment": "dont set anywhere under 1 or else shit will break lmao",
 			"isStatic": false,
 			"isConstant": false,
@@ -11674,7 +11674,16 @@
 										{
 											"id": "is-boolean-instance-variable-set",
 											"objectClass": "Player1",
-											"sid": 136899593753229,
+											"sid": 153744168885668,
+											"parameters": {
+												"instance-variable": "InPipe"
+											},
+											"isInverted": true
+										},
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "Player1",
+											"sid": 229038244615312,
 											"parameters": {
 												"instance-variable": "CourseClear"
 											},
@@ -13983,6 +13992,15 @@
 														},
 														{
 															"id": "set-enabled",
+															"objectClass": "EnemyCoin",
+															"sid": 722050184508590,
+															"behaviorType": "Platform",
+															"parameters": {
+																"state": "disabled"
+															}
+														},
+														{
+															"id": "set-enabled",
 															"objectClass": "ENEMY_BanzaiBill",
 															"sid": 251456008072061,
 															"behaviorType": "Bullet",
@@ -14092,6 +14110,15 @@
 															"sid": 864037254825306,
 															"parameters": {
 																"from": "current-frame"
+															}
+														},
+														{
+															"id": "set-enabled",
+															"objectClass": "EnemyCoin",
+															"sid": 162967164277703,
+															"behaviorType": "Platform",
+															"parameters": {
+																"state": "enabled"
 															}
 														},
 														{
@@ -20147,6 +20174,15 @@
 											}
 										},
 										{
+											"id": "set-enabled",
+											"objectClass": "EnemyCoin",
+											"sid": 688551300446179,
+											"behaviorType": "Platform",
+											"parameters": {
+												"state": "disabled"
+											}
+										},
+										{
 											"id": "play",
 											"objectClass": "Audio",
 											"sid": 692135686543400,
@@ -25477,6 +25513,15 @@
 											}
 										},
 										{
+											"id": "set-enabled",
+											"objectClass": "EnemyCoin",
+											"sid": 757989600576591,
+											"behaviorType": "Platform",
+											"parameters": {
+												"state": "disabled"
+											}
+										},
+										{
 											"id": "stop-flashing",
 											"objectClass": "Player1",
 											"sid": 237203585194065,
@@ -25677,6 +25722,15 @@
 											"sid": 986121164754294,
 											"disabled": true,
 											"behaviorType": "Bullet",
+											"parameters": {
+												"state": "enabled"
+											}
+										},
+										{
+											"id": "set-enabled",
+											"objectClass": "EnemyCoin",
+											"sid": 267126631006828,
+											"behaviorType": "Platform",
 											"parameters": {
 												"state": "enabled"
 											}

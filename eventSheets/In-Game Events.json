@@ -29390,6 +29390,15 @@
 													}
 												},
 												{
+													"id": "set-enabled",
+													"objectClass": "EnemyCoin",
+													"sid": 799158720002785,
+													"behaviorType": "Platform",
+													"parameters": {
+														"state": "disabled"
+													}
+												},
+												{
 													"id": "stop-animation",
 													"objectClass": "Enemies",
 													"sid": 430940352976394
@@ -29508,6 +29517,15 @@
 													"objectClass": "Player_FireBall",
 													"sid": 864931348177920,
 													"behaviorType": "Movement",
+													"parameters": {
+														"state": "enabled"
+													}
+												},
+												{
+													"id": "set-enabled",
+													"objectClass": "EnemyCoin",
+													"sid": 538155008453165,
+													"behaviorType": "Platform",
 													"parameters": {
 														"state": "enabled"
 													}
@@ -30196,6 +30214,15 @@
 													}
 												},
 												{
+													"id": "set-enabled",
+													"objectClass": "EnemyCoin",
+													"sid": 459517465538301,
+													"behaviorType": "Platform",
+													"parameters": {
+														"state": "disabled"
+													}
+												},
+												{
 													"id": "set-animation",
 													"objectClass": "Player1",
 													"sid": 975168693910473,
@@ -30314,6 +30341,15 @@
 													"objectClass": "Player_FireBall",
 													"sid": 314345383961023,
 													"behaviorType": "Movement",
+													"parameters": {
+														"state": "enabled"
+													}
+												},
+												{
+													"id": "set-enabled",
+													"objectClass": "EnemyCoin",
+													"sid": 425913015022813,
+													"behaviorType": "Platform",
 													"parameters": {
 														"state": "enabled"
 													}

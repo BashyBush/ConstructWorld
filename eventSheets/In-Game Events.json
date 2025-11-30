@@ -11488,9 +11488,9 @@
 										{
 											"id": "play",
 											"objectClass": "Audio",
-											"sid": 648749104388155,
+											"sid": 665290588482921,
 											"parameters": {
-												"audio-file": "smw_stomp",
+												"audio-file": "bump",
 												"loop": "not-looping",
 												"volume": "-5",
 												"stereo-pan": "0",
@@ -11519,13 +11519,13 @@
 										{
 											"id": "play",
 											"objectClass": "Audio",
-											"sid": 914656790009150,
+											"sid": 133310998068944,
 											"parameters": {
-												"audio-file": "coin",
+												"audio-file": "smw_stomp",
 												"loop": "not-looping",
-												"volume": "0",
+												"volume": "-5",
 												"stereo-pan": "0",
-												"tag-optional": "\"\""
+												"tag-optional": "\"SF\""
 											}
 										},
 										{

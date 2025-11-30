@@ -673,6 +673,43 @@
 						"angle": 0,
 						"zElevation": 0
 					}
+				},
+				{
+					"type": "WM_MarioMover",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 117,
+					"sid": 608282145670467,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 608282145670467,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 528,
+						"y": 240,
+						"width": 32,
+						"height": 32,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
 				}
 			],
 			"sid": 981050056740983,
@@ -1269,7 +1306,8 @@
 						"MoveN": false,
 						"MoveE": false,
 						"MoveW": false,
-						"MoveS": false
+						"MoveS": false,
+						"CurveTurnChecker": false
 					},
 					"behaviors": {
 						"TileMovement": {
@@ -1692,8 +1730,8 @@
 					"world": {
 						"x": 144,
 						"y": 80,
-						"width": 304,
-						"height": 96,
+						"width": 224,
+						"height": 160,
 						"originX": 0,
 						"originY": 0,
 						"color": [
@@ -1761,6 +1799,43 @@
 						"x": 427,
 						"y": 240,
 						"width": 224,
+						"height": 32,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "WM_MarioMover",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 116,
+					"sid": 780105322238673,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 780105322238673,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 528,
+						"y": 240,
+						"width": 32,
 						"height": 32,
 						"originX": 0.5,
 						"originY": 0.5,

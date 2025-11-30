@@ -504,7 +504,8 @@
 					"FONT_LevelName",
 					"WM_MarioStart",
 					"PART_TestYellowBlockLaunch",
-					"WM_DebugInfo"
+					"WM_DebugInfo",
+					"WM_MarioMover"
 				],
 				"subfolders": [],
 				"name": "WorldMapStuff"
@@ -820,6 +821,22 @@
 					"name": "smw_door_opens.webm",
 					"type": "audio/webm; codecs=opus",
 					"sid": 535727932436323,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "smw_stomp.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 603243761482507,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "smw_map_castle_crumbles.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 261034110780364,
 					"file-info": {
 						"purpose": "none"
 					}

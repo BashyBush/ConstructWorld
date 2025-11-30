@@ -67,9 +67,9 @@
 				{
 					"id": "set-text",
 					"objectClass": "WM_DebugInfo",
-					"sid": 429414672483399,
+					"sid": 432481919246401,
 					"parameters": {
-						"text": "\"Debug Info\r\nLevel ID: \" & WM_DebugInfo.GetLevelID & \"\r\nCompleted: \" & WM_DebugInfo.IsCompleted & \"\r\nS-Completed: \" & WM_DebugInfo.IsSecertComplete & \"\nSkip Mario Start: \" & WM_DebugInfo.IsSkipMarioStart"
+						"text": "\"Debug Info\r\nLevel ID: \" & WM_DebugInfo.GetLevelID & \"\r\nCompleted: \" & WM_DebugInfo.IsCompleted & \"\r\nS-Completed: \" & WM_DebugInfo.IsSecertComplete & \"\nSkip Mario Start: \" & WM_DebugInfo.IsSkipMarioStart & \"\n\nMario X: \" & WM_Mario.X & \"\nMario Y: \" & WM_Mario.Y"
 					}
 				}
 			],
@@ -1290,6 +1290,40 @@
 				}
 			],
 			"sid": 269575904002909
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "WM_CurveStuff",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "WM_Mario",
+							"sid": 450340642904582,
+							"parameters": {
+								"object": "WM_MarioMover"
+							}
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "WM_Mario",
+							"sid": 533417488357824,
+							"parameters": {
+								"instance-variable": "CurveTurnChecker"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [],
+					"sid": 819380401615434
+				}
+			],
+			"sid": 588368603976334
 		},
 		{
 			"eventType": "group",

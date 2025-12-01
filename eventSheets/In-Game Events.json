@@ -31994,10 +31994,10 @@
 										{
 											"id": "create-object",
 											"objectClass": "System",
-											"sid": 344912050949059,
+											"sid": 259839150876808,
 											"parameters": {
 												"object-to-create": "PART_PointGivenSprites",
-												"layer": "14",
+												"layer": "\"Main Objects\"",
 												"x": "Player1.X",
 												"y": "Player1.Y+16",
 												"create-hierarchy": false,

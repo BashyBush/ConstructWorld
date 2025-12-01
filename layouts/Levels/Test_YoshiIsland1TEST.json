@@ -9470,6 +9470,116 @@
 						"angle": 0,
 						"zElevation": 0
 					}
+				},
+				{
+					"type": "PART_RotateDestroyed",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 117,
+					"sid": 762752840924960,
+					"tags": "",
+					"instanceVariables": {
+						"XSet": "",
+						"YSet": ""
+					},
+					"behaviors": {
+						"Platform": {
+							"properties": {
+								"max-speed": 120,
+								"acceleration": 7000,
+								"deceleration": 1500,
+								"jump-strength": 650,
+								"gravity": 1500,
+								"max-fall-speed": 1000,
+								"double-jump": false,
+								"jump-sustain": 0,
+								"default-controls": false,
+								"enabled": true
+							}
+						}
+					},
+					"instanceFolderItem": {
+						"sid": 762752840924960,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 3896,
+						"y": 264,
+						"width": 16,
+						"height": 16,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "PART_RotateDestroyed",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 121,
+					"sid": 280672582325014,
+					"tags": "",
+					"instanceVariables": {
+						"XSet": "",
+						"YSet": ""
+					},
+					"behaviors": {
+						"Platform": {
+							"properties": {
+								"max-speed": 120,
+								"acceleration": 7000,
+								"deceleration": 1500,
+								"jump-strength": 650,
+								"gravity": 1500,
+								"max-fall-speed": 1000,
+								"double-jump": false,
+								"jump-sustain": 0,
+								"default-controls": false,
+								"enabled": true
+							}
+						}
+					},
+					"instanceFolderItem": {
+						"sid": 280672582325014,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": -64,
+						"y": 272,
+						"width": 16,
+						"height": 16,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
 				}
 			],
 			"sid": 921026342967386,
@@ -10819,7 +10929,7 @@
 				{
 					"type": "DevLog",
 					"properties": {
-						"text": "Devlog - 30/4/2025\n\nKnown Issues\n- Enemies will still have the same\n  Pause flashing bug that the Player\n  used to have...\n\n",
+						"text": "Recommended to NOT remove these objects or else things will break",
 						"enable-bbcode": true,
 						"font": "Arial",
 						"size": 12,
@@ -10849,17 +10959,17 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": -352,
-						"y": 368,
+						"x": -416,
+						"y": 32,
 						"width": 318,
-						"height": 192,
+						"height": 48,
 						"originX": 0,
 						"originY": 0,
 						"color": [
 							1,
 							1,
 							1,
-							0
+							1
 						],
 						"angle": 0,
 						"zElevation": 0

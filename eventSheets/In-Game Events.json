@@ -7177,6 +7177,396 @@
 							"isActiveOnStart": true,
 							"children": [
 								{
+									"eventType": "group",
+									"disabled": false,
+									"title": "ParticleforRotater",
+									"description": "",
+									"isActiveOnStart": true,
+									"children": [
+										{
+											"eventType": "comment",
+											"text": "the way i did the creation part sucks ass but it works eitherway so im taking it as a win."
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "on-created",
+													"objectClass": "RotBlockParticleSetup",
+													"sid": 363088276245846
+												}
+											],
+											"actions": [
+												{
+													"type": "comment",
+													"text": "Top"
+												},
+												{
+													"id": "create-object",
+													"objectClass": "System",
+													"sid": 747893220603239,
+													"parameters": {
+														"object-to-create": "PART_RotateDestroyed",
+														"layer": "\"Blocks\"",
+														"x": "RotBlockParticleSetup.X-8",
+														"y": "RotBlockParticleSetup.Y-8",
+														"create-hierarchy": false,
+														"template-name": "\"\""
+													}
+												},
+												{
+													"id": "set-instvar-value",
+													"objectClass": "PART_RotateDestroyed",
+													"sid": 838574168465331,
+													"parameters": {
+														"instance-variable": "XSet",
+														"value": "\"Left\""
+													}
+												},
+												{
+													"id": "set-vector-y",
+													"objectClass": "PART_RotateDestroyed",
+													"sid": 231346136373460,
+													"behaviorType": "Platform",
+													"parameters": {
+														"vector-y": "-450"
+													}
+												},
+												{
+													"id": "create-object",
+													"objectClass": "System",
+													"sid": 174212925345708,
+													"parameters": {
+														"object-to-create": "PART_RotateDestroyed",
+														"layer": "\"Blocks\"",
+														"x": "RotBlockParticleSetup.X+8",
+														"y": "RotBlockParticleSetup.Y-8",
+														"create-hierarchy": false,
+														"template-name": "\"\""
+													}
+												},
+												{
+													"id": "set-instvar-value",
+													"objectClass": "PART_RotateDestroyed",
+													"sid": 291612461767929,
+													"parameters": {
+														"instance-variable": "XSet",
+														"value": "\"Right\""
+													}
+												},
+												{
+													"id": "set-vector-y",
+													"objectClass": "PART_RotateDestroyed",
+													"sid": 392487688770011,
+													"behaviorType": "Platform",
+													"parameters": {
+														"vector-y": "-450"
+													}
+												},
+												{
+													"type": "comment",
+													"text": "Bottom"
+												},
+												{
+													"id": "create-object",
+													"objectClass": "System",
+													"sid": 104434029264996,
+													"parameters": {
+														"object-to-create": "PART_RotateDestroyed",
+														"layer": "\"Blocks\"",
+														"x": "RotBlockParticleSetup.X-8",
+														"y": "RotBlockParticleSetup.Y+8",
+														"create-hierarchy": false,
+														"template-name": "\"\""
+													}
+												},
+												{
+													"id": "set-instvar-value",
+													"objectClass": "PART_RotateDestroyed",
+													"sid": 133947886243903,
+													"parameters": {
+														"instance-variable": "XSet",
+														"value": "\"Left\""
+													}
+												},
+												{
+													"id": "create-object",
+													"objectClass": "System",
+													"sid": 225966209976216,
+													"parameters": {
+														"object-to-create": "PART_RotateDestroyed",
+														"layer": "\"Blocks\"",
+														"x": "RotBlockParticleSetup.X+8",
+														"y": "RotBlockParticleSetup.Y+8",
+														"create-hierarchy": false,
+														"template-name": "\"\""
+													}
+												},
+												{
+													"id": "set-instvar-value",
+													"objectClass": "PART_RotateDestroyed",
+													"sid": 205078170388731,
+													"parameters": {
+														"instance-variable": "XSet",
+														"value": "\"Right\""
+													}
+												}
+											],
+											"sid": 585298498494079
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "on-created",
+													"objectClass": "PART_RotateDestroyed",
+													"sid": 646975433528903
+												}
+											],
+											"actions": [
+												{
+													"id": "set-animation-frame",
+													"objectClass": "PART_RotateDestroyed",
+													"sid": 906708642783949,
+													"parameters": {
+														"frame-number": "round(random(0,5))"
+													}
+												},
+												{
+													"id": "set-vector-y",
+													"objectClass": "PART_RotateDestroyed",
+													"sid": 695286579927489,
+													"behaviorType": "Platform",
+													"parameters": {
+														"vector-y": "-350"
+													}
+												}
+											],
+											"sid": 355568728806634,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-two-values",
+															"objectClass": "System",
+															"sid": 343381704413076,
+															"parameters": {
+																"first-value": "PART_RotateDestroyed.X",
+																"comparison": 4,
+																"second-value": "RotBlockParticleSetup.X"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-instvar-value",
+															"objectClass": "PART_RotateDestroyed",
+															"sid": 250597151991890,
+															"parameters": {
+																"instance-variable": "XSet",
+																"value": "\"Right\""
+															}
+														}
+													],
+													"sid": 910884308310049
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-two-values",
+															"objectClass": "System",
+															"sid": 468250590897716,
+															"parameters": {
+																"first-value": "PART_RotateDestroyed.Y-8",
+																"comparison": 0,
+																"second-value": "RotBlockParticleSetup.Y"
+															}
+														}
+													],
+													"actions": [],
+													"sid": 902906759916695
+												},
+												{
+													"eventType": "block",
+													"conditions": [],
+													"actions": [
+														{
+															"id": "set-collisions-enabled",
+															"objectClass": "PART_RotateDestroyed",
+															"sid": 194721195790248,
+															"parameters": {
+																"collisions": "disabled"
+															}
+														},
+														{
+															"id": "wait",
+															"objectClass": "System",
+															"sid": 291203002554005,
+															"parameters": {
+																"seconds": "0.01",
+																"use-timescale": true
+															}
+														},
+														{
+															"id": "destroy",
+															"objectClass": "RotBlockParticleSetup",
+															"sid": 911615431825868
+														}
+													],
+													"sid": 541150970180978
+												}
+											]
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "is-on-screen",
+													"objectClass": "PART_RotateDestroyed",
+													"sid": 878256057386040
+												}
+											],
+											"actions": [],
+											"sid": 777751965928463,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-instance-variable",
+															"objectClass": "PART_RotateDestroyed",
+															"sid": 758162092939266,
+															"parameters": {
+																"instance-variable": "XSet",
+																"comparison": 0,
+																"value": "\"Left\""
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "simulate-control",
+															"objectClass": "PART_RotateDestroyed",
+															"sid": 266501041786619,
+															"behaviorType": "Platform",
+															"parameters": {
+																"control": "left"
+															}
+														}
+													],
+													"sid": 249339661313046
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-instance-variable",
+															"objectClass": "PART_RotateDestroyed",
+															"sid": 879128979919861,
+															"parameters": {
+																"instance-variable": "XSet",
+																"comparison": 0,
+																"value": "\"Right\""
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "simulate-control",
+															"objectClass": "PART_RotateDestroyed",
+															"sid": 548477645103336,
+															"behaviorType": "Platform",
+															"parameters": {
+																"control": "right"
+															}
+														}
+													],
+													"sid": 956820860879880
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "on-signal",
+															"objectClass": "System",
+															"sid": 227715870601686,
+															"parameters": {
+																"tag": "\"RotatePartCheck\""
+															}
+														}
+													],
+													"actions": [],
+													"sid": 119121574842186,
+													"children": [
+														{
+															"eventType": "block",
+															"conditions": [],
+															"actions": [
+																{
+																	"id": "set-vector-y",
+																	"objectClass": "PART_RotateDestroyed",
+																	"sid": 328310131241733,
+																	"disabled": true,
+																	"behaviorType": "Platform",
+																	"parameters": {
+																		"vector-y": "-150"
+																	}
+																}
+															],
+															"sid": 783545595878691
+														},
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "else",
+																	"objectClass": "System",
+																	"sid": 441014376580283
+																}
+															],
+															"actions": [
+																{
+																	"id": "set-vector-y",
+																	"objectClass": "PART_RotateDestroyed",
+																	"sid": 404561542491244,
+																	"disabled": true,
+																	"behaviorType": "Platform",
+																	"parameters": {
+																		"vector-y": "-150"
+																	}
+																}
+															],
+															"sid": 890365444415073
+														}
+													]
+												}
+											]
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "is-on-screen",
+													"objectClass": "PART_RotateDestroyed",
+													"sid": 988267551865908,
+													"isInverted": true
+												}
+											],
+											"actions": [
+												{
+													"id": "destroy",
+													"objectClass": "PART_RotateDestroyed",
+													"sid": 517063463790676
+												}
+											],
+											"sid": 928803618001291
+										}
+									],
+									"sid": 170298010482948
+								},
+								{
 									"eventType": "block",
 									"conditions": [
 										{
@@ -8109,6 +8499,27 @@
 															],
 															"actions": [
 																{
+																	"id": "signal",
+																	"objectClass": "System",
+																	"sid": 373073135297529,
+																	"parameters": {
+																		"tag": "\"RotatePartCheck\""
+																	}
+																},
+																{
+																	"id": "create-object",
+																	"objectClass": "System",
+																	"sid": 420669903105284,
+																	"parameters": {
+																		"object-to-create": "RotBlockParticleSetup",
+																		"layer": "\"Blocks\"",
+																		"x": "Rotating_Block.x",
+																		"y": "Rotating_Block.Y",
+																		"create-hierarchy": false,
+																		"template-name": "\"\""
+																	}
+																},
+																{
 																	"id": "destroy",
 																	"objectClass": "Rotating_Block",
 																	"sid": 330252743156012
@@ -8141,20 +8552,6 @@
 																	"parameters": {
 																		"variable": "Score",
 																		"value": "50"
-																	}
-																},
-																{
-																	"id": "create-object",
-																	"objectClass": "System",
-																	"sid": 145955470821923,
-																	"disabled": true,
-																	"parameters": {
-																		"object-to-create": "Empty_Block",
-																		"layer": "\"Blocks\"",
-																		"x": "Rotating_Block.x-1",
-																		"y": "Rotating_Block.Y-1",
-																		"create-hierarchy": false,
-																		"template-name": "\"\""
 																	}
 																},
 																{

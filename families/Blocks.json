@@ -13,6 +13,7 @@
 		"Question_Block",
 		"Cloud_Block",
 		"Yellow_Switch_Block",
-		"Spike_Block"
+		"Spike_Block",
+		"RotBlockParticleSetup"
 	]
 }

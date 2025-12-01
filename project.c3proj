@@ -321,7 +321,8 @@
 					"Pipe_Teleporter_Exit",
 					"Invisible_Slope",
 					"PipeLayoutWarpSetup",
-					"DoorLayoutWarpSetup"
+					"DoorLayoutWarpSetup",
+					"RotBlockParticleSetup"
 				],
 				"subfolders": [],
 				"name": "HiddenObjects"
@@ -514,7 +515,8 @@
 				"items": [
 					"PART_PointGivenSprites",
 					"PART_CoinBlock",
-					"PART_Kick"
+					"PART_Kick",
+					"PART_RotateDestroyed"
 				],
 				"subfolders": [],
 				"name": "Particles"

@@ -12357,11 +12357,13 @@
 									}
 								},
 								{
-									"id": "is-boolean-instance-variable-set",
+									"id": "compare-instance-variable",
 									"objectClass": "Player1",
-									"sid": 321484834228104,
+									"sid": 207780276241190,
 									"parameters": {
-										"instance-variable": "DumbSpinCheck"
+										"instance-variable": "AnimationState",
+										"comparison": 0,
+										"value": "\"Spining\""
 									}
 								}
 							],
@@ -12371,6 +12373,16 @@
 								{
 									"eventType": "comment",
 									"text": "not fully working YET"
+								},
+								{
+									"eventType": "variable",
+									"name": "FireBallSpinRandomize",
+									"type": "number",
+									"initialValue": "0",
+									"comment": "not accurate ik. also funny how this is my first local variable in a folder",
+									"isStatic": false,
+									"isConstant": false,
+									"sid": 442427335243014
 								},
 								{
 									"eventType": "block",
@@ -12385,6 +12397,24 @@
 												"second-value": "1"
 											},
 											"isInverted": true
+										},
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Player1",
+											"sid": 174818869394862,
+											"parameters": {
+												"instance-variable": "AnimationState",
+												"comparison": 0,
+												"value": "\"Spining\""
+											}
+										},
+										{
+											"id": "every-x-seconds",
+											"objectClass": "System",
+											"sid": 185030132193645,
+											"parameters": {
+												"interval-seconds": "0.35"
+											}
 										}
 									],
 									"actions": [
@@ -12456,120 +12486,84 @@
 											}
 										},
 										{
-											"id": "set-instvar-value",
-											"objectClass": "Player_FireBall",
-											"sid": 174197665245239,
+											"id": "play",
+											"objectClass": "Audio",
+											"sid": 529180857860869,
 											"parameters": {
-												"instance-variable": "MovingState",
-												"value": "\"Left\""
+												"audio-file": "smw_fireball",
+												"loop": "not-looping",
+												"volume": "-5",
+												"stereo-pan": "0",
+												"tag-optional": "\"SF\""
 											}
 										},
 										{
-											"id": "wait",
+											"id": "set-eventvar-value",
 											"objectClass": "System",
-											"sid": 154689668381637,
-											"disabled": true,
+											"sid": 468035432663285,
 											"parameters": {
-												"seconds": "0.5",
-												"use-timescale": true
-											}
-										},
-										{
-											"id": "create-object",
-											"objectClass": "System",
-											"sid": 978416773695167,
-											"disabled": true,
-											"parameters": {
-												"object-to-create": "Player_FireBall",
-												"layer": "\"Main Objects\"",
-												"x": "Player1.X",
-												"y": "Player1.Y+32",
-												"create-hierarchy": false,
-												"template-name": "\"\""
-											}
-										},
-										{
-											"id": "set-max-speed",
-											"objectClass": "Player_FireBall",
-											"sid": 846929828733986,
-											"disabled": true,
-											"behaviorType": "Platform",
-											"parameters": {
-												"max-speed": "350"
-											}
-										},
-										{
-											"id": "set-acceleration",
-											"objectClass": "Player_FireBall",
-											"sid": 738403257389269,
-											"disabled": true,
-											"behaviorType": "Platform",
-											"parameters": {
-												"acceleration": "5000"
-											}
-										},
-										{
-											"id": "set-deceleration",
-											"objectClass": "Player_FireBall",
-											"sid": 551592954665575,
-											"disabled": true,
-											"behaviorType": "Platform",
-											"parameters": {
-												"deceleration": "5000"
-											}
-										},
-										{
-											"id": "set-jump-strength",
-											"objectClass": "Player_FireBall",
-											"sid": 165409621012387,
-											"disabled": true,
-											"behaviorType": "Platform",
-											"parameters": {
-												"jump-strength": "250"
-											}
-										},
-										{
-											"id": "set-default-controls",
-											"objectClass": "Player_FireBall",
-											"sid": 512629761878061,
-											"disabled": true,
-											"behaviorType": "Platform",
-											"parameters": {
-												"default-controls": false
-											}
-										},
-										{
-											"id": "set-size",
-											"objectClass": "Player_FireBall",
-											"sid": 865531592609598,
-											"disabled": true,
-											"parameters": {
-												"width": "16",
-												"height": "16"
-											}
-										},
-										{
-											"id": "set-instvar-value",
-											"objectClass": "Player_FireBall",
-											"sid": 821443293608334,
-											"disabled": true,
-											"parameters": {
-												"instance-variable": "MovingState",
-												"value": "\"Right\""
-											}
-										},
-										{
-											"id": "wait",
-											"objectClass": "System",
-											"sid": 799706354585608,
-											"disabled": true,
-											"parameters": {
-												"seconds": "0.5",
-												"use-timescale": true
+												"variable": "FireBallSpinRandomize",
+												"value": "round(random(0,1))"
 											}
 										}
 									],
-									"sid": 954298536996149
+									"sid": 954298536996149,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 333850996565991,
+													"parameters": {
+														"variable": "FireBallSpinRandomize",
+														"comparison": 0,
+														"value": "0"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-instvar-value",
+													"objectClass": "Player_FireBall",
+													"sid": 755228027253867,
+													"parameters": {
+														"instance-variable": "MovingState",
+														"value": "\"Left\""
+													}
+												}
+											],
+											"sid": 327781735095627
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 242791827379693,
+													"parameters": {
+														"variable": "FireBallSpinRandomize",
+														"comparison": 0,
+														"value": "1"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-instvar-value",
+													"objectClass": "Player_FireBall",
+													"sid": 207300291916189,
+													"parameters": {
+														"instance-variable": "MovingState",
+														"value": "\"Right\""
+													}
+												}
+											],
+											"sid": 951761806235537
+										}
+									]
 								}
 							]
 						},

@@ -27781,16 +27781,16 @@
 										},
 										{
 											"id": "set-blend-mode",
-											"objectClass": "Player1",
-											"sid": 261201243108759,
+											"objectClass": "Key",
+											"sid": 620316610544598,
 											"parameters": {
 												"blend-mode": "destination-over"
 											}
 										},
 										{
 											"id": "set-blend-mode",
-											"objectClass": "Key",
-											"sid": 934813060158245,
+											"objectClass": "Player1",
+											"sid": 261201243108759,
 											"parameters": {
 												"blend-mode": "destination-over"
 											}

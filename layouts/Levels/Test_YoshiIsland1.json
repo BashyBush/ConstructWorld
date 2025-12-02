@@ -3820,7 +3820,7 @@
 					"instanceVariables": {
 						"LevelID": 1,
 						"YoshiCoinsCollected": 0,
-						"MusicPlayer": "Overworld",
+						"MusicPlayer": "1Overworld",
 						"PSwitchRemMusic": "",
 						"NoMusicWarp": false,
 						"MusicLoopBack": 0

@@ -31020,8 +31020,8 @@
 										},
 										{
 											"id": "on-collision-with-another-object",
-											"objectClass": "Mushroom",
-											"sid": 854480743596929,
+											"objectClass": "1up",
+											"sid": 566479056160777,
 											"parameters": {
 												"object": "Tiles"
 											}

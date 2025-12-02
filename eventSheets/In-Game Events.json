@@ -149,7 +149,7 @@
 			"eventType": "variable",
 			"name": "CurrentHP",
 			"type": "number",
-			"initialValue": "3",
+			"initialValue": "1",
 			"comment": "dont set anywhere under 1 or else shit will break lmao",
 			"isStatic": false,
 			"isConstant": false,

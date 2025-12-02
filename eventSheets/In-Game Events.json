@@ -30128,20 +30128,7 @@
 											}
 										}
 									],
-									"actions": [
-										{
-											"id": "play",
-											"objectClass": "Audio",
-											"sid": 564265365007262,
-											"parameters": {
-												"audio-file": "coin",
-												"loop": "not-looping",
-												"volume": "0",
-												"stereo-pan": "0",
-												"tag-optional": "\"\""
-											}
-										}
-									],
+									"actions": [],
 									"sid": 534469453956623,
 									"children": [
 										{
@@ -31033,19 +31020,10 @@
 										},
 										{
 											"id": "on-collision-with-another-object",
-											"objectClass": "1up",
-											"sid": 923401398374579,
+											"objectClass": "Mushroom",
+											"sid": 854480743596929,
 											"parameters": {
-												"object": "OW_GroundTileset"
-											}
-										},
-										{
-											"id": "on-collision-with-another-object",
-											"objectClass": "1up",
-											"sid": 709357234386776,
-											"disabled": true,
-											"parameters": {
-												"object": "General_Pipes"
+												"object": "Tiles"
 											}
 										}
 									],

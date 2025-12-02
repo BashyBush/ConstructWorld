@@ -27765,8 +27765,16 @@
 										},
 										{
 											"id": "set-blend-mode",
+											"objectClass": "KeyHole",
+											"sid": 763656213508654,
+											"parameters": {
+												"blend-mode": "destination-over"
+											}
+										},
+										{
+											"id": "set-blend-mode",
 											"objectClass": "KeyHoleAnimation",
-											"sid": 199840165281705,
+											"sid": 924468788020760,
 											"parameters": {
 												"blend-mode": "destination-out"
 											}
@@ -27786,6 +27794,11 @@
 											"parameters": {
 												"blend-mode": "destination-over"
 											}
+										},
+										{
+											"id": "move-to-top",
+											"objectClass": "Player1",
+											"sid": 427908142620979
 										}
 									],
 									"sid": 786756032447504

@@ -754,7 +754,7 @@
 				{
 					"type": "WM_LevelPoints",
 					"properties": {
-						"initially-visible": true,
+						"initially-visible": false,
 						"initial-animation": "SingleExit",
 						"initial-frame": 0,
 						"enable-collisions": true,

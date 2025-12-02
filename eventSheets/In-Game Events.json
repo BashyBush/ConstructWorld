@@ -30122,12 +30122,26 @@
 											"id": "on-collision-with-another-object",
 											"objectClass": "Mushroom",
 											"sid": 203301132773741,
+											"disabled": true,
 											"parameters": {
 												"object": "General_Pipes"
 											}
 										}
 									],
-									"actions": [],
+									"actions": [
+										{
+											"id": "play",
+											"objectClass": "Audio",
+											"sid": 564265365007262,
+											"parameters": {
+												"audio-file": "coin",
+												"loop": "not-looping",
+												"volume": "0",
+												"stereo-pan": "0",
+												"tag-optional": "\"\""
+											}
+										}
+									],
 									"sid": 534469453956623,
 									"children": [
 										{
@@ -31029,6 +31043,7 @@
 											"id": "on-collision-with-another-object",
 											"objectClass": "1up",
 											"sid": 709357234386776,
+											"disabled": true,
 											"parameters": {
 												"object": "General_Pipes"
 											}

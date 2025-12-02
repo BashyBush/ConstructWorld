@@ -3877,7 +3877,7 @@
 							"locked": false,
 							"world": {
 								"x": 2928,
-								"y": 176,
+								"y": -144,
 								"width": 32,
 								"height": 32,
 								"originX": 0.5,
@@ -4961,7 +4961,7 @@
 							"instanceVariables": {
 								"Pipe_SwitchLayout": "",
 								"Pipe_XDirection": 3232,
-								"Pipe_YDirection": 254,
+								"Pipe_YDirection": 253,
 								"Pipe_GoingInto": "Left",
 								"Pipe_ExitingPipe": "Down",
 								"Pipe_CamXSetLeft": 619,
@@ -6764,6 +6764,53 @@
 								"angle": 0,
 								"zElevation": 0
 							}
+						},
+						{
+							"type": "Question_Block",
+							"properties": {
+								"initially-visible": true,
+								"initial-animation": "Animation 1",
+								"initial-frame": 0,
+								"enable-collisions": true,
+								"live-preview": false
+							},
+							"uid": 161,
+							"sid": 938960510214075,
+							"tags": "",
+							"instanceVariables": {
+								"ItemHolder": "FireMush",
+								"Invisible": false
+							},
+							"behaviors": {
+								"Solid": {
+									"properties": {
+										"enabled": true,
+										"tags": ""
+									}
+								}
+							},
+							"instanceFolderItem": {
+								"sid": 938960510214075,
+								"expanded": true
+							},
+							"showing": true,
+							"locked": false,
+							"world": {
+								"x": 2928,
+								"y": 176,
+								"width": 32,
+								"height": 32,
+								"originX": 0.5,
+								"originY": 0.5,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"angle": 0,
+								"zElevation": 0
+							}
 						}
 					],
 					"sid": 766944952418982,
@@ -8320,9 +8367,9 @@
 					"locked": false,
 					"world": {
 						"x": 7728,
-						"y": 464,
+						"y": 352,
 						"width": 32,
-						"height": 480,
+						"height": 704,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [

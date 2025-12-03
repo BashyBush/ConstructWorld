@@ -3548,6 +3548,26 @@
 												"value": "\"Pipe\""
 											},
 											"isInverted": true
+										},
+										{
+											"id": "is-between-angles",
+											"objectClass": "Pipe_Teleporter",
+											"sid": 358023526387241,
+											"parameters": {
+												"first-angle": "265",
+												"second-angle": "275"
+											},
+											"isInverted": true
+										},
+										{
+											"id": "is-between-angles",
+											"objectClass": "Pipe_Teleporter",
+											"sid": 955163238034272,
+											"parameters": {
+												"first-angle": "85",
+												"second-angle": "95"
+											},
+											"isInverted": true
 										}
 									],
 									"actions": [
@@ -3623,6 +3643,26 @@
 												"value": "\"Pipe\""
 											},
 											"isInverted": true
+										},
+										{
+											"id": "is-between-angles",
+											"objectClass": "Pipe_Teleporter",
+											"sid": 306789449965631,
+											"parameters": {
+												"first-angle": "265",
+												"second-angle": "275"
+											},
+											"isInverted": true
+										},
+										{
+											"id": "is-between-angles",
+											"objectClass": "Pipe_Teleporter",
+											"sid": 393644264839922,
+											"parameters": {
+												"first-angle": "85",
+												"second-angle": "95"
+											},
+											"isInverted": true
 										}
 									],
 									"actions": [
@@ -3696,6 +3736,17 @@
 												"instance-variable": "AnimationState",
 												"comparison": 0,
 												"value": "\"Pipe\""
+											},
+											"isInverted": true
+										},
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Player1",
+											"sid": 432510061203252,
+											"parameters": {
+												"instance-variable": "AnimationState",
+												"comparison": 0,
+												"value": "\"Duck\""
 											},
 											"isInverted": true
 										},

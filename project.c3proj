@@ -506,7 +506,8 @@
 					"WM_MarioStart",
 					"PART_TestYellowBlockLaunch",
 					"WM_DebugInfo",
-					"WM_MarioMover"
+					"WM_MarioMover",
+					"WM_MusicChanger"
 				],
 				"subfolders": [],
 				"name": "WorldMapStuff"

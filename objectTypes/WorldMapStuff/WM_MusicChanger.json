@@ -1,0 +1,55 @@
+{
+	"name": "WM_MusicChanger",
+	"plugin-id": "Sprite",
+	"sid": 749358368491215,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [
+		{
+			"name": "MusicPlayer",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 515572420500480
+		},
+		{
+			"name": "MusicVolume",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 532615506550863
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 32,
+						"height": 32,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 3195979,
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 984427326066884,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

@@ -1415,6 +1415,81 @@
 			"global": false
 		},
 		{
+			"name": "MusicChangers",
+			"overriden": 0,
+			"subLayers": [],
+			"instances": [
+				{
+					"type": "WM_MusicChanger",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 116,
+					"sid": 584637698905584,
+					"tags": "",
+					"instanceVariables": {
+						"MusicPlayer": "placeholder_map_audio",
+						"MusicVolume": -10
+					},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 584637698905584,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 432,
+						"y": 264,
+						"width": 576,
+						"height": 368,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				}
+			],
+			"sid": 478640821026893,
+			"effectTypes": [],
+			"isInitiallyVisible": false,
+			"isInitiallyInteractive": true,
+			"isHTMLElementsLayer": false,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				0.3686274509803922,
+				0.3686274509803922,
+				0.3686274509803922,
+				1
+			],
+			"isTransparent": true,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"renderingMode": "3d",
+			"drawOrder": "z-order",
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"zElevation": 0,
+			"global": false
+		},
+		{
 			"name": "Boarder",
 			"overriden": 0,
 			"subLayers": [],
@@ -1656,7 +1731,7 @@
 				{
 					"type": "WM_DebugInfo",
 					"properties": {
-						"text": "Debug Info\nLevel ID:\nCompleted: \nS-Completed:\nSkip Mario Start:",
+						"text": "Debug Info\nLevel ID:\nCompleted: \nS-Completed:\nSkip Mario Start:\nMusic Playing:\n\nMario X:\nMario Y:",
 						"enable-bbcode": true,
 						"font": "Arial",
 						"size": 10,
@@ -1685,7 +1760,8 @@
 						"GetLevelID": "",
 						"IsCompleted": "",
 						"IsSecertComplete": "",
-						"IsSkipMarioStart": ""
+						"IsSkipMarioStart": "",
+						"GetMusicPlayed": ""
 					},
 					"behaviors": {},
 					"showing": true,
@@ -1693,7 +1769,7 @@
 					"world": {
 						"x": 144,
 						"y": 80,
-						"width": 224,
+						"width": 336,
 						"height": 160,
 						"originX": 0,
 						"originY": 0,
@@ -1762,43 +1838,6 @@
 						"x": 427,
 						"y": 240,
 						"width": 224,
-						"height": 32,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "WM_MarioMover",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 116,
-					"sid": 780105322238673,
-					"tags": "",
-					"instanceVariables": {},
-					"behaviors": {},
-					"instanceFolderItem": {
-						"sid": 780105322238673,
-						"expanded": true
-					},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 528,
-						"y": 240,
-						"width": 32,
 						"height": 32,
 						"originX": 0.5,
 						"originY": 0.5,

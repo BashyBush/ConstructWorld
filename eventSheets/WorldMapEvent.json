@@ -67,9 +67,9 @@
 				{
 					"id": "set-text",
 					"objectClass": "WM_DebugInfo",
-					"sid": 432481919246401,
+					"sid": 112266806624448,
 					"parameters": {
-						"text": "\"Debug Info\r\nLevel ID: \" & WM_DebugInfo.GetLevelID & \"\r\nCompleted: \" & WM_DebugInfo.IsCompleted & \"\r\nS-Completed: \" & WM_DebugInfo.IsSecertComplete & \"\nSkip Mario Start: \" & WM_DebugInfo.IsSkipMarioStart & \"\n\nMario X: \" & WM_Mario.X & \"\nMario Y: \" & WM_Mario.Y"
+						"text": "\"Debug Info\r\nLevel ID: \" & WM_DebugInfo.GetLevelID & \"\r\nCompleted: \" & WM_DebugInfo.IsCompleted & \"\r\nS-Completed: \" & WM_DebugInfo.IsSecertComplete & \"\nSkip Mario Start: \" & WM_DebugInfo.IsSkipMarioStart & \"\nMusic Playing: \" & WM_DebugInfo.GetMusicPlayed & \"\n\nMario X: \" & WM_Mario.X & \"\nMario Y: \" & WM_Mario.Y"
 					}
 				}
 			],
@@ -240,6 +240,7 @@
 					"id": "play",
 					"objectClass": "Audio",
 					"sid": 393234224862686,
+					"disabled": true,
 					"parameters": {
 						"audio-file": "placeholder_map_audio",
 						"loop": "looping",
@@ -1324,6 +1325,82 @@
 				}
 			],
 			"sid": 588368603976334
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "WM_MusicChangerObject",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "WM_Mario",
+							"sid": 910162063733038,
+							"parameters": {
+								"object": "WM_MusicChanger"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 985898655188557,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "WM_DebugInfo",
+									"sid": 394561648204620,
+									"parameters": {
+										"instance-variable": "GetMusicPlayed",
+										"comparison": 0,
+										"value": "WM_MusicChanger.MusicPlayer"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "stop",
+									"objectClass": "Audio",
+									"sid": 399016172522483,
+									"parameters": {
+										"tag": "\"BG\""
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "WM_DebugInfo",
+									"sid": 167715440390343,
+									"parameters": {
+										"instance-variable": "GetMusicPlayed",
+										"value": "WM_MusicChanger.MusicPlayer"
+									}
+								},
+								{
+									"id": "play-by-name",
+									"objectClass": "Audio",
+									"sid": 536063321500231,
+									"parameters": {
+										"folder": "music",
+										"audio-file-name": "WM_MusicChanger.MusicPlayer",
+										"loop": "looping",
+										"volume": "WM_MusicChanger.MusicVolume",
+										"stereo-pan": "0",
+										"tag-optional": "\"BG\""
+									}
+								}
+							],
+							"sid": 127043724573871
+						}
+					]
+				}
+			],
+			"sid": 702318556730389
 		},
 		{
 			"eventType": "group",

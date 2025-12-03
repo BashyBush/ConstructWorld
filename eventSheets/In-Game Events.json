@@ -23884,7 +23884,7 @@
 									"eventType": "group",
 									"disabled": false,
 									"title": "ItemHolderStuff",
-									"description": "",
+									"description": "drop system kinda needs to be reworked a bit",
 									"isActiveOnStart": true,
 									"children": [
 										{

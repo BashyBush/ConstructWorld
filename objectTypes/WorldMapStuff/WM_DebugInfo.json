@@ -32,6 +32,13 @@
 			"desc": "",
 			"show": true,
 			"sid": 941137179151213
+		},
+		{
+			"name": "GetMusicPlayed",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 745624889464487
 		}
 	],
 	"behaviorTypes": [],

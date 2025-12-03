@@ -11901,6 +11901,19 @@
 							],
 							"actions": [
 								{
+									"id": "create-object",
+									"objectClass": "System",
+									"sid": 507740703846073,
+									"parameters": {
+										"object-to-create": "PART_FireballHit",
+										"layer": "\"Main Objects\"",
+										"x": "Player_FireBall.X",
+										"y": "Player_FireBall.Y",
+										"create-hierarchy": false,
+										"template-name": "\"\""
+									}
+								},
+								{
 									"id": "destroy",
 									"objectClass": "Player_FireBall",
 									"sid": 976181651477364
@@ -12063,6 +12076,27 @@
 									]
 								}
 							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-animation-finished",
+									"objectClass": "PART_FireballHit",
+									"sid": 402650927027209,
+									"parameters": {
+										"animation": "\"Animation 1\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "destroy",
+									"objectClass": "PART_FireballHit",
+									"sid": 247795913315594
+								}
+							],
+							"sid": 367030607255529
 						}
 					],
 					"sid": 690752992014744

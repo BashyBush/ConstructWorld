@@ -25817,7 +25817,7 @@
 					"eventType": "group",
 					"disabled": false,
 					"title": "Pause System",
-					"description": "",
+					"description": "Bash Notes:\nWhile this is good for debugging stuff.\nThis Pause System kinda sucks and could be improved by alot... \nIf you do use this for a project. I recommend only using this Pause menu for Debugging Stuff.",
 					"isActiveOnStart": true,
 					"children": [
 						{

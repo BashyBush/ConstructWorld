@@ -12765,6 +12765,19 @@
 							],
 							"actions": [
 								{
+									"id": "create-object",
+									"objectClass": "System",
+									"sid": 877482291469437,
+									"parameters": {
+										"object-to-create": "PART_FireballHit",
+										"layer": "\"Main Objects\"",
+										"x": "Player_FireBall.X",
+										"y": "Player_FireBall.Y",
+										"create-hierarchy": false,
+										"template-name": "\"\""
+									}
+								},
+								{
 									"id": "destroy",
 									"objectClass": "Player_FireBall",
 									"sid": 795668229747210

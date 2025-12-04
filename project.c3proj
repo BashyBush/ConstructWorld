@@ -1057,7 +1057,10 @@
 	"timelines": {
 		"items": [
 			"WM_Tul_YI1_Down",
-			"WM_Wel_Tul_Down"
+			"WM_Tul_YSP_Right",
+			"WM_Wel_Tul_Down",
+			"WM_YI1_Tul_Right",
+			"WM_YSP_Tul_Up"
 		],
 		"subfolders": [
 			{

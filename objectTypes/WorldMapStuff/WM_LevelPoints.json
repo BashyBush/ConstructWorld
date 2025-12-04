@@ -37,7 +37,7 @@
 			"name": "SecertCompleted",
 			"type": "boolean",
 			"desc": "",
-			"show": true,
+			"show": false,
 			"sid": 515717665159859
 		},
 		{

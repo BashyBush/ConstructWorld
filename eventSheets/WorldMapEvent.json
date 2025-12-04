@@ -366,7 +366,6 @@
 					"id": "set-enabled",
 					"objectClass": "WM_Mario",
 					"sid": 413954391799519,
-					"disabled": true,
 					"behaviorType": "TileMovement",
 					"parameters": {
 						"state": "enabled"
@@ -500,7 +499,6 @@
 									"id": "set-enabled",
 									"objectClass": "WM_Mario",
 									"sid": 626044497228488,
-									"disabled": true,
 									"behaviorType": "TileMovement",
 									"parameters": {
 										"state": "enabled"
@@ -620,7 +618,6 @@
 									"id": "set-enabled",
 									"objectClass": "WM_Mario",
 									"sid": 935088108444220,
-									"disabled": true,
 									"behaviorType": "TileMovement",
 									"parameters": {
 										"state": "enabled"
@@ -968,7 +965,8 @@
 							}
 						}
 					],
-					"sid": 164394813276759
+					"sid": 164394813276759,
+					"disabled": true
 				},
 				{
 					"eventType": "block",
@@ -1036,6 +1034,7 @@
 									"id": "is-moving",
 									"objectClass": "WM_Mario",
 									"sid": 622273784971199,
+									"disabled": true,
 									"behaviorType": "TileMovement",
 									"isInverted": true
 								},
@@ -1424,20 +1423,7 @@
 									}
 								}
 							],
-							"actions": [
-								{
-									"id": "play",
-									"objectClass": "Audio",
-									"sid": 191280737309440,
-									"parameters": {
-										"audio-file": "1up",
-										"loop": "not-looping",
-										"volume": "0",
-										"stereo-pan": "0",
-										"tag-optional": "\"\""
-									}
-								}
-							],
+							"actions": [],
 							"sid": 170075706564147,
 							"children": [
 								{
@@ -1624,20 +1610,7 @@
 									"isInverted": true
 								}
 							],
-							"actions": [
-								{
-									"id": "play",
-									"objectClass": "Audio",
-									"sid": 136087841463905,
-									"parameters": {
-										"audio-file": "1up",
-										"loop": "not-looping",
-										"volume": "0",
-										"stereo-pan": "0",
-										"tag-optional": "\"\""
-									}
-								}
-							],
+							"actions": [],
 							"sid": 262450279134501,
 							"children": [
 								{
@@ -1824,20 +1797,7 @@
 									"isInverted": true
 								}
 							],
-							"actions": [
-								{
-									"id": "play",
-									"objectClass": "Audio",
-									"sid": 623241356125657,
-									"parameters": {
-										"audio-file": "1up",
-										"loop": "not-looping",
-										"volume": "0",
-										"stereo-pan": "0",
-										"tag-optional": "\"\""
-									}
-								}
-							],
+							"actions": [],
 							"sid": 966816610053576,
 							"children": [
 								{
@@ -1905,11 +1865,11 @@
 										{
 											"id": "compare-instance-variable",
 											"objectClass": "WM_LevelPoints",
-											"sid": 146778263251149,
+											"sid": 327840557855512,
 											"parameters": {
 												"instance-variable": "SecertDirection",
 												"comparison": 0,
-												"value": "\"Right\""
+												"value": "\"Left\""
 											}
 										},
 										{
@@ -1964,11 +1924,11 @@
 										{
 											"id": "compare-instance-variable",
 											"objectClass": "WM_LevelPoints",
-											"sid": 969441272419513,
+											"sid": 700622814329936,
 											"parameters": {
 												"instance-variable": "ReturnerDirection",
 												"comparison": 0,
-												"value": "\"Right\""
+												"value": "\"Left\""
 											}
 										}
 									],
@@ -2024,20 +1984,7 @@
 									"isInverted": true
 								}
 							],
-							"actions": [
-								{
-									"id": "play",
-									"objectClass": "Audio",
-									"sid": 472981960533277,
-									"parameters": {
-										"audio-file": "1up",
-										"loop": "not-looping",
-										"volume": "0",
-										"stereo-pan": "0",
-										"tag-optional": "\"\""
-									}
-								}
-							],
+							"actions": [],
 							"sid": 163385160420249,
 							"children": [
 								{
@@ -2290,139 +2237,10 @@
 		{
 			"eventType": "group",
 			"disabled": false,
-			"title": "MarioAnimations",
+			"title": "WM_MarioAnimations",
 			"description": "",
 			"isActiveOnStart": true,
 			"children": [
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "is-boolean-instance-variable-set",
-							"objectClass": "WM_Mario",
-							"sid": 150025089707462,
-							"parameters": {
-								"instance-variable": "AllowMovement"
-							}
-						}
-					],
-					"actions": [],
-					"sid": 834517268077837,
-					"children": [
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "is-moving-direction",
-									"objectClass": "WM_Mario",
-									"sid": 144924255546828,
-									"behaviorType": "TileMovement",
-									"parameters": {
-										"direction": "down"
-									}
-								},
-								{
-									"id": "is-moving",
-									"objectClass": "WM_Mario",
-									"sid": 115929759164356,
-									"behaviorType": "TileMovement",
-									"isInverted": true
-								}
-							],
-							"actions": [
-								{
-									"id": "set-animation",
-									"objectClass": "WM_Mario",
-									"sid": 214156495955011,
-									"parameters": {
-										"animation": "\"MovingDown\"",
-										"from": "beginning"
-									}
-								}
-							],
-							"sid": 635609267161829,
-							"isOrBlock": true
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "is-moving-direction",
-									"objectClass": "WM_Mario",
-									"sid": 780015690651117,
-									"behaviorType": "TileMovement",
-									"parameters": {
-										"direction": "up"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-animation",
-									"objectClass": "WM_Mario",
-									"sid": 672771983233307,
-									"parameters": {
-										"animation": "\"MovingUp\"",
-										"from": "beginning"
-									}
-								}
-							],
-							"sid": 983923999765362
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "is-moving-direction",
-									"objectClass": "WM_Mario",
-									"sid": 757878940323220,
-									"behaviorType": "TileMovement",
-									"parameters": {
-										"direction": "left"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-animation",
-									"objectClass": "WM_Mario",
-									"sid": 870721443536902,
-									"parameters": {
-										"animation": "\"MovingLeft\"",
-										"from": "beginning"
-									}
-								}
-							],
-							"sid": 542270529648870
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "is-moving-direction",
-									"objectClass": "WM_Mario",
-									"sid": 496844272496167,
-									"behaviorType": "TileMovement",
-									"parameters": {
-										"direction": "right"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-animation",
-									"objectClass": "WM_Mario",
-									"sid": 781972124527155,
-									"parameters": {
-										"animation": "\"MovingRight\"",
-										"from": "beginning"
-									}
-								}
-							],
-							"sid": 267800961173497
-						}
-					]
-				},
 				{
 					"eventType": "block",
 					"conditions": [
@@ -2476,6 +2294,145 @@
 						}
 					],
 					"sid": 312908841258567
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "WM_ClassicTileMovement",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "WM_Mario",
+									"sid": 247308026243995,
+									"parameters": {
+										"instance-variable": "AllowMovement"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 419803695481357,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-moving-direction",
+											"objectClass": "WM_Mario",
+											"sid": 739987597265609,
+											"behaviorType": "TileMovement",
+											"parameters": {
+												"direction": "down"
+											}
+										},
+										{
+											"id": "is-moving",
+											"objectClass": "WM_Mario",
+											"sid": 239203146313729,
+											"behaviorType": "TileMovement",
+											"isInverted": true
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation",
+											"objectClass": "WM_Mario",
+											"sid": 255442522078575,
+											"parameters": {
+												"animation": "\"MovingDown\"",
+												"from": "beginning"
+											}
+										}
+									],
+									"sid": 962587565118332,
+									"isOrBlock": true
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-moving-direction",
+											"objectClass": "WM_Mario",
+											"sid": 230360967628477,
+											"behaviorType": "TileMovement",
+											"parameters": {
+												"direction": "up"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation",
+											"objectClass": "WM_Mario",
+											"sid": 274067814730711,
+											"parameters": {
+												"animation": "\"MovingUp\"",
+												"from": "beginning"
+											}
+										}
+									],
+									"sid": 679222233448984
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-moving-direction",
+											"objectClass": "WM_Mario",
+											"sid": 426935087009970,
+											"behaviorType": "TileMovement",
+											"parameters": {
+												"direction": "left"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation",
+											"objectClass": "WM_Mario",
+											"sid": 202501085022282,
+											"parameters": {
+												"animation": "\"MovingLeft\"",
+												"from": "beginning"
+											}
+										}
+									],
+									"sid": 880174038065305
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-moving-direction",
+											"objectClass": "WM_Mario",
+											"sid": 394239203183002,
+											"behaviorType": "TileMovement",
+											"parameters": {
+												"direction": "right"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation",
+											"objectClass": "WM_Mario",
+											"sid": 530794622491211,
+											"parameters": {
+												"animation": "\"MovingRight\"",
+												"from": "beginning"
+											}
+										}
+									],
+									"sid": 224432170787503
+								}
+							]
+						}
+					],
+					"sid": 897679304764522
 				}
 			],
 			"sid": 725674819852719

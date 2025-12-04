@@ -768,7 +768,7 @@
 					"sid": 977841796835288,
 					"tags": "",
 					"instanceVariables": {
-						"LevelName": "goes back to title lol.\nnot much else to say...\n\nConstruct World - v1.03\npress r to free-move btw",
+						"LevelName": "goes back to title lol.\nnot much else to say...\n\nConstruct World - vDEV\npress r to free-move btw",
 						"LevelID": "",
 						"SkipMarioStartScreen": true,
 						"Completed": true,
@@ -1324,8 +1324,8 @@
 								"grid-height": 16,
 								"grid-offset-x": 0,
 								"grid-offset-y": 0,
-								"speed-x": 100,
-								"speed-y": 100,
+								"speed-x": 0.00001,
+								"speed-y": 0.00001,
 								"enabled": true,
 								"default-controls": true,
 								"isometric": false

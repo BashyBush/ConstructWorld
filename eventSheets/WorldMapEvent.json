@@ -980,6 +980,12 @@
 									"sid": 622273784971199,
 									"behaviorType": "TileMovement",
 									"isInverted": true
+								},
+								{
+									"id": "is-any-playing",
+									"objectClass": "TimelineController",
+									"sid": 568710581710942,
+									"isInverted": true
 								}
 							],
 							"actions": [
@@ -1832,11 +1838,11 @@
 										{
 											"id": "compare-instance-variable",
 											"objectClass": "WM_LevelPoints",
-											"sid": 854902027787011,
+											"sid": 146778263251149,
 											"parameters": {
 												"instance-variable": "SecertDirection",
 												"comparison": 0,
-												"value": "\"Left\""
+												"value": "\"Right\""
 											}
 										},
 										{
@@ -1891,11 +1897,11 @@
 										{
 											"id": "compare-instance-variable",
 											"objectClass": "WM_LevelPoints",
-											"sid": 113027374158777,
+											"sid": 969441272419513,
 											"parameters": {
 												"instance-variable": "ReturnerDirection",
 												"comparison": 0,
-												"value": "\"Left\""
+												"value": "\"Right\""
 											}
 										}
 									],
@@ -2221,10 +2227,6 @@
 			"description": "",
 			"isActiveOnStart": true,
 			"children": [
-				{
-					"eventType": "comment",
-					"text": "this requires some recoding for the timeline stuff"
-				},
 				{
 					"eventType": "block",
 					"conditions": [

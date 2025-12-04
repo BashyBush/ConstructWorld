@@ -1056,6 +1056,7 @@
 	},
 	"timelines": {
 		"items": [
+			"WM_Tul_Wel_Up",
 			"WM_Tul_YI1_Down",
 			"WM_Tul_YSP_Right",
 			"WM_Wel_Tul_Down",

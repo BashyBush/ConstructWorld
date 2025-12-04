@@ -1,12 +1,12 @@
 {
-	"name": "WM_Wel_Tul_Down",
+	"name": "WM_Tul_Wel_Up",
 	"enabled": true,
 	"interpolationMode": "default",
 	"resultMode": "default",
 	"ease": "noease",
 	"pathMode": "line",
 	"resizeMode": "size",
-	"playheadTime": 1.8333120000000054,
+	"playheadTime": 1,
 	"totalTime": 1,
 	"stepTime": 0.1,
 	"useStepTime": true,
@@ -37,7 +37,7 @@
 			"id": "",
 			"virtualPosition": {
 				"offsetX": 0,
-				"offsetY": 80,
+				"offsetY": -80,
 				"useColor": true,
 				"colorSet": false,
 				"relativeFlags": 2047
@@ -135,7 +135,7 @@
 							"pathMode": "default",
 							"value": 0,
 							"rValue": 0,
-							"aValue": 112,
+							"aValue": 192,
 							"addons": [
 								{
 									"id": "cubic-bezier",
@@ -154,9 +154,9 @@
 							"resultMode": "default",
 							"ease": "default",
 							"pathMode": "default",
-							"value": 80,
-							"rValue": 80,
-							"aValue": 192,
+							"value": -80,
+							"rValue": -80,
+							"aValue": 112,
 							"addons": [
 								{
 									"id": "cubic-bezier",
@@ -178,7 +178,7 @@
 				"resultMode": "default",
 				"ease": "default",
 				"pathMode": "default",
-				"resizeMode": "default",
+				"resizeMode": "",
 				"expanded": true,
 				"name": "Property Track Folder",
 				"items": [],

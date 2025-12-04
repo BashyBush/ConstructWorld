@@ -13,39 +13,18 @@
 			"sid": 162202226323690
 		},
 		{
-			"name": "MoveN",
-			"type": "boolean",
-			"desc": "",
-			"show": false,
-			"sid": 212060950872098
-		},
-		{
-			"name": "MoveE",
-			"type": "boolean",
-			"desc": "",
-			"show": false,
-			"sid": 429932519428883
-		},
-		{
-			"name": "MoveW",
-			"type": "boolean",
-			"desc": "",
-			"show": false,
-			"sid": 149000729569516
-		},
-		{
-			"name": "MoveS",
-			"type": "boolean",
-			"desc": "",
-			"show": false,
-			"sid": 780871694097006
-		},
-		{
 			"name": "CurveTurnChecker",
 			"type": "boolean",
 			"desc": "",
 			"show": true,
 			"sid": 804091129132888
+		},
+		{
+			"name": "DEBUG_FreeMove",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 780871694097006
 		}
 	],
 	"behaviorTypes": [
@@ -53,11 +32,6 @@
 			"behaviorId": "TileMovement",
 			"name": "TileMovement",
 			"sid": 333867949034287
-		},
-		{
-			"behaviorId": "MoveTo",
-			"name": "MoveTo",
-			"sid": 307347890340257
 		}
 	],
 	"effectTypes": [],

@@ -768,7 +768,7 @@
 					"sid": 977841796835288,
 					"tags": "",
 					"instanceVariables": {
-						"LevelName": "goes back to title lol.\nnot much else to say...\n\nConstruct World - v1.03\nyou can free-move btw.",
+						"LevelName": "goes back to title lol.\nnot much else to say...\n\nConstruct World - v1.03\npress r to free-move btw",
 						"LevelID": "",
 						"SkipMarioStartScreen": true,
 						"Completed": true,
@@ -1006,7 +1006,7 @@
 						"Locked": false,
 						"NormalMoveID": "WM_Tul_YI1_Down",
 						"SecertMoveID": "WM_Tul_YSP_Right",
-						"ReturnerMoveID": "",
+						"ReturnerMoveID": "WM_Tul_Wel_Up",
 						"NormalDirection": "Down",
 						"SecertDirection": "Right",
 						"ReturnerDirection": "Up"
@@ -1314,11 +1314,8 @@
 					"tags": "",
 					"instanceVariables": {
 						"AllowMovement": true,
-						"MoveN": false,
-						"MoveE": false,
-						"MoveW": false,
-						"MoveS": false,
-						"CurveTurnChecker": false
+						"CurveTurnChecker": false,
+						"DEBUG_FreeMove": false
 					},
 					"behaviors": {
 						"TileMovement": {
@@ -1332,17 +1329,6 @@
 								"enabled": true,
 								"default-controls": true,
 								"isometric": false
-							}
-						},
-						"MoveTo": {
-							"properties": {
-								"max-speed": 100,
-								"acceleration": 0,
-								"deceleration": 0,
-								"rotate-speed": 0,
-								"set-angle": false,
-								"stop-on-solids": false,
-								"enabled": true
 							}
 						}
 					},

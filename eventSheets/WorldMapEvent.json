@@ -804,6 +804,64 @@
 			"eventType": "block",
 			"conditions": [
 				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 202589796246057,
+					"parameters": {
+						"key": 82
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 633454343054240,
+					"parameters": {
+						"variable": "DebugMode",
+						"comparison": 0,
+						"value": "1"
+					}
+				},
+				{
+					"id": "is-any-playing",
+					"objectClass": "TimelineController",
+					"sid": 597906616147877,
+					"isInverted": true
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "WM_Mario",
+					"sid": 256634315436465,
+					"parameters": {
+						"instance-variable": "AllowMovement"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-enabled",
+					"objectClass": "WM_Mario",
+					"sid": 782876836296820,
+					"behaviorType": "TileMovement",
+					"parameters": {
+						"state": "enabled"
+					}
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "WM_Mario",
+					"sid": 954682002514736,
+					"parameters": {
+						"instance-variable": "DEBUG_FreeMove",
+						"value": "true"
+					}
+				}
+			],
+			"sid": 980999220617114
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
 					"id": "on-start-of-layout",
 					"objectClass": "System",
 					"sid": 209300843449274
@@ -1326,6 +1384,15 @@
 							"parameters": {
 								"instance-variable": "AllowMovement"
 							}
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "WM_Mario",
+							"sid": 613899151219129,
+							"parameters": {
+								"instance-variable": "DEBUG_FreeMove"
+							},
+							"isInverted": true
 						}
 					],
 					"actions": [],

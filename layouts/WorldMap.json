@@ -728,8 +728,10 @@
 						"Completed": false,
 						"SecertCompleted": false,
 						"Locked": false,
-						"NormalMove": "",
-						"SecertMove": ""
+						"NormalMoveID": "",
+						"SecertMoveID": "",
+						"NormalDirection": "",
+						"SecertDirection": ""
 					},
 					"behaviors": {},
 					"showing": true,
@@ -770,8 +772,10 @@
 						"Completed": false,
 						"SecertCompleted": false,
 						"Locked": false,
-						"NormalMove": "",
-						"SecertMove": ""
+						"NormalMoveID": "WM_Wel_Tul_Down",
+						"SecertMoveID": "",
+						"NormalDirection": "Down",
+						"SecertDirection": ""
 					},
 					"behaviors": {},
 					"showing": true,
@@ -812,8 +816,10 @@
 						"Completed": false,
 						"SecertCompleted": false,
 						"Locked": false,
-						"NormalMove": "",
-						"SecertMove": ""
+						"NormalMoveID": "",
+						"SecertMoveID": "",
+						"NormalDirection": "",
+						"SecertDirection": ""
 					},
 					"behaviors": {},
 					"showing": true,
@@ -854,8 +860,10 @@
 						"Completed": false,
 						"SecertCompleted": false,
 						"Locked": false,
-						"NormalMove": "",
-						"SecertMove": ""
+						"NormalMoveID": "",
+						"SecertMoveID": "",
+						"NormalDirection": "",
+						"SecertDirection": ""
 					},
 					"behaviors": {},
 					"showing": true,
@@ -896,8 +904,10 @@
 						"Completed": false,
 						"SecertCompleted": false,
 						"Locked": false,
-						"NormalMove": "",
-						"SecertMove": ""
+						"NormalMoveID": "",
+						"SecertMoveID": "",
+						"NormalDirection": "",
+						"SecertDirection": ""
 					},
 					"behaviors": {},
 					"showing": true,
@@ -938,8 +948,10 @@
 						"Completed": false,
 						"SecertCompleted": false,
 						"Locked": false,
-						"NormalMove": "",
-						"SecertMove": ""
+						"NormalMoveID": "",
+						"SecertMoveID": "",
+						"NormalDirection": "",
+						"SecertDirection": ""
 					},
 					"behaviors": {},
 					"showing": true,
@@ -980,8 +992,10 @@
 						"Completed": false,
 						"SecertCompleted": false,
 						"Locked": false,
-						"NormalMove": "Down",
-						"SecertMove": "Right"
+						"NormalMoveID": "Down",
+						"SecertMoveID": "Right",
+						"NormalDirection": "",
+						"SecertDirection": ""
 					},
 					"behaviors": {},
 					"showing": true,
@@ -1022,8 +1036,10 @@
 						"Completed": false,
 						"SecertCompleted": false,
 						"Locked": false,
-						"NormalMove": "",
-						"SecertMove": ""
+						"NormalMoveID": "",
+						"SecertMoveID": "",
+						"NormalDirection": "",
+						"SecertDirection": ""
 					},
 					"behaviors": {},
 					"showing": true,
@@ -1064,8 +1080,10 @@
 						"Completed": false,
 						"SecertCompleted": false,
 						"Locked": false,
-						"NormalMove": "",
-						"SecertMove": ""
+						"NormalMoveID": "",
+						"SecertMoveID": "",
+						"NormalDirection": "",
+						"SecertDirection": ""
 					},
 					"behaviors": {},
 					"showing": true,
@@ -1106,8 +1124,10 @@
 						"Completed": false,
 						"SecertCompleted": false,
 						"Locked": false,
-						"NormalMove": "",
-						"SecertMove": ""
+						"NormalMoveID": "",
+						"SecertMoveID": "",
+						"NormalDirection": "",
+						"SecertDirection": ""
 					},
 					"behaviors": {},
 					"showing": true,
@@ -1148,8 +1168,10 @@
 						"Completed": false,
 						"SecertCompleted": false,
 						"Locked": false,
-						"NormalMove": "",
-						"SecertMove": ""
+						"NormalMoveID": "",
+						"SecertMoveID": "",
+						"NormalDirection": "",
+						"SecertDirection": ""
 					},
 					"behaviors": {},
 					"showing": true,
@@ -1190,8 +1212,10 @@
 						"Completed": false,
 						"SecertCompleted": false,
 						"Locked": false,
-						"NormalMove": "",
-						"SecertMove": ""
+						"NormalMoveID": "",
+						"SecertMoveID": "",
+						"NormalDirection": "",
+						"SecertDirection": ""
 					},
 					"behaviors": {},
 					"instanceFolderItem": {

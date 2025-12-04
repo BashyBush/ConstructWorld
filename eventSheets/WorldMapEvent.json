@@ -366,6 +366,7 @@
 					"id": "set-enabled",
 					"objectClass": "WM_Mario",
 					"sid": 413954391799519,
+					"disabled": true,
 					"behaviorType": "TileMovement",
 					"parameters": {
 						"state": "enabled"
@@ -1295,7 +1296,7 @@
 		{
 			"eventType": "group",
 			"disabled": false,
-			"title": "WM_CurveStuff",
+			"title": "WM_MarioMover",
 			"description": "",
 			"isActiveOnStart": true,
 			"children": [
@@ -1303,25 +1304,81 @@
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "on-collision-with-another-object",
-							"objectClass": "WM_Mario",
-							"sid": 450340642904582,
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 767269937347530,
 							"parameters": {
-								"object": "WM_MarioMover"
+								"key": 40
 							}
 						},
 						{
-							"id": "is-boolean-instance-variable-set",
-							"objectClass": "WM_Mario",
-							"sid": 533417488357824,
+							"id": "compare-instance-variable",
+							"objectClass": "WM_LevelPoints",
+							"sid": 782171609928545,
 							"parameters": {
-								"instance-variable": "CurveTurnChecker"
-							},
+								"instance-variable": "NormalDirection",
+								"comparison": 0,
+								"value": "\"Down\""
+							}
+						},
+						{
+							"id": "is-any-playing",
+							"objectClass": "TimelineController",
+							"sid": 230574448125507,
 							"isInverted": true
 						}
 					],
 					"actions": [],
-					"sid": 819380401615434
+					"sid": 819380401615434,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "WM_LevelPoints",
+									"sid": 693100843941406,
+									"parameters": {
+										"instance-variable": "NormalMoveID",
+										"comparison": 1,
+										"value": "\"\""
+									}
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "WM_LevelPoints",
+									"sid": 302091364691150,
+									"parameters": {
+										"instance-variable": "Completed"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "play-timeline-by-name",
+									"objectClass": "TimelineController",
+									"sid": 757989273035016,
+									"parameters": {
+										"timeline-name": "WM_LevelPoints.NormalMoveID",
+										"tags": "\"\""
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 188583306179595,
+									"parameters": {
+										"audio-file": "1up",
+										"loop": "not-looping",
+										"volume": "0",
+										"stereo-pan": "0",
+										"tag-optional": "\"\""
+									}
+								}
+							],
+							"sid": 528020959681342
+						}
+					]
 				}
 			],
 			"sid": 588368603976334

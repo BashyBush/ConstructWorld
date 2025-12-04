@@ -106,6 +106,13 @@
 		},
 		{
 			"type": "plugin",
+			"id": "Timeline",
+			"name": "Timeline controller",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
 			"id": "gamepad",
 			"name": "Gamepad",
 			"author": "Scirra",
@@ -264,7 +271,8 @@
 					"Browser",
 					"NWjs",
 					"Mouse",
-					"Audio"
+					"Audio",
+					"TimelineController"
 				],
 				"subfolders": [],
 				"name": "Plugins"
@@ -1048,7 +1056,7 @@
 	},
 	"timelines": {
 		"items": [
-			"Timeline 1"
+			"WM_Wel_Tul_Down"
 		],
 		"subfolders": [
 			{

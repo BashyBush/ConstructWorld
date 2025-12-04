@@ -48,18 +48,32 @@
 			"sid": 216431959171608
 		},
 		{
-			"name": "NormalMove",
+			"name": "NormalMoveID",
 			"type": "string",
-			"desc": "",
+			"desc": "Set Timeline Name Here",
 			"show": true,
 			"sid": 293671850319134
 		},
 		{
-			"name": "SecertMove",
+			"name": "SecertMoveID",
+			"type": "string",
+			"desc": "Set Timeline Name Here",
+			"show": true,
+			"sid": 448153850947676
+		},
+		{
+			"name": "NormalDirection",
 			"type": "string",
 			"desc": "",
 			"show": true,
-			"sid": 448153850947676
+			"sid": 140276240487076
+		},
+		{
+			"name": "SecertDirection",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 619500560580769
 		}
 	],
 	"behaviorTypes": [],

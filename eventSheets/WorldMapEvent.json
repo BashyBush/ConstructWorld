@@ -1304,69 +1304,48 @@
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "on-key-pressed",
-							"objectClass": "Keyboard",
-							"sid": 767269937347530,
+							"id": "is-overlapping-another-object",
+							"objectClass": "WM_Mario",
+							"sid": 969578079668979,
 							"parameters": {
-								"key": 40
+								"object": "WM_LevelPoints"
 							}
 						},
 						{
-							"id": "compare-instance-variable",
-							"objectClass": "WM_LevelPoints",
-							"sid": 782171609928545,
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "WM_Mario",
+							"sid": 212288722888007,
 							"parameters": {
-								"instance-variable": "NormalDirection",
-								"comparison": 0,
-								"value": "\"Down\""
+								"instance-variable": "AllowMovement"
 							}
-						},
-						{
-							"id": "is-any-playing",
-							"objectClass": "TimelineController",
-							"sid": 230574448125507,
-							"isInverted": true
 						}
 					],
 					"actions": [],
-					"sid": 819380401615434,
+					"sid": 120619789170594,
 					"children": [
 						{
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "compare-instance-variable",
-									"objectClass": "WM_LevelPoints",
-									"sid": 693100843941406,
+									"id": "on-key-pressed",
+									"objectClass": "Keyboard",
+									"sid": 303928994039230,
 									"parameters": {
-										"instance-variable": "NormalMoveID",
-										"comparison": 1,
-										"value": "\"\""
+										"key": 40
 									}
 								},
 								{
-									"id": "is-boolean-instance-variable-set",
-									"objectClass": "WM_LevelPoints",
-									"sid": 302091364691150,
-									"parameters": {
-										"instance-variable": "Completed"
-									}
+									"id": "is-any-playing",
+									"objectClass": "TimelineController",
+									"sid": 852524471439265,
+									"isInverted": true
 								}
 							],
 							"actions": [
 								{
-									"id": "play-timeline-by-name",
-									"objectClass": "TimelineController",
-									"sid": 757989273035016,
-									"parameters": {
-										"timeline-name": "WM_LevelPoints.NormalMoveID",
-										"tags": "\"\""
-									}
-								},
-								{
 									"id": "play",
 									"objectClass": "Audio",
-									"sid": 188583306179595,
+									"sid": 191280737309440,
 									"parameters": {
 										"audio-file": "1up",
 										"loop": "not-looping",
@@ -1376,7 +1355,85 @@
 									}
 								}
 							],
-							"sid": 528020959681342
+							"sid": 170075706564147,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "WM_LevelPoints",
+											"sid": 646821061045347,
+											"parameters": {
+												"instance-variable": "NormalDirection",
+												"comparison": 0,
+												"value": "\"Down\""
+											}
+										}
+									],
+									"actions": [],
+									"sid": 287705601150270,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "WM_LevelPoints",
+													"sid": 496043635107795,
+													"parameters": {
+														"instance-variable": "NormalMoveID",
+														"comparison": 1,
+														"value": "\"\""
+													}
+												},
+												{
+													"id": "is-boolean-instance-variable-set",
+													"objectClass": "WM_LevelPoints",
+													"sid": 517371202726350,
+													"parameters": {
+														"instance-variable": "Completed"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "play-timeline-by-name",
+													"objectClass": "TimelineController",
+													"sid": 714989936708490,
+													"parameters": {
+														"timeline-name": "WM_LevelPoints.NormalMoveID",
+														"tags": "\"\""
+													}
+												}
+											],
+											"sid": 990773894242779
+										}
+									]
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 200089343923802
+										},
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "WM_LevelPoints",
+											"sid": 973419431260469,
+											"parameters": {
+												"instance-variable": "SecertDirection",
+												"comparison": 0,
+												"value": "\"Down\""
+											}
+										}
+									],
+									"actions": [],
+									"sid": 119578755724830
+								}
+							]
 						}
 					]
 				}

@@ -730,8 +730,10 @@
 						"Locked": false,
 						"NormalMoveID": "",
 						"SecertMoveID": "",
+						"ReturnerMoveID": "",
 						"NormalDirection": "",
-						"SecertDirection": ""
+						"SecertDirection": "",
+						"ReturnerDirection": ""
 					},
 					"behaviors": {},
 					"showing": true,
@@ -769,13 +771,15 @@
 						"LevelName": "goes back to title lol.\nnot much else to say...\n\nConstruct World - v1.03\nyou can free-move btw.",
 						"LevelID": "",
 						"SkipMarioStartScreen": true,
-						"Completed": false,
+						"Completed": true,
 						"SecertCompleted": false,
 						"Locked": false,
 						"NormalMoveID": "WM_Wel_Tul_Down",
-						"SecertMoveID": "",
+						"SecertMoveID": "none",
+						"ReturnerMoveID": "",
 						"NormalDirection": "Down",
-						"SecertDirection": ""
+						"SecertDirection": "Down",
+						"ReturnerDirection": ""
 					},
 					"behaviors": {},
 					"showing": true,
@@ -818,8 +822,10 @@
 						"Locked": false,
 						"NormalMoveID": "",
 						"SecertMoveID": "",
+						"ReturnerMoveID": "",
 						"NormalDirection": "",
-						"SecertDirection": ""
+						"SecertDirection": "",
+						"ReturnerDirection": ""
 					},
 					"behaviors": {},
 					"showing": true,
@@ -862,8 +868,10 @@
 						"Locked": false,
 						"NormalMoveID": "",
 						"SecertMoveID": "",
+						"ReturnerMoveID": "",
 						"NormalDirection": "",
-						"SecertDirection": ""
+						"SecertDirection": "",
+						"ReturnerDirection": ""
 					},
 					"behaviors": {},
 					"showing": true,
@@ -906,8 +914,10 @@
 						"Locked": false,
 						"NormalMoveID": "",
 						"SecertMoveID": "",
+						"ReturnerMoveID": "",
 						"NormalDirection": "",
-						"SecertDirection": ""
+						"SecertDirection": "",
+						"ReturnerDirection": ""
 					},
 					"behaviors": {},
 					"showing": true,
@@ -950,8 +960,10 @@
 						"Locked": false,
 						"NormalMoveID": "",
 						"SecertMoveID": "",
+						"ReturnerMoveID": "",
 						"NormalDirection": "",
-						"SecertDirection": ""
+						"SecertDirection": "",
+						"ReturnerDirection": ""
 					},
 					"behaviors": {},
 					"showing": true,
@@ -992,10 +1004,12 @@
 						"Completed": false,
 						"SecertCompleted": false,
 						"Locked": false,
-						"NormalMoveID": "Down",
-						"SecertMoveID": "Right",
-						"NormalDirection": "",
-						"SecertDirection": ""
+						"NormalMoveID": "WM_Tul_YI1_Down",
+						"SecertMoveID": "",
+						"ReturnerMoveID": "",
+						"NormalDirection": "Down",
+						"SecertDirection": "Right",
+						"ReturnerDirection": "Up"
 					},
 					"behaviors": {},
 					"showing": true,
@@ -1038,8 +1052,10 @@
 						"Locked": false,
 						"NormalMoveID": "",
 						"SecertMoveID": "",
+						"ReturnerMoveID": "",
 						"NormalDirection": "",
-						"SecertDirection": ""
+						"SecertDirection": "",
+						"ReturnerDirection": ""
 					},
 					"behaviors": {},
 					"showing": true,
@@ -1082,8 +1098,10 @@
 						"Locked": false,
 						"NormalMoveID": "",
 						"SecertMoveID": "",
+						"ReturnerMoveID": "",
 						"NormalDirection": "",
-						"SecertDirection": ""
+						"SecertDirection": "",
+						"ReturnerDirection": ""
 					},
 					"behaviors": {},
 					"showing": true,
@@ -1126,8 +1144,10 @@
 						"Locked": false,
 						"NormalMoveID": "",
 						"SecertMoveID": "",
+						"ReturnerMoveID": "",
 						"NormalDirection": "",
-						"SecertDirection": ""
+						"SecertDirection": "",
+						"ReturnerDirection": ""
 					},
 					"behaviors": {},
 					"showing": true,
@@ -1170,8 +1190,10 @@
 						"Locked": false,
 						"NormalMoveID": "",
 						"SecertMoveID": "",
+						"ReturnerMoveID": "",
 						"NormalDirection": "",
-						"SecertDirection": ""
+						"SecertDirection": "",
+						"ReturnerDirection": ""
 					},
 					"behaviors": {},
 					"showing": true,
@@ -1214,8 +1236,10 @@
 						"Locked": false,
 						"NormalMoveID": "",
 						"SecertMoveID": "",
+						"ReturnerMoveID": "",
 						"NormalDirection": "",
-						"SecertDirection": ""
+						"SecertDirection": "",
+						"ReturnerDirection": ""
 					},
 					"behaviors": {},
 					"instanceFolderItem": {

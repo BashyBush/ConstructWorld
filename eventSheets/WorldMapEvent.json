@@ -844,6 +844,16 @@
 					}
 				},
 				{
+					"id": "set-speed",
+					"objectClass": "WM_Mario",
+					"sid": 797374829744199,
+					"behaviorType": "TileMovement",
+					"parameters": {
+						"x": "100",
+						"y": "100"
+					}
+				},
+				{
 					"id": "set-boolean-instvar",
 					"objectClass": "WM_Mario",
 					"sid": 954682002514736,
@@ -2298,6 +2308,36 @@
 				{
 					"eventType": "group",
 					"disabled": false,
+					"title": "WM_MarioAnimTile",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-any-keyframe-reached",
+									"objectClass": "TimelineController",
+									"sid": 181741756843065
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "WM_Mario",
+									"sid": 535200951761780,
+									"parameters": {
+										"instance-variable": "AllowMovement"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 693297770398043
+						}
+					],
+					"sid": 367462327210547
+				},
+				{
+					"eventType": "group",
+					"disabled": true,
 					"title": "WM_ClassicTileMovement",
 					"description": "",
 					"isActiveOnStart": true,
@@ -2316,6 +2356,7 @@
 							],
 							"actions": [],
 							"sid": 419803695481357,
+							"disabled": true,
 							"children": [
 								{
 									"eventType": "block",
@@ -2349,6 +2390,7 @@
 										}
 									],
 									"sid": 962587565118332,
+									"disabled": true,
 									"isOrBlock": true
 								},
 								{
@@ -2375,7 +2417,8 @@
 											}
 										}
 									],
-									"sid": 679222233448984
+									"sid": 679222233448984,
+									"disabled": true
 								},
 								{
 									"eventType": "block",
@@ -2401,7 +2444,8 @@
 											}
 										}
 									],
-									"sid": 880174038065305
+									"sid": 880174038065305,
+									"disabled": true
 								},
 								{
 									"eventType": "block",
@@ -2427,7 +2471,8 @@
 											}
 										}
 									],
-									"sid": 224432170787503
+									"sid": 224432170787503,
+									"disabled": true
 								}
 							]
 						}

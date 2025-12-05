@@ -12456,10 +12456,6 @@
 							"sid": 627765906793727,
 							"children": [
 								{
-									"eventType": "comment",
-									"text": "not fully working YET"
-								},
-								{
 									"eventType": "variable",
 									"name": "FireBallSpinRandomize",
 									"type": "number",

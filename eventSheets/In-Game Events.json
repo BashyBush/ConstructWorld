@@ -15838,6 +15838,15 @@
 													}
 												},
 												{
+													"id": "is-boolean-instance-variable-set",
+													"objectClass": "Player1",
+													"sid": 792946286910041,
+													"parameters": {
+														"instance-variable": "InPipe"
+													},
+													"isInverted": true
+												},
+												{
 													"id": "is-on-floor",
 													"objectClass": "Player1",
 													"sid": 362816842295743,
@@ -15857,7 +15866,7 @@
 												{
 													"id": "is-boolean-instance-variable-set",
 													"objectClass": "Player1",
-													"sid": 644591945557337,
+													"sid": 384384010335436,
 													"parameters": {
 														"instance-variable": "CourseClear"
 													},

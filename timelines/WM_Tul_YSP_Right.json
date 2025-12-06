@@ -6,7 +6,7 @@
 	"ease": "noease",
 	"pathMode": "line",
 	"resizeMode": "size",
-	"playheadTime": 2.5,
+	"playheadTime": 0.5,
 	"totalTime": 2.5,
 	"stepTime": 0.1,
 	"useStepTime": true,
@@ -36,8 +36,8 @@
 			"initialVisibility": true,
 			"id": "",
 			"virtualPosition": {
-				"offsetX": 112,
-				"offsetY": 128,
+				"offsetX": 40,
+				"offsetY": 0,
 				"useColor": true,
 				"colorSet": false,
 				"relativeFlags": 2047
@@ -266,6 +266,64 @@
 									}
 								}
 							]
+						}
+					]
+				},
+				{
+					"property": "PlayAnimation",
+					"source": {
+						"type": "instance-variable",
+						"uid": "PlayAnimation"
+					},
+					"enabled": true,
+					"interpolationMode": "default",
+					"resultMode": "default",
+					"ease": "default",
+					"pathMode": "none",
+					"propertyKeyframes": [
+						{
+							"time": 0,
+							"enabled": true,
+							"resultMode": "default",
+							"ease": "default",
+							"pathMode": "none",
+							"value": "Right",
+							"rValue": "Right",
+							"aValue": "Right",
+							"addons": []
+						},
+						{
+							"time": 1,
+							"enabled": true,
+							"resultMode": "default",
+							"ease": "default",
+							"pathMode": "none",
+							"value": "",
+							"rValue": "",
+							"aValue": "",
+							"addons": []
+						},
+						{
+							"time": 1.5,
+							"enabled": true,
+							"resultMode": "default",
+							"ease": "default",
+							"pathMode": "none",
+							"value": "Down",
+							"rValue": "Down",
+							"aValue": "Down",
+							"addons": []
+						},
+						{
+							"time": 2.5,
+							"enabled": true,
+							"resultMode": "default",
+							"ease": "default",
+							"pathMode": "none",
+							"value": "",
+							"rValue": "",
+							"aValue": "",
+							"addons": []
 						}
 					]
 				}

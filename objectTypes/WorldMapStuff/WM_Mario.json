@@ -25,6 +25,13 @@
 			"desc": "",
 			"show": true,
 			"sid": 780871694097006
+		},
+		{
+			"name": "PlayAnimation",
+			"type": "string",
+			"desc": "",
+			"show": false,
+			"sid": 598126465601931
 		}
 	],
 	"behaviorTypes": [

@@ -1315,7 +1315,8 @@
 					"instanceVariables": {
 						"AllowMovement": true,
 						"CurveTurnChecker": false,
-						"DEBUG_FreeMove": false
+						"DEBUG_FreeMove": false,
+						"PlayAnimation": ""
 					},
 					"behaviors": {
 						"TileMovement": {

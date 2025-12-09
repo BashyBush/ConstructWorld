@@ -32004,6 +32004,19 @@
 									}
 								},
 								{
+									"id": "create-object",
+									"objectClass": "System",
+									"sid": 172387220565064,
+									"parameters": {
+										"object-to-create": "PART_CoinCollected",
+										"layer": "\"Main Objects\"",
+										"x": "Coin.X",
+										"y": "Coin.Y",
+										"create-hierarchy": false,
+										"template-name": "\"\""
+									}
+								},
+								{
 									"id": "destroy",
 									"objectClass": "Coin",
 									"sid": 185891138139611
@@ -32043,6 +32056,19 @@
 									"parameters": {
 										"variable": "Coins",
 										"value": "1"
+									}
+								},
+								{
+									"id": "create-object",
+									"objectClass": "System",
+									"sid": 942024698293714,
+									"parameters": {
+										"object-to-create": "PART_CoinCollected",
+										"layer": "\"Main Objects\"",
+										"x": "YoshiCoins.X",
+										"y": "YoshiCoins.Y",
+										"create-hierarchy": false,
+										"template-name": "\"\""
 									}
 								},
 								{

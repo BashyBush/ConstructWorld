@@ -49,6 +49,18 @@
 						"exportQuality": 0.8,
 						"fileType": "image/png",
 						"imageSpriteId": 7527426,
+						"collisionPoly": {
+							"points": [
+								0.40625,
+								0,
+								1,
+								0,
+								1,
+								1,
+								0.40625,
+								1
+							]
+						},
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""

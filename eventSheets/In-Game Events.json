@@ -17087,6 +17087,115 @@
 							"isActiveOnStart": true,
 							"children": [
 								{
+									"eventType": "comment",
+									"text": "Event below will change mario animation speed depending on his x vector "
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "every-tick",
+											"objectClass": "System",
+											"sid": 405366044351948
+										}
+									],
+									"actions": [],
+									"sid": 563673116967158,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 809975942154073,
+													"parameters": {
+														"first-value": "Player1.Platform.VectorX",
+														"comparison": 4,
+														"second-value": "165"
+													}
+												},
+												{
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 420068689119713,
+													"parameters": {
+														"first-value": "Player1.Platform.VectorX",
+														"comparison": 2,
+														"second-value": "-165"
+													}
+												}
+											],
+											"actions": [],
+											"sid": 195186059707899,
+											"children": [
+												{
+													"eventType": "comment",
+													"text": "reusing the same event conditions cus of minus vector x. there probably a better way ngl."
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-two-values",
+															"objectClass": "System",
+															"sid": 737111239080876,
+															"parameters": {
+																"first-value": "Player1.Platform.VectorX",
+																"comparison": 4,
+																"second-value": "165"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-animation-speed",
+															"objectClass": "Player1",
+															"sid": 336864217920323,
+															"parameters": {
+																"speed": "7*(Player1.Platform.VectorX/200)"
+															}
+														}
+													],
+													"sid": 818038301909657
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "else",
+															"objectClass": "System",
+															"sid": 614489459524905
+														},
+														{
+															"id": "compare-two-values",
+															"objectClass": "System",
+															"sid": 675629404632243,
+															"parameters": {
+																"first-value": "Player1.Platform.VectorX",
+																"comparison": 2,
+																"second-value": "-165"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-animation-speed",
+															"objectClass": "Player1",
+															"sid": 185739394554261,
+															"parameters": {
+																"speed": "7*(Player1.Platform.VectorX/200*-1)"
+															}
+														}
+													],
+													"sid": 943708144091224
+												}
+											],
+											"isOrBlock": true
+										}
+									]
+								},
+								{
 									"eventType": "block",
 									"conditions": [
 										{
@@ -17157,6 +17266,7 @@
 													"id": "set-animation-speed",
 													"objectClass": "Player1",
 													"sid": 308290139333327,
+													"disabled": true,
 													"parameters": {
 														"speed": "7"
 													}
@@ -17170,11 +17280,21 @@
 														{
 															"id": "compare-animation-speed",
 															"objectClass": "Player1",
-															"sid": 558298502874819,
+															"sid": 711892157048231,
+															"parameters": {
+																"comparison": 5,
+																"number": "5"
+															}
+														},
+														{
+															"id": "compare-animation-speed",
+															"objectClass": "Player1",
+															"sid": 486567189454648,
 															"parameters": {
 																"comparison": 0,
-																"number": "7"
-															}
+																"number": "15"
+															},
+															"isInverted": true
 														}
 													],
 													"actions": [
@@ -18232,6 +18352,7 @@
 													"id": "set-animation-speed",
 													"objectClass": "Player1",
 													"sid": 920432421194308,
+													"disabled": true,
 													"parameters": {
 														"speed": "7"
 													}
@@ -18341,6 +18462,7 @@
 													"id": "set-animation-speed",
 													"objectClass": "Player1",
 													"sid": 461876829929925,
+													"disabled": true,
 													"parameters": {
 														"speed": "7"
 													}

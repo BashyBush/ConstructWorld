@@ -17097,6 +17097,16 @@
 											"id": "every-tick",
 											"objectClass": "System",
 											"sid": 405366044351948
+										},
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Player1",
+											"sid": 574773412229794,
+											"parameters": {
+												"instance-variable": "AnimationState",
+												"comparison": 1,
+												"value": "\"Spining\""
+											}
 										}
 									],
 									"actions": [],

@@ -27952,6 +27952,80 @@
 				{
 					"eventType": "group",
 					"disabled": false,
+					"title": "MushShooter",
+					"description": "might have to put this on the main branch of construct world",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-collision-with-another-object",
+									"objectClass": "Player1",
+									"sid": 665298871133021,
+									"parameters": {
+										"object": "MushroomSpawner"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "create-object",
+									"objectClass": "System",
+									"sid": 661022534786287,
+									"parameters": {
+										"object-to-create": "Mushroom",
+										"layer": "\"Main Objects\"",
+										"x": "MushroomSpawner.X+16",
+										"y": "MushroomSpawner.Y-32",
+										"create-hierarchy": false,
+										"template-name": "\"\""
+									}
+								},
+								{
+									"id": "set-vector-x",
+									"objectClass": "Mushroom",
+									"sid": 933964618298439,
+									"behaviorType": "Movement",
+									"parameters": {
+										"vector-x": "200"
+									}
+								},
+								{
+									"id": "set-vector-y",
+									"objectClass": "Mushroom",
+									"sid": 617121223135648,
+									"behaviorType": "Movement",
+									"parameters": {
+										"vector-y": "-32*15"
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 131463986316652,
+									"parameters": {
+										"audio-file": "sprout-item",
+										"loop": "not-looping",
+										"volume": "-5",
+										"stereo-pan": "0",
+										"tag-optional": "\"SF\""
+									}
+								},
+								{
+									"id": "destroy",
+									"objectClass": "MushroomSpawner",
+									"sid": 179661197836849
+								}
+							],
+							"sid": 532825717548959
+						}
+					],
+					"sid": 833415241459460
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
 					"title": "Key/KeyHole",
 					"description": "",
 					"isActiveOnStart": true,

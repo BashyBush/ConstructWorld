@@ -330,7 +330,8 @@
 					"Invisible_Slope",
 					"PipeLayoutWarpSetup",
 					"DoorLayoutWarpSetup",
-					"RotBlockParticleSetup"
+					"RotBlockParticleSetup",
+					"MushroomSpawner"
 				],
 				"subfolders": [],
 				"name": "HiddenObjects"

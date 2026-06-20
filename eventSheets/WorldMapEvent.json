@@ -232,6 +232,134 @@
 				{
 					"id": "on-start-of-layout",
 					"objectClass": "System",
+					"sid": 674220298103393
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 998277272722540,
+					"parameters": {
+						"variable": "Lifes",
+						"comparison": 0,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "WM_Mario",
+					"sid": 826824445916066,
+					"parameters": {
+						"animation": "\"GameOver\"",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 702786517706321,
+					"parameters": {
+						"layer": "\"GMFade\"",
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 255058059596670,
+					"parameters": {
+						"layer": "\"GMText\"",
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 451113703349795,
+					"parameters": {
+						"object-to-create": "Title_System",
+						"layer": "\"Extra Objects\"",
+						"x": "0",
+						"y": "0",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Title_System",
+					"sid": 304799624690662,
+					"parameters": {
+						"instance-variable": "Title_AllowMovement",
+						"value": "0"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Title_System",
+					"sid": 546132560174568,
+					"parameters": {
+						"instance-variable": "Title_MenuState",
+						"value": "0"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Title_System",
+					"sid": 100165647445153,
+					"parameters": {
+						"instance-variable": "Title_MenuSelection",
+						"value": "0"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Title_System",
+					"sid": 154536063421915,
+					"parameters": {
+						"instance-variable": "Title_MenuMaxSelection",
+						"value": "1"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 745493979466555,
+					"parameters": {
+						"seconds": "0.35",
+						"use-timescale": true
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Title_System",
+					"sid": 511927206245202,
+					"parameters": {
+						"instance-variable": "Title_AllowMovement",
+						"value": "1"
+					}
+				},
+				{
+					"id": "flash",
+					"objectClass": "WM_GMPointer",
+					"sid": 290841840157634,
+					"behaviorType": "Flash",
+					"parameters": {
+						"on-time": "0.15",
+						"off-time": "0.15",
+						"duration": "99999999999999"
+					}
+				}
+			],
+			"sid": 341796964204159
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
 					"sid": 717772524186357
 				}
 			],
@@ -1056,6 +1184,16 @@
 									"objectClass": "TimelineController",
 									"sid": 568710581710942,
 									"isInverted": true
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 323799080227518,
+									"parameters": {
+										"variable": "Lifes",
+										"comparison": 1,
+										"value": "0"
+									}
 								}
 							],
 							"actions": [
@@ -1405,6 +1543,16 @@
 								"instance-variable": "DEBUG_FreeMove"
 							},
 							"isInverted": true
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 557388335960359,
+							"parameters": {
+								"variable": "Lifes",
+								"comparison": 1,
+								"value": "0"
+							}
 						}
 					],
 					"actions": [],
@@ -3315,6 +3463,638 @@
 				}
 			],
 			"sid": 868195795623877
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "WM_GameOver Highlighters",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Title_System",
+							"sid": 418765308351025,
+							"parameters": {
+								"instance-variable": "Title_MenuState",
+								"comparison": 0,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 283759278299019,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Title_System",
+									"sid": 457259159027826,
+									"parameters": {
+										"instance-variable": "Title_MenuSelection",
+										"comparison": 0,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-y",
+									"objectClass": "WM_GMPointer",
+									"sid": 819060831324972,
+									"parameters": {
+										"y": "256"
+									}
+								}
+							],
+							"sid": 441364532130943
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Title_System",
+									"sid": 901101661719518,
+									"parameters": {
+										"instance-variable": "Title_MenuSelection",
+										"comparison": 0,
+										"value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-y",
+									"objectClass": "WM_GMPointer",
+									"sid": 216170330789197,
+									"parameters": {
+										"y": "288"
+									}
+								}
+							],
+							"sid": 964475447243060
+						}
+					]
+				}
+			],
+			"sid": 650373058056164
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "WM_GameOver Keyboard Setup",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 106713193486549,
+							"parameters": {
+								"key": 40
+							}
+						},
+						{
+							"id": "on-button-pressed",
+							"objectClass": "Gamepad",
+							"sid": 313374796600162,
+							"parameters": {
+								"gamepad": "0",
+								"button": "d-pad-down"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 616785749187522,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Title_System",
+									"sid": 421840733962581,
+									"parameters": {
+										"instance-variable": "Title_MenuSelection",
+										"comparison": 5,
+										"value": "Title_System.Title_MenuMaxSelection"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Title_System",
+									"sid": 877644733354376,
+									"parameters": {
+										"instance-variable": "Title_MenuSelection",
+										"value": "0"
+									}
+								}
+							],
+							"sid": 233626730868651
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 369127696487606
+								}
+							],
+							"actions": [
+								{
+									"id": "add-to-instvar",
+									"objectClass": "Title_System",
+									"sid": 133819171267138,
+									"parameters": {
+										"instance-variable": "Title_MenuSelection",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 484768115733789
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 793948820368150,
+									"parameters": {
+										"variable": "Lifes",
+										"comparison": 0,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 429468094866176,
+									"parameters": {
+										"audio-file": "smw_fireball",
+										"loop": "not-looping",
+										"volume": "-5",
+										"stereo-pan": "0",
+										"tag-optional": "\"SF\""
+									}
+								}
+							],
+							"sid": 910083928663428
+						}
+					],
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 558066057496543,
+							"parameters": {
+								"key": 38
+							}
+						},
+						{
+							"id": "on-button-pressed",
+							"objectClass": "Gamepad",
+							"sid": 909363584137953,
+							"parameters": {
+								"gamepad": "0",
+								"button": "d-pad-up"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 824026046672674,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Title_System",
+									"sid": 776909194602464,
+									"parameters": {
+										"instance-variable": "Title_MenuSelection",
+										"comparison": 3,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Title_System",
+									"sid": 482049248469883,
+									"parameters": {
+										"instance-variable": "Title_MenuSelection",
+										"value": "Title_System.Title_MenuMaxSelection"
+									}
+								}
+							],
+							"sid": 294293498560484
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 535123104125032
+								}
+							],
+							"actions": [
+								{
+									"id": "add-to-instvar",
+									"objectClass": "Title_System",
+									"sid": 498717306614902,
+									"parameters": {
+										"instance-variable": "Title_MenuSelection",
+										"value": "-1"
+									}
+								}
+							],
+							"sid": 266119539817457
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 372709518959452,
+									"parameters": {
+										"variable": "Lifes",
+										"comparison": 0,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 150886581908541,
+									"parameters": {
+										"audio-file": "smw_fireball",
+										"loop": "not-looping",
+										"volume": "-5",
+										"stereo-pan": "0",
+										"tag-optional": "\"SF\""
+									}
+								}
+							],
+							"sid": 382047907599550
+						}
+					],
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 937914084925399,
+							"parameters": {
+								"key": 13
+							}
+						},
+						{
+							"id": "on-button-pressed",
+							"objectClass": "Gamepad",
+							"sid": 273759409403470,
+							"parameters": {
+								"gamepad": "0",
+								"button": "button-a"
+							}
+						},
+						{
+							"id": "on-button-pressed",
+							"objectClass": "Gamepad",
+							"sid": 421772845492543,
+							"parameters": {
+								"gamepad": "0",
+								"button": "start-menu"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 763389723320519,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Title_System",
+									"sid": 948370505922835,
+									"parameters": {
+										"instance-variable": "Title_AllowMovement",
+										"comparison": 0,
+										"value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "signal",
+									"objectClass": "System",
+									"sid": 400132485189294,
+									"parameters": {
+										"tag": "\"TitleSelected\""
+									}
+								}
+							],
+							"sid": 983766719812380
+						}
+					],
+					"isOrBlock": true
+				}
+			],
+			"sid": 641120296320405
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "WM_GameOver Selected Setup",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-signal",
+							"objectClass": "System",
+							"sid": 618054863747255,
+							"parameters": {
+								"tag": "\"TitleSelected\""
+							}
+						}
+					],
+					"actions": [],
+					"sid": 552054030832342,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Title_System",
+									"sid": 401900890145395,
+									"parameters": {
+										"instance-variable": "Title_MenuState",
+										"comparison": 0,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 585850624248405,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Title_System",
+											"sid": 437798368423121,
+											"parameters": {
+												"instance-variable": "Title_MenuSelection",
+												"comparison": 0,
+												"value": "0"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "play",
+											"objectClass": "Audio",
+											"sid": 938163291248077,
+											"parameters": {
+												"audio-file": "coin",
+												"loop": "not-looping",
+												"volume": "-5",
+												"stereo-pan": "0",
+												"tag-optional": "\"SF\""
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "Title_System",
+											"sid": 394893178850344,
+											"parameters": {
+												"instance-variable": "Title_AllowMovement",
+												"value": "0"
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "Camera",
+											"sid": 706219808587046,
+											"parameters": {
+												"instance-variable": "FadeSetting",
+												"value": "\"In\""
+											}
+										},
+										{
+											"id": "set-boolean-instvar",
+											"objectClass": "Camera",
+											"sid": 692695204638293,
+											"parameters": {
+												"instance-variable": "StartFade",
+												"value": "true"
+											}
+										},
+										{
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 547389684076774,
+											"parameters": {
+												"seconds": "1",
+												"use-timescale": true
+											}
+										},
+										{
+											"id": "stop",
+											"objectClass": "Audio",
+											"sid": 103597503623662,
+											"parameters": {
+												"tag": "\"BG\""
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 576022898545362,
+											"parameters": {
+												"variable": "Lifes",
+												"value": "5"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 966248978862275,
+											"parameters": {
+												"variable": "Coins",
+												"value": "0"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 263573420528134,
+											"parameters": {
+												"variable": "Score",
+												"value": "0"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 116995653911855,
+											"parameters": {
+												"variable": "BonusPoints",
+												"value": "0"
+											}
+										},
+										{
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 489161821525282,
+											"parameters": {
+												"seconds": "0.45",
+												"use-timescale": true
+											}
+										},
+										{
+											"id": "set-layer-visible",
+											"objectClass": "System",
+											"sid": 432947320309268,
+											"parameters": {
+												"layer": "\"GMFade\"",
+												"visibility": "invisible"
+											}
+										},
+										{
+											"id": "set-layer-visible",
+											"objectClass": "System",
+											"sid": 412732424253280,
+											"parameters": {
+												"layer": "\"GMText\"",
+												"visibility": "invisible"
+											}
+										},
+										{
+											"id": "go-to-layout",
+											"objectClass": "System",
+											"sid": 800528659247696,
+											"parameters": {
+												"layout": "WorldMap"
+											}
+										}
+									],
+									"sid": 928373791551382
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Title_System",
+											"sid": 628534965662212,
+											"parameters": {
+												"instance-variable": "Title_MenuSelection",
+												"comparison": 0,
+												"value": "1"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-instvar-value",
+											"objectClass": "Title_System",
+											"sid": 410173984027536,
+											"parameters": {
+												"instance-variable": "Title_AllowMovement",
+												"value": "0"
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "Camera",
+											"sid": 291117339091177,
+											"parameters": {
+												"instance-variable": "FadeSetting",
+												"value": "\"In\""
+											}
+										},
+										{
+											"id": "set-boolean-instvar",
+											"objectClass": "Camera",
+											"sid": 695849096711206,
+											"parameters": {
+												"instance-variable": "StartFade",
+												"value": "true"
+											}
+										},
+										{
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 416695522740107,
+											"parameters": {
+												"seconds": "1",
+												"use-timescale": true
+											}
+										},
+										{
+											"id": "stop",
+											"objectClass": "Audio",
+											"sid": 499819324724730,
+											"parameters": {
+												"tag": "\"BG\""
+											}
+										},
+										{
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 113502053924284,
+											"parameters": {
+												"seconds": "0.45",
+												"use-timescale": true
+											}
+										},
+										{
+											"id": "reload",
+											"objectClass": "Browser",
+											"sid": 972375351688376
+										}
+									],
+									"sid": 102479640429974
+								}
+							]
+						}
+					]
+				}
+			],
+			"sid": 597651020947049
 		}
 	],
 	"sid": 124582047518197

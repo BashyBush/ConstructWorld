@@ -341,9 +341,9 @@
 						{
 							"id": "go-to-layout",
 							"objectClass": "System",
-							"sid": 660234729182403,
+							"sid": 831564912614130,
 							"parameters": {
-								"layout": "TitleScreen"
+								"layout": "WorldMap"
 							}
 						}
 					],

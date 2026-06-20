@@ -424,6 +424,43 @@
 				"repeatCount": 1,
 				"repeatTo": 0,
 				"speed": 5
+			},
+			{
+				"frames": [
+					{
+						"width": 32,
+						"height": 46,
+						"originX": 0.5,
+						"originY": 0.6521739130434783,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 3636856,
+						"collisionPoly": {
+							"points": [
+								0.3125,
+								0.5217391304347826,
+								0.6875,
+								0.5217391304347826,
+								1,
+								1,
+								0,
+								1
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 410183329221419,
+				"name": "GameOver",
+				"isLooping": true,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 6
 			}
 		],
 		"subfolders": []

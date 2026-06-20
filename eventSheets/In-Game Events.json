@@ -27983,6 +27983,14 @@
 									}
 								},
 								{
+									"id": "set-collisions-enabled",
+									"objectClass": "Mushroom",
+									"sid": 828960989053653,
+									"parameters": {
+										"collisions": "disabled"
+									}
+								},
+								{
 									"id": "set-vector-x",
 									"objectClass": "Mushroom",
 									"sid": 933964618298439,
@@ -28016,6 +28024,23 @@
 									"id": "destroy",
 									"objectClass": "MushroomSpawner",
 									"sid": 179661197836849
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 414366178078592,
+									"parameters": {
+										"seconds": "0.1",
+										"use-timescale": true
+									}
+								},
+								{
+									"id": "set-collisions-enabled",
+									"objectClass": "Mushroom",
+									"sid": 124102167050118,
+									"parameters": {
+										"collisions": "enabled"
+									}
 								}
 							],
 							"sid": 532825717548959

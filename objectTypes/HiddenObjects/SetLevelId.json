@@ -22,7 +22,7 @@
 		{
 			"name": "MusicPlayer",
 			"type": "string",
-			"desc": "",
+			"desc": "Note: Will be reworked.",
 			"show": true,
 			"sid": 713894099880621
 		},

@@ -1,0 +1,20 @@
+{
+	"name": "FAM_HudFonts",
+	"plugin-id": "Spritefont2",
+	"sid": 270180074001866,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "MoveTo",
+			"name": "MoveTo",
+			"sid": 607404725225465
+		}
+	],
+	"effectTypes": [],
+	"members": [
+		"FONT_BonusPoints",
+		"FONT_CoinsScore",
+		"FONT_MarioLifes",
+		"FONT_TimeLimit"
+	]
+}

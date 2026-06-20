@@ -500,7 +500,8 @@
 			{
 				"items": [
 					"BG_Overworld1",
-					"BG_Bonus"
+					"BG_Bonus",
+					"BG_Underground"
 				],
 				"subfolders": [],
 				"name": "Backgrounds"
@@ -556,7 +557,10 @@
 			"Powerups",
 			"Collectables",
 			"Tiles",
-			"HoldItems"
+			"HoldItems",
+			"specialstagestuff",
+			"FAM_HudSprites",
+			"FAM_HudFonts"
 		],
 		"subfolders": []
 	},
@@ -570,6 +574,7 @@
 				"items": [
 					"Test Level (dont use lmao)",
 					"Test_YoshiIsland1",
+					"Test_YoshiIslandBonus",
 					"Test_YellowSwitchPalace",
 					"Test_LevelPipeWarpExample",
 					"Tutorial",

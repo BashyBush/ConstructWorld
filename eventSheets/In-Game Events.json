@@ -595,6 +595,14 @@
 					],
 					"actions": [
 						{
+							"id": "set-visible",
+							"objectClass": "PipeLayoutWarpSetup",
+							"sid": 129058190010645,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
 							"id": "play-by-name",
 							"objectClass": "Audio",
 							"sid": 658964762285622,
@@ -22919,6 +22927,56 @@
 									"sid": 521859270528214
 								}
 							]
+						},
+						{
+							"eventType": "comment",
+							"text": "incase the camerastate value is not set correctly"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Camera",
+									"sid": 716539332909906,
+									"parameters": {
+										"instance-variable": "CameraState",
+										"comparison": 1,
+										"value": "\"Regular\""
+									}
+								},
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Camera",
+									"sid": 622632918997672,
+									"parameters": {
+										"instance-variable": "CameraState",
+										"comparison": 1,
+										"value": "\"Accurate\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "log",
+									"objectClass": "Browser",
+									"sid": 376622281043532,
+									"parameters": {
+										"type": "warn",
+										"message": "\"CameraState Variable Not Set! Returning as: \" &  Camera.CameraState & \" Reverting to Regular Camera.\""
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Camera",
+									"sid": 671151874228855,
+									"parameters": {
+										"instance-variable": "CameraState",
+										"value": "\"Regular\""
+									}
+								}
+							],
+							"sid": 579164970630470
 						},
 						{
 							"eventType": "block",

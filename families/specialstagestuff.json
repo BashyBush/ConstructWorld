@@ -1,0 +1,11 @@
+{
+	"name": "specialstagestuff",
+	"plugin-id": "Sprite",
+	"sid": 525561323700850,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"Coin"
+	]
+}

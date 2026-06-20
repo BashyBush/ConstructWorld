@@ -1,0 +1,21 @@
+{
+	"name": "FAM_HudSprites",
+	"plugin-id": "Sprite",
+	"sid": 245732626579646,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "MoveTo",
+			"name": "MoveTo",
+			"sid": 415712541682053
+		}
+	],
+	"effectTypes": [],
+	"members": [
+		"HUD_Time",
+		"HUD_ItemHolder",
+		"HUD_CoinsScore",
+		"HUD_MarioLifes",
+		"HUD_YCBP"
+	]
+}

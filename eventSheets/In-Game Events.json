@@ -10492,6 +10492,19 @@
 																			"parameters": {
 																				"tag": "\"ComboCheck\""
 																			}
+																		},
+																		{
+																			"type": "comment",
+																			"text": "yea for some reason in SMW. spin jumping on rexs for whatever reason makes mario jump higher than any other spin jump kill... i dont even know"
+																		},
+																		{
+																			"id": "set-vector-y",
+																			"objectClass": "Player1",
+																			"sid": 229527362261710,
+																			"behaviorType": "Platform",
+																			"parameters": {
+																				"vector-y": "-475"
+																			}
 																		}
 																	],
 																	"sid": 939268574197649
@@ -11605,280 +11618,6 @@
 								}
 							],
 							"sid": 785237601032209
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "on-collision-with-another-object",
-									"objectClass": "Player1",
-									"sid": 873878546576609,
-									"parameters": {
-										"object": "Enemies"
-									}
-								},
-								{
-									"id": "is-flashing",
-									"objectClass": "Enemies",
-									"sid": 489220428105388,
-									"behaviorType": "Flash",
-									"isInverted": true
-								}
-							],
-							"actions": [
-								{
-									"type": "comment",
-									"text": "- this system sucks with the amount of SMW stuff added. i'm probably gonna remove this tbh lol."
-								}
-							],
-							"sid": 209486377464667,
-							"disabled": true,
-							"children": [
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "compare-instance-variable",
-											"objectClass": "PauseSystem",
-											"sid": 206982632240259,
-											"parameters": {
-												"instance-variable": "PlayerFlashTimer",
-												"comparison": 2,
-												"value": "1.4"
-											}
-										},
-										{
-											"id": "is-falling",
-											"objectClass": "Player1",
-											"sid": 753768558828823,
-											"behaviorType": "Platform"
-										},
-										{
-											"id": "compare-y",
-											"objectClass": "Player1",
-											"sid": 150062732509465,
-											"parameters": {
-												"comparison": 2,
-												"y-co-ordinate": "Enemies.Y-0.001"
-											}
-										},
-										{
-											"id": "compare-y",
-											"objectClass": "Player1",
-											"sid": 270964682310563,
-											"disabled": true,
-											"parameters": {
-												"comparison": 2,
-												"y-co-ordinate": "Enemies.Y"
-											}
-										}
-									],
-									"actions": [
-										{
-											"id": "set-vector-y",
-											"objectClass": "Player1",
-											"sid": 890753237546244,
-											"behaviorType": "Platform",
-											"parameters": {
-												"vector-y": "-550"
-											}
-										},
-										{
-											"id": "add-to-instvar",
-											"objectClass": "Player1",
-											"sid": 598708656090947,
-											"parameters": {
-												"instance-variable": "EnemyCombo",
-												"value": "1"
-											}
-										}
-									],
-									"sid": 390241226171523,
-									"disabled": true,
-									"children": [
-										{
-											"eventType": "block",
-											"conditions": [
-												{
-													"id": "compare-instance-variable",
-													"objectClass": "Enemies",
-													"sid": 831439443423864,
-													"parameters": {
-														"instance-variable": "HP",
-														"comparison": 4,
-														"value": "0"
-													}
-												}
-											],
-											"actions": [
-												{
-													"id": "subtract-from-instvar",
-													"objectClass": "Enemies",
-													"sid": 752076386099750,
-													"parameters": {
-														"instance-variable": "HP",
-														"value": "1"
-													}
-												}
-											],
-											"sid": 351780971344489,
-											"disabled": true,
-											"children": [
-												{
-													"eventType": "block",
-													"conditions": [
-														{
-															"id": "compare-instance-variable",
-															"objectClass": "Player1",
-															"sid": 917106662482000,
-															"parameters": {
-																"instance-variable": "AnimationState",
-																"comparison": 0,
-																"value": "\"Spining\""
-															}
-														}
-													],
-													"actions": [],
-													"sid": 728047414930129,
-													"disabled": true,
-													"children": [
-														{
-															"eventType": "block",
-															"conditions": [
-																{
-																	"id": "is-boolean-instance-variable-set",
-																	"objectClass": "Enemies",
-																	"sid": 860335994104861,
-																	"parameters": {
-																		"instance-variable": "OneHitKillSpin"
-																	}
-																}
-															],
-															"actions": [
-																{
-																	"id": "destroy",
-																	"objectClass": "Enemies",
-																	"sid": 283706984208603
-																},
-																{
-																	"id": "play",
-																	"objectClass": "Audio",
-																	"sid": 916508534673458,
-																	"parameters": {
-																		"audio-file": "super-stomp",
-																		"loop": "not-looping",
-																		"volume": "-5",
-																		"stereo-pan": "0",
-																		"tag-optional": "\"\""
-																	}
-																}
-															],
-															"sid": 792050749117533,
-															"disabled": true
-														}
-													]
-												},
-												{
-													"eventType": "block",
-													"conditions": [
-														{
-															"id": "else",
-															"objectClass": "System",
-															"sid": 518738935139544
-														},
-														{
-															"id": "compare-instance-variable",
-															"objectClass": "Player1",
-															"sid": 801593256334513,
-															"parameters": {
-																"instance-variable": "AnimationState",
-																"comparison": 0,
-																"value": "\"Spining\""
-															},
-															"isInverted": true
-														}
-													],
-													"actions": [
-														{
-															"id": "play",
-															"objectClass": "Audio",
-															"sid": 200110822647935,
-															"parameters": {
-																"audio-file": "stomp",
-																"loop": "not-looping",
-																"volume": "-5",
-																"stereo-pan": "0",
-																"tag-optional": "\"\""
-															}
-														}
-													],
-													"sid": 906447319362427,
-													"disabled": true
-												}
-											]
-										},
-										{
-											"eventType": "block",
-											"conditions": [
-												{
-													"id": "compare-instance-variable",
-													"objectClass": "Enemies",
-													"sid": 617713688361602,
-													"parameters": {
-														"instance-variable": "HP",
-														"comparison": 0,
-														"value": "0"
-													}
-												}
-											],
-											"actions": [
-												{
-													"id": "play",
-													"objectClass": "Audio",
-													"sid": 332017350958486,
-													"disabled": true,
-													"parameters": {
-														"audio-file": "stomp",
-														"loop": "not-looping",
-														"volume": "-5",
-														"stereo-pan": "0",
-														"tag-optional": "\"\""
-													}
-												},
-												{
-													"id": "destroy",
-													"objectClass": "Enemies",
-													"sid": 567295328426120
-												}
-											],
-											"sid": 957941498992100,
-											"disabled": true
-										}
-									]
-								},
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "else",
-											"objectClass": "System",
-											"sid": 701773961108096
-										}
-									],
-									"actions": [
-										{
-											"id": "signal",
-											"objectClass": "System",
-											"sid": 676196328769509,
-											"parameters": {
-												"tag": "\"GotDamaged\""
-											}
-										}
-									],
-									"sid": 814858408517576,
-									"disabled": true
-								}
-							]
 						}
 					],
 					"sid": 515345706414946
@@ -13189,6 +12928,10 @@
 														}
 													],
 													"sid": 197495910432703
+												},
+												{
+													"eventType": "comment",
+													"text": ""
 												},
 												{
 													"eventType": "block",

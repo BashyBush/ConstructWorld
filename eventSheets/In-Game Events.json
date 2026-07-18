@@ -10452,7 +10452,46 @@
 																	}
 																}
 															],
-															"actions": [],
+															"actions": [
+																{
+																	"id": "destroy",
+																	"objectClass": "ENEMY_Rex",
+																	"sid": 823407712741936
+																},
+																{
+																	"id": "play",
+																	"objectClass": "Audio",
+																	"sid": 244156559580308,
+																	"parameters": {
+																		"audio-file": "super-stomp",
+																		"loop": "not-looping",
+																		"volume": "-5",
+																		"stereo-pan": "0",
+																		"tag-optional": "\"\""
+																	}
+																},
+																{
+																	"id": "signal",
+																	"objectClass": "System",
+																	"sid": 123863688367218,
+																	"parameters": {
+																		"tag": "\"ComboCheck\""
+																	}
+																},
+																{
+																	"type": "comment",
+																	"text": "yea for some reason in SMW. spin jumping on rexs for whatever reason makes mario jump higher than any other spin jump kill... i dont even know"
+																},
+																{
+																	"id": "set-vector-y",
+																	"objectClass": "Player1",
+																	"sid": 115827630292856,
+																	"behaviorType": "Platform",
+																	"parameters": {
+																		"vector-y": "-475"
+																	}
+																}
+															],
 															"sid": 932336144519241,
 															"children": [
 																{
@@ -10467,47 +10506,9 @@
 																			}
 																		}
 																	],
-																	"actions": [
-																		{
-																			"id": "destroy",
-																			"objectClass": "ENEMY_Rex",
-																			"sid": 972782903308700
-																		},
-																		{
-																			"id": "play",
-																			"objectClass": "Audio",
-																			"sid": 510555471357658,
-																			"parameters": {
-																				"audio-file": "super-stomp",
-																				"loop": "not-looping",
-																				"volume": "-5",
-																				"stereo-pan": "0",
-																				"tag-optional": "\"\""
-																			}
-																		},
-																		{
-																			"id": "signal",
-																			"objectClass": "System",
-																			"sid": 789421327800310,
-																			"parameters": {
-																				"tag": "\"ComboCheck\""
-																			}
-																		},
-																		{
-																			"type": "comment",
-																			"text": "yea for some reason in SMW. spin jumping on rexs for whatever reason makes mario jump higher than any other spin jump kill... i dont even know"
-																		},
-																		{
-																			"id": "set-vector-y",
-																			"objectClass": "Player1",
-																			"sid": 229527362261710,
-																			"behaviorType": "Platform",
-																			"parameters": {
-																				"vector-y": "-475"
-																			}
-																		}
-																	],
-																	"sid": 939268574197649
+																	"actions": [],
+																	"sid": 939268574197649,
+																	"disabled": true
 																}
 															]
 														},
@@ -10728,43 +10729,26 @@
 																	}
 																}
 															],
-															"actions": [],
-															"sid": 837139811791819,
-															"children": [
+															"actions": [
 																{
-																	"eventType": "block",
-																	"conditions": [
-																		{
-																			"id": "is-boolean-instance-variable-set",
-																			"objectClass": "ENEMY_BanzaiBill",
-																			"sid": 544608711233548,
-																			"parameters": {
-																				"instance-variable": "OneHitKillSpin"
-																			}
-																		}
-																	],
-																	"actions": [
-																		{
-																			"id": "destroy",
-																			"objectClass": "ENEMY_BanzaiBill",
-																			"sid": 959522333312757
-																		},
-																		{
-																			"id": "play",
-																			"objectClass": "Audio",
-																			"sid": 430397686328113,
-																			"parameters": {
-																				"audio-file": "super-stomp",
-																				"loop": "not-looping",
-																				"volume": "-5",
-																				"stereo-pan": "0",
-																				"tag-optional": "\"\""
-																			}
-																		}
-																	],
-																	"sid": 650828826285659
+																	"id": "destroy",
+																	"objectClass": "ENEMY_BanzaiBill",
+																	"sid": 518476719786007
+																},
+																{
+																	"id": "play",
+																	"objectClass": "Audio",
+																	"sid": 772506036968559,
+																	"parameters": {
+																		"audio-file": "super-stomp",
+																		"loop": "not-looping",
+																		"volume": "-5",
+																		"stereo-pan": "0",
+																		"tag-optional": "\"\""
+																	}
 																}
-															]
+															],
+															"sid": 837139811791819
 														},
 														{
 															"eventType": "block",

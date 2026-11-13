@@ -3184,6 +3184,48 @@
 								}
 							],
 							"sid": 153476540482468
+						},
+						{
+							"eventType": "comment",
+							"text": "fallback code"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Player1",
+									"sid": 254169930064211,
+									"parameters": {
+										"instance-variable": "ColorState",
+										"comparison": 2,
+										"value": "0"
+									}
+								},
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Player1",
+									"sid": 267171876278968,
+									"parameters": {
+										"instance-variable": "ColorState",
+										"comparison": 4,
+										"value": "3"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Player1",
+									"sid": 215264150783278,
+									"parameters": {
+										"instance-variable": "ColorState",
+										"value": "0"
+									}
+								}
+							],
+							"sid": 908602420141688,
+							"isOrBlock": true
 						}
 					],
 					"sid": 665120104159763

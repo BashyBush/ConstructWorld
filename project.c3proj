@@ -248,7 +248,7 @@
 							{
 								"items": [
 									"DBM_SetHP",
-									"DBM_SetMaxHP",
+									"DBM_SetColorPallete",
 									"DBM_CloseMenu",
 									"DBM_FCheckpointX",
 									"DBM_FCheckpointY",

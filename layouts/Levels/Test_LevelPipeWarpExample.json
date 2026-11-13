@@ -1202,233 +1202,6 @@
 					}
 				},
 				{
-					"type": "Player1",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Small_Idle",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 510,
-					"sid": 778658794061131,
-					"tags": "",
-					"instanceVariables": {
-						"InCamLock": 0,
-						"HP": 1,
-						"MaxHP": 3,
-						"EnemyCombo": 0,
-						"AnimationState": "Idle",
-						"TimertilRunning": 90,
-						"AnimationRem": "",
-						"DumbSpinCheck": false,
-						"InPipe": false,
-						"CourseClear": false,
-						"CourseClearState": 0,
-						"JumpTimerHigh": 0.3,
-						"HoldingItem": false,
-						"InWater": false,
-						"ShotFireBall": false,
-						"ColorState": 0,
-						"StarState": false,
-						"StarTimer": 0
-					},
-					"behaviors": {
-						"Platform": {
-							"properties": {
-								"max-speed": 165,
-								"acceleration": 675,
-								"deceleration": 675,
-								"jump-strength": 475,
-								"gravity": 1500,
-								"max-fall-speed": 1000,
-								"double-jump": false,
-								"jump-sustain": 110,
-								"default-controls": false,
-								"enabled": true
-							}
-						},
-						"MoveTo": {
-							"properties": {
-								"max-speed": 200,
-								"acceleration": 600,
-								"deceleration": 600,
-								"rotate-speed": 0,
-								"set-angle": false,
-								"stop-on-solids": false,
-								"enabled": true
-							}
-						},
-						"Flash": {
-							"properties": {}
-						}
-					},
-					"effects": {
-						"Pallete1": {
-							"isEnabled": true,
-							"parameters": {
-								"source-color": [
-									1,
-									1,
-									1,
-									1
-								],
-								"replace-color": [
-									0,
-									0,
-									0,
-									1
-								],
-								"tolerance": 0.01
-							}
-						},
-						"Pallete2": {
-							"isEnabled": true,
-							"parameters": {
-								"source-color": [
-									1,
-									1,
-									1,
-									1
-								],
-								"replace-color": [
-									0,
-									0,
-									0,
-									1
-								],
-								"tolerance": 0.01
-							}
-						},
-						"Pallete3": {
-							"isEnabled": true,
-							"parameters": {
-								"source-color": [
-									1,
-									1,
-									1,
-									1
-								],
-								"replace-color": [
-									0,
-									0,
-									0,
-									1
-								],
-								"tolerance": 0.01
-							}
-						},
-						"Pallete4": {
-							"isEnabled": true,
-							"parameters": {
-								"source-color": [
-									1,
-									1,
-									1,
-									1
-								],
-								"replace-color": [
-									0,
-									0,
-									0,
-									1
-								],
-								"tolerance": 0.01
-							}
-						},
-						"Pallete5": {
-							"isEnabled": true,
-							"parameters": {
-								"source-color": [
-									1,
-									1,
-									1,
-									1
-								],
-								"replace-color": [
-									0,
-									0,
-									0,
-									1
-								],
-								"tolerance": 0.01
-							}
-						},
-						"Pallete6": {
-							"isEnabled": true,
-							"parameters": {
-								"source-color": [
-									1,
-									1,
-									1,
-									1
-								],
-								"replace-color": [
-									0,
-									0,
-									0,
-									1
-								],
-								"tolerance": 0.01
-							}
-						},
-						"Pallete7": {
-							"isEnabled": true,
-							"parameters": {
-								"source-color": [
-									1,
-									1,
-									1,
-									1
-								],
-								"replace-color": [
-									0,
-									0,
-									0,
-									1
-								],
-								"tolerance": 0.01
-							}
-						},
-						"Pallete8": {
-							"isEnabled": true,
-							"parameters": {
-								"source-color": [
-									1,
-									1,
-									1,
-									1
-								],
-								"replace-color": [
-									0,
-									0,
-									0,
-									1
-								],
-								"tolerance": 0.01
-							}
-						}
-					},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 48,
-						"y": 352,
-						"width": 32,
-						"height": 64,
-						"originX": 0.5,
-						"originY": 0,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
 					"type": "Camera",
 					"properties": {
 						"initially-visible": false,
@@ -2357,6 +2130,233 @@
 						"height": 16,
 						"originX": 0.5,
 						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Player1",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Small_Idle",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 187,
+					"sid": 131205882934077,
+					"tags": "",
+					"instanceVariables": {
+						"InCamLock": 0,
+						"HP": 1,
+						"MaxHP": 3,
+						"EnemyCombo": 0,
+						"AnimationState": "Idle",
+						"TimertilRunning": 90,
+						"AnimationRem": "",
+						"DumbSpinCheck": false,
+						"InPipe": false,
+						"CourseClear": false,
+						"CourseClearState": 0,
+						"JumpTimerHigh": 0.3,
+						"HoldingItem": false,
+						"InWater": false,
+						"ShotFireBall": false,
+						"ColorState": 0,
+						"StarState": false,
+						"StarTimer": 0
+					},
+					"behaviors": {
+						"Platform": {
+							"properties": {
+								"max-speed": 165,
+								"acceleration": 675,
+								"deceleration": 675,
+								"jump-strength": 475,
+								"gravity": 1500,
+								"max-fall-speed": 1000,
+								"double-jump": false,
+								"jump-sustain": 110,
+								"default-controls": false,
+								"enabled": true
+							}
+						},
+						"MoveTo": {
+							"properties": {
+								"max-speed": 200,
+								"acceleration": 600,
+								"deceleration": 600,
+								"rotate-speed": 0,
+								"set-angle": false,
+								"stop-on-solids": false,
+								"enabled": true
+							}
+						},
+						"Flash": {
+							"properties": {}
+						}
+					},
+					"effects": {
+						"Pallete1": {
+							"isEnabled": true,
+							"parameters": {
+								"source-color": [
+									0.9725490196078431,
+									0.8156862745098039,
+									0.7529411764705882,
+									1
+								],
+								"replace-color": [
+									0.9725490196078431,
+									0.8156862745098039,
+									0.7529411764705882,
+									1
+								],
+								"tolerance": 0.01
+							}
+						},
+						"Pallete2": {
+							"isEnabled": true,
+							"parameters": {
+								"source-color": [
+									0.3137254901960784,
+									0,
+									0,
+									1
+								],
+								"replace-color": [
+									0.3137254901960784,
+									0,
+									0,
+									1
+								],
+								"tolerance": 0.01
+							}
+						},
+						"Pallete3": {
+							"isEnabled": true,
+							"parameters": {
+								"source-color": [
+									0.9725490196078431,
+									0.25098039215686274,
+									0.4392156862745098,
+									1
+								],
+								"replace-color": [
+									0.9725490196078431,
+									0.25098039215686274,
+									0.4392156862745098,
+									1
+								],
+								"tolerance": 0.01
+							}
+						},
+						"Pallete4": {
+							"isEnabled": true,
+							"parameters": {
+								"source-color": [
+									0.12549019607843137,
+									0.18823529411764706,
+									0.5333333333333333,
+									1
+								],
+								"replace-color": [
+									0.12549019607843137,
+									0.18823529411764706,
+									0.5333333333333333,
+									1
+								],
+								"tolerance": 0.01
+							}
+						},
+						"Pallete5": {
+							"isEnabled": true,
+							"parameters": {
+								"source-color": [
+									0.25098039215686274,
+									0.5019607843137255,
+									0.596078431372549,
+									1
+								],
+								"replace-color": [
+									0.25098039215686274,
+									0.5019607843137255,
+									0.596078431372549,
+									1
+								],
+								"tolerance": 0.01
+							}
+						},
+						"Pallete6": {
+							"isEnabled": true,
+							"parameters": {
+								"source-color": [
+									0.5019607843137255,
+									0.8470588235294118,
+									0.7843137254901961,
+									1
+								],
+								"replace-color": [
+									0.5019607843137255,
+									0.8470588235294118,
+									0.7843137254901961,
+									1
+								],
+								"tolerance": 0.01
+							}
+						},
+						"Pallete7": {
+							"isEnabled": true,
+							"parameters": {
+								"source-color": [
+									0.6901960784313725,
+									0.1568627450980392,
+									0.3764705882352941,
+									1
+								],
+								"replace-color": [
+									0.6901960784313725,
+									0.1568627450980392,
+									0.3764705882352941,
+									1
+								],
+								"tolerance": 0.01
+							}
+						},
+						"Pallete8": {
+							"isEnabled": true,
+							"parameters": {
+								"source-color": [
+									0.9725490196078431,
+									0.4392156862745098,
+									0.40784313725490196,
+									1
+								],
+								"replace-color": [
+									0.9725490196078431,
+									0.4392156862745098,
+									0.40784313725490196,
+									1
+								],
+								"tolerance": 0.01
+							}
+						}
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 48,
+						"y": 352,
+						"width": 32,
+						"height": 64,
+						"originX": 0.5,
+						"originY": 0,
 						"color": [
 							1,
 							1,
@@ -3828,7 +3828,7 @@
 				{
 					"type": "DBM_InfoText",
 					"properties": {
-						"text": "Set HP:\nSet MAX HP:\n\nSet Checkpoint X:\nSet Checkpoint Y:\n\nScore:\nCoins:\nLifes:\nTime Limit:",
+						"text": "Set HP:\nColor Pallete:\n\nSet Checkpoint X:\nSet Checkpoint Y:\n\nScore:\nCoins:\nLifes:\nTime Limit:",
 						"enable-bbcode": true,
 						"font": "Arial",
 						"size": 12,
@@ -3912,7 +3912,7 @@
 					}
 				},
 				{
-					"type": "DBM_SetMaxHP",
+					"type": "DBM_SetColorPallete",
 					"properties": {
 						"text": "",
 						"placeholder": "3",

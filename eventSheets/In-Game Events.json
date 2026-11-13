@@ -1714,7 +1714,7 @@
 									"conditions": [
 										{
 											"id": "on-text-changed",
-											"objectClass": "DBM_SetMaxHP",
+											"objectClass": "DBM_SetColorPallete",
 											"sid": 276828493464194
 										}
 									],
@@ -1722,10 +1722,10 @@
 										{
 											"id": "set-instvar-value",
 											"objectClass": "Player1",
-											"sid": 776493154108282,
+											"sid": 526947755434585,
 											"parameters": {
-												"instance-variable": "MaxHP",
-												"value": "DBM_SetMaxHP.Text"
+												"instance-variable": "ColorState",
+												"value": "DBM_SetColorPallete.Text"
 											}
 										}
 									],
@@ -1752,7 +1752,7 @@
 													"sid": 125329952370017,
 													"parameters": {
 														"instance-variable": "HP",
-														"value": "DBM_SetMaxHP.Text"
+														"value": "DBM_SetColorPallete.Text"
 													}
 												}
 											],
@@ -1973,10 +1973,10 @@
 										},
 										{
 											"id": "set-text",
-											"objectClass": "DBM_SetMaxHP",
-											"sid": 733870692597420,
+											"objectClass": "DBM_SetColorPallete",
+											"sid": 614241431698659,
 											"parameters": {
-												"text": "Player1.MAXHP"
+												"text": "Player1.ColorState"
 											}
 										},
 										{

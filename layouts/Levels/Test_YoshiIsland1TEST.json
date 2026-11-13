@@ -9230,7 +9230,7 @@
 						"HoldingItem": false,
 						"InWater": false,
 						"ShotFireBall": false,
-						"ColorState": 3,
+						"ColorState": 0,
 						"StarState": false,
 						"StarTimer": 0
 					},
@@ -12221,7 +12221,7 @@
 				{
 					"type": "DBM_InfoText",
 					"properties": {
-						"text": "Set HP:\nSet MAX HP:\n\nSet Checkpoint X:\nSet Checkpoint Y:\n\nScore:\nCoins:\nLifes:\nTime Limit:",
+						"text": "Set HP:\nColor Pallete:\n\nSet Checkpoint X:\nSet Checkpoint Y:\n\nScore:\nCoins:\nLifes:\nTime Limit:",
 						"enable-bbcode": true,
 						"font": "Arial",
 						"size": 12,
@@ -12305,7 +12305,7 @@
 					}
 				},
 				{
-					"type": "DBM_SetMaxHP",
+					"type": "DBM_SetColorPallete",
 					"properties": {
 						"text": "",
 						"placeholder": "3",

@@ -2778,6 +2778,112 @@
 					"isActiveOnStart": true,
 					"children": [
 						{
+							"eventType": "group",
+							"disabled": false,
+							"title": "StarSwapStuff",
+							"description": "",
+							"isActiveOnStart": true,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Player1",
+											"sid": 171738310611476,
+											"parameters": {
+												"instance-variable": "StarTimer",
+												"comparison": 3,
+												"value": "1"
+											},
+											"isInverted": true
+										}
+									],
+									"actions": [
+										{
+											"id": "subtract-from-instvar",
+											"objectClass": "Player1",
+											"sid": 112678436636572,
+											"parameters": {
+												"instance-variable": "StarTimer",
+												"value": "1"
+											}
+										}
+									],
+									"sid": 259978369550464,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "every-x-seconds",
+													"objectClass": "System",
+													"sid": 993962861931004,
+													"parameters": {
+														"interval-seconds": "0.25"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "add-to-instvar",
+													"objectClass": "Player1",
+													"sid": 665655817532654,
+													"parameters": {
+														"instance-variable": "ColorState",
+														"value": "1"
+													}
+												}
+											],
+											"sid": 120953423249950
+										}
+									]
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 407423840497489
+										},
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Player1",
+											"sid": 960657014051235,
+											"parameters": {
+												"instance-variable": "StarTimer",
+												"comparison": 0,
+												"value": "1"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-instvar-value",
+											"objectClass": "Player1",
+											"sid": 212718093265681,
+											"parameters": {
+												"instance-variable": "ColorState",
+												"value": "0"
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "Player1",
+											"sid": 690046323741033,
+											"parameters": {
+												"instance-variable": "StarTimer",
+												"value": "0"
+											}
+										}
+									],
+									"sid": 225676691543410
+								}
+							],
+							"sid": 876930422446227
+						},
+						{
 							"eventType": "comment",
 							"text": "Mario Color Pallete"
 						},

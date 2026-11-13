@@ -109,6 +109,27 @@
 			"desc": "some extra checks",
 			"show": true,
 			"sid": 332553160247189
+		},
+		{
+			"name": "ColorState",
+			"type": "number",
+			"desc": "0 = M / 1 = L / 2 = FM / 3 = FL",
+			"show": true,
+			"sid": 692622683516776
+		},
+		{
+			"name": "StarState",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 839475173377486
+		},
+		{
+			"name": "StarTimer",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 864119612318036
 		}
 	],
 	"behaviorTypes": [
@@ -128,7 +149,40 @@
 			"sid": 932967822711674
 		}
 	],
-	"effectTypes": [],
+	"effectTypes": [
+		{
+			"effectId": "replacesolidcolor",
+			"name": "Pallete1"
+		},
+		{
+			"effectId": "replacesolidcolor",
+			"name": "Pallete2"
+		},
+		{
+			"effectId": "replacesolidcolor",
+			"name": "Pallete3"
+		},
+		{
+			"effectId": "replacesolidcolor",
+			"name": "Pallete4"
+		},
+		{
+			"effectId": "replacesolidcolor",
+			"name": "Pallete5"
+		},
+		{
+			"effectId": "replacesolidcolor",
+			"name": "Pallete6"
+		},
+		{
+			"effectId": "replacesolidcolor",
+			"name": "Pallete7"
+		},
+		{
+			"effectId": "replacesolidcolor",
+			"name": "Pallete8"
+		}
+	],
 	"animations": {
 		"items": [
 			{

@@ -205,6 +205,13 @@
 		},
 		{
 			"type": "effect",
+			"id": "replacesolidcolor",
+			"name": "Replace solid color",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "effect",
 			"id": "waterbg",
 			"name": "Water background",
 			"author": "Viktor Korsun",
@@ -331,7 +338,8 @@
 					"PipeLayoutWarpSetup",
 					"DoorLayoutWarpSetup",
 					"RotBlockParticleSetup",
-					"MushroomSpawner"
+					"MushroomSpawner",
+					"MarioColorPalleteChanger"
 				],
 				"subfolders": [],
 				"name": "HiddenObjects"

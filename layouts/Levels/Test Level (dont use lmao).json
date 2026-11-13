@@ -693,7 +693,10 @@
 						"JumpTimerHigh": 0.3,
 						"HoldingItem": false,
 						"InWater": false,
-						"ShotFireBall": false
+						"ShotFireBall": false,
+						"ColorState": 0,
+						"StarState": false,
+						"StarTimer": 0
 					},
 					"behaviors": {
 						"Platform": {
@@ -723,6 +726,152 @@
 						},
 						"Flash": {
 							"properties": {}
+						}
+					},
+					"effects": {
+						"Pallete1": {
+							"isEnabled": true,
+							"parameters": {
+								"source-color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"replace-color": [
+									0,
+									0,
+									0,
+									1
+								],
+								"tolerance": 0.01
+							}
+						},
+						"Pallete2": {
+							"isEnabled": true,
+							"parameters": {
+								"source-color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"replace-color": [
+									0,
+									0,
+									0,
+									1
+								],
+								"tolerance": 0.01
+							}
+						},
+						"Pallete3": {
+							"isEnabled": true,
+							"parameters": {
+								"source-color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"replace-color": [
+									0,
+									0,
+									0,
+									1
+								],
+								"tolerance": 0.01
+							}
+						},
+						"Pallete4": {
+							"isEnabled": true,
+							"parameters": {
+								"source-color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"replace-color": [
+									0,
+									0,
+									0,
+									1
+								],
+								"tolerance": 0.01
+							}
+						},
+						"Pallete5": {
+							"isEnabled": true,
+							"parameters": {
+								"source-color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"replace-color": [
+									0,
+									0,
+									0,
+									1
+								],
+								"tolerance": 0.01
+							}
+						},
+						"Pallete6": {
+							"isEnabled": true,
+							"parameters": {
+								"source-color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"replace-color": [
+									0,
+									0,
+									0,
+									1
+								],
+								"tolerance": 0.01
+							}
+						},
+						"Pallete7": {
+							"isEnabled": true,
+							"parameters": {
+								"source-color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"replace-color": [
+									0,
+									0,
+									0,
+									1
+								],
+								"tolerance": 0.01
+							}
+						},
+						"Pallete8": {
+							"isEnabled": true,
+							"parameters": {
+								"source-color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"replace-color": [
+									0,
+									0,
+									0,
+									1
+								],
+								"tolerance": 0.01
+							}
 						}
 					},
 					"showing": true,

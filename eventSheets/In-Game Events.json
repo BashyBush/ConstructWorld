@@ -2773,6 +2773,424 @@
 				{
 					"eventType": "group",
 					"disabled": false,
+					"title": "Player Color Pallete Changer",
+					"description": "Note: This doesn't work for Fire Mario Sprites.",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "comment",
+							"text": "Mario Color Pallete"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Player1",
+									"sid": 135164009908890,
+									"parameters": {
+										"instance-variable": "ColorState",
+										"comparison": 0,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-effect-parameter",
+									"objectClass": "Player1",
+									"sid": 113845775147401,
+									"parameters": {
+										"effect": "\"Pallete1\"",
+										"parameter-index": "1",
+										"value": "rgb(248, 208, 192)"
+									}
+								},
+								{
+									"id": "set-effect-parameter",
+									"objectClass": "Player1",
+									"sid": 676327600403156,
+									"parameters": {
+										"effect": "\"Pallete2\"",
+										"parameter-index": "1",
+										"value": "rgb(80, 0, 0)"
+									}
+								},
+								{
+									"id": "set-effect-parameter",
+									"objectClass": "Player1",
+									"sid": 149412184013529,
+									"parameters": {
+										"effect": "\"Pallete3\"",
+										"parameter-index": "1",
+										"value": "rgb(248, 64, 112)"
+									}
+								},
+								{
+									"id": "set-effect-parameter",
+									"objectClass": "Player1",
+									"sid": 154920447558185,
+									"parameters": {
+										"effect": "\"Pallete4\"",
+										"parameter-index": "1",
+										"value": "rgb(32, 48, 136)"
+									}
+								},
+								{
+									"id": "set-effect-parameter",
+									"objectClass": "Player1",
+									"sid": 606420666115073,
+									"parameters": {
+										"effect": "\"Pallete5\"",
+										"parameter-index": "1",
+										"value": "rgb(64, 128, 152)"
+									}
+								},
+								{
+									"id": "set-effect-parameter",
+									"objectClass": "Player1",
+									"sid": 947959724014425,
+									"parameters": {
+										"effect": "\"Pallete6\"",
+										"parameter-index": "1",
+										"value": "rgb(128, 216, 200)"
+									}
+								},
+								{
+									"id": "set-effect-parameter",
+									"objectClass": "Player1",
+									"sid": 436477020154929,
+									"parameters": {
+										"effect": "\"Pallete7\"",
+										"parameter-index": "1",
+										"value": "rgb(176, 40, 96)"
+									}
+								},
+								{
+									"id": "set-effect-parameter",
+									"objectClass": "Player1",
+									"sid": 971778807987014,
+									"parameters": {
+										"effect": "\"Pallete8\"",
+										"parameter-index": "1",
+										"value": "rgb(248, 112, 104)"
+									}
+								}
+							],
+							"sid": 117754962744808
+						},
+						{
+							"eventType": "comment",
+							"text": "Luigi Color Pallete"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Player1",
+									"sid": 105252851604435,
+									"parameters": {
+										"instance-variable": "ColorState",
+										"comparison": 0,
+										"value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-effect-parameter",
+									"objectClass": "Player1",
+									"sid": 406775715471390,
+									"parameters": {
+										"effect": "\"Pallete1\"",
+										"parameter-index": "1",
+										"value": "rgb(248, 200, 152)"
+									}
+								},
+								{
+									"id": "set-effect-parameter",
+									"objectClass": "Player1",
+									"sid": 729608336719752,
+									"parameters": {
+										"effect": "\"Pallete2\"",
+										"parameter-index": "1",
+										"value": "rgb(0, 80, 32)"
+									}
+								},
+								{
+									"id": "set-effect-parameter",
+									"objectClass": "Player1",
+									"sid": 656796232045258,
+									"parameters": {
+										"effect": "\"Pallete3\"",
+										"parameter-index": "1",
+										"value": "rgb(0, 248, 120)"
+									}
+								},
+								{
+									"id": "set-effect-parameter",
+									"objectClass": "Player1",
+									"sid": 318923085099706,
+									"parameters": {
+										"effect": "\"Pallete4\"",
+										"parameter-index": "1",
+										"value": "rgb(56, 0, 120)"
+									}
+								},
+								{
+									"id": "set-effect-parameter",
+									"objectClass": "Player1",
+									"sid": 811172666104978,
+									"parameters": {
+										"effect": "\"Pallete5\"",
+										"parameter-index": "1",
+										"value": "rgb(112, 40, 248)"
+									}
+								},
+								{
+									"id": "set-effect-parameter",
+									"objectClass": "Player1",
+									"sid": 823896804169938,
+									"parameters": {
+										"effect": "\"Pallete6\"",
+										"parameter-index": "1",
+										"value": "rgb(152, 104, 248)"
+									}
+								},
+								{
+									"id": "set-effect-parameter",
+									"objectClass": "Player1",
+									"sid": 911666017618724,
+									"parameters": {
+										"effect": "\"Pallete7\"",
+										"parameter-index": "1",
+										"value": "rgb(0, 192, 88)"
+									}
+								},
+								{
+									"id": "set-effect-parameter",
+									"objectClass": "Player1",
+									"sid": 108443909031920,
+									"parameters": {
+										"effect": "\"Pallete8\"",
+										"parameter-index": "1",
+										"value": "rgb(248, 144, 40)"
+									}
+								}
+							],
+							"sid": 378981247882215
+						},
+						{
+							"eventType": "comment",
+							"text": "Fire Mario Color Pallete"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Player1",
+									"sid": 230651144231120,
+									"parameters": {
+										"instance-variable": "ColorState",
+										"comparison": 0,
+										"value": "2"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-effect-parameter",
+									"objectClass": "Player1",
+									"sid": 529490370289790,
+									"parameters": {
+										"effect": "\"Pallete1\"",
+										"parameter-index": "1",
+										"value": "rgb(248, 208, 192)"
+									}
+								},
+								{
+									"id": "set-effect-parameter",
+									"objectClass": "Player1",
+									"sid": 568958483217177,
+									"parameters": {
+										"effect": "\"Pallete2\"",
+										"parameter-index": "1",
+										"value": "rgb(72, 72, 72)"
+									}
+								},
+								{
+									"id": "set-effect-parameter",
+									"objectClass": "Player1",
+									"sid": 631166448875516,
+									"parameters": {
+										"effect": "\"Pallete3\"",
+										"parameter-index": "1",
+										"value": "rgb(248, 248, 248)"
+									}
+								},
+								{
+									"id": "set-effect-parameter",
+									"objectClass": "Player1",
+									"sid": 257287974895693,
+									"parameters": {
+										"effect": "\"Pallete4\"",
+										"parameter-index": "1",
+										"value": "rgb(64, 0, 0)"
+									}
+								},
+								{
+									"id": "set-effect-parameter",
+									"objectClass": "Player1",
+									"sid": 787891448291057,
+									"parameters": {
+										"effect": "\"Pallete5\"",
+										"parameter-index": "1",
+										"value": "rgb(184, 0, 0)"
+									}
+								},
+								{
+									"id": "set-effect-parameter",
+									"objectClass": "Player1",
+									"sid": 107648611894403,
+									"parameters": {
+										"effect": "\"Pallete6\"",
+										"parameter-index": "1",
+										"value": "rgb(248, 0, 0)"
+									}
+								},
+								{
+									"id": "set-effect-parameter",
+									"objectClass": "Player1",
+									"sid": 577750329413836,
+									"parameters": {
+										"effect": "\"Pallete7\"",
+										"parameter-index": "1",
+										"value": "rgb(216, 216, 168)"
+									}
+								},
+								{
+									"id": "set-effect-parameter",
+									"objectClass": "Player1",
+									"sid": 944331356367145,
+									"parameters": {
+										"effect": "\"Pallete8\"",
+										"parameter-index": "1",
+										"value": "rgb(248, 112, 24)"
+									}
+								}
+							],
+							"sid": 745373392167094
+						},
+						{
+							"eventType": "comment",
+							"text": "Fire Luigi Color Pallete"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Player1",
+									"sid": 549102196355093,
+									"parameters": {
+										"instance-variable": "ColorState",
+										"comparison": 0,
+										"value": "3"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-effect-parameter",
+									"objectClass": "Player1",
+									"sid": 105434673174463,
+									"parameters": {
+										"effect": "\"Pallete1\"",
+										"parameter-index": "1",
+										"value": "rgb(248, 192, 112)"
+									}
+								},
+								{
+									"id": "set-effect-parameter",
+									"objectClass": "Player1",
+									"sid": 385211813278629,
+									"parameters": {
+										"effect": "\"Pallete2\"",
+										"parameter-index": "1",
+										"value": "rgb(72, 72, 72)"
+									}
+								},
+								{
+									"id": "set-effect-parameter",
+									"objectClass": "Player1",
+									"sid": 564383394975075,
+									"parameters": {
+										"effect": "\"Pallete3\"",
+										"parameter-index": "1",
+										"value": "rgb(248, 248, 248)"
+									}
+								},
+								{
+									"id": "set-effect-parameter",
+									"objectClass": "Player1",
+									"sid": 882554426922409,
+									"parameters": {
+										"effect": "\"Pallete4\"",
+										"parameter-index": "1",
+										"value": "rgb(0, 80, 0)"
+									}
+								},
+								{
+									"id": "set-effect-parameter",
+									"objectClass": "Player1",
+									"sid": 647369514031165,
+									"parameters": {
+										"effect": "\"Pallete5\"",
+										"parameter-index": "1",
+										"value": "rgb(0, 120, 0)"
+									}
+								},
+								{
+									"id": "set-effect-parameter",
+									"objectClass": "Player1",
+									"sid": 450310236966079,
+									"parameters": {
+										"effect": "\"Pallete6\"",
+										"parameter-index": "1",
+										"value": "rgb(0, 184, 0)"
+									}
+								},
+								{
+									"id": "set-effect-parameter",
+									"objectClass": "Player1",
+									"sid": 757482364876777,
+									"parameters": {
+										"effect": "\"Pallete7\"",
+										"parameter-index": "1",
+										"value": "rgb(216, 216, 168)"
+									}
+								},
+								{
+									"id": "set-effect-parameter",
+									"objectClass": "Player1",
+									"sid": 789246826500131,
+									"parameters": {
+										"effect": "\"Pallete8\"",
+										"parameter-index": "1",
+										"value": "rgb(248, 112, 24)"
+									}
+								}
+							],
+							"sid": 153476540482468
+						}
+					],
+					"sid": 665120104159763
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
 					"title": "Holding an Item",
 					"description": "",
 					"isActiveOnStart": true,

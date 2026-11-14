@@ -32398,14 +32398,22 @@
 												{
 													"id": "create-object",
 													"objectClass": "System",
-													"sid": 281814076089540,
+													"sid": 127051170805981,
 													"parameters": {
 														"object-to-create": "PART_StarShine",
 														"layer": "\"Main Objects\"",
 														"x": "Player1.X+round(random(-15,15))",
-														"y": "Player1.Y+round(random(-15,15))",
+														"y": "Player1.Y+round(random(-15,30))",
 														"create-hierarchy": false,
 														"template-name": "\"\""
+													}
+												},
+												{
+													"id": "set-y",
+													"objectClass": "PART_StarShine",
+													"sid": 987941307387104,
+													"parameters": {
+														"y": "Self.Y+30"
 													}
 												}
 											],

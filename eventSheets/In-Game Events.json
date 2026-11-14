@@ -2774,7 +2774,7 @@
 					"eventType": "group",
 					"disabled": false,
 					"title": "Player Color Pallete Changer",
-					"description": "Note: This doesn't work for Fire Mario Sprites.",
+					"description": "Note: This doesn't work for Fire Mario Sprites. (yet at least)",
 					"isActiveOnStart": true,
 					"children": [
 						{

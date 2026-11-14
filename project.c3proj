@@ -548,7 +548,8 @@
 					"PART_Kick",
 					"PART_RotateDestroyed",
 					"PART_FireballHit",
-					"PART_CoinCollected"
+					"PART_CoinCollected",
+					"PART_StarShine"
 				],
 				"subfolders": [],
 				"name": "Particles"

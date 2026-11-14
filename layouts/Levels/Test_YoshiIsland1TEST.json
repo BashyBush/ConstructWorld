@@ -9918,6 +9918,43 @@
 						"angle": 0,
 						"zElevation": 0
 					}
+				},
+				{
+					"type": "PART_StarShine",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 203,
+					"sid": 837264854273102,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 837264854273102,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": -96,
+						"y": 192,
+						"width": 16,
+						"height": 16,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
 				}
 			],
 			"sid": 921026342967386,
@@ -12019,10 +12056,10 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 595.276098651155,
+						"x": 579.0033713784279,
 						"y": 3.8814626890049198,
-						"width": 239.72727272727286,
-						"height": 272,
+						"width": 256,
+						"height": 304,
 						"originX": 0,
 						"originY": 0,
 						"color": [

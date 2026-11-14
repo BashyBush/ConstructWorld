@@ -2446,17 +2446,17 @@
 						{
 							"id": "set-text",
 							"objectClass": "Debug_Coords",
-							"sid": 456376971384381,
+							"sid": 899428338084149,
 							"parameters": {
-								"text": "\"Player X: \"& Player1.X & \"\nPlayer Y: \"& Player1.Y & \"\n\nCamera X \" & Camera.X & \"\nCamera Y \" & Camera.Y & \" \nCam.M Speed: \" & Camera.MoveTo.MaxSpeed & \"\nCamera Offset: \" & Camera.CameraXTimer & \"\n\nPlayer Speed: \"& Player1.Platform.Speed & \"\nPlayer MAX-Speed: \" & Player1.Platform.MaxSpeed & \"\nPlayer X Vector: \" & Player1.Platform.VectorX & \"\nPlayer Y Vector: \" & Player1.Platform.VectorY & \"\nPlayer A-State: \" & Player1.AnimationState & \"\nPlayer A-Rem: \" & Player1.AnimationRem & \"\nPlayer Anim: \" & Player1.AnimationName & \"\nRun Timer: \" & Player1.TimertilRunning & \"\nWater: \" & Player1.InWater\n\r\n"
+								"text": "\"Player X: \"& Player1.X & \"\nPlayer Y: \"& Player1.Y & \"\n\nCamera X \" & Camera.X & \"\nCamera Y \" & Camera.Y & \" \nCam.M Speed: \" & Camera.MoveTo.MaxSpeed & \"\nCamera Offset: \" & Camera.CameraXTimer & \"\n\nPlayer Speed: \"& Player1.Platform.Speed & \"\nPlayer MAX-Speed: \" & Player1.Platform.MaxSpeed & \"\nPlayer X Vector: \" & Player1.Platform.VectorX & \"\nPlayer Y Vector: \" & Player1.Platform.VectorY & \"\nPlayer A-State: \" & Player1.AnimationState & \"\nPlayer A-Rem: \" & Player1.AnimationRem & \"\nPlayer Anim: \" & Player1.AnimationName & \"\nRun Timer: \" & Player1.TimertilRunning & \"\nWater: \" & Player1.InWater & \"\nStar Timer: \" & Player1.StarTimer & \"\nStar Power: \" & Player1.StarState\r\n"
 							}
 						},
 						{
 							"id": "set-height",
 							"objectClass": "Debug_Coords",
-							"sid": 571217454553572,
+							"sid": 685660237717168,
 							"parameters": {
-								"height": "320"
+								"height": "320+16"
 							}
 						}
 					],
@@ -32044,22 +32044,12 @@
 													}
 												},
 												{
-													"id": "set-animation",
+													"id": "add-to-instvar",
 													"objectClass": "Player1",
-													"sid": 975168693910473,
-													"disabled": true,
-													"parameters": {
-														"animation": "\"Small_Growup\"",
-														"from": "beginning"
-													}
-												},
-												{
-													"id": "set-instvar-value",
-													"objectClass": "Player1",
-													"sid": 444404347833742,
+													"sid": 279315494801124,
 													"parameters": {
 														"instance-variable": "StarTimer",
-														"value": "120-60"
+														"value": "60"
 													}
 												},
 												{

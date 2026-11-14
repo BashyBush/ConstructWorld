@@ -9204,10 +9204,10 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 611.276098651155,
+						"x": 579.003371,
 						"y": 3.8814626890049198,
-						"width": 239.72727272727286,
-						"height": 272,
+						"width": 256,
+						"height": 304,
 						"originX": 0,
 						"originY": 0,
 						"color": [

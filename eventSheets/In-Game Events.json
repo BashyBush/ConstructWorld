@@ -31517,6 +31517,119 @@
 						{
 							"eventType": "group",
 							"disabled": false,
+							"title": "SuperStar",
+							"description": "",
+							"isActiveOnStart": true,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-collision-with-another-object",
+											"objectClass": "Player1",
+											"sid": 256012410191990,
+											"parameters": {
+												"object": "SuperStar"
+											}
+										}
+									],
+									"actions": [],
+									"sid": 522890873851210,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [],
+											"actions": [
+												{
+													"id": "add-to-eventvar",
+													"objectClass": "System",
+													"sid": 196039513210544,
+													"parameters": {
+														"variable": "Score",
+														"value": "1000"
+													}
+												},
+												{
+													"id": "destroy",
+													"objectClass": "SuperStar",
+													"sid": 620095450133235
+												},
+												{
+													"id": "play",
+													"objectClass": "Audio",
+													"sid": 479699888952697,
+													"parameters": {
+														"audio-file": "powerup",
+														"loop": "not-looping",
+														"volume": "-5",
+														"stereo-pan": "0",
+														"tag-optional": "\"\""
+													}
+												},
+												{
+													"id": "create-object",
+													"objectClass": "System",
+													"sid": 884683713000237,
+													"parameters": {
+														"object-to-create": "PART_PointGivenSprites",
+														"layer": "\"Main Objects\"",
+														"x": "Player1.X",
+														"y": "Player1.Y+16",
+														"create-hierarchy": false,
+														"template-name": "\"\""
+													}
+												},
+												{
+													"id": "set-animation",
+													"objectClass": "PART_PointGivenSprites",
+													"sid": 528001110773884,
+													"parameters": {
+														"animation": "\"1000\"",
+														"from": "beginning"
+													}
+												},
+												{
+													"id": "move-to-position",
+													"objectClass": "PART_PointGivenSprites",
+													"sid": 553265369211458,
+													"behaviorType": "MoveTo",
+													"parameters": {
+														"x": "Self.X",
+														"y": "Self.Y-40",
+														"mode": "direct"
+													}
+												},
+												{
+													"id": "wait",
+													"objectClass": "System",
+													"sid": 958308501587126,
+													"parameters": {
+														"seconds": "0.85",
+														"use-timescale": true
+													}
+												},
+												{
+													"id": "destroy",
+													"objectClass": "PART_PointGivenSprites",
+													"sid": 888662507682055
+												}
+											],
+											"sid": 836630987938152
+										},
+										{
+											"eventType": "block",
+											"conditions": [],
+											"actions": [],
+											"sid": 521785889631160
+										}
+									]
+								}
+							],
+							"sid": 378023149677049
+						},
+						{
+							"eventType": "group",
+							"disabled": false,
 							"title": "1-up",
 							"description": "pretty much the same thing but you get a 1-up instead of a mushroom lmaoooo",
 							"isActiveOnStart": true,

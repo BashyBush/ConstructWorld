@@ -469,7 +469,8 @@
 				"items": [
 					"Mushroom",
 					"1up",
-					"FireFlower"
+					"FireFlower",
+					"SuperStar"
 				],
 				"subfolders": [],
 				"name": "Powerups"

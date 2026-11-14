@@ -14100,6 +14100,10 @@
 											"sid": 757631186186743,
 											"children": [
 												{
+													"eventType": "comment",
+													"text": "will need to be recoded for fire > big maybe. also excuse for the damaged bool to exist for now as a sorta work around ig lol"
+												},
+												{
 													"eventType": "block",
 													"conditions": [
 														{
@@ -14159,6 +14163,15 @@
 															"parameters": {
 																"instance-variable": "AnimationState",
 																"value": "\"Shrinking\""
+															}
+														},
+														{
+															"id": "set-boolean-instvar",
+															"objectClass": "Player1",
+															"sid": 245428315953114,
+															"parameters": {
+																"instance-variable": "Damaged",
+																"value": "true"
 															}
 														},
 														{
@@ -14371,6 +14384,15 @@
 															}
 														},
 														{
+															"id": "set-boolean-instvar",
+															"objectClass": "Player1",
+															"sid": 110784019194261,
+															"parameters": {
+																"instance-variable": "Damaged",
+																"value": "false"
+															}
+														},
+														{
 															"id": "subtract-from-instvar",
 															"objectClass": "Player1",
 															"sid": 452141461001649,
@@ -14381,6 +14403,33 @@
 														}
 													],
 													"sid": 341128527343717
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-instance-variable",
+															"objectClass": "Player1",
+															"sid": 552059803945991,
+															"parameters": {
+																"instance-variable": "HP",
+																"comparison": 0,
+																"value": "3"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-instvar-value",
+															"objectClass": "Player1",
+															"sid": 147568746899875,
+															"parameters": {
+																"instance-variable": "ColorState",
+																"value": "0"
+															}
+														}
+													],
+													"sid": 646679123049800
 												},
 												{
 													"eventType": "block",
@@ -21455,7 +21504,17 @@
 							"children": [
 								{
 									"eventType": "block",
-									"conditions": [],
+									"conditions": [
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "Player1",
+											"sid": 786932085283022,
+											"parameters": {
+												"instance-variable": "Damaged"
+											},
+											"isInverted": true
+										}
+									],
 									"actions": [
 										{
 											"type": "comment",
@@ -21627,6 +21686,187 @@
 										}
 									],
 									"sid": 204381669987048
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 477905110108061
+										}
+									],
+									"actions": [
+										{
+											"type": "comment",
+											"text": "Source"
+										},
+										{
+											"id": "set-effect-parameter",
+											"objectClass": "Player1",
+											"sid": 802013730301864,
+											"parameters": {
+												"effect": "\"Pallete1\"",
+												"parameter-index": "0",
+												"value": "rgb(248, 208, 192)"
+											}
+										},
+										{
+											"id": "set-effect-parameter",
+											"objectClass": "Player1",
+											"sid": 484417551214700,
+											"parameters": {
+												"effect": "\"Pallete2\"",
+												"parameter-index": "0",
+												"value": "rgb(80, 0, 0)"
+											}
+										},
+										{
+											"id": "set-effect-parameter",
+											"objectClass": "Player1",
+											"sid": 818012042898337,
+											"parameters": {
+												"effect": "\"Pallete3\"",
+												"parameter-index": "0",
+												"value": "rgb(248, 64, 112)"
+											}
+										},
+										{
+											"id": "set-effect-parameter",
+											"objectClass": "Player1",
+											"sid": 610839479582429,
+											"parameters": {
+												"effect": "\"Pallete4\"",
+												"parameter-index": "0",
+												"value": "rgb(32, 48, 136)"
+											}
+										},
+										{
+											"id": "set-effect-parameter",
+											"objectClass": "Player1",
+											"sid": 604520515906859,
+											"parameters": {
+												"effect": "\"Pallete5\"",
+												"parameter-index": "0",
+												"value": "rgb(64, 128, 152)"
+											}
+										},
+										{
+											"id": "set-effect-parameter",
+											"objectClass": "Player1",
+											"sid": 644984635212323,
+											"parameters": {
+												"effect": "\"Pallete6\"",
+												"parameter-index": "0",
+												"value": "rgb(128, 216, 200)"
+											}
+										},
+										{
+											"id": "set-effect-parameter",
+											"objectClass": "Player1",
+											"sid": 577564847971392,
+											"parameters": {
+												"effect": "\"Pallete7\"",
+												"parameter-index": "0",
+												"value": "rgb(176, 40, 96)"
+											}
+										},
+										{
+											"id": "set-effect-parameter",
+											"objectClass": "Player1",
+											"sid": 664055685293717,
+											"parameters": {
+												"effect": "\"Pallete8\"",
+												"parameter-index": "0",
+												"value": "rgb(248, 112, 104)"
+											}
+										},
+										{
+											"type": "comment",
+											"text": "Replace"
+										},
+										{
+											"id": "set-effect-parameter",
+											"objectClass": "Player1",
+											"sid": 338101383449607,
+											"parameters": {
+												"effect": "\"Pallete1\"",
+												"parameter-index": "1",
+												"value": "rgb(248, 208, 192)"
+											}
+										},
+										{
+											"id": "set-effect-parameter",
+											"objectClass": "Player1",
+											"sid": 450936927755746,
+											"parameters": {
+												"effect": "\"Pallete2\"",
+												"parameter-index": "1",
+												"value": "rgb(80, 0, 0)"
+											}
+										},
+										{
+											"id": "set-effect-parameter",
+											"objectClass": "Player1",
+											"sid": 101027136497014,
+											"parameters": {
+												"effect": "\"Pallete3\"",
+												"parameter-index": "1",
+												"value": "rgb(248, 64, 112)"
+											}
+										},
+										{
+											"id": "set-effect-parameter",
+											"objectClass": "Player1",
+											"sid": 188859981493761,
+											"parameters": {
+												"effect": "\"Pallete4\"",
+												"parameter-index": "1",
+												"value": "rgb(32, 48, 136)"
+											}
+										},
+										{
+											"id": "set-effect-parameter",
+											"objectClass": "Player1",
+											"sid": 141065763831036,
+											"parameters": {
+												"effect": "\"Pallete5\"",
+												"parameter-index": "1",
+												"value": "rgb(64, 128, 152)"
+											}
+										},
+										{
+											"id": "set-effect-parameter",
+											"objectClass": "Player1",
+											"sid": 308480616605560,
+											"parameters": {
+												"effect": "\"Pallete6\"",
+												"parameter-index": "1",
+												"value": "rgb(128, 216, 200)"
+											}
+										},
+										{
+											"id": "set-effect-parameter",
+											"objectClass": "Player1",
+											"sid": 194230859996091,
+											"parameters": {
+												"effect": "\"Pallete7\"",
+												"parameter-index": "1",
+												"value": "rgb(176, 40, 96)"
+											}
+										},
+										{
+											"id": "set-effect-parameter",
+											"objectClass": "Player1",
+											"sid": 729638887309432,
+											"parameters": {
+												"effect": "\"Pallete8\"",
+												"parameter-index": "1",
+												"value": "rgb(248, 112, 104)"
+											}
+										}
+									],
+									"sid": 907803706605147
 								}
 							]
 						}

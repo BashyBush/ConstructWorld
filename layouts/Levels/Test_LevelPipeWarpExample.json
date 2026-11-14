@@ -2170,7 +2170,8 @@
 						"ShotFireBall": false,
 						"ColorState": 0,
 						"StarState": false,
-						"StarTimer": 0
+						"StarTimer": 0,
+						"Damaged": false
 					},
 					"behaviors": {
 						"Platform": {

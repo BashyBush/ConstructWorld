@@ -107,29 +107,36 @@
 			"name": "ShotFireBall",
 			"type": "boolean",
 			"desc": "some extra checks",
-			"show": true,
+			"show": false,
 			"sid": 332553160247189
 		},
 		{
 			"name": "ColorState",
 			"type": "number",
 			"desc": "0 = M / 1 = L / 2 = FM / 3 = FL",
-			"show": true,
+			"show": false,
 			"sid": 692622683516776
 		},
 		{
 			"name": "StarState",
 			"type": "boolean",
 			"desc": "",
-			"show": true,
+			"show": false,
 			"sid": 839475173377486
 		},
 		{
 			"name": "StarTimer",
 			"type": "number",
 			"desc": "",
-			"show": true,
+			"show": false,
 			"sid": 864119612318036
+		},
+		{
+			"name": "Damaged",
+			"type": "boolean",
+			"desc": "variable existing just for fire mario eye flash bug to not exist ig lol",
+			"show": false,
+			"sid": 120614157586266
 		}
 	],
 	"behaviorTypes": [

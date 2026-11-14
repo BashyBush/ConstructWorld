@@ -21232,9 +21232,407 @@
 			"eventType": "group",
 			"disabled": false,
 			"title": "Player Color Pallete Changer",
-			"description": "Note: This doesn't work for Fire Mario Sprites. (yet at least)",
+			"description": "",
 			"isActiveOnStart": true,
 			"children": [
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "MarioColorPalleteChecker",
+					"description": "Regular Mario and Luigi eyes breaks for some reason most likely cus of the Fire Color Pallete using a similar color as the eyes ",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Player1",
+									"sid": 617252745272974,
+									"parameters": {
+										"instance-variable": "HP",
+										"comparison": 3,
+										"value": "2"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 871915360614451,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [],
+									"actions": [
+										{
+											"type": "comment",
+											"text": "Source"
+										},
+										{
+											"id": "set-effect-parameter",
+											"objectClass": "Player1",
+											"sid": 412707250608950,
+											"parameters": {
+												"effect": "\"Pallete1\"",
+												"parameter-index": "0",
+												"value": "rgb(248, 208, 192)"
+											}
+										},
+										{
+											"id": "set-effect-parameter",
+											"objectClass": "Player1",
+											"sid": 847026098702205,
+											"parameters": {
+												"effect": "\"Pallete2\"",
+												"parameter-index": "0",
+												"value": "rgb(80, 0, 0)"
+											}
+										},
+										{
+											"id": "set-effect-parameter",
+											"objectClass": "Player1",
+											"sid": 128039341451423,
+											"parameters": {
+												"effect": "\"Pallete3\"",
+												"parameter-index": "0",
+												"value": "rgb(248, 64, 112)"
+											}
+										},
+										{
+											"id": "set-effect-parameter",
+											"objectClass": "Player1",
+											"sid": 503525472220231,
+											"parameters": {
+												"effect": "\"Pallete4\"",
+												"parameter-index": "0",
+												"value": "rgb(32, 48, 136)"
+											}
+										},
+										{
+											"id": "set-effect-parameter",
+											"objectClass": "Player1",
+											"sid": 575299956636226,
+											"parameters": {
+												"effect": "\"Pallete5\"",
+												"parameter-index": "0",
+												"value": "rgb(64, 128, 152)"
+											}
+										},
+										{
+											"id": "set-effect-parameter",
+											"objectClass": "Player1",
+											"sid": 917193505241358,
+											"parameters": {
+												"effect": "\"Pallete6\"",
+												"parameter-index": "0",
+												"value": "rgb(128, 216, 200)"
+											}
+										},
+										{
+											"id": "set-effect-parameter",
+											"objectClass": "Player1",
+											"sid": 953044626813918,
+											"parameters": {
+												"effect": "\"Pallete7\"",
+												"parameter-index": "0",
+												"value": "rgb(176, 40, 96)"
+											}
+										},
+										{
+											"id": "set-effect-parameter",
+											"objectClass": "Player1",
+											"sid": 939091962683771,
+											"parameters": {
+												"effect": "\"Pallete8\"",
+												"parameter-index": "0",
+												"value": "rgb(248, 112, 104)"
+											}
+										},
+										{
+											"type": "comment",
+											"text": "Replace"
+										},
+										{
+											"id": "set-effect-parameter",
+											"objectClass": "Player1",
+											"sid": 604024526064645,
+											"parameters": {
+												"effect": "\"Pallete1\"",
+												"parameter-index": "1",
+												"value": "rgb(248, 208, 192)"
+											}
+										},
+										{
+											"id": "set-effect-parameter",
+											"objectClass": "Player1",
+											"sid": 902841631579554,
+											"parameters": {
+												"effect": "\"Pallete2\"",
+												"parameter-index": "1",
+												"value": "rgb(80, 0, 0)"
+											}
+										},
+										{
+											"id": "set-effect-parameter",
+											"objectClass": "Player1",
+											"sid": 670654350780917,
+											"parameters": {
+												"effect": "\"Pallete3\"",
+												"parameter-index": "1",
+												"value": "rgb(248, 64, 112)"
+											}
+										},
+										{
+											"id": "set-effect-parameter",
+											"objectClass": "Player1",
+											"sid": 853721343263388,
+											"parameters": {
+												"effect": "\"Pallete4\"",
+												"parameter-index": "1",
+												"value": "rgb(32, 48, 136)"
+											}
+										},
+										{
+											"id": "set-effect-parameter",
+											"objectClass": "Player1",
+											"sid": 111477263640321,
+											"parameters": {
+												"effect": "\"Pallete5\"",
+												"parameter-index": "1",
+												"value": "rgb(64, 128, 152)"
+											}
+										},
+										{
+											"id": "set-effect-parameter",
+											"objectClass": "Player1",
+											"sid": 729122758435472,
+											"parameters": {
+												"effect": "\"Pallete6\"",
+												"parameter-index": "1",
+												"value": "rgb(128, 216, 200)"
+											}
+										},
+										{
+											"id": "set-effect-parameter",
+											"objectClass": "Player1",
+											"sid": 736880173975151,
+											"parameters": {
+												"effect": "\"Pallete7\"",
+												"parameter-index": "1",
+												"value": "rgb(176, 40, 96)"
+											}
+										},
+										{
+											"id": "set-effect-parameter",
+											"objectClass": "Player1",
+											"sid": 173023598645949,
+											"parameters": {
+												"effect": "\"Pallete8\"",
+												"parameter-index": "1",
+												"value": "rgb(248, 112, 104)"
+											}
+										}
+									],
+									"sid": 315237372408229
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Player1",
+									"sid": 763043367031328,
+									"parameters": {
+										"instance-variable": "HP",
+										"comparison": 0,
+										"value": "3"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 306389594893879,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [],
+									"actions": [
+										{
+											"type": "comment",
+											"text": "Source"
+										},
+										{
+											"id": "set-effect-parameter",
+											"objectClass": "Player1",
+											"sid": 240645724016072,
+											"parameters": {
+												"effect": "\"Pallete1\"",
+												"parameter-index": "0",
+												"value": "rgb(248, 208, 192)"
+											}
+										},
+										{
+											"id": "set-effect-parameter",
+											"objectClass": "Player1",
+											"sid": 767439903383028,
+											"parameters": {
+												"effect": "\"Pallete2\"",
+												"parameter-index": "0",
+												"value": "rgb(72, 72, 72)"
+											}
+										},
+										{
+											"id": "set-effect-parameter",
+											"objectClass": "Player1",
+											"sid": 423932664099658,
+											"parameters": {
+												"effect": "\"Pallete3\"",
+												"parameter-index": "0",
+												"value": "rgb(248, 248, 248)"
+											}
+										},
+										{
+											"id": "set-effect-parameter",
+											"objectClass": "Player1",
+											"sid": 765545504284061,
+											"parameters": {
+												"effect": "\"Pallete4\"",
+												"parameter-index": "0",
+												"value": "rgb(64, 0, 0)"
+											}
+										},
+										{
+											"id": "set-effect-parameter",
+											"objectClass": "Player1",
+											"sid": 559828199604468,
+											"parameters": {
+												"effect": "\"Pallete5\"",
+												"parameter-index": "0",
+												"value": "rgb(184, 0, 0)"
+											}
+										},
+										{
+											"id": "set-effect-parameter",
+											"objectClass": "Player1",
+											"sid": 161645140741366,
+											"parameters": {
+												"effect": "\"Pallete6\"",
+												"parameter-index": "0",
+												"value": "rgb(248, 0, 0)"
+											}
+										},
+										{
+											"id": "set-effect-parameter",
+											"objectClass": "Player1",
+											"sid": 213719152143876,
+											"parameters": {
+												"effect": "\"Pallete7\"",
+												"parameter-index": "0",
+												"value": "rgb(216, 216, 168)"
+											}
+										},
+										{
+											"id": "set-effect-parameter",
+											"objectClass": "Player1",
+											"sid": 329874288411337,
+											"parameters": {
+												"effect": "\"Pallete8\"",
+												"parameter-index": "0",
+												"value": "rgb(248, 112, 24)"
+											}
+										},
+										{
+											"type": "comment",
+											"text": "Replace"
+										},
+										{
+											"id": "set-effect-parameter",
+											"objectClass": "Player1",
+											"sid": 168986991094968,
+											"parameters": {
+												"effect": "\"Pallete1\"",
+												"parameter-index": "1",
+												"value": "rgb(248, 208, 192)"
+											}
+										},
+										{
+											"id": "set-effect-parameter",
+											"objectClass": "Player1",
+											"sid": 137239436617321,
+											"parameters": {
+												"effect": "\"Pallete2\"",
+												"parameter-index": "1",
+												"value": "rgb(72, 72, 72)"
+											}
+										},
+										{
+											"id": "set-effect-parameter",
+											"objectClass": "Player1",
+											"sid": 903176254305390,
+											"parameters": {
+												"effect": "\"Pallete3\"",
+												"parameter-index": "1",
+												"value": "rgb(248, 248, 248)"
+											}
+										},
+										{
+											"id": "set-effect-parameter",
+											"objectClass": "Player1",
+											"sid": 190778645676881,
+											"parameters": {
+												"effect": "\"Pallete4\"",
+												"parameter-index": "1",
+												"value": "rgb(64, 0, 0)"
+											}
+										},
+										{
+											"id": "set-effect-parameter",
+											"objectClass": "Player1",
+											"sid": 852554524832080,
+											"parameters": {
+												"effect": "\"Pallete5\"",
+												"parameter-index": "1",
+												"value": "rgb(184, 0, 0)"
+											}
+										},
+										{
+											"id": "set-effect-parameter",
+											"objectClass": "Player1",
+											"sid": 690393194064546,
+											"parameters": {
+												"effect": "\"Pallete6\"",
+												"parameter-index": "1",
+												"value": "rgb(248, 0, 0)"
+											}
+										},
+										{
+											"id": "set-effect-parameter",
+											"objectClass": "Player1",
+											"sid": 742123592513928,
+											"parameters": {
+												"effect": "\"Pallete7\"",
+												"parameter-index": "1",
+												"value": "rgb(216, 216, 168)"
+											}
+										},
+										{
+											"id": "set-effect-parameter",
+											"objectClass": "Player1",
+											"sid": 469040906580724,
+											"parameters": {
+												"effect": "\"Pallete8\"",
+												"parameter-index": "1",
+												"value": "rgb(248, 112, 24)"
+											}
+										}
+									],
+									"sid": 204381669987048
+								}
+							]
+						}
+					],
+					"sid": 371561780851620
+				},
 				{
 					"eventType": "group",
 					"disabled": false,
@@ -21346,15 +21744,6 @@
 								{
 									"id": "set-instvar-value",
 									"objectClass": "Player1",
-									"sid": 212718093265681,
-									"parameters": {
-										"instance-variable": "ColorState",
-										"value": "0"
-									}
-								},
-								{
-									"id": "set-instvar-value",
-									"objectClass": "Player1",
 									"sid": 690046323741033,
 									"parameters": {
 										"instance-variable": "StarTimer",
@@ -21362,7 +21751,69 @@
 									}
 								}
 							],
-							"sid": 225676691543410
+							"sid": 225676691543410,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Player1",
+											"sid": 266100770339695,
+											"parameters": {
+												"instance-variable": "HP",
+												"comparison": 3,
+												"value": "2"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-instvar-value",
+											"objectClass": "Player1",
+											"sid": 992695472851548,
+											"parameters": {
+												"instance-variable": "ColorState",
+												"value": "0"
+											}
+										}
+									],
+									"sid": 349527914774446
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 222344543502154
+										},
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Player1",
+											"sid": 546497867774584,
+											"disabled": true,
+											"parameters": {
+												"instance-variable": "HP",
+												"comparison": 0,
+												"value": "3"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-instvar-value",
+											"objectClass": "Player1",
+											"sid": 658555258748484,
+											"parameters": {
+												"instance-variable": "ColorState",
+												"value": "2"
+											}
+										}
+									],
+									"sid": 744221443369731
+								}
+							]
 						}
 					],
 					"sid": 876930422446227
@@ -31365,10 +31816,10 @@
 												{
 													"id": "set-instvar-value",
 													"objectClass": "Player1",
-													"sid": 582326593723467,
+													"sid": 444404347833742,
 													"parameters": {
 														"instance-variable": "StarTimer",
-														"value": "120"
+														"value": "120-60"
 													}
 												},
 												{
@@ -31609,6 +32060,15 @@
 													}
 												},
 												{
+													"id": "set-boolean-instvar",
+													"objectClass": "Player1",
+													"sid": 811144787841987,
+													"parameters": {
+														"instance-variable": "StarState",
+														"value": "true"
+													}
+												},
+												{
 													"id": "destroy",
 													"objectClass": "SuperStar",
 													"sid": 620095450133235
@@ -31679,15 +32139,34 @@
 								},
 								{
 									"eventType": "block",
-									"conditions": [],
+									"conditions": [
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "Player1",
+											"sid": 344251427726309,
+											"parameters": {
+												"instance-variable": "StarState"
+											}
+										},
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Player1",
+											"sid": 247026634096276,
+											"parameters": {
+												"instance-variable": "StarTimer",
+												"comparison": 3,
+												"value": "0"
+											}
+										}
+									],
 									"actions": [
 										{
-											"id": "set-eventvar-value",
-											"objectClass": "System",
-											"sid": 196787168710198,
+											"id": "set-boolean-instvar",
+											"objectClass": "Player1",
+											"sid": 287240362429972,
 											"parameters": {
-												"variable": "Score",
-												"value": "Player1.StarTimer"
+												"instance-variable": "StarState",
+												"value": "false"
 											}
 										}
 									],

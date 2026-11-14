@@ -119,6 +119,14 @@
 			"bundled": false
 		},
 		{
+			"type": "plugin",
+			"id": "skymen_limit_fps",
+			"name": "Limit FPS",
+			"author": "skymen",
+			"bundled": true,
+			"version": "1.0.0.6"
+		},
+		{
 			"type": "behavior",
 			"id": "Bullet",
 			"name": "Bullet",
@@ -279,7 +287,8 @@
 					"NWjs",
 					"Mouse",
 					"Audio",
-					"TimelineController"
+					"TimelineController",
+					"LimitFPS"
 				],
 				"subfolders": [],
 				"name": "Plugins"

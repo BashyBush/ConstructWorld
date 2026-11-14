@@ -2781,7 +2781,7 @@
 							"eventType": "group",
 							"disabled": false,
 							"title": "StarSwapStuff",
-							"description": "",
+							"description": "note. the thing slows down around the two-ish second left so uh yeah",
 							"isActiveOnStart": true,
 							"children": [
 								{
@@ -2818,9 +2818,9 @@
 												{
 													"id": "every-x-seconds",
 													"objectClass": "System",
-													"sid": 993962861931004,
+													"sid": 456881571892237,
 													"parameters": {
-														"interval-seconds": "0.25"
+														"interval-seconds": "0.05"
 													}
 												}
 											],
@@ -2836,6 +2836,32 @@
 												}
 											],
 											"sid": 120953423249950
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "every-x-seconds",
+													"objectClass": "System",
+													"sid": 281640478220790,
+													"parameters": {
+														"interval-seconds": "0.25"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "add-to-instvar",
+													"objectClass": "Player1",
+													"sid": 386922065929998,
+													"parameters": {
+														"instance-variable": "ColorState",
+														"value": "1"
+													}
+												}
+											],
+											"sid": 910382132149493,
+											"disabled": true
 										}
 									]
 								},
@@ -31550,6 +31576,15 @@
 													}
 												},
 												{
+													"id": "set-instvar-value",
+													"objectClass": "Player1",
+													"sid": 289478291110749,
+													"parameters": {
+														"instance-variable": "StarTimer",
+														"value": "960"
+													}
+												},
+												{
 													"id": "destroy",
 													"objectClass": "SuperStar",
 													"sid": 620095450133235
@@ -31615,14 +31650,24 @@
 												}
 											],
 											"sid": 836630987938152
-										},
-										{
-											"eventType": "block",
-											"conditions": [],
-											"actions": [],
-											"sid": 521785889631160
 										}
 									]
+								},
+								{
+									"eventType": "block",
+									"conditions": [],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 196787168710198,
+											"parameters": {
+												"variable": "Score",
+												"value": "Player1.StarTimer"
+											}
+										}
+									],
+									"sid": 815339508353542
 								}
 							],
 							"sid": 378023149677049

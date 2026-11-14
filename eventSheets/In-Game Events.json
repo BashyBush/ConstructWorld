@@ -364,6 +364,33 @@
 					"eventType": "block",
 					"conditions": [
 						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 559971175599358,
+							"parameters": {
+								"first-value": "CurrentHP",
+								"comparison": 0,
+								"second-value": "3"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Player1",
+							"sid": 894613590786027,
+							"parameters": {
+								"instance-variable": "ColorState",
+								"value": "2"
+							}
+						}
+					],
+					"sid": 602368186415203
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
 							"id": "compare-boolean-eventvar",
 							"objectClass": "System",
 							"sid": 344936353303366,

@@ -32377,11 +32377,75 @@
 											"parameters": {
 												"instance-variable": "StarState"
 											}
+										}
+									],
+									"actions": [],
+									"sid": 815339508353542,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "every-x-seconds",
+													"objectClass": "System",
+													"sid": 901347033353033,
+													"parameters": {
+														"interval-seconds": "0.05"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "create-object",
+													"objectClass": "System",
+													"sid": 281814076089540,
+													"parameters": {
+														"object-to-create": "PART_StarShine",
+														"layer": "\"Main Objects\"",
+														"x": "Player1.X+round(random(-15,15))",
+														"y": "Player1.Y+round(random(-15,15))",
+														"create-hierarchy": false,
+														"template-name": "\"\""
+													}
+												}
+											],
+											"sid": 493386596079709
+										}
+									]
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-any-animation-finished",
+											"objectClass": "PART_StarShine",
+											"sid": 722801624633980
+										}
+									],
+									"actions": [
+										{
+											"id": "destroy",
+											"objectClass": "PART_StarShine",
+											"sid": 712089679109756
+										}
+									],
+									"sid": 727895758759169
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "Player1",
+											"sid": 533804459880566,
+											"parameters": {
+												"instance-variable": "StarState"
+											}
 										},
 										{
 											"id": "compare-instance-variable",
 											"objectClass": "Player1",
-											"sid": 247026634096276,
+											"sid": 962188072443433,
 											"parameters": {
 												"instance-variable": "StarTimer",
 												"comparison": 3,
@@ -32393,14 +32457,14 @@
 										{
 											"id": "set-boolean-instvar",
 											"objectClass": "Player1",
-											"sid": 287240362429972,
+											"sid": 152222784721631,
 											"parameters": {
 												"instance-variable": "StarState",
 												"value": "false"
 											}
 										}
 									],
-									"sid": 815339508353542
+									"sid": 698700474373714
 								}
 							],
 							"sid": 378023149677049

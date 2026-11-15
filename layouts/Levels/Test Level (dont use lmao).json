@@ -727,6 +727,24 @@
 						},
 						"Flash": {
 							"properties": {}
+						},
+						"Follow": {
+							"properties": {
+								"mode": "time",
+								"delay": 1,
+								"max-delay": 1,
+								"history-rate": 30,
+								"follow-x": true,
+								"follow-y": true,
+								"follow-z-elevation": false,
+								"follow-width": false,
+								"follow-height": false,
+								"follow-angle": false,
+								"follow-opacity": false,
+								"follow-visibility": false,
+								"follow-destroyed": true,
+								"enabled": true
+							}
 						}
 					},
 					"effects": {

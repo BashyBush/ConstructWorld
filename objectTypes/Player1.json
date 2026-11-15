@@ -65,14 +65,14 @@
 			"name": "InPipe",
 			"type": "boolean",
 			"desc": "Can also be used to disable the animation system",
-			"show": false,
+			"show": true,
 			"sid": 529461889749350
 		},
 		{
 			"name": "CourseClear",
 			"type": "boolean",
 			"desc": "Can also be used to disable the Player Controls (without disabling the platform behavior)",
-			"show": false,
+			"show": true,
 			"sid": 959965244033657
 		},
 		{
@@ -154,6 +154,11 @@
 			"behaviorId": "Flash",
 			"name": "Flash",
 			"sid": 932967822711674
+		},
+		{
+			"behaviorId": "Follow",
+			"name": "Follow",
+			"sid": 495868710910330
 		}
 	],
 	"effectTypes": [

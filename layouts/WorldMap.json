@@ -1264,6 +1264,56 @@
 						"angle": 0,
 						"zElevation": 0
 					}
+				},
+				{
+					"type": "WM_LevelPoints",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "SingleExit",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 1035,
+					"sid": 431664387990745,
+					"tags": "",
+					"instanceVariables": {
+						"LevelName": "RECORD TEST",
+						"LevelID": "RecorderTest",
+						"SkipMarioStartScreen": false,
+						"Completed": false,
+						"SecertCompleted": false,
+						"Locked": false,
+						"NormalMoveID": "",
+						"SecertMoveID": "",
+						"ReturnerMoveID": "",
+						"NormalDirection": "",
+						"SecertDirection": "",
+						"ReturnerDirection": ""
+					},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 431664387990745,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 496,
+						"y": 320,
+						"width": 32,
+						"height": 32,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
 				}
 			],
 			"sid": 526259461105187,
@@ -1985,7 +2035,7 @@
 					"world": {
 						"x": 144,
 						"y": 80,
-						"width": 336,
+						"width": 272,
 						"height": 160,
 						"originX": 0,
 						"originY": 0,

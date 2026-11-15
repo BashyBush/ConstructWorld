@@ -15363,6 +15363,15 @@
 													"sid": 491502713166930,
 													"behaviorType": "Platform",
 													"isInverted": true
+												},
+												{
+													"id": "is-boolean-instance-variable-set",
+													"objectClass": "Player1",
+													"sid": 221857106589384,
+													"parameters": {
+														"instance-variable": "CourseClear"
+													},
+													"isInverted": true
 												}
 											],
 											"actions": [],
@@ -35076,6 +35085,687 @@
 			"isActiveOnStart": true,
 			"children": [],
 			"sid": 382828342385402
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "RecordTester",
+			"description": "Screwing / Messing around",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "SetLevelId",
+							"sid": 974499375293340,
+							"parameters": {
+								"instance-variable": "LevelID",
+								"comparison": 0,
+								"value": "4576"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "add-to-instvar",
+							"objectClass": "Recorder",
+							"sid": 312137752902889,
+							"parameters": {
+								"instance-variable": "ROOMTIMER",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 728720210063241,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-start-of-layout",
+									"objectClass": "System",
+									"sid": 512574995170480
+								}
+							],
+							"actions": [
+								{
+									"id": "follow-self",
+									"objectClass": "Player1",
+									"sid": 689800323092299,
+									"behaviorType": "Follow"
+								},
+								{
+									"id": "set-property-interpolation",
+									"objectClass": "Player1",
+									"sid": 557539496615031,
+									"behaviorType": "Follow",
+									"parameters": {
+										"property": "width",
+										"interpolation": "step"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 404372529989256,
+									"parameters": {
+										"seconds": "0.01",
+										"use-timescale": true
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Recorder",
+									"sid": 798626118817724,
+									"parameters": {
+										"instance-variable": "REMEMBERX",
+										"value": "Player1.X"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Recorder",
+									"sid": 155339984038966,
+									"parameters": {
+										"instance-variable": "REMEMBERY",
+										"value": "Player1.Y"
+									}
+								}
+							],
+							"sid": 413499494370588
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-key-pressed",
+									"objectClass": "Keyboard",
+									"sid": 728301866988970,
+									"parameters": {
+										"key": 82
+									}
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Recorder",
+									"sid": 821941148480713,
+									"parameters": {
+										"instance-variable": "PLAY"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [],
+							"sid": 958658773861041,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "Recorder",
+											"sid": 314366353136633,
+											"parameters": {
+												"instance-variable": "REC"
+											},
+											"isInverted": true
+										}
+									],
+									"actions": [
+										{
+											"id": "play",
+											"objectClass": "Audio",
+											"sid": 272693409884163,
+											"parameters": {
+												"audio-file": "1up",
+												"loop": "not-looping",
+												"volume": "-5",
+												"stereo-pan": "0",
+												"tag-optional": "\"\""
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "Recorder",
+											"sid": 958327602493790,
+											"parameters": {
+												"instance-variable": "RECSTARTTIMER",
+												"value": "Self.ROOMTIMER"
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "Recorder",
+											"sid": 542004211500831,
+											"disabled": true,
+											"parameters": {
+												"instance-variable": "RECSTARTTIMER",
+												"value": "time"
+											}
+										},
+										{
+											"id": "set-vector-x",
+											"objectClass": "Player1",
+											"sid": 581487948837800,
+											"behaviorType": "Platform",
+											"parameters": {
+												"vector-x": "0"
+											}
+										},
+										{
+											"id": "set-vector-y",
+											"objectClass": "Player1",
+											"sid": 793231854902490,
+											"behaviorType": "Platform",
+											"parameters": {
+												"vector-y": "0"
+											}
+										},
+										{
+											"id": "set-enabled",
+											"objectClass": "Player1",
+											"sid": 612459105176146,
+											"behaviorType": "Platform",
+											"parameters": {
+												"state": "enabled"
+											}
+										},
+										{
+											"id": "set-position",
+											"objectClass": "Player1",
+											"sid": 829103531788483,
+											"parameters": {
+												"x": "240",
+												"y": "320"
+											}
+										},
+										{
+											"id": "set-boolean-instvar",
+											"objectClass": "Player1",
+											"sid": 561052599590877,
+											"parameters": {
+												"instance-variable": "CourseClear",
+												"value": "false"
+											}
+										},
+										{
+											"id": "set-enabled",
+											"objectClass": "Player1",
+											"sid": 982759044030866,
+											"behaviorType": "Follow",
+											"parameters": {
+												"state": true
+											}
+										},
+										{
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 695539071872806,
+											"parameters": {
+												"seconds": "0.01",
+												"use-timescale": true
+											}
+										},
+										{
+											"id": "set-boolean-instvar",
+											"objectClass": "Recorder",
+											"sid": 985741965321561,
+											"parameters": {
+												"instance-variable": "REC",
+												"value": "true"
+											}
+										}
+									],
+									"sid": 240847851826312
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "Recorder",
+											"sid": 579131117446041,
+											"parameters": {
+												"instance-variable": "REC"
+											},
+											"isInverted": true
+										},
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Recorder",
+											"sid": 310061853408070,
+											"parameters": {
+												"instance-variable": "OUTPUT",
+												"comparison": 1,
+												"value": "\"\""
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-instvar-value",
+											"objectClass": "Recorder",
+											"sid": 118817820064289,
+											"parameters": {
+												"instance-variable": "OUTPUT",
+												"value": "\"\""
+											}
+										},
+										{
+											"id": "follow-self",
+											"objectClass": "Player1",
+											"sid": 826527664536522,
+											"behaviorType": "Follow"
+										},
+										{
+											"id": "set-property-interpolation",
+											"objectClass": "Player1",
+											"sid": 644096349771244,
+											"behaviorType": "Follow",
+											"parameters": {
+												"property": "width",
+												"interpolation": "step"
+											}
+										},
+										{
+											"id": "clear-history",
+											"objectClass": "Player1",
+											"sid": 984377274670717,
+											"behaviorType": "Follow"
+										}
+									],
+									"sid": 559379242118439
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "Recorder",
+											"sid": 408699208049445,
+											"parameters": {
+												"instance-variable": "REC"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "stop-following",
+											"objectClass": "Player1",
+											"sid": 759154725680701,
+											"behaviorType": "Follow"
+										},
+										{
+											"id": "set-enabled",
+											"objectClass": "Player1",
+											"sid": 707965964078688,
+											"behaviorType": "Follow",
+											"parameters": {
+												"state": false
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "Recorder",
+											"sid": 217406650671589,
+											"parameters": {
+												"instance-variable": "OUTPUT",
+												"value": "Player1.Follow.HistoryAsJSON(Self.ROOMTIMER - Self.RECSTARTTIMER)"
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "Recorder",
+											"sid": 642525335966897,
+											"disabled": true,
+											"parameters": {
+												"instance-variable": "OUTPUT",
+												"value": "Player1.Follow.HistoryAsJSON(time - Self.RECSTARTTIMER)"
+											}
+										},
+										{
+											"id": "set-boolean-instvar",
+											"objectClass": "Player1",
+											"sid": 485544087888254,
+											"parameters": {
+												"instance-variable": "CourseClear",
+												"value": "true"
+											}
+										},
+										{
+											"id": "set-vector-x",
+											"objectClass": "Player1",
+											"sid": 963443713807191,
+											"behaviorType": "Platform",
+											"parameters": {
+												"vector-x": "0"
+											}
+										},
+										{
+											"id": "set-vector-y",
+											"objectClass": "Player1",
+											"sid": 120319996981658,
+											"behaviorType": "Platform",
+											"parameters": {
+												"vector-y": "0"
+											}
+										},
+										{
+											"id": "set-enabled",
+											"objectClass": "Player1",
+											"sid": 819349655348547,
+											"behaviorType": "Platform",
+											"parameters": {
+												"state": "disabled"
+											}
+										},
+										{
+											"id": "set-position",
+											"objectClass": "Player1",
+											"sid": 565478162101501,
+											"parameters": {
+												"x": "240",
+												"y": "320"
+											}
+										},
+										{
+											"id": "set-boolean-instvar",
+											"objectClass": "Recorder",
+											"sid": 922274002482676,
+											"parameters": {
+												"instance-variable": "REC",
+												"value": "false"
+											}
+										}
+									],
+									"sid": 870915575908853
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-key-pressed",
+									"objectClass": "Keyboard",
+									"sid": 284950125326951,
+									"parameters": {
+										"key": 80
+									}
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Recorder",
+									"sid": 637511632191006,
+									"parameters": {
+										"instance-variable": "REC"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [],
+							"sid": 347721354416506,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Recorder",
+											"sid": 530035150742956,
+											"parameters": {
+												"instance-variable": "OUTPUT",
+												"comparison": 1,
+												"value": "\"\""
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-boolean-instvar",
+											"objectClass": "Recorder",
+											"sid": 114248748013986,
+											"parameters": {
+												"instance-variable": "PLAY",
+												"value": "true"
+											}
+										},
+										{
+											"id": "set-enabled",
+											"objectClass": "Player1",
+											"sid": 303383007541900,
+											"behaviorType": "Follow",
+											"parameters": {
+												"state": true
+											}
+										},
+										{
+											"id": "set-enabled",
+											"objectClass": "Player1",
+											"sid": 581564027343956,
+											"behaviorType": "Platform",
+											"parameters": {
+												"state": "disabled"
+											}
+										},
+										{
+											"id": "load-history-json",
+											"objectClass": "Player1",
+											"sid": 305243153617872,
+											"behaviorType": "Follow",
+											"parameters": {
+												"json": "Recorder.OUTPUT"
+											}
+										},
+										{
+											"id": "play",
+											"objectClass": "Audio",
+											"sid": 737293220085704,
+											"parameters": {
+												"audio-file": "1up",
+												"loop": "not-looping",
+												"volume": "0",
+												"stereo-pan": "0",
+												"tag-optional": "\"\""
+											}
+										},
+										{
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 721946876947337,
+											"parameters": {
+												"seconds": "Player1.Follow.Delay",
+												"use-timescale": true
+											}
+										},
+										{
+											"id": "set-boolean-instvar",
+											"objectClass": "Recorder",
+											"sid": 789899323157396,
+											"parameters": {
+												"instance-variable": "PLAY",
+												"value": "false"
+											}
+										},
+										{
+											"id": "set-enabled",
+											"objectClass": "Player1",
+											"sid": 937960485778495,
+											"behaviorType": "Follow",
+											"parameters": {
+												"state": false
+											}
+										},
+										{
+											"id": "play",
+											"objectClass": "Audio",
+											"sid": 425907094307614,
+											"parameters": {
+												"audio-file": "checkpoint",
+												"loop": "not-looping",
+												"volume": "0",
+												"stereo-pan": "0",
+												"tag-optional": "\"\""
+											}
+										}
+									],
+									"sid": 111349591269373
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 268699556329858
+										},
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Recorder",
+											"sid": 965402771487087,
+											"parameters": {
+												"instance-variable": "OUTPUT",
+												"comparison": 0,
+												"value": "\"\""
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "play",
+											"objectClass": "Audio",
+											"sid": 712514457923391,
+											"parameters": {
+												"audio-file": "bump",
+												"loop": "not-looping",
+												"volume": "0",
+												"stereo-pan": "0",
+												"tag-optional": "\"\""
+											}
+										}
+									],
+									"sid": 254618204655486
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-key-pressed",
+									"objectClass": "Keyboard",
+									"sid": 286737459443488,
+									"parameters": {
+										"key": 85
+									}
+								},
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Recorder",
+									"sid": 919734732779641,
+									"parameters": {
+										"instance-variable": "OUTPUT",
+										"comparison": 1,
+										"value": "\"\""
+									}
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Recorder",
+									"sid": 468282124021125,
+									"parameters": {
+										"instance-variable": "REC"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "copy-text",
+									"objectClass": "Clipboard",
+									"sid": 276594918480123,
+									"parameters": {
+										"text": "Recorder.OUTPUT"
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 422334897437730,
+									"parameters": {
+										"audio-file": "smw_reserve_item_store",
+										"loop": "not-looping",
+										"volume": "0",
+										"stereo-pan": "0",
+										"tag-optional": "\"\""
+									}
+								}
+							],
+							"sid": 964853911164009
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-key-pressed",
+									"objectClass": "Keyboard",
+									"sid": 392696386621037,
+									"parameters": {
+										"key": 69
+									}
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Recorder",
+									"sid": 265735718098068,
+									"parameters": {
+										"instance-variable": "PLAY"
+									},
+									"isInverted": true
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Recorder",
+									"sid": 925972012654608,
+									"parameters": {
+										"instance-variable": "REC"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "go-to-layout",
+									"objectClass": "System",
+									"sid": 961639239812571,
+									"parameters": {
+										"layout": "WorldMap"
+									}
+								}
+							],
+							"sid": 964962364695829
+						},
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "Recorder",
+									"sid": 748776905021672,
+									"parameters": {
+										"text": "\"RECORDER TEST. RECORDING? = \" & Self.REC & \" / ROOM TIME: \" & Self.ROOMTIMER & \" / PLAYING? = \" & Recorder.PLAY & \" / OUTCHECK: \" & Self.OUTPUT & \"\nR TO RECORD / P TO PLAY / T TO RESET STAGE  / U TO COPY OUTPUT TO CLIPBOARD / E TO EXIT\nBUGS: ANIMATIONS AND SOUND DON'T PLAY WHEN REPLAYING\"\n\n"
+									}
+								}
+							],
+							"sid": 310312246642139
+						}
+					]
+				}
+			],
+			"sid": 429384765247602
 		}
 	],
 	"sid": 795943327228075

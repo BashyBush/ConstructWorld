@@ -1,0 +1,60 @@
+{
+	"name": "Recorder",
+	"plugin-id": "Text",
+	"sid": 933594263377114,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [
+		{
+			"name": "OUTPUT",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 630054496078910
+		},
+		{
+			"name": "REC",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 739149665658947
+		},
+		{
+			"name": "ROOMTIMER",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 818027360815154
+		},
+		{
+			"name": "RECSTARTTIMER",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 820949650478386
+		},
+		{
+			"name": "REMEMBERX",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 221457921173115
+		},
+		{
+			"name": "REMEMBERY",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 590706073399090
+		},
+		{
+			"name": "PLAY",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 397896479537338
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": []
+}

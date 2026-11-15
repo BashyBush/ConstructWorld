@@ -20,6 +20,13 @@
 			"sid": 739149665658947
 		},
 		{
+			"name": "PLAY",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 397896479537338
+		},
+		{
 			"name": "ROOMTIMER",
 			"type": "number",
 			"desc": "",
@@ -46,13 +53,6 @@
 			"desc": "",
 			"show": true,
 			"sid": 590706073399090
-		},
-		{
-			"name": "PLAY",
-			"type": "boolean",
-			"desc": "",
-			"show": true,
-			"sid": 397896479537338
 		}
 	],
 	"behaviorTypes": [],

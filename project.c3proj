@@ -256,8 +256,7 @@
 		"subfolders": [
 			{
 				"items": [
-					"Debug_Coords",
-					"Recorder"
+					"Debug_Coords"
 				],
 				"subfolders": [
 					{
@@ -289,6 +288,14 @@
 							}
 						],
 						"name": "Debug Menu"
+					},
+					{
+						"items": [
+							"Recorder",
+							"Recorder_Insert"
+						],
+						"subfolders": [],
+						"name": "Recorder"
 					}
 				],
 				"name": "Debug Related Stuff"

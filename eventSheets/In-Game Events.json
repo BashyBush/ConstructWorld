@@ -35471,6 +35471,11 @@
 											}
 										},
 										{
+											"id": "stop-animation",
+											"objectClass": "Player1",
+											"sid": 678199873138666
+										},
+										{
 											"id": "set-boolean-instvar",
 											"objectClass": "Recorder",
 											"sid": 922274002482676,
@@ -35503,6 +35508,15 @@
 										"instance-variable": "REC"
 									},
 									"isInverted": true
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Recorder",
+									"sid": 193850427203208,
+									"parameters": {
+										"instance-variable": "PLAY"
+									},
+									"isInverted": true
 								}
 							],
 							"actions": [],
@@ -35531,6 +35545,12 @@
 												"instance-variable": "PLAY",
 												"value": "true"
 											}
+										},
+										{
+											"id": "stop-following",
+											"objectClass": "Player1",
+											"sid": 138023071580910,
+											"behaviorType": "Follow"
 										},
 										{
 											"id": "set-enabled",
@@ -35685,7 +35705,7 @@
 								{
 									"id": "copy-text",
 									"objectClass": "Clipboard",
-									"sid": 276594918480123,
+									"sid": 219021600572228,
 									"parameters": {
 										"text": "Recorder.OUTPUT"
 									}
@@ -35711,7 +35731,28 @@
 								{
 									"id": "on-key-pressed",
 									"objectClass": "Keyboard",
-									"sid": 392696386621037,
+									"sid": 328428093626556,
+									"parameters": {
+										"key": 84
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "restart-layout",
+									"objectClass": "System",
+									"sid": 900765755178203
+								}
+							],
+							"sid": 964962364695829
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-key-pressed",
+									"objectClass": "Keyboard",
+									"sid": 947766683954792,
 									"parameters": {
 										"key": 69
 									}
@@ -35719,7 +35760,8 @@
 								{
 									"id": "is-boolean-instance-variable-set",
 									"objectClass": "Recorder",
-									"sid": 265735718098068,
+									"sid": 193216743187982,
+									"disabled": true,
 									"parameters": {
 										"instance-variable": "PLAY"
 									},
@@ -35728,7 +35770,8 @@
 								{
 									"id": "is-boolean-instance-variable-set",
 									"objectClass": "Recorder",
-									"sid": 925972012654608,
+									"sid": 693825048355018,
+									"disabled": true,
 									"parameters": {
 										"instance-variable": "REC"
 									},
@@ -35739,13 +35782,13 @@
 								{
 									"id": "go-to-layout",
 									"objectClass": "System",
-									"sid": 961639239812571,
+									"sid": 483846658303640,
 									"parameters": {
 										"layout": "WorldMap"
 									}
 								}
 							],
-							"sid": 964962364695829
+							"sid": 364443983563617
 						},
 						{
 							"eventType": "block",
@@ -35761,6 +35804,98 @@
 								}
 							],
 							"sid": 310312246642139
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-text-changed",
+									"objectClass": "Recorder_Insert",
+									"sid": 206595099765168
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Recorder",
+									"sid": 418478074910285,
+									"parameters": {
+										"instance-variable": "OUTPUT",
+										"value": "Recorder_Insert.Text"
+									}
+								}
+							],
+							"sid": 568068796842412
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Recorder",
+									"sid": 490669228195384,
+									"parameters": {
+										"instance-variable": "REC"
+									}
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Recorder",
+									"sid": 125790354059525,
+									"parameters": {
+										"instance-variable": "PLAY"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-enabled",
+									"objectClass": "Recorder_Insert",
+									"sid": 860261233687295,
+									"parameters": {
+										"mode": "disabled"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "Recorder_Insert",
+									"sid": 816627355031295,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								}
+							],
+							"sid": 722134626865713,
+							"isOrBlock": true
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 824813832310367
+								}
+							],
+							"actions": [
+								{
+									"id": "set-enabled",
+									"objectClass": "Recorder_Insert",
+									"sid": 656050020199305,
+									"parameters": {
+										"mode": "enabled"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "Recorder_Insert",
+									"sid": 752476774166085,
+									"parameters": {
+										"visibility": "visible"
+									}
+								}
+							],
+							"sid": 315804119260883
 						}
 					]
 				}

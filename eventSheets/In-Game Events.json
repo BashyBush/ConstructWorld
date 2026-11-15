@@ -35131,6 +35131,15 @@
 							],
 							"actions": [
 								{
+									"id": "set-instvar-value",
+									"objectClass": "Player1",
+									"sid": 464116916515885,
+									"parameters": {
+										"instance-variable": "HP",
+										"value": "1"
+									}
+								},
+								{
 									"id": "follow-self",
 									"objectClass": "Player1",
 									"sid": 689800323092299,
@@ -35483,6 +35492,15 @@
 												"instance-variable": "REC",
 												"value": "false"
 											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "Player1",
+											"sid": 731211379420026,
+											"parameters": {
+												"instance-variable": "HP",
+												"value": "1"
+											}
 										}
 									],
 									"sid": 870915575908853
@@ -35822,6 +35840,18 @@
 									"parameters": {
 										"instance-variable": "OUTPUT",
 										"value": "Recorder_Insert.Text"
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 743836754788969,
+									"parameters": {
+										"audio-file": "map-menu",
+										"loop": "not-looping",
+										"volume": "0",
+										"stereo-pan": "0",
+										"tag-optional": "\"\""
 									}
 								}
 							],

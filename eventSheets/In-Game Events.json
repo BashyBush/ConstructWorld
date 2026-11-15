@@ -31414,6 +31414,41 @@
 												{
 													"id": "compare-instance-variable",
 													"objectClass": "Player1",
+													"sid": 328660094410484,
+													"parameters": {
+														"instance-variable": "HP",
+														"comparison": 0,
+														"value": "1"
+													}
+												},
+												{
+													"id": "is-boolean-instance-variable-set",
+													"objectClass": "Player1",
+													"sid": 653854825647201,
+													"parameters": {
+														"instance-variable": "StarState"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "add-to-instvar",
+													"objectClass": "Player1",
+													"sid": 613766997143237,
+													"parameters": {
+														"instance-variable": "StarTimer",
+														"value": "60"
+													}
+												}
+											],
+											"sid": 385826310072801
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "Player1",
 													"sid": 806118228080434,
 													"parameters": {
 														"instance-variable": "HP",

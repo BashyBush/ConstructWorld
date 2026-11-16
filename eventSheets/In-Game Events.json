@@ -35815,9 +35815,9 @@
 								{
 									"id": "set-text",
 									"objectClass": "Recorder",
-									"sid": 748776905021672,
+									"sid": 172929110697757,
 									"parameters": {
-										"text": "\"RECORDER TEST. RECORDING? = \" & Self.REC & \" / ROOM TIME: \" & Self.ROOMTIMER & \" / PLAYING? = \" & Recorder.PLAY & \" / OUTCHECK: \" & Self.OUTPUT & \"\nR TO RECORD / P TO PLAY / T TO RESET STAGE  / U TO COPY OUTPUT TO CLIPBOARD / E TO EXIT\nBUGS: ANIMATIONS AND SOUND DON'T PLAY WHEN REPLAYING\"\n\n"
+										"text": "\"RECORDER TEST. RECORDING? = \" & Self.REC & \" / ROOM TIME: \" & Self.ROOMTIMER & \" / PLAYING? = \" & Recorder.PLAY & \" / OUTCHECK: \" & Self.OUTPUT & \"\nR TO RECORD / P TO PLAY / T TO RESET STAGE  / U TO COPY OUTPUT TO CLIPBOARD / E TO EXIT\nVERY UNFINISHED AT THE MOMENT. EXPECT SOME PROBLEMS\"\n\n"
 									}
 								}
 							],

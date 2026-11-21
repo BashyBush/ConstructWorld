@@ -149,7 +149,7 @@
 			"eventType": "variable",
 			"name": "CurrentHP",
 			"type": "number",
-			"initialValue": "1",
+			"initialValue": "3",
 			"comment": "dont set anywhere under 1 or else shit will break lmao",
 			"isStatic": false,
 			"isConstant": false,
@@ -4878,7 +4878,18 @@
 												{
 													"id": "compare-instance-variable",
 													"objectClass": "Player1",
+													"sid": 131413674797397,
+													"parameters": {
+														"instance-variable": "HP",
+														"comparison": 5,
+														"value": "2"
+													}
+												},
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "Player1",
 													"sid": 165438626432232,
+													"disabled": true,
 													"parameters": {
 														"instance-variable": "HP",
 														"comparison": 0,
@@ -4924,7 +4935,8 @@
 													}
 												}
 											],
-											"sid": 851048249773229
+											"sid": 851048249773229,
+											"disabled": true
 										}
 									]
 								},
@@ -4998,7 +5010,18 @@
 												{
 													"id": "compare-instance-variable",
 													"objectClass": "Player1",
+													"sid": 169998920736917,
+													"parameters": {
+														"instance-variable": "HP",
+														"comparison": 5,
+														"value": "2"
+													}
+												},
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "Player1",
 													"sid": 882759537998169,
+													"disabled": true,
 													"parameters": {
 														"instance-variable": "HP",
 														"comparison": 0,
@@ -5044,7 +5067,8 @@
 													}
 												}
 											],
-											"sid": 193770548209715
+											"sid": 193770548209715,
+											"disabled": true
 										}
 									]
 								},
@@ -5127,7 +5151,18 @@
 												{
 													"id": "compare-instance-variable",
 													"objectClass": "Player1",
+													"sid": 593149299383780,
+													"parameters": {
+														"instance-variable": "HP",
+														"comparison": 5,
+														"value": "2"
+													}
+												},
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "Player1",
 													"sid": 929343169928638,
+													"disabled": true,
 													"parameters": {
 														"instance-variable": "HP",
 														"comparison": 0,
@@ -5173,7 +5208,8 @@
 													}
 												}
 											],
-											"sid": 473777645721527
+											"sid": 473777645721527,
+											"disabled": true
 										}
 									]
 								},
@@ -5256,7 +5292,18 @@
 												{
 													"id": "compare-instance-variable",
 													"objectClass": "Player1",
+													"sid": 256721925989485,
+													"parameters": {
+														"instance-variable": "HP",
+														"comparison": 5,
+														"value": "2"
+													}
+												},
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "Player1",
 													"sid": 202292897015191,
+													"disabled": true,
 													"parameters": {
 														"instance-variable": "HP",
 														"comparison": 0,
@@ -5302,7 +5349,8 @@
 													}
 												}
 											],
-											"sid": 175801480064539
+											"sid": 175801480064539,
+											"disabled": true
 										}
 									]
 								}
@@ -14878,7 +14926,18 @@
 																{
 																	"id": "compare-instance-variable",
 																	"objectClass": "Player1",
+																	"sid": 840869391455246,
+																	"parameters": {
+																		"instance-variable": "HP",
+																		"comparison": 5,
+																		"value": "2"
+																	}
+																},
+																{
+																	"id": "compare-instance-variable",
+																	"objectClass": "Player1",
 																	"sid": 748396845226390,
+																	"disabled": true,
 																	"parameters": {
 																		"instance-variable": "HP",
 																		"comparison": 0,
@@ -14924,7 +14983,8 @@
 																	}
 																}
 															],
-															"sid": 752186710621364
+															"sid": 752186710621364,
+															"disabled": true
 														}
 													]
 												},
@@ -14981,7 +15041,18 @@
 																{
 																	"id": "compare-instance-variable",
 																	"objectClass": "Player1",
-																	"sid": 446962632093943,
+																	"sid": 356525751730963,
+																	"parameters": {
+																		"instance-variable": "HP",
+																		"comparison": 5,
+																		"value": "2"
+																	}
+																},
+																{
+																	"id": "compare-instance-variable",
+																	"objectClass": "Player1",
+																	"sid": 939938337179447,
+																	"disabled": true,
 																	"parameters": {
 																		"instance-variable": "HP",
 																		"comparison": 0,
@@ -15027,7 +15098,8 @@
 																	}
 																}
 															],
-															"sid": 913961680079431
+															"sid": 913961680079431,
+															"disabled": true
 														}
 													]
 												}
@@ -15165,7 +15237,18 @@
 																		{
 																			"id": "compare-instance-variable",
 																			"objectClass": "Player1",
+																			"sid": 656274848449707,
+																			"parameters": {
+																				"instance-variable": "HP",
+																				"comparison": 5,
+																				"value": "2"
+																			}
+																		},
+																		{
+																			"id": "compare-instance-variable",
+																			"objectClass": "Player1",
 																			"sid": 253705206812697,
+																			"disabled": true,
 																			"parameters": {
 																				"instance-variable": "HP",
 																				"comparison": 0,
@@ -15211,7 +15294,8 @@
 																			}
 																		}
 																	],
-																	"sid": 620404024046152
+																	"sid": 620404024046152,
+																	"disabled": true
 																}
 															]
 														},
@@ -15485,7 +15569,18 @@
 																		{
 																			"id": "compare-instance-variable",
 																			"objectClass": "Player1",
+																			"sid": 608673652749978,
+																			"parameters": {
+																				"instance-variable": "HP",
+																				"comparison": 5,
+																				"value": "2"
+																			}
+																		},
+																		{
+																			"id": "compare-instance-variable",
+																			"objectClass": "Player1",
 																			"sid": 809412169537938,
+																			"disabled": true,
 																			"parameters": {
 																				"instance-variable": "HP",
 																				"comparison": 0,
@@ -15531,7 +15626,8 @@
 																			}
 																		}
 																	],
-																	"sid": 804317182550029
+																	"sid": 804317182550029,
+																	"disabled": true
 																}
 															]
 														},
@@ -15588,7 +15684,18 @@
 																		{
 																			"id": "compare-instance-variable",
 																			"objectClass": "Player1",
-																			"sid": 191940596149028,
+																			"sid": 197607045103452,
+																			"parameters": {
+																				"instance-variable": "HP",
+																				"comparison": 5,
+																				"value": "2"
+																			}
+																		},
+																		{
+																			"id": "compare-instance-variable",
+																			"objectClass": "Player1",
+																			"sid": 475123079972802,
+																			"disabled": true,
 																			"parameters": {
 																				"instance-variable": "HP",
 																				"comparison": 0,
@@ -15634,7 +15741,8 @@
 																			}
 																		}
 																	],
-																	"sid": 647309853079845
+																	"sid": 647309853079845,
+																	"disabled": true
 																}
 															]
 														}
@@ -15755,7 +15863,18 @@
 																{
 																	"id": "compare-instance-variable",
 																	"objectClass": "Player1",
+																	"sid": 855551168810097,
+																	"parameters": {
+																		"instance-variable": "HP",
+																		"comparison": 5,
+																		"value": "2"
+																	}
+																},
+																{
+																	"id": "compare-instance-variable",
+																	"objectClass": "Player1",
 																	"sid": 492116744741197,
+																	"disabled": true,
 																	"parameters": {
 																		"instance-variable": "HP",
 																		"comparison": 0,
@@ -15801,7 +15920,8 @@
 																	}
 																}
 															],
-															"sid": 198568538690011
+															"sid": 198568538690011,
+															"disabled": true
 														}
 													]
 												},
@@ -15858,7 +15978,18 @@
 																{
 																	"id": "compare-instance-variable",
 																	"objectClass": "Player1",
-																	"sid": 831289192058514,
+																	"sid": 821967002130488,
+																	"parameters": {
+																		"instance-variable": "HP",
+																		"comparison": 5,
+																		"value": "2"
+																	}
+																},
+																{
+																	"id": "compare-instance-variable",
+																	"objectClass": "Player1",
+																	"sid": 793944004459693,
+																	"disabled": true,
 																	"parameters": {
 																		"instance-variable": "HP",
 																		"comparison": 0,
@@ -15904,7 +16035,8 @@
 																	}
 																}
 															],
-															"sid": 804128078708674
+															"sid": 804128078708674,
+															"disabled": true
 														}
 													]
 												}
@@ -16074,7 +16206,18 @@
 																				{
 																					"id": "compare-instance-variable",
 																					"objectClass": "Player1",
+																					"sid": 680203494438987,
+																					"parameters": {
+																						"instance-variable": "HP",
+																						"comparison": 5,
+																						"value": "2"
+																					}
+																				},
+																				{
+																					"id": "compare-instance-variable",
+																					"objectClass": "Player1",
 																					"sid": 759154724346407,
+																					"disabled": true,
 																					"parameters": {
 																						"instance-variable": "HP",
 																						"comparison": 0,
@@ -16120,7 +16263,8 @@
 																					}
 																				}
 																			],
-																			"sid": 869245373156177
+																			"sid": 869245373156177,
+																			"disabled": true
 																		},
 																		{
 																			"eventType": "block",
@@ -16204,7 +16348,18 @@
 																				{
 																					"id": "compare-instance-variable",
 																					"objectClass": "Player1",
-																					"sid": 968208337249642,
+																					"sid": 782325770305303,
+																					"parameters": {
+																						"instance-variable": "HP",
+																						"comparison": 5,
+																						"value": "2"
+																					}
+																				},
+																				{
+																					"id": "compare-instance-variable",
+																					"objectClass": "Player1",
+																					"sid": 350136210216332,
+																					"disabled": true,
 																					"parameters": {
 																						"instance-variable": "HP",
 																						"comparison": 0,
@@ -16250,7 +16405,8 @@
 																					}
 																				}
 																			],
-																			"sid": 395875766384980
+																			"sid": 395875766384980,
+																			"disabled": true
 																		}
 																	]
 																}
@@ -16413,7 +16569,18 @@
 																				{
 																					"id": "compare-instance-variable",
 																					"objectClass": "Player1",
-																					"sid": 198805053851698,
+																					"sid": 998908219236987,
+																					"parameters": {
+																						"instance-variable": "HP",
+																						"comparison": 5,
+																						"value": "2"
+																					}
+																				},
+																				{
+																					"id": "compare-instance-variable",
+																					"objectClass": "Player1",
+																					"sid": 197317873084985,
+																					"disabled": true,
 																					"parameters": {
 																						"instance-variable": "HP",
 																						"comparison": 0,
@@ -16459,7 +16626,8 @@
 																					}
 																				}
 																			],
-																			"sid": 567176902647482
+																			"sid": 567176902647482,
+																			"disabled": true
 																		},
 																		{
 																			"eventType": "block",
@@ -16547,7 +16715,18 @@
 																				{
 																					"id": "compare-instance-variable",
 																					"objectClass": "Player1",
-																					"sid": 471077807853446,
+																					"sid": 905091259111428,
+																					"parameters": {
+																						"instance-variable": "HP",
+																						"comparison": 5,
+																						"value": "2"
+																					}
+																				},
+																				{
+																					"id": "compare-instance-variable",
+																					"objectClass": "Player1",
+																					"sid": 134692717504342,
+																					"disabled": true,
 																					"parameters": {
 																						"instance-variable": "HP",
 																						"comparison": 0,
@@ -16593,7 +16772,8 @@
 																					}
 																				}
 																			],
-																			"sid": 145020213124359
+																			"sid": 145020213124359,
+																			"disabled": true
 																		}
 																	]
 																}
@@ -16650,7 +16830,17 @@
 										{
 											"id": "set-animation",
 											"objectClass": "Player1",
-											"sid": 974402255387656,
+											"sid": 307790120985446,
+											"parameters": {
+												"animation": "\"Big_Shoot\"",
+												"from": "beginning"
+											}
+										},
+										{
+											"id": "set-animation",
+											"objectClass": "Player1",
+											"sid": 512700765501144,
+											"disabled": true,
 											"parameters": {
 												"animation": "\"Fire_Shoot\"",
 												"from": "beginning"
@@ -16766,7 +16956,18 @@
 												{
 													"id": "compare-instance-variable",
 													"objectClass": "Player1",
+													"sid": 874267016736336,
+													"parameters": {
+														"instance-variable": "HP",
+														"comparison": 5,
+														"value": "2"
+													}
+												},
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "Player1",
 													"sid": 619809743475180,
+													"disabled": true,
 													"parameters": {
 														"instance-variable": "HP",
 														"comparison": 0,
@@ -16853,6 +17054,7 @@
 												}
 											],
 											"sid": 729578917274830,
+											"disabled": true,
 											"children": [
 												{
 													"eventType": "block",
@@ -16890,6 +17092,7 @@
 														}
 													],
 													"sid": 356260314244492,
+													"disabled": true,
 													"isOrBlock": true
 												}
 											]
@@ -17347,7 +17550,18 @@
 																		{
 																			"id": "compare-instance-variable",
 																			"objectClass": "Player1",
+																			"sid": 475921310997623,
+																			"parameters": {
+																				"instance-variable": "HP",
+																				"comparison": 5,
+																				"value": "2"
+																			}
+																		},
+																		{
+																			"id": "compare-instance-variable",
+																			"objectClass": "Player1",
 																			"sid": 222906880649386,
+																			"disabled": true,
 																			"parameters": {
 																				"instance-variable": "HP",
 																				"comparison": 0,
@@ -17393,7 +17607,8 @@
 																			}
 																		}
 																	],
-																	"sid": 512737217356369
+																	"sid": 512737217356369,
+																	"disabled": true
 																}
 															]
 														},
@@ -17450,7 +17665,18 @@
 																		{
 																			"id": "compare-instance-variable",
 																			"objectClass": "Player1",
+																			"sid": 365141206587906,
+																			"parameters": {
+																				"instance-variable": "HP",
+																				"comparison": 5,
+																				"value": "2"
+																			}
+																		},
+																		{
+																			"id": "compare-instance-variable",
+																			"objectClass": "Player1",
 																			"sid": 825679694575640,
+																			"disabled": true,
 																			"parameters": {
 																				"instance-variable": "HP",
 																				"comparison": 0,
@@ -17496,7 +17722,8 @@
 																			}
 																		}
 																	],
-																	"sid": 733484287825112
+																	"sid": 733484287825112,
+																	"disabled": true
 																}
 															]
 														}
@@ -17867,241 +18094,6 @@
 												}
 											],
 											"sid": 581162773823363
-										},
-										{
-											"eventType": "block",
-											"conditions": [
-												{
-													"id": "key-is-down",
-													"objectClass": "Keyboard",
-													"sid": 676854936921899,
-													"parameters": {
-														"key": 40
-													}
-												},
-												{
-													"id": "is-on-floor",
-													"objectClass": "Player1",
-													"sid": 791592431372721,
-													"behaviorType": "Platform"
-												}
-											],
-											"actions": [
-												{
-													"id": "set-instvar-value",
-													"objectClass": "Player1",
-													"sid": 175411351824149,
-													"parameters": {
-														"instance-variable": "AnimationState",
-														"value": "\"Duck\""
-													}
-												}
-											],
-											"sid": 244826637719541,
-											"children": [
-												{
-													"eventType": "block",
-													"conditions": [
-														{
-															"id": "is-boolean-instance-variable-set",
-															"objectClass": "Player1",
-															"sid": 475378428237371,
-															"parameters": {
-																"instance-variable": "HoldingItem"
-															},
-															"isInverted": true
-														}
-													],
-													"actions": [],
-													"sid": 113647405524965,
-													"children": [
-														{
-															"eventType": "block",
-															"conditions": [
-																{
-																	"id": "compare-instance-variable",
-																	"objectClass": "Player1",
-																	"sid": 789068668594418,
-																	"parameters": {
-																		"instance-variable": "HP",
-																		"comparison": 0,
-																		"value": "1"
-																	}
-																}
-															],
-															"actions": [
-																{
-																	"id": "set-animation",
-																	"objectClass": "Player1",
-																	"sid": 379578245760148,
-																	"parameters": {
-																		"animation": "\"Small_Duck\"",
-																		"from": "beginning"
-																	}
-																}
-															],
-															"sid": 360850666713695
-														},
-														{
-															"eventType": "block",
-															"conditions": [
-																{
-																	"id": "compare-instance-variable",
-																	"objectClass": "Player1",
-																	"sid": 511265366360903,
-																	"parameters": {
-																		"instance-variable": "HP",
-																		"comparison": 0,
-																		"value": "2"
-																	}
-																}
-															],
-															"actions": [
-																{
-																	"id": "set-animation",
-																	"objectClass": "Player1",
-																	"sid": 523632493640676,
-																	"parameters": {
-																		"animation": "\"Big_Duck\"",
-																		"from": "beginning"
-																	}
-																}
-															],
-															"sid": 775133868786092
-														},
-														{
-															"eventType": "block",
-															"conditions": [
-																{
-																	"id": "compare-instance-variable",
-																	"objectClass": "Player1",
-																	"sid": 385585593101855,
-																	"parameters": {
-																		"instance-variable": "HP",
-																		"comparison": 5,
-																		"value": "3"
-																	}
-																}
-															],
-															"actions": [
-																{
-																	"id": "set-animation",
-																	"objectClass": "Player1",
-																	"sid": 740466289794384,
-																	"parameters": {
-																		"animation": "\"Fire_Duck\"",
-																		"from": "beginning"
-																	}
-																}
-															],
-															"sid": 177633692695492
-														}
-													]
-												},
-												{
-													"eventType": "block",
-													"conditions": [
-														{
-															"id": "else",
-															"objectClass": "System",
-															"sid": 714195025053315
-														},
-														{
-															"id": "is-boolean-instance-variable-set",
-															"objectClass": "Player1",
-															"sid": 956216880819981,
-															"parameters": {
-																"instance-variable": "HoldingItem"
-															}
-														}
-													],
-													"actions": [],
-													"sid": 672374756603590,
-													"children": [
-														{
-															"eventType": "block",
-															"conditions": [
-																{
-																	"id": "compare-instance-variable",
-																	"objectClass": "Player1",
-																	"sid": 967063580128464,
-																	"parameters": {
-																		"instance-variable": "HP",
-																		"comparison": 0,
-																		"value": "1"
-																	}
-																}
-															],
-															"actions": [
-																{
-																	"id": "set-animation",
-																	"objectClass": "Player1",
-																	"sid": 885127820532059,
-																	"parameters": {
-																		"animation": "\"Small_DuckP\"",
-																		"from": "beginning"
-																	}
-																}
-															],
-															"sid": 947735049661898
-														},
-														{
-															"eventType": "block",
-															"conditions": [
-																{
-																	"id": "compare-instance-variable",
-																	"objectClass": "Player1",
-																	"sid": 156451400064442,
-																	"parameters": {
-																		"instance-variable": "HP",
-																		"comparison": 0,
-																		"value": "2"
-																	}
-																}
-															],
-															"actions": [
-																{
-																	"id": "set-animation",
-																	"objectClass": "Player1",
-																	"sid": 419920637409329,
-																	"parameters": {
-																		"animation": "\"Big_DuckP\"",
-																		"from": "beginning"
-																	}
-																}
-															],
-															"sid": 789393491156407
-														},
-														{
-															"eventType": "block",
-															"conditions": [
-																{
-																	"id": "compare-instance-variable",
-																	"objectClass": "Player1",
-																	"sid": 986327789392865,
-																	"parameters": {
-																		"instance-variable": "HP",
-																		"comparison": 5,
-																		"value": "3"
-																	}
-																}
-															],
-															"actions": [
-																{
-																	"id": "set-animation",
-																	"objectClass": "Player1",
-																	"sid": 715761517142586,
-																	"parameters": {
-																		"animation": "\"Fire_DuckP\"",
-																		"from": "beginning"
-																	}
-																}
-															],
-															"sid": 317260319932878
-														}
-													]
-												}
-											]
 										}
 									]
 								},
@@ -19058,7 +19050,18 @@
 																				{
 																					"id": "compare-instance-variable",
 																					"objectClass": "Player1",
+																					"sid": 748805324790867,
+																					"parameters": {
+																						"instance-variable": "HP",
+																						"comparison": 5,
+																						"value": "2"
+																					}
+																				},
+																				{
+																					"id": "compare-instance-variable",
+																					"objectClass": "Player1",
 																					"sid": 335406619604420,
+																					"disabled": true,
 																					"parameters": {
 																						"instance-variable": "HP",
 																						"comparison": 0,
@@ -19104,7 +19107,8 @@
 																					}
 																				}
 																			],
-																			"sid": 857640833271884
+																			"sid": 857640833271884,
+																			"disabled": true
 																		}
 																	]
 																},
@@ -19161,7 +19165,18 @@
 																				{
 																					"id": "compare-instance-variable",
 																					"objectClass": "Player1",
+																					"sid": 116123102110326,
+																					"parameters": {
+																						"instance-variable": "HP",
+																						"comparison": 5,
+																						"value": "2"
+																					}
+																				},
+																				{
+																					"id": "compare-instance-variable",
+																					"objectClass": "Player1",
 																					"sid": 791880800223741,
+																					"disabled": true,
 																					"parameters": {
 																						"instance-variable": "HP",
 																						"comparison": 0,
@@ -19207,7 +19222,8 @@
 																					}
 																				}
 																			],
-																			"sid": 151948815906958
+																			"sid": 151948815906958,
+																			"disabled": true
 																		}
 																	]
 																}
@@ -19266,7 +19282,18 @@
 																		{
 																			"id": "compare-instance-variable",
 																			"objectClass": "Player1",
+																			"sid": 765330110690170,
+																			"parameters": {
+																				"instance-variable": "HP",
+																				"comparison": 5,
+																				"value": "2"
+																			}
+																		},
+																		{
+																			"id": "compare-instance-variable",
+																			"objectClass": "Player1",
 																			"sid": 164734525408363,
+																			"disabled": true,
 																			"parameters": {
 																				"instance-variable": "HP",
 																				"comparison": 0,
@@ -19312,7 +19339,8 @@
 																			}
 																		}
 																	],
-																	"sid": 555959310778281
+																	"sid": 555959310778281,
+																	"disabled": true
 																}
 															]
 														}
@@ -19464,7 +19492,18 @@
 																		{
 																			"id": "compare-instance-variable",
 																			"objectClass": "Player1",
-																			"sid": 888135256926324,
+																			"sid": 627760858471731,
+																			"parameters": {
+																				"instance-variable": "HP",
+																				"comparison": 5,
+																				"value": "2"
+																			}
+																		},
+																		{
+																			"id": "compare-instance-variable",
+																			"objectClass": "Player1",
+																			"sid": 144991413005169,
+																			"disabled": true,
 																			"parameters": {
 																				"instance-variable": "HP",
 																				"comparison": 0,
@@ -19553,6 +19592,7 @@
 																		}
 																	],
 																	"sid": 780806890996946,
+																	"disabled": true,
 																	"children": [
 																		{
 																			"eventType": "block",
@@ -19592,7 +19632,8 @@
 																					}
 																				}
 																			],
-																			"sid": 590825732774669
+																			"sid": 590825732774669,
+																			"disabled": true
 																		}
 																	]
 																}
@@ -19651,7 +19692,18 @@
 																		{
 																			"id": "compare-instance-variable",
 																			"objectClass": "Player1",
+																			"sid": 374753224989063,
+																			"parameters": {
+																				"instance-variable": "HP",
+																				"comparison": 5,
+																				"value": "2"
+																			}
+																		},
+																		{
+																			"id": "compare-instance-variable",
+																			"objectClass": "Player1",
 																			"sid": 566937543342106,
+																			"disabled": true,
 																			"parameters": {
 																				"instance-variable": "HP",
 																				"comparison": 0,
@@ -19697,7 +19749,8 @@
 																			}
 																		}
 																	],
-																	"sid": 290795380496031
+																	"sid": 290795380496031,
+																	"disabled": true
 																}
 															]
 														}
@@ -19797,7 +19850,18 @@
 																{
 																	"id": "compare-instance-variable",
 																	"objectClass": "Player1",
+																	"sid": 679307820341862,
+																	"parameters": {
+																		"instance-variable": "HP",
+																		"comparison": 5,
+																		"value": "2"
+																	}
+																},
+																{
+																	"id": "compare-instance-variable",
+																	"objectClass": "Player1",
 																	"sid": 189912479528427,
+																	"disabled": true,
 																	"parameters": {
 																		"instance-variable": "HP",
 																		"comparison": 0,
@@ -19843,7 +19907,8 @@
 																	}
 																}
 															],
-															"sid": 141909051535464
+															"sid": 141909051535464,
+															"disabled": true
 														}
 													]
 												},
@@ -19900,7 +19965,18 @@
 																{
 																	"id": "compare-instance-variable",
 																	"objectClass": "Player1",
+																	"sid": 607699975973577,
+																	"parameters": {
+																		"instance-variable": "HP",
+																		"comparison": 5,
+																		"value": "2"
+																	}
+																},
+																{
+																	"id": "compare-instance-variable",
+																	"objectClass": "Player1",
 																	"sid": 164363354538499,
+																	"disabled": true,
 																	"parameters": {
 																		"instance-variable": "HP",
 																		"comparison": 0,
@@ -19946,7 +20022,8 @@
 																	}
 																}
 															],
-															"sid": 722730634478694
+															"sid": 722730634478694,
+															"disabled": true
 														}
 													]
 												}
@@ -20022,7 +20099,18 @@
 												{
 													"id": "compare-instance-variable",
 													"objectClass": "Player1",
+													"sid": 372984522981181,
+													"parameters": {
+														"instance-variable": "HP",
+														"comparison": 5,
+														"value": "2"
+													}
+												},
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "Player1",
 													"sid": 970320416232209,
+													"disabled": true,
 													"parameters": {
 														"instance-variable": "HP",
 														"comparison": 0,
@@ -20084,7 +20172,8 @@
 													}
 												}
 											],
-											"sid": 903613784825631
+											"sid": 903613784825631,
+											"disabled": true
 										}
 									]
 								},
@@ -20272,7 +20361,18 @@
 																		{
 																			"id": "compare-instance-variable",
 																			"objectClass": "Player1",
+																			"sid": 660046030154960,
+																			"parameters": {
+																				"instance-variable": "HP",
+																				"comparison": 5,
+																				"value": "2"
+																			}
+																		},
+																		{
+																			"id": "compare-instance-variable",
+																			"objectClass": "Player1",
 																			"sid": 349570096281820,
+																			"disabled": true,
 																			"parameters": {
 																				"instance-variable": "HP",
 																				"comparison": 0,
@@ -20348,6 +20448,7 @@
 																		}
 																	],
 																	"sid": 844149320242385,
+																	"disabled": true,
 																	"children": [
 																		{
 																			"eventType": "block",
@@ -20374,7 +20475,8 @@
 																					}
 																				}
 																			],
-																			"sid": 693966973633890
+																			"sid": 693966973633890,
+																			"disabled": true
 																		}
 																	]
 																}
@@ -20433,7 +20535,18 @@
 																		{
 																			"id": "compare-instance-variable",
 																			"objectClass": "Player1",
+																			"sid": 976841945398128,
+																			"parameters": {
+																				"instance-variable": "HP",
+																				"comparison": 5,
+																				"value": "2"
+																			}
+																		},
+																		{
+																			"id": "compare-instance-variable",
+																			"objectClass": "Player1",
 																			"sid": 220816470700547,
+																			"disabled": true,
 																			"parameters": {
 																				"instance-variable": "HP",
 																				"comparison": 0,
@@ -20479,7 +20592,8 @@
 																			}
 																		}
 																	],
-																	"sid": 692887055602576
+																	"sid": 692887055602576,
+																	"disabled": true
 																}
 															]
 														}
@@ -21334,6 +21448,7 @@
 									"id": "compare-instance-variable",
 									"objectClass": "Player1",
 									"sid": 617252745272974,
+									"disabled": true,
 									"parameters": {
 										"instance-variable": "HP",
 										"comparison": 3,
@@ -21537,6 +21652,7 @@
 							],
 							"actions": [],
 							"sid": 306389594893879,
+							"disabled": true,
 							"children": [
 								{
 									"eventType": "block",
@@ -21721,7 +21837,8 @@
 											}
 										}
 									],
-									"sid": 204381669987048
+									"sid": 204381669987048,
+									"disabled": true
 								},
 								{
 									"eventType": "block",
@@ -21902,7 +22019,8 @@
 											}
 										}
 									],
-									"sid": 907803706605147
+									"sid": 907803706605147,
+									"disabled": true
 								}
 							]
 						}

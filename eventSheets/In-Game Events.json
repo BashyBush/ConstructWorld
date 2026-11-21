@@ -26489,7 +26489,18 @@
 														{
 															"id": "compare-instance-variable",
 															"objectClass": "Player1",
+															"sid": 351413696207600,
+															"parameters": {
+																"instance-variable": "HP",
+																"comparison": 5,
+																"value": "2"
+															}
+														},
+														{
+															"id": "compare-instance-variable",
+															"objectClass": "Player1",
 															"sid": 951955423533240,
+															"disabled": true,
 															"parameters": {
 																"instance-variable": "HP",
 																"comparison": 0,
@@ -26535,7 +26546,8 @@
 															}
 														}
 													],
-													"sid": 896673372844120
+													"sid": 896673372844120,
+													"disabled": true
 												}
 											]
 										},

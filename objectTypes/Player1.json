@@ -92,8 +92,8 @@
 		{
 			"name": "HoldingItem",
 			"type": "boolean",
-			"desc": "Used to set correct animations",
-			"show": true,
+			"desc": "Used to set correct animations when holding items",
+			"show": false,
 			"sid": 786553420256848
 		},
 		{
@@ -2421,6 +2421,43 @@
 						"repeatCount": 1,
 						"repeatTo": 0,
 						"speed": 10
+					},
+					{
+						"frames": [
+							{
+								"width": 16,
+								"height": 32,
+								"originX": 0.5,
+								"originY": 0,
+								"originalSource": "",
+								"exportFormat": "lossless",
+								"exportQuality": 0.8,
+								"fileType": "image/png",
+								"imageSpriteId": 8225127,
+								"collisionPoly": {
+									"points": [
+										0.9375,
+										1,
+										0.0625,
+										1,
+										0.0625,
+										0.125,
+										0.9375,
+										0.125
+									]
+								},
+								"useCollisionPoly": true,
+								"duration": 1,
+								"tag": ""
+							}
+						],
+						"sid": 147405489521175,
+						"name": "Big_Shoot",
+						"isLooping": false,
+						"isPingPong": false,
+						"repeatCount": 1,
+						"repeatTo": 0,
+						"speed": 5
 					},
 					{
 						"frames": [

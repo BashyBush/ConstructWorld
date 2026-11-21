@@ -12050,6 +12050,7 @@
 															"id": "create-object",
 															"objectClass": "System",
 															"sid": 908167873466567,
+															"disabled": true,
 															"parameters": {
 																"object-to-create": "Player_FireBall",
 																"layer": "\"Main Objects\"",
@@ -12057,60 +12058,6 @@
 																"y": "Player1.Y+32",
 																"create-hierarchy": false,
 																"template-name": "\"\""
-															}
-														},
-														{
-															"id": "set-max-speed",
-															"objectClass": "Player_FireBall",
-															"sid": 285613750731746,
-															"behaviorType": "Platform",
-															"parameters": {
-																"max-speed": "350"
-															}
-														},
-														{
-															"id": "set-acceleration",
-															"objectClass": "Player_FireBall",
-															"sid": 658194988696313,
-															"behaviorType": "Platform",
-															"parameters": {
-																"acceleration": "10000"
-															}
-														},
-														{
-															"id": "set-deceleration",
-															"objectClass": "Player_FireBall",
-															"sid": 466162074480128,
-															"behaviorType": "Platform",
-															"parameters": {
-																"deceleration": "10000"
-															}
-														},
-														{
-															"id": "set-jump-strength",
-															"objectClass": "Player_FireBall",
-															"sid": 221128311552361,
-															"behaviorType": "Platform",
-															"parameters": {
-																"jump-strength": "250"
-															}
-														},
-														{
-															"id": "set-default-controls",
-															"objectClass": "Player_FireBall",
-															"sid": 830290163094806,
-															"behaviorType": "Platform",
-															"parameters": {
-																"default-controls": false
-															}
-														},
-														{
-															"id": "set-size",
-															"objectClass": "Player_FireBall",
-															"sid": 170819969047072,
-															"parameters": {
-																"width": "16",
-																"height": "16"
 															}
 														},
 														{
@@ -12139,6 +12086,19 @@
 															],
 															"actions": [
 																{
+																	"id": "create-object",
+																	"objectClass": "System",
+																	"sid": 111936385017412,
+																	"parameters": {
+																		"object-to-create": "Player_FireBall",
+																		"layer": "\"Main Objects\"",
+																		"x": "Player1.X-16",
+																		"y": "Player1.Y+28",
+																		"create-hierarchy": false,
+																		"template-name": "\"\""
+																	}
+																},
+																{
 																	"id": "set-instvar-value",
 																	"objectClass": "Player_FireBall",
 																	"sid": 267752055243606,
@@ -12161,6 +12121,19 @@
 																}
 															],
 															"actions": [
+																{
+																	"id": "create-object",
+																	"objectClass": "System",
+																	"sid": 994961768108184,
+																	"parameters": {
+																		"object-to-create": "Player_FireBall",
+																		"layer": "\"Main Objects\"",
+																		"x": "Player1.X+16",
+																		"y": "Player1.Y+28",
+																		"create-hierarchy": false,
+																		"template-name": "\"\""
+																	}
+																},
 																{
 																	"id": "set-instvar-value",
 																	"objectClass": "Player_FireBall",
@@ -24739,6 +24712,1414 @@
 		{
 			"eventType": "group",
 			"disabled": false,
+			"title": "Course Clear Stuff",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "CC_OrbVersion",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-signal",
+									"objectClass": "System",
+									"sid": 115983389102961,
+									"parameters": {
+										"tag": "\"StartCourseClearORB\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Camera",
+									"sid": 673217040439047,
+									"parameters": {
+										"instance-variable": "StartCCFade",
+										"value": "true"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Camera",
+									"sid": 460136371289683,
+									"parameters": {
+										"instance-variable": "CCFadeSetting",
+										"value": "\"In\""
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "HUD_CourseClear",
+									"sid": 251116693493951,
+									"parameters": {
+										"instance-variable": "TimeBonus",
+										"value": "TimerSystem.TimeLimiter*50"
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "FONT_CourseClear",
+									"sid": 563879891742000,
+									"parameters": {
+										"text": "TimerSystem.TimeLimiter & \" 50 \" & HUD_CourseClear.TimeBonus"
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Player1",
+									"sid": 355163200334093,
+									"parameters": {
+										"instance-variable": "CourseClear",
+										"value": "true"
+									}
+								},
+								{
+									"id": "stop-animation",
+									"objectClass": "Player1",
+									"sid": 596767305307111
+								},
+								{
+									"id": "set-enabled",
+									"objectClass": "Player1",
+									"sid": 252850551208582,
+									"behaviorType": "Platform",
+									"parameters": {
+										"state": "disabled"
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 962913368704584,
+									"parameters": {
+										"audio-file": "smw_fortress_clear",
+										"loop": "not-looping",
+										"volume": "-5",
+										"stereo-pan": "0",
+										"tag-optional": "\"CC\""
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 881002012519428,
+									"parameters": {
+										"seconds": "4",
+										"use-timescale": true
+									}
+								},
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 891438924891646,
+									"parameters": {
+										"layer": "\"CourseClear\"",
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 408565589056956,
+									"parameters": {
+										"seconds": "1.5",
+										"use-timescale": true
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 388783991944900,
+									"parameters": {
+										"audio-file": "drumrollstart",
+										"loop": "not-looping",
+										"volume": "-5",
+										"stereo-pan": "0",
+										"tag-optional": "\"\""
+									}
+								},
+								{
+									"id": "toggle-boolean-instvar",
+									"objectClass": "HUD_CourseClear",
+									"sid": 846546403805664,
+									"parameters": {
+										"instance-variable": "StartScoreTotal"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 835322476441954,
+									"parameters": {
+										"seconds": "1.85",
+										"use-timescale": true
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 386114158670090,
+									"parameters": {
+										"seconds": "1.5",
+										"use-timescale": true
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Camera",
+									"sid": 175343888942439,
+									"parameters": {
+										"instance-variable": "StartFade",
+										"value": "true"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Camera",
+									"sid": 821568474232873,
+									"parameters": {
+										"instance-variable": "FadeSetting",
+										"value": "\"In\""
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 711827549715991,
+									"parameters": {
+										"seconds": "1",
+										"use-timescale": true
+									}
+								},
+								{
+									"id": "signal",
+									"objectClass": "System",
+									"sid": 294699177305758,
+									"parameters": {
+										"tag": "\"WipeCheckPoint\""
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 348290362866562,
+									"parameters": {
+										"variable": "CurrentHP",
+										"value": "Player1.HP"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 804788684763943,
+									"parameters": {
+										"variable": "CurrentItemHeld",
+										"value": "HUD_ItemHolder.Item_Holding"
+									}
+								},
+								{
+									"id": "go-to-layout",
+									"objectClass": "System",
+									"sid": 589224752717909,
+									"parameters": {
+										"layout": "WorldMap"
+									}
+								}
+							],
+							"sid": 740707010486942
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-signal",
+									"objectClass": "System",
+									"sid": 484736759307076,
+									"parameters": {
+										"tag": "\"StartCourseClearORB_MM\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Camera",
+									"sid": 846025398661750,
+									"parameters": {
+										"instance-variable": "StartCCFade",
+										"value": "true"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Camera",
+									"sid": 768163701912278,
+									"parameters": {
+										"instance-variable": "CCFadeSetting",
+										"value": "\"In\""
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "HUD_CourseClear",
+									"sid": 790447179540086,
+									"parameters": {
+										"instance-variable": "TimeBonus",
+										"value": "TimerSystem.TimeLimiter*50"
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "FONT_CourseClear",
+									"sid": 988506685268162,
+									"parameters": {
+										"text": "TimerSystem.TimeLimiter & \" 50 \" & HUD_CourseClear.TimeBonus"
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Player1",
+									"sid": 830561403274171,
+									"parameters": {
+										"instance-variable": "CourseClear",
+										"value": "true"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Player1",
+									"sid": 689223767432885,
+									"parameters": {
+										"instance-variable": "CourseClearState",
+										"value": "1"
+									}
+								},
+								{
+									"id": "set-vector-x",
+									"objectClass": "Player1",
+									"sid": 433711531514549,
+									"behaviorType": "Platform",
+									"parameters": {
+										"vector-x": "50"
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 814136467446778,
+									"parameters": {
+										"audio-file": "smw_fortress_clear",
+										"loop": "not-looping",
+										"volume": "-5",
+										"stereo-pan": "0",
+										"tag-optional": "\"CC\""
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 224870560430263,
+									"parameters": {
+										"seconds": "4",
+										"use-timescale": true
+									}
+								},
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 946878455751412,
+									"parameters": {
+										"layer": "\"CourseClear\"",
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 583525624933696,
+									"parameters": {
+										"seconds": "1.5",
+										"use-timescale": true
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 798864312485285,
+									"parameters": {
+										"audio-file": "drumrollstart",
+										"loop": "not-looping",
+										"volume": "-5",
+										"stereo-pan": "0",
+										"tag-optional": "\"\""
+									}
+								},
+								{
+									"id": "toggle-boolean-instvar",
+									"objectClass": "HUD_CourseClear",
+									"sid": 660575002624793,
+									"parameters": {
+										"instance-variable": "StartScoreTotal"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 154363775633836,
+									"parameters": {
+										"seconds": "1.85",
+										"use-timescale": true
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Player1",
+									"sid": 791146602733625,
+									"parameters": {
+										"instance-variable": "CourseClearState",
+										"value": "2"
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Camera",
+									"sid": 404016733621861,
+									"parameters": {
+										"instance-variable": "StartCCFade",
+										"value": "true"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Camera",
+									"sid": 545374280944115,
+									"parameters": {
+										"instance-variable": "CCFadeSetting",
+										"value": "\"Out\""
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 745629661747657,
+									"parameters": {
+										"seconds": "1.5",
+										"use-timescale": true
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Player1",
+									"sid": 656635198053956,
+									"parameters": {
+										"instance-variable": "CourseClearState",
+										"value": "3"
+									}
+								},
+								{
+									"id": "set-size",
+									"objectClass": "HUD_CircleZoomInEffectThing",
+									"sid": 156420746452527,
+									"disabled": true,
+									"parameters": {
+										"width": "1072",
+										"height": "1072"
+									}
+								},
+								{
+									"id": "set-position",
+									"objectClass": "HUD_CircleZoomInEffectThing",
+									"sid": 101289740744486,
+									"disabled": true,
+									"parameters": {
+										"x": "416",
+										"y": "224"
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 614592545380759,
+									"parameters": {
+										"audio-file": "fade-out",
+										"loop": "not-looping",
+										"volume": "-5",
+										"stereo-pan": "0",
+										"tag-optional": "\"\""
+									}
+								},
+								{
+									"id": "set-active",
+									"objectClass": "HUD_CircleZoomInEffectThing",
+									"sid": 236283553106202,
+									"behaviorType": "Sine",
+									"parameters": {
+										"state": "active"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 790014802984996,
+									"parameters": {
+										"seconds": "1.25",
+										"use-timescale": true
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "HUD_CircleZoomInEffectThing",
+									"sid": 823740201856267,
+									"parameters": {
+										"animation": "\"dumbhackkillme\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "set-active",
+									"objectClass": "HUD_CircleZoomInEffectThing",
+									"sid": 512444479423931,
+									"behaviorType": "Sine",
+									"parameters": {
+										"state": "inactive"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 304824094604565,
+									"parameters": {
+										"seconds": "0.5",
+										"use-timescale": true
+									}
+								},
+								{
+									"id": "signal",
+									"objectClass": "System",
+									"sid": 789393869539039,
+									"parameters": {
+										"tag": "\"WipeCheckPoint\""
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 723625461708541,
+									"parameters": {
+										"variable": "CurrentHP",
+										"value": "Player1.HP"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 252291639386885,
+									"parameters": {
+										"variable": "CurrentItemHeld",
+										"value": "HUD_ItemHolder.Item_Holding"
+									}
+								},
+								{
+									"id": "go-to-layout",
+									"objectClass": "System",
+									"sid": 317522968730396,
+									"parameters": {
+										"layout": "WorldMap"
+									}
+								}
+							],
+							"sid": 995181408262193
+						}
+					],
+					"sid": 256773524257015
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-signal",
+							"objectClass": "System",
+							"sid": 365105828882422,
+							"parameters": {
+								"tag": "\"StartCourseClear\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Camera",
+							"sid": 135796651338930,
+							"parameters": {
+								"instance-variable": "StartCCFade",
+								"value": "true"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Camera",
+							"sid": 376551652989287,
+							"parameters": {
+								"instance-variable": "CCFadeSetting",
+								"value": "\"In\""
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "HUD_CourseClear",
+							"sid": 972790473242448,
+							"parameters": {
+								"instance-variable": "TimeBonus",
+								"value": "TimerSystem.TimeLimiter*50"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "FONT_CourseClear",
+							"sid": 782523394945795,
+							"parameters": {
+								"text": "TimerSystem.TimeLimiter & \" 50 \" & HUD_CourseClear.TimeBonus"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Player1",
+							"sid": 338450797982501,
+							"parameters": {
+								"instance-variable": "CourseClear",
+								"value": "true"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Player1",
+							"sid": 870208946881760,
+							"parameters": {
+								"instance-variable": "CourseClearState",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-vector-x",
+							"objectClass": "Player1",
+							"sid": 194842839834289,
+							"behaviorType": "Platform",
+							"parameters": {
+								"vector-x": "50"
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 862092233481048,
+							"parameters": {
+								"audio-file": "smw_course_clear",
+								"loop": "not-looping",
+								"volume": "-5",
+								"stereo-pan": "0",
+								"tag-optional": "\"CC\""
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 979472910105300,
+							"parameters": {
+								"seconds": "4",
+								"use-timescale": true
+							}
+						},
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 792155824355215,
+							"parameters": {
+								"layer": "\"CourseClear\"",
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 499066791322751,
+							"parameters": {
+								"seconds": "1.5",
+								"use-timescale": true
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 955208165884421,
+							"parameters": {
+								"audio-file": "drumrollstart",
+								"loop": "not-looping",
+								"volume": "-5",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
+							"id": "toggle-boolean-instvar",
+							"objectClass": "HUD_CourseClear",
+							"sid": 247136730126574,
+							"parameters": {
+								"instance-variable": "StartScoreTotal"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 165878328721795,
+							"parameters": {
+								"seconds": "1.85",
+								"use-timescale": true
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 369798328232594,
+							"disabled": true,
+							"parameters": {
+								"seconds": "3.35",
+								"use-timescale": true
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Player1",
+							"sid": 187205215084792,
+							"parameters": {
+								"instance-variable": "CourseClearState",
+								"value": "2"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Camera",
+							"sid": 280250911273357,
+							"parameters": {
+								"instance-variable": "StartCCFade",
+								"value": "true"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Camera",
+							"sid": 408253616916278,
+							"parameters": {
+								"instance-variable": "CCFadeSetting",
+								"value": "\"Out\""
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 145660719826761,
+							"parameters": {
+								"seconds": "1.5",
+								"use-timescale": true
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Player1",
+							"sid": 970109899541900,
+							"parameters": {
+								"instance-variable": "CourseClearState",
+								"value": "3"
+							}
+						},
+						{
+							"id": "set-size",
+							"objectClass": "HUD_CircleZoomInEffectThing",
+							"sid": 917873106881829,
+							"disabled": true,
+							"parameters": {
+								"width": "1072",
+								"height": "1072"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "HUD_CircleZoomInEffectThing",
+							"sid": 240759046120808,
+							"disabled": true,
+							"parameters": {
+								"x": "416",
+								"y": "224"
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 950005122565551,
+							"parameters": {
+								"audio-file": "fade-out",
+								"loop": "not-looping",
+								"volume": "-5",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
+							"id": "set-active",
+							"objectClass": "HUD_CircleZoomInEffectThing",
+							"sid": 830090600095943,
+							"behaviorType": "Sine",
+							"parameters": {
+								"state": "active"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 726657632546743,
+							"parameters": {
+								"seconds": "1.25",
+								"use-timescale": true
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "HUD_CircleZoomInEffectThing",
+							"sid": 718193812678111,
+							"parameters": {
+								"animation": "\"dumbhackkillme\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-active",
+							"objectClass": "HUD_CircleZoomInEffectThing",
+							"sid": 867060930991274,
+							"behaviorType": "Sine",
+							"parameters": {
+								"state": "inactive"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 349363046944409,
+							"parameters": {
+								"seconds": "0.5",
+								"use-timescale": true
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 106973996804804,
+							"parameters": {
+								"variable": "CurrentHP",
+								"value": "Player1.HP"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 134383892654496,
+							"parameters": {
+								"variable": "CurrentItemHeld",
+								"value": "HUD_ItemHolder.Item_Holding"
+							}
+						},
+						{
+							"id": "signal",
+							"objectClass": "System",
+							"sid": 254070715579036,
+							"parameters": {
+								"tag": "\"WipeCheckPoint\""
+							}
+						},
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 930475224393445,
+							"parameters": {
+								"layout": "WorldMap"
+							}
+						}
+					],
+					"sid": 993273470540196
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-signal",
+							"objectClass": "System",
+							"sid": 409743678231149,
+							"parameters": {
+								"tag": "\"StartCourseClear\""
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "HUD_CourseClear",
+							"sid": 988011377919480,
+							"parameters": {
+								"instance-variable": "GoalBonus",
+								"comparison": 1,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 836541694284959,
+							"parameters": {
+								"seconds": "1.0",
+								"use-timescale": true
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "HUD_CourseClear",
+							"sid": 319430864018458,
+							"parameters": {
+								"animation": "\"WithBonus\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "FONT_CCBonusPoints",
+							"sid": 995323305947909,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 285949830370783,
+							"parameters": {
+								"seconds": "4.5",
+								"use-timescale": true
+							}
+						},
+						{
+							"id": "toggle-boolean-instvar",
+							"objectClass": "HUD_CourseClear",
+							"sid": 418882464369352,
+							"parameters": {
+								"instance-variable": "StartBonusTotal"
+							}
+						}
+					],
+					"sid": 845507151555671
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Player1",
+							"sid": 909837476883404,
+							"parameters": {
+								"instance-variable": "CourseClearState",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "Player1",
+							"sid": 168451788236828,
+							"behaviorType": "Platform",
+							"parameters": {
+								"control": "right"
+							}
+						},
+						{
+							"id": "set-max-speed",
+							"objectClass": "Player1",
+							"sid": 623205404147304,
+							"behaviorType": "Platform",
+							"parameters": {
+								"max-speed": "25"
+							}
+						}
+					],
+					"sid": 761254339656102
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Player1",
+							"sid": 336428267085460,
+							"parameters": {
+								"instance-variable": "CourseClearState",
+								"comparison": 0,
+								"value": "2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Player1",
+							"sid": 987765339969365,
+							"parameters": {
+								"instance-variable": "AnimationState",
+								"value": "\"Victory\""
+							}
+						}
+					],
+					"sid": 807941807164370,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Player1",
+									"sid": 866243562076451,
+									"parameters": {
+										"instance-variable": "HP",
+										"comparison": 0,
+										"value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Player1",
+									"sid": 814460001316980,
+									"parameters": {
+										"animation": "\"Small_Victory\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 370128073465453
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Player1",
+									"sid": 284007157450472,
+									"parameters": {
+										"instance-variable": "HP",
+										"comparison": 5,
+										"value": "2"
+									}
+								},
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Player1",
+									"sid": 785963040430931,
+									"disabled": true,
+									"parameters": {
+										"instance-variable": "HP",
+										"comparison": 0,
+										"value": "2"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Player1",
+									"sid": 346219876373621,
+									"parameters": {
+										"animation": "\"Big_Victory\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 680682120031318
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Player1",
+									"sid": 425986279721755,
+									"parameters": {
+										"instance-variable": "HP",
+										"comparison": 5,
+										"value": "3"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Player1",
+									"sid": 102848384973084,
+									"parameters": {
+										"animation": "\"Fire_Victory\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 714058518024879,
+							"disabled": true
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Player1",
+							"sid": 631118310447625,
+							"parameters": {
+								"instance-variable": "CourseClearState",
+								"comparison": 0,
+								"value": "3"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "Player1",
+							"sid": 656951549381842,
+							"behaviorType": "Platform",
+							"parameters": {
+								"control": "right"
+							}
+						},
+						{
+							"id": "set-acceleration",
+							"objectClass": "Player1",
+							"sid": 249710868121667,
+							"behaviorType": "Platform",
+							"parameters": {
+								"acceleration": "125"
+							}
+						},
+						{
+							"id": "set-max-speed",
+							"objectClass": "Player1",
+							"sid": 564928836643228,
+							"behaviorType": "Platform",
+							"parameters": {
+								"max-speed": "330"
+							}
+						}
+					],
+					"sid": 372644451823677
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "HUD_CourseClear",
+							"sid": 300322566678025,
+							"parameters": {
+								"instance-variable": "StartScoreTotal"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "subtract-from-instvar",
+							"objectClass": "HUD_CourseClear",
+							"sid": 303389519986628,
+							"parameters": {
+								"instance-variable": "TimeBonus",
+								"value": "100"
+							}
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 662548271079027,
+							"parameters": {
+								"variable": "Score",
+								"value": "100"
+							}
+						}
+					],
+					"sid": 700011079758968,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "HUD_CourseClear",
+									"sid": 492804457549610,
+									"parameters": {
+										"instance-variable": "TimeBonus",
+										"comparison": 1,
+										"value": "0"
+									}
+								},
+								{
+									"id": "every-x-seconds",
+									"objectClass": "System",
+									"sid": 617770352685513,
+									"parameters": {
+										"interval-seconds": "0.045"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 673495706289199,
+									"parameters": {
+										"audio-file": "drumrollloop",
+										"loop": "not-looping",
+										"volume": "-5",
+										"stereo-pan": "0",
+										"tag-optional": "\"drumloop\""
+									}
+								}
+							],
+							"sid": 979475536742097
+						},
+						{
+							"eventType": "comment",
+							"text": "incase"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "HUD_CourseClear",
+									"sid": 872738505972438,
+									"parameters": {
+										"instance-variable": "TimeBonus",
+										"comparison": 0,
+										"value": "50"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "subtract-from-instvar",
+									"objectClass": "HUD_CourseClear",
+									"sid": 601527723929941,
+									"parameters": {
+										"instance-variable": "TimeBonus",
+										"value": "50"
+									}
+								},
+								{
+									"id": "add-to-eventvar",
+									"objectClass": "System",
+									"sid": 167340809561121,
+									"parameters": {
+										"variable": "Score",
+										"value": "50"
+									}
+								}
+							],
+							"sid": 305050806042686
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "HUD_CourseClear",
+									"sid": 203282915934534,
+									"parameters": {
+										"instance-variable": "TimeBonus",
+										"comparison": 3,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "stop",
+									"objectClass": "Audio",
+									"sid": 889908706571981,
+									"parameters": {
+										"tag": "\"drumloop\""
+									}
+								},
+								{
+									"id": "toggle-boolean-instvar",
+									"objectClass": "HUD_CourseClear",
+									"sid": 267910750655591,
+									"parameters": {
+										"instance-variable": "StartScoreTotal"
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 783582121578508,
+									"parameters": {
+										"audio-file": "drumrollend",
+										"loop": "not-looping",
+										"volume": "-5",
+										"stereo-pan": "0",
+										"tag-optional": "\"\""
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "HUD_CourseClear",
+									"sid": 913794896433266,
+									"parameters": {
+										"instance-variable": "TimeBonus",
+										"value": "0"
+									}
+								}
+							],
+							"sid": 718094150984084
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "HUD_CourseClear",
+							"sid": 377890500899938,
+							"parameters": {
+								"instance-variable": "StartBonusTotal"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 652900272266747,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "every-x-seconds",
+									"objectClass": "System",
+									"sid": 276598788579212,
+									"parameters": {
+										"interval-seconds": "0.05"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "subtract-from-instvar",
+									"objectClass": "HUD_CourseClear",
+									"sid": 330001874716393,
+									"parameters": {
+										"instance-variable": "GoalBonus",
+										"value": "1"
+									}
+								},
+								{
+									"id": "add-to-eventvar",
+									"objectClass": "System",
+									"sid": 334480735162948,
+									"parameters": {
+										"variable": "BonusPoints",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 571106586375045,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "HUD_CourseClear",
+											"sid": 791954155540379,
+											"parameters": {
+												"instance-variable": "GoalBonus",
+												"comparison": 3,
+												"value": "0"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-boolean-instvar",
+											"objectClass": "HUD_CourseClear",
+											"sid": 118681078212305,
+											"parameters": {
+												"instance-variable": "StartBonusTotal",
+												"value": "false"
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "HUD_CourseClear",
+											"sid": 868009488448937,
+											"parameters": {
+												"instance-variable": "GoalBonus",
+												"value": "0"
+											}
+										}
+									],
+									"sid": 236577582054260
+								}
+							]
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "layer-is-visible",
+							"objectClass": "System",
+							"sid": 141621901920906,
+							"parameters": {
+								"layer": "\"CourseClear\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "FONT_CourseClear",
+							"sid": 506518400626906,
+							"parameters": {
+								"text": "TimerSystem.TimeLimiter & \" 50 \" & HUD_CourseClear.TimeBonus"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "FONT_CCBonusPoints",
+							"sid": 234333643922217,
+							"parameters": {
+								"text": "HUD_CourseClear.GoalBonus"
+							}
+						}
+					],
+					"sid": 144817979446129
+				}
+			],
+			"sid": 654626948935360
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
 			"title": "Hud Systems",
 			"description": "(SMW Stuff, Regular Timer and Pause System is included here)",
 			"isActiveOnStart": true,
@@ -25480,1414 +26861,6 @@
 										}
 									],
 									"sid": 258070223906335
-								},
-								{
-									"eventType": "group",
-									"disabled": false,
-									"title": "Course Clear Stuff",
-									"description": "",
-									"isActiveOnStart": true,
-									"children": [
-										{
-											"eventType": "group",
-											"disabled": false,
-											"title": "CC_OrbVersion",
-											"description": "",
-											"isActiveOnStart": true,
-											"children": [
-												{
-													"eventType": "block",
-													"conditions": [
-														{
-															"id": "on-signal",
-															"objectClass": "System",
-															"sid": 217836260759016,
-															"parameters": {
-																"tag": "\"StartCourseClearORB\""
-															}
-														}
-													],
-													"actions": [
-														{
-															"id": "set-boolean-instvar",
-															"objectClass": "Camera",
-															"sid": 371364918848851,
-															"parameters": {
-																"instance-variable": "StartCCFade",
-																"value": "true"
-															}
-														},
-														{
-															"id": "set-instvar-value",
-															"objectClass": "Camera",
-															"sid": 800645344116026,
-															"parameters": {
-																"instance-variable": "CCFadeSetting",
-																"value": "\"In\""
-															}
-														},
-														{
-															"id": "set-instvar-value",
-															"objectClass": "HUD_CourseClear",
-															"sid": 935337995245958,
-															"parameters": {
-																"instance-variable": "TimeBonus",
-																"value": "TimerSystem.TimeLimiter*50"
-															}
-														},
-														{
-															"id": "set-text",
-															"objectClass": "FONT_CourseClear",
-															"sid": 469493013062942,
-															"parameters": {
-																"text": "TimerSystem.TimeLimiter & \" 50 \" & HUD_CourseClear.TimeBonus"
-															}
-														},
-														{
-															"id": "set-boolean-instvar",
-															"objectClass": "Player1",
-															"sid": 893795751793852,
-															"parameters": {
-																"instance-variable": "CourseClear",
-																"value": "true"
-															}
-														},
-														{
-															"id": "stop-animation",
-															"objectClass": "Player1",
-															"sid": 823365406498940
-														},
-														{
-															"id": "set-enabled",
-															"objectClass": "Player1",
-															"sid": 847392363329765,
-															"behaviorType": "Platform",
-															"parameters": {
-																"state": "disabled"
-															}
-														},
-														{
-															"id": "play",
-															"objectClass": "Audio",
-															"sid": 823903225440626,
-															"parameters": {
-																"audio-file": "smw_fortress_clear",
-																"loop": "not-looping",
-																"volume": "-5",
-																"stereo-pan": "0",
-																"tag-optional": "\"CC\""
-															}
-														},
-														{
-															"id": "wait",
-															"objectClass": "System",
-															"sid": 974069507278254,
-															"parameters": {
-																"seconds": "4",
-																"use-timescale": true
-															}
-														},
-														{
-															"id": "set-layer-visible",
-															"objectClass": "System",
-															"sid": 892991297315913,
-															"parameters": {
-																"layer": "\"CourseClear\"",
-																"visibility": "visible"
-															}
-														},
-														{
-															"id": "wait",
-															"objectClass": "System",
-															"sid": 817866440296358,
-															"parameters": {
-																"seconds": "1.5",
-																"use-timescale": true
-															}
-														},
-														{
-															"id": "play",
-															"objectClass": "Audio",
-															"sid": 707507967259687,
-															"parameters": {
-																"audio-file": "drumrollstart",
-																"loop": "not-looping",
-																"volume": "-5",
-																"stereo-pan": "0",
-																"tag-optional": "\"\""
-															}
-														},
-														{
-															"id": "toggle-boolean-instvar",
-															"objectClass": "HUD_CourseClear",
-															"sid": 544271923170095,
-															"parameters": {
-																"instance-variable": "StartScoreTotal"
-															}
-														},
-														{
-															"id": "wait",
-															"objectClass": "System",
-															"sid": 816600879205104,
-															"parameters": {
-																"seconds": "1.85",
-																"use-timescale": true
-															}
-														},
-														{
-															"id": "wait",
-															"objectClass": "System",
-															"sid": 233655866883341,
-															"parameters": {
-																"seconds": "1.5",
-																"use-timescale": true
-															}
-														},
-														{
-															"id": "set-boolean-instvar",
-															"objectClass": "Camera",
-															"sid": 244167321801974,
-															"parameters": {
-																"instance-variable": "StartFade",
-																"value": "true"
-															}
-														},
-														{
-															"id": "set-instvar-value",
-															"objectClass": "Camera",
-															"sid": 469463967505804,
-															"parameters": {
-																"instance-variable": "FadeSetting",
-																"value": "\"In\""
-															}
-														},
-														{
-															"id": "wait",
-															"objectClass": "System",
-															"sid": 727854170671818,
-															"parameters": {
-																"seconds": "1",
-																"use-timescale": true
-															}
-														},
-														{
-															"id": "signal",
-															"objectClass": "System",
-															"sid": 637204429590240,
-															"parameters": {
-																"tag": "\"WipeCheckPoint\""
-															}
-														},
-														{
-															"id": "set-eventvar-value",
-															"objectClass": "System",
-															"sid": 822448929650847,
-															"parameters": {
-																"variable": "CurrentHP",
-																"value": "Player1.HP"
-															}
-														},
-														{
-															"id": "set-eventvar-value",
-															"objectClass": "System",
-															"sid": 844260122298060,
-															"parameters": {
-																"variable": "CurrentItemHeld",
-																"value": "HUD_ItemHolder.Item_Holding"
-															}
-														},
-														{
-															"id": "go-to-layout",
-															"objectClass": "System",
-															"sid": 515880698013821,
-															"parameters": {
-																"layout": "WorldMap"
-															}
-														}
-													],
-													"sid": 514031303184268
-												},
-												{
-													"eventType": "block",
-													"conditions": [
-														{
-															"id": "on-signal",
-															"objectClass": "System",
-															"sid": 539809181117912,
-															"parameters": {
-																"tag": "\"StartCourseClearORB_MM\""
-															}
-														}
-													],
-													"actions": [
-														{
-															"id": "set-boolean-instvar",
-															"objectClass": "Camera",
-															"sid": 114649888818544,
-															"parameters": {
-																"instance-variable": "StartCCFade",
-																"value": "true"
-															}
-														},
-														{
-															"id": "set-instvar-value",
-															"objectClass": "Camera",
-															"sid": 575099507625621,
-															"parameters": {
-																"instance-variable": "CCFadeSetting",
-																"value": "\"In\""
-															}
-														},
-														{
-															"id": "set-instvar-value",
-															"objectClass": "HUD_CourseClear",
-															"sid": 464030823062382,
-															"parameters": {
-																"instance-variable": "TimeBonus",
-																"value": "TimerSystem.TimeLimiter*50"
-															}
-														},
-														{
-															"id": "set-text",
-															"objectClass": "FONT_CourseClear",
-															"sid": 433557809190381,
-															"parameters": {
-																"text": "TimerSystem.TimeLimiter & \" 50 \" & HUD_CourseClear.TimeBonus"
-															}
-														},
-														{
-															"id": "set-boolean-instvar",
-															"objectClass": "Player1",
-															"sid": 869852808158948,
-															"parameters": {
-																"instance-variable": "CourseClear",
-																"value": "true"
-															}
-														},
-														{
-															"id": "set-instvar-value",
-															"objectClass": "Player1",
-															"sid": 487410742902095,
-															"parameters": {
-																"instance-variable": "CourseClearState",
-																"value": "1"
-															}
-														},
-														{
-															"id": "set-vector-x",
-															"objectClass": "Player1",
-															"sid": 617968721105721,
-															"behaviorType": "Platform",
-															"parameters": {
-																"vector-x": "50"
-															}
-														},
-														{
-															"id": "play",
-															"objectClass": "Audio",
-															"sid": 969377588329173,
-															"parameters": {
-																"audio-file": "smw_fortress_clear",
-																"loop": "not-looping",
-																"volume": "-5",
-																"stereo-pan": "0",
-																"tag-optional": "\"CC\""
-															}
-														},
-														{
-															"id": "wait",
-															"objectClass": "System",
-															"sid": 655814422574542,
-															"parameters": {
-																"seconds": "4",
-																"use-timescale": true
-															}
-														},
-														{
-															"id": "set-layer-visible",
-															"objectClass": "System",
-															"sid": 354816668035203,
-															"parameters": {
-																"layer": "\"CourseClear\"",
-																"visibility": "visible"
-															}
-														},
-														{
-															"id": "wait",
-															"objectClass": "System",
-															"sid": 937473068684031,
-															"parameters": {
-																"seconds": "1.5",
-																"use-timescale": true
-															}
-														},
-														{
-															"id": "play",
-															"objectClass": "Audio",
-															"sid": 359528277485002,
-															"parameters": {
-																"audio-file": "drumrollstart",
-																"loop": "not-looping",
-																"volume": "-5",
-																"stereo-pan": "0",
-																"tag-optional": "\"\""
-															}
-														},
-														{
-															"id": "toggle-boolean-instvar",
-															"objectClass": "HUD_CourseClear",
-															"sid": 432603656961753,
-															"parameters": {
-																"instance-variable": "StartScoreTotal"
-															}
-														},
-														{
-															"id": "wait",
-															"objectClass": "System",
-															"sid": 972325650196650,
-															"parameters": {
-																"seconds": "1.85",
-																"use-timescale": true
-															}
-														},
-														{
-															"id": "set-instvar-value",
-															"objectClass": "Player1",
-															"sid": 216564136269251,
-															"parameters": {
-																"instance-variable": "CourseClearState",
-																"value": "2"
-															}
-														},
-														{
-															"id": "set-boolean-instvar",
-															"objectClass": "Camera",
-															"sid": 159907142606323,
-															"parameters": {
-																"instance-variable": "StartCCFade",
-																"value": "true"
-															}
-														},
-														{
-															"id": "set-instvar-value",
-															"objectClass": "Camera",
-															"sid": 714167279132943,
-															"parameters": {
-																"instance-variable": "CCFadeSetting",
-																"value": "\"Out\""
-															}
-														},
-														{
-															"id": "wait",
-															"objectClass": "System",
-															"sid": 315273100040610,
-															"parameters": {
-																"seconds": "1.5",
-																"use-timescale": true
-															}
-														},
-														{
-															"id": "set-instvar-value",
-															"objectClass": "Player1",
-															"sid": 177762320689224,
-															"parameters": {
-																"instance-variable": "CourseClearState",
-																"value": "3"
-															}
-														},
-														{
-															"id": "set-size",
-															"objectClass": "HUD_CircleZoomInEffectThing",
-															"sid": 399541398750757,
-															"disabled": true,
-															"parameters": {
-																"width": "1072",
-																"height": "1072"
-															}
-														},
-														{
-															"id": "set-position",
-															"objectClass": "HUD_CircleZoomInEffectThing",
-															"sid": 609729496098925,
-															"disabled": true,
-															"parameters": {
-																"x": "416",
-																"y": "224"
-															}
-														},
-														{
-															"id": "play",
-															"objectClass": "Audio",
-															"sid": 655950753883185,
-															"parameters": {
-																"audio-file": "fade-out",
-																"loop": "not-looping",
-																"volume": "-5",
-																"stereo-pan": "0",
-																"tag-optional": "\"\""
-															}
-														},
-														{
-															"id": "set-active",
-															"objectClass": "HUD_CircleZoomInEffectThing",
-															"sid": 942816510109059,
-															"behaviorType": "Sine",
-															"parameters": {
-																"state": "active"
-															}
-														},
-														{
-															"id": "wait",
-															"objectClass": "System",
-															"sid": 230858663176284,
-															"parameters": {
-																"seconds": "1.25",
-																"use-timescale": true
-															}
-														},
-														{
-															"id": "set-animation",
-															"objectClass": "HUD_CircleZoomInEffectThing",
-															"sid": 131238337382930,
-															"parameters": {
-																"animation": "\"dumbhackkillme\"",
-																"from": "beginning"
-															}
-														},
-														{
-															"id": "set-active",
-															"objectClass": "HUD_CircleZoomInEffectThing",
-															"sid": 409159778251375,
-															"behaviorType": "Sine",
-															"parameters": {
-																"state": "inactive"
-															}
-														},
-														{
-															"id": "wait",
-															"objectClass": "System",
-															"sid": 722189179312651,
-															"parameters": {
-																"seconds": "0.5",
-																"use-timescale": true
-															}
-														},
-														{
-															"id": "signal",
-															"objectClass": "System",
-															"sid": 509566639356939,
-															"parameters": {
-																"tag": "\"WipeCheckPoint\""
-															}
-														},
-														{
-															"id": "set-eventvar-value",
-															"objectClass": "System",
-															"sid": 452823600447409,
-															"parameters": {
-																"variable": "CurrentHP",
-																"value": "Player1.HP"
-															}
-														},
-														{
-															"id": "set-eventvar-value",
-															"objectClass": "System",
-															"sid": 224815365470086,
-															"parameters": {
-																"variable": "CurrentItemHeld",
-																"value": "HUD_ItemHolder.Item_Holding"
-															}
-														},
-														{
-															"id": "go-to-layout",
-															"objectClass": "System",
-															"sid": 573211404874272,
-															"parameters": {
-																"layout": "WorldMap"
-															}
-														}
-													],
-													"sid": 266688794499781
-												}
-											],
-											"sid": 592626512145315
-										},
-										{
-											"eventType": "block",
-											"conditions": [
-												{
-													"id": "on-signal",
-													"objectClass": "System",
-													"sid": 552762701551703,
-													"parameters": {
-														"tag": "\"StartCourseClear\""
-													}
-												}
-											],
-											"actions": [
-												{
-													"id": "set-boolean-instvar",
-													"objectClass": "Camera",
-													"sid": 799419561778474,
-													"parameters": {
-														"instance-variable": "StartCCFade",
-														"value": "true"
-													}
-												},
-												{
-													"id": "set-instvar-value",
-													"objectClass": "Camera",
-													"sid": 186598848783780,
-													"parameters": {
-														"instance-variable": "CCFadeSetting",
-														"value": "\"In\""
-													}
-												},
-												{
-													"id": "set-instvar-value",
-													"objectClass": "HUD_CourseClear",
-													"sid": 935552513684260,
-													"parameters": {
-														"instance-variable": "TimeBonus",
-														"value": "TimerSystem.TimeLimiter*50"
-													}
-												},
-												{
-													"id": "set-text",
-													"objectClass": "FONT_CourseClear",
-													"sid": 752566803321809,
-													"parameters": {
-														"text": "TimerSystem.TimeLimiter & \" 50 \" & HUD_CourseClear.TimeBonus"
-													}
-												},
-												{
-													"id": "set-boolean-instvar",
-													"objectClass": "Player1",
-													"sid": 711590546011990,
-													"parameters": {
-														"instance-variable": "CourseClear",
-														"value": "true"
-													}
-												},
-												{
-													"id": "set-instvar-value",
-													"objectClass": "Player1",
-													"sid": 958814304476318,
-													"parameters": {
-														"instance-variable": "CourseClearState",
-														"value": "1"
-													}
-												},
-												{
-													"id": "set-vector-x",
-													"objectClass": "Player1",
-													"sid": 432508377699494,
-													"behaviorType": "Platform",
-													"parameters": {
-														"vector-x": "50"
-													}
-												},
-												{
-													"id": "play",
-													"objectClass": "Audio",
-													"sid": 305211296212369,
-													"parameters": {
-														"audio-file": "smw_course_clear",
-														"loop": "not-looping",
-														"volume": "-5",
-														"stereo-pan": "0",
-														"tag-optional": "\"CC\""
-													}
-												},
-												{
-													"id": "wait",
-													"objectClass": "System",
-													"sid": 352952171417842,
-													"parameters": {
-														"seconds": "4",
-														"use-timescale": true
-													}
-												},
-												{
-													"id": "set-layer-visible",
-													"objectClass": "System",
-													"sid": 252578542545890,
-													"parameters": {
-														"layer": "\"CourseClear\"",
-														"visibility": "visible"
-													}
-												},
-												{
-													"id": "wait",
-													"objectClass": "System",
-													"sid": 112444788427838,
-													"parameters": {
-														"seconds": "1.5",
-														"use-timescale": true
-													}
-												},
-												{
-													"id": "play",
-													"objectClass": "Audio",
-													"sid": 873381737611398,
-													"parameters": {
-														"audio-file": "drumrollstart",
-														"loop": "not-looping",
-														"volume": "-5",
-														"stereo-pan": "0",
-														"tag-optional": "\"\""
-													}
-												},
-												{
-													"id": "toggle-boolean-instvar",
-													"objectClass": "HUD_CourseClear",
-													"sid": 148675445337150,
-													"parameters": {
-														"instance-variable": "StartScoreTotal"
-													}
-												},
-												{
-													"id": "wait",
-													"objectClass": "System",
-													"sid": 516756366071345,
-													"parameters": {
-														"seconds": "1.85",
-														"use-timescale": true
-													}
-												},
-												{
-													"id": "wait",
-													"objectClass": "System",
-													"sid": 645400099153536,
-													"disabled": true,
-													"parameters": {
-														"seconds": "3.35",
-														"use-timescale": true
-													}
-												},
-												{
-													"id": "set-instvar-value",
-													"objectClass": "Player1",
-													"sid": 568334625675877,
-													"parameters": {
-														"instance-variable": "CourseClearState",
-														"value": "2"
-													}
-												},
-												{
-													"id": "set-boolean-instvar",
-													"objectClass": "Camera",
-													"sid": 150710815189420,
-													"parameters": {
-														"instance-variable": "StartCCFade",
-														"value": "true"
-													}
-												},
-												{
-													"id": "set-instvar-value",
-													"objectClass": "Camera",
-													"sid": 511641396474002,
-													"parameters": {
-														"instance-variable": "CCFadeSetting",
-														"value": "\"Out\""
-													}
-												},
-												{
-													"id": "wait",
-													"objectClass": "System",
-													"sid": 104055962756398,
-													"parameters": {
-														"seconds": "1.5",
-														"use-timescale": true
-													}
-												},
-												{
-													"id": "set-instvar-value",
-													"objectClass": "Player1",
-													"sid": 826144506101915,
-													"parameters": {
-														"instance-variable": "CourseClearState",
-														"value": "3"
-													}
-												},
-												{
-													"id": "set-size",
-													"objectClass": "HUD_CircleZoomInEffectThing",
-													"sid": 817401233247464,
-													"disabled": true,
-													"parameters": {
-														"width": "1072",
-														"height": "1072"
-													}
-												},
-												{
-													"id": "set-position",
-													"objectClass": "HUD_CircleZoomInEffectThing",
-													"sid": 477163285792686,
-													"disabled": true,
-													"parameters": {
-														"x": "416",
-														"y": "224"
-													}
-												},
-												{
-													"id": "play",
-													"objectClass": "Audio",
-													"sid": 219423114989038,
-													"parameters": {
-														"audio-file": "fade-out",
-														"loop": "not-looping",
-														"volume": "-5",
-														"stereo-pan": "0",
-														"tag-optional": "\"\""
-													}
-												},
-												{
-													"id": "set-active",
-													"objectClass": "HUD_CircleZoomInEffectThing",
-													"sid": 736670216320671,
-													"behaviorType": "Sine",
-													"parameters": {
-														"state": "active"
-													}
-												},
-												{
-													"id": "wait",
-													"objectClass": "System",
-													"sid": 644168786030865,
-													"parameters": {
-														"seconds": "1.25",
-														"use-timescale": true
-													}
-												},
-												{
-													"id": "set-animation",
-													"objectClass": "HUD_CircleZoomInEffectThing",
-													"sid": 301710048658488,
-													"parameters": {
-														"animation": "\"dumbhackkillme\"",
-														"from": "beginning"
-													}
-												},
-												{
-													"id": "set-active",
-													"objectClass": "HUD_CircleZoomInEffectThing",
-													"sid": 737537586172829,
-													"behaviorType": "Sine",
-													"parameters": {
-														"state": "inactive"
-													}
-												},
-												{
-													"id": "wait",
-													"objectClass": "System",
-													"sid": 234461049749325,
-													"parameters": {
-														"seconds": "0.5",
-														"use-timescale": true
-													}
-												},
-												{
-													"id": "set-eventvar-value",
-													"objectClass": "System",
-													"sid": 109534564022165,
-													"parameters": {
-														"variable": "CurrentHP",
-														"value": "Player1.HP"
-													}
-												},
-												{
-													"id": "set-eventvar-value",
-													"objectClass": "System",
-													"sid": 305316314323440,
-													"parameters": {
-														"variable": "CurrentItemHeld",
-														"value": "HUD_ItemHolder.Item_Holding"
-													}
-												},
-												{
-													"id": "signal",
-													"objectClass": "System",
-													"sid": 736451296477088,
-													"parameters": {
-														"tag": "\"WipeCheckPoint\""
-													}
-												},
-												{
-													"id": "go-to-layout",
-													"objectClass": "System",
-													"sid": 590739462770967,
-													"parameters": {
-														"layout": "WorldMap"
-													}
-												}
-											],
-											"sid": 688205380795038
-										},
-										{
-											"eventType": "block",
-											"conditions": [
-												{
-													"id": "on-signal",
-													"objectClass": "System",
-													"sid": 979661594891444,
-													"parameters": {
-														"tag": "\"StartCourseClear\""
-													}
-												},
-												{
-													"id": "compare-instance-variable",
-													"objectClass": "HUD_CourseClear",
-													"sid": 966591011829541,
-													"parameters": {
-														"instance-variable": "GoalBonus",
-														"comparison": 1,
-														"value": "0"
-													}
-												}
-											],
-											"actions": [
-												{
-													"id": "wait",
-													"objectClass": "System",
-													"sid": 809527588501419,
-													"parameters": {
-														"seconds": "1.0",
-														"use-timescale": true
-													}
-												},
-												{
-													"id": "set-animation",
-													"objectClass": "HUD_CourseClear",
-													"sid": 812668122053364,
-													"parameters": {
-														"animation": "\"WithBonus\"",
-														"from": "beginning"
-													}
-												},
-												{
-													"id": "set-visible",
-													"objectClass": "FONT_CCBonusPoints",
-													"sid": 890248359858341,
-													"parameters": {
-														"visibility": "visible"
-													}
-												},
-												{
-													"id": "wait",
-													"objectClass": "System",
-													"sid": 683655780725835,
-													"parameters": {
-														"seconds": "4.5",
-														"use-timescale": true
-													}
-												},
-												{
-													"id": "toggle-boolean-instvar",
-													"objectClass": "HUD_CourseClear",
-													"sid": 248754574181255,
-													"parameters": {
-														"instance-variable": "StartBonusTotal"
-													}
-												}
-											],
-											"sid": 789506454123428
-										},
-										{
-											"eventType": "block",
-											"conditions": [
-												{
-													"id": "compare-instance-variable",
-													"objectClass": "Player1",
-													"sid": 863315859719150,
-													"parameters": {
-														"instance-variable": "CourseClearState",
-														"comparison": 0,
-														"value": "1"
-													}
-												}
-											],
-											"actions": [
-												{
-													"id": "simulate-control",
-													"objectClass": "Player1",
-													"sid": 993442491402957,
-													"behaviorType": "Platform",
-													"parameters": {
-														"control": "right"
-													}
-												},
-												{
-													"id": "set-max-speed",
-													"objectClass": "Player1",
-													"sid": 781092418126012,
-													"behaviorType": "Platform",
-													"parameters": {
-														"max-speed": "25"
-													}
-												}
-											],
-											"sid": 740352858737648
-										},
-										{
-											"eventType": "block",
-											"conditions": [
-												{
-													"id": "compare-instance-variable",
-													"objectClass": "Player1",
-													"sid": 159887292195515,
-													"parameters": {
-														"instance-variable": "CourseClearState",
-														"comparison": 0,
-														"value": "2"
-													}
-												}
-											],
-											"actions": [
-												{
-													"id": "set-instvar-value",
-													"objectClass": "Player1",
-													"sid": 427782430785378,
-													"parameters": {
-														"instance-variable": "AnimationState",
-														"value": "\"Victory\""
-													}
-												}
-											],
-											"sid": 563572294013396,
-											"children": [
-												{
-													"eventType": "block",
-													"conditions": [
-														{
-															"id": "compare-instance-variable",
-															"objectClass": "Player1",
-															"sid": 859517819103171,
-															"parameters": {
-																"instance-variable": "HP",
-																"comparison": 0,
-																"value": "1"
-															}
-														}
-													],
-													"actions": [
-														{
-															"id": "set-animation",
-															"objectClass": "Player1",
-															"sid": 173188501960096,
-															"parameters": {
-																"animation": "\"Small_Victory\"",
-																"from": "beginning"
-															}
-														}
-													],
-													"sid": 342688649186931
-												},
-												{
-													"eventType": "block",
-													"conditions": [
-														{
-															"id": "compare-instance-variable",
-															"objectClass": "Player1",
-															"sid": 351413696207600,
-															"parameters": {
-																"instance-variable": "HP",
-																"comparison": 5,
-																"value": "2"
-															}
-														},
-														{
-															"id": "compare-instance-variable",
-															"objectClass": "Player1",
-															"sid": 951955423533240,
-															"disabled": true,
-															"parameters": {
-																"instance-variable": "HP",
-																"comparison": 0,
-																"value": "2"
-															}
-														}
-													],
-													"actions": [
-														{
-															"id": "set-animation",
-															"objectClass": "Player1",
-															"sid": 180511054668354,
-															"parameters": {
-																"animation": "\"Big_Victory\"",
-																"from": "beginning"
-															}
-														}
-													],
-													"sid": 727119168126687
-												},
-												{
-													"eventType": "block",
-													"conditions": [
-														{
-															"id": "compare-instance-variable",
-															"objectClass": "Player1",
-															"sid": 558102907483462,
-															"parameters": {
-																"instance-variable": "HP",
-																"comparison": 5,
-																"value": "3"
-															}
-														}
-													],
-													"actions": [
-														{
-															"id": "set-animation",
-															"objectClass": "Player1",
-															"sid": 979718107627323,
-															"parameters": {
-																"animation": "\"Fire_Victory\"",
-																"from": "beginning"
-															}
-														}
-													],
-													"sid": 896673372844120,
-													"disabled": true
-												}
-											]
-										},
-										{
-											"eventType": "block",
-											"conditions": [
-												{
-													"id": "compare-instance-variable",
-													"objectClass": "Player1",
-													"sid": 754345563024068,
-													"parameters": {
-														"instance-variable": "CourseClearState",
-														"comparison": 0,
-														"value": "3"
-													}
-												}
-											],
-											"actions": [
-												{
-													"id": "simulate-control",
-													"objectClass": "Player1",
-													"sid": 260322433520935,
-													"behaviorType": "Platform",
-													"parameters": {
-														"control": "right"
-													}
-												},
-												{
-													"id": "set-acceleration",
-													"objectClass": "Player1",
-													"sid": 927627781566425,
-													"behaviorType": "Platform",
-													"parameters": {
-														"acceleration": "125"
-													}
-												},
-												{
-													"id": "set-max-speed",
-													"objectClass": "Player1",
-													"sid": 933411593021632,
-													"behaviorType": "Platform",
-													"parameters": {
-														"max-speed": "330"
-													}
-												}
-											],
-											"sid": 849717357681703
-										},
-										{
-											"eventType": "block",
-											"conditions": [
-												{
-													"id": "is-boolean-instance-variable-set",
-													"objectClass": "HUD_CourseClear",
-													"sid": 225760480893827,
-													"parameters": {
-														"instance-variable": "StartScoreTotal"
-													}
-												}
-											],
-											"actions": [
-												{
-													"id": "subtract-from-instvar",
-													"objectClass": "HUD_CourseClear",
-													"sid": 291350160541669,
-													"parameters": {
-														"instance-variable": "TimeBonus",
-														"value": "100"
-													}
-												},
-												{
-													"id": "add-to-eventvar",
-													"objectClass": "System",
-													"sid": 630484515766169,
-													"parameters": {
-														"variable": "Score",
-														"value": "100"
-													}
-												}
-											],
-											"sid": 489326510925482,
-											"children": [
-												{
-													"eventType": "block",
-													"conditions": [
-														{
-															"id": "compare-instance-variable",
-															"objectClass": "HUD_CourseClear",
-															"sid": 830555057159288,
-															"parameters": {
-																"instance-variable": "TimeBonus",
-																"comparison": 1,
-																"value": "0"
-															}
-														},
-														{
-															"id": "every-x-seconds",
-															"objectClass": "System",
-															"sid": 840830933558854,
-															"parameters": {
-																"interval-seconds": "0.045"
-															}
-														}
-													],
-													"actions": [
-														{
-															"id": "play",
-															"objectClass": "Audio",
-															"sid": 300960253319438,
-															"parameters": {
-																"audio-file": "drumrollloop",
-																"loop": "not-looping",
-																"volume": "-5",
-																"stereo-pan": "0",
-																"tag-optional": "\"drumloop\""
-															}
-														}
-													],
-													"sid": 914782310820860
-												},
-												{
-													"eventType": "comment",
-													"text": "incase"
-												},
-												{
-													"eventType": "block",
-													"conditions": [
-														{
-															"id": "compare-instance-variable",
-															"objectClass": "HUD_CourseClear",
-															"sid": 139429861788263,
-															"parameters": {
-																"instance-variable": "TimeBonus",
-																"comparison": 0,
-																"value": "50"
-															}
-														}
-													],
-													"actions": [
-														{
-															"id": "subtract-from-instvar",
-															"objectClass": "HUD_CourseClear",
-															"sid": 105056489056019,
-															"parameters": {
-																"instance-variable": "TimeBonus",
-																"value": "50"
-															}
-														},
-														{
-															"id": "add-to-eventvar",
-															"objectClass": "System",
-															"sid": 621688717804036,
-															"parameters": {
-																"variable": "Score",
-																"value": "50"
-															}
-														}
-													],
-													"sid": 540949119421963
-												},
-												{
-													"eventType": "block",
-													"conditions": [
-														{
-															"id": "compare-instance-variable",
-															"objectClass": "HUD_CourseClear",
-															"sid": 510489814855087,
-															"parameters": {
-																"instance-variable": "TimeBonus",
-																"comparison": 3,
-																"value": "0"
-															}
-														}
-													],
-													"actions": [
-														{
-															"id": "stop",
-															"objectClass": "Audio",
-															"sid": 438775855348538,
-															"parameters": {
-																"tag": "\"drumloop\""
-															}
-														},
-														{
-															"id": "toggle-boolean-instvar",
-															"objectClass": "HUD_CourseClear",
-															"sid": 206576276108079,
-															"parameters": {
-																"instance-variable": "StartScoreTotal"
-															}
-														},
-														{
-															"id": "play",
-															"objectClass": "Audio",
-															"sid": 930725716381012,
-															"parameters": {
-																"audio-file": "drumrollend",
-																"loop": "not-looping",
-																"volume": "-5",
-																"stereo-pan": "0",
-																"tag-optional": "\"\""
-															}
-														},
-														{
-															"id": "set-instvar-value",
-															"objectClass": "HUD_CourseClear",
-															"sid": 639086726167414,
-															"parameters": {
-																"instance-variable": "TimeBonus",
-																"value": "0"
-															}
-														}
-													],
-													"sid": 182212277139272
-												}
-											]
-										},
-										{
-											"eventType": "block",
-											"conditions": [
-												{
-													"id": "is-boolean-instance-variable-set",
-													"objectClass": "HUD_CourseClear",
-													"sid": 749922158491555,
-													"parameters": {
-														"instance-variable": "StartBonusTotal"
-													}
-												}
-											],
-											"actions": [],
-											"sid": 169136170001201,
-											"children": [
-												{
-													"eventType": "block",
-													"conditions": [
-														{
-															"id": "every-x-seconds",
-															"objectClass": "System",
-															"sid": 840985242743213,
-															"parameters": {
-																"interval-seconds": "0.05"
-															}
-														}
-													],
-													"actions": [
-														{
-															"id": "subtract-from-instvar",
-															"objectClass": "HUD_CourseClear",
-															"sid": 158485940858988,
-															"parameters": {
-																"instance-variable": "GoalBonus",
-																"value": "1"
-															}
-														},
-														{
-															"id": "add-to-eventvar",
-															"objectClass": "System",
-															"sid": 656822973462884,
-															"parameters": {
-																"variable": "BonusPoints",
-																"value": "1"
-															}
-														}
-													],
-													"sid": 684877764808572,
-													"children": [
-														{
-															"eventType": "block",
-															"conditions": [
-																{
-																	"id": "compare-instance-variable",
-																	"objectClass": "HUD_CourseClear",
-																	"sid": 439436863267184,
-																	"parameters": {
-																		"instance-variable": "GoalBonus",
-																		"comparison": 3,
-																		"value": "0"
-																	}
-																}
-															],
-															"actions": [
-																{
-																	"id": "set-boolean-instvar",
-																	"objectClass": "HUD_CourseClear",
-																	"sid": 946267196887152,
-																	"parameters": {
-																		"instance-variable": "StartBonusTotal",
-																		"value": "false"
-																	}
-																},
-																{
-																	"id": "set-instvar-value",
-																	"objectClass": "HUD_CourseClear",
-																	"sid": 282270489929675,
-																	"parameters": {
-																		"instance-variable": "GoalBonus",
-																		"value": "0"
-																	}
-																}
-															],
-															"sid": 111344598180879
-														}
-													]
-												}
-											]
-										},
-										{
-											"eventType": "block",
-											"conditions": [
-												{
-													"id": "layer-is-visible",
-													"objectClass": "System",
-													"sid": 143090618327725,
-													"parameters": {
-														"layer": "\"CourseClear\""
-													}
-												}
-											],
-											"actions": [
-												{
-													"id": "set-text",
-													"objectClass": "FONT_CourseClear",
-													"sid": 769343253921437,
-													"parameters": {
-														"text": "TimerSystem.TimeLimiter & \" 50 \" & HUD_CourseClear.TimeBonus"
-													}
-												},
-												{
-													"id": "set-text",
-													"objectClass": "FONT_CCBonusPoints",
-													"sid": 151033651733423,
-													"parameters": {
-														"text": "HUD_CourseClear.GoalBonus"
-													}
-												}
-											],
-											"sid": 503746763590278
-										}
-									],
-									"sid": 891229842740576
 								},
 								{
 									"eventType": "comment",

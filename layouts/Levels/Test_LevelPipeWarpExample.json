@@ -937,6 +937,7 @@
 								"DontTurn": false,
 								"DontMove": true,
 								"FireBallHit": "",
+								"StarKilled": false,
 								"BeingHeld": false,
 								"CanBeHeld": false,
 								"Moving": false,

@@ -1732,7 +1732,8 @@
 						"OneHitKillSpin": false,
 						"DontTurn": false,
 						"DontMove": false,
-						"FireBallHit": ""
+						"FireBallHit": "",
+						"StarKilled": false
 					},
 					"behaviors": {
 						"Platform": {
@@ -1887,7 +1888,8 @@
 						"OneHitKillSpin": false,
 						"DontTurn": false,
 						"DontMove": false,
-						"FireBallHit": ""
+						"FireBallHit": "",
+						"StarKilled": false
 					},
 					"behaviors": {
 						"Platform": {
@@ -2082,7 +2084,8 @@
 						"OneHitKillSpin": false,
 						"DontTurn": false,
 						"DontMove": false,
-						"FireBallHit": ""
+						"FireBallHit": "",
+						"StarKilled": false
 					},
 					"behaviors": {
 						"Platform": {
@@ -2192,7 +2195,8 @@
 						"OneHitKillSpin": false,
 						"DontTurn": false,
 						"DontMove": false,
-						"FireBallHit": ""
+						"FireBallHit": "",
+						"StarKilled": false
 					},
 					"behaviors": {
 						"Platform": {
@@ -2267,7 +2271,8 @@
 						"OneHitKillSpin": false,
 						"DontTurn": false,
 						"DontMove": false,
-						"FireBallHit": ""
+						"FireBallHit": "",
+						"StarKilled": false
 					},
 					"behaviors": {
 						"Platform": {
@@ -2342,7 +2347,8 @@
 						"OneHitKillSpin": false,
 						"DontTurn": false,
 						"DontMove": false,
-						"FireBallHit": ""
+						"FireBallHit": "",
+						"StarKilled": false
 					},
 					"behaviors": {
 						"Platform": {
@@ -2417,7 +2423,8 @@
 						"OneHitKillSpin": false,
 						"DontTurn": false,
 						"DontMove": false,
-						"FireBallHit": ""
+						"FireBallHit": "",
+						"StarKilled": false
 					},
 					"behaviors": {
 						"Platform": {
@@ -2527,7 +2534,8 @@
 						"OneHitKillSpin": false,
 						"DontTurn": false,
 						"DontMove": false,
-						"FireBallHit": ""
+						"FireBallHit": "",
+						"StarKilled": false
 					},
 					"behaviors": {
 						"Platform": {
@@ -2602,7 +2610,8 @@
 						"OneHitKillSpin": false,
 						"DontTurn": false,
 						"DontMove": false,
-						"FireBallHit": ""
+						"FireBallHit": "",
+						"StarKilled": false
 					},
 					"behaviors": {
 						"Platform": {
@@ -2677,7 +2686,8 @@
 						"OneHitKillSpin": false,
 						"DontTurn": false,
 						"DontMove": false,
-						"FireBallHit": ""
+						"FireBallHit": "",
+						"StarKilled": false
 					},
 					"behaviors": {
 						"Platform": {
@@ -2752,7 +2762,8 @@
 						"OneHitKillSpin": false,
 						"DontTurn": false,
 						"DontMove": false,
-						"FireBallHit": ""
+						"FireBallHit": "",
+						"StarKilled": false
 					},
 					"behaviors": {
 						"Platform": {

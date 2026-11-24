@@ -3947,7 +3947,8 @@
 						"OneHitKillSpin": false,
 						"DontTurn": true,
 						"DontMove": false,
-						"FireBallHit": ""
+						"FireBallHit": "",
+						"StarKilled": false
 					},
 					"behaviors": {
 						"Platform": {
@@ -4033,7 +4034,8 @@
 						"OneHitKillSpin": true,
 						"DontTurn": false,
 						"DontMove": false,
-						"FireBallHit": "insta"
+						"FireBallHit": "insta",
+						"StarKilled": false
 					},
 					"behaviors": {
 						"Platform": {
@@ -4108,7 +4110,8 @@
 						"OneHitKillSpin": true,
 						"DontTurn": false,
 						"DontMove": false,
-						"FireBallHit": "insta"
+						"FireBallHit": "insta",
+						"StarKilled": false
 					},
 					"behaviors": {
 						"Platform": {
@@ -4183,7 +4186,8 @@
 						"OneHitKillSpin": true,
 						"DontTurn": false,
 						"DontMove": false,
-						"FireBallHit": "insta"
+						"FireBallHit": "insta",
+						"StarKilled": false
 					},
 					"behaviors": {
 						"Platform": {
@@ -4258,7 +4262,8 @@
 						"OneHitKillSpin": true,
 						"DontTurn": false,
 						"DontMove": false,
-						"FireBallHit": "insta"
+						"FireBallHit": "insta",
+						"StarKilled": false
 					},
 					"behaviors": {
 						"Platform": {
@@ -4333,7 +4338,8 @@
 						"OneHitKillSpin": true,
 						"DontTurn": false,
 						"DontMove": false,
-						"FireBallHit": "insta"
+						"FireBallHit": "insta",
+						"StarKilled": false
 					},
 					"behaviors": {
 						"Platform": {
@@ -4408,7 +4414,8 @@
 						"OneHitKillSpin": true,
 						"DontTurn": false,
 						"DontMove": false,
-						"FireBallHit": "insta"
+						"FireBallHit": "insta",
+						"StarKilled": false
 					},
 					"behaviors": {
 						"Platform": {
@@ -4483,7 +4490,8 @@
 						"OneHitKillSpin": true,
 						"DontTurn": false,
 						"DontMove": false,
-						"FireBallHit": "insta"
+						"FireBallHit": "insta",
+						"StarKilled": false
 					},
 					"behaviors": {
 						"Platform": {
@@ -4558,7 +4566,8 @@
 						"OneHitKillSpin": true,
 						"DontTurn": false,
 						"DontMove": false,
-						"FireBallHit": "insta"
+						"FireBallHit": "insta",
+						"StarKilled": false
 					},
 					"behaviors": {
 						"Platform": {
@@ -4633,7 +4642,8 @@
 						"OneHitKillSpin": true,
 						"DontTurn": false,
 						"DontMove": false,
-						"FireBallHit": "insta"
+						"FireBallHit": "insta",
+						"StarKilled": false
 					},
 					"behaviors": {
 						"Platform": {
@@ -4708,7 +4718,8 @@
 						"OneHitKillSpin": true,
 						"DontTurn": false,
 						"DontMove": false,
-						"FireBallHit": "insta"
+						"FireBallHit": "insta",
+						"StarKilled": false
 					},
 					"behaviors": {
 						"Platform": {
@@ -4783,7 +4794,8 @@
 						"OneHitKillSpin": true,
 						"DontTurn": false,
 						"DontMove": false,
-						"FireBallHit": "insta"
+						"FireBallHit": "insta",
+						"StarKilled": false
 					},
 					"behaviors": {
 						"Platform": {
@@ -4858,7 +4870,8 @@
 						"OneHitKillSpin": true,
 						"DontTurn": false,
 						"DontMove": false,
-						"FireBallHit": "insta"
+						"FireBallHit": "insta",
+						"StarKilled": false
 					},
 					"behaviors": {
 						"Platform": {
@@ -4933,7 +4946,8 @@
 						"OneHitKillSpin": false,
 						"DontTurn": true,
 						"DontMove": false,
-						"FireBallHit": ""
+						"FireBallHit": "",
+						"StarKilled": false
 					},
 					"behaviors": {
 						"Platform": {
@@ -5019,7 +5033,8 @@
 						"OneHitKillSpin": false,
 						"DontTurn": true,
 						"DontMove": false,
-						"FireBallHit": ""
+						"FireBallHit": "",
+						"StarKilled": false
 					},
 					"behaviors": {
 						"Platform": {

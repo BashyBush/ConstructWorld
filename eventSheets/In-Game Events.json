@@ -10384,6 +10384,64 @@
 					"isActiveOnStart": true,
 					"children": [
 						{
+							"eventType": "comment",
+							"text": ""
+						},
+						{
+							"eventType": "group",
+							"disabled": false,
+							"title": "SuperStar Kills",
+							"description": "",
+							"isActiveOnStart": true,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-collision-with-another-object",
+											"objectClass": "Player1",
+											"sid": 977447636931826,
+											"parameters": {
+												"object": "Enemies"
+											}
+										},
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "Player1",
+											"sid": 109752229652551,
+											"parameters": {
+												"instance-variable": "StarState"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "play",
+											"objectClass": "Audio",
+											"sid": 323560113559345,
+											"parameters": {
+												"audio-file": "drumrollend",
+												"loop": "not-looping",
+												"volume": "-10",
+												"stereo-pan": "0",
+												"tag-optional": "\"\""
+											}
+										}
+									],
+									"sid": 876431542363557,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [],
+											"actions": [],
+											"sid": 281106725742400
+										}
+									]
+								}
+							],
+							"sid": 399781420449206
+						},
+						{
 							"eventType": "block",
 							"conditions": [
 								{
@@ -10391,6 +10449,15 @@
 									"objectClass": "Player1",
 									"sid": 954542992071588,
 									"behaviorType": "Platform"
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Player1",
+									"sid": 843262522117686,
+									"parameters": {
+										"instance-variable": "StarState"
+									},
+									"isInverted": true
 								}
 							],
 							"actions": [
@@ -10455,6 +10522,15 @@
 														"comparison": 2,
 														"y-co-ordinate": "ENEMY_Rex.Y-0.001"
 													}
+												},
+												{
+													"id": "is-boolean-instance-variable-set",
+													"objectClass": "Player1",
+													"sid": 803574451131064,
+													"parameters": {
+														"instance-variable": "StarState"
+													},
+													"isInverted": true
 												}
 											],
 											"actions": [
@@ -10665,6 +10741,14 @@
 													"id": "else",
 													"objectClass": "System",
 													"sid": 446885399948525
+												},
+												{
+													"id": "is-boolean-instance-variable-set",
+													"objectClass": "Player1",
+													"sid": 826822583118846,
+													"parameters": {
+														"instance-variable": "StarState"
+													}
 												}
 											],
 											"actions": [
@@ -10672,12 +10756,45 @@
 													"id": "signal",
 													"objectClass": "System",
 													"sid": 119853604619624,
+													"disabled": true,
 													"parameters": {
 														"tag": "\"GotDamaged\""
 													}
 												}
 											],
-											"sid": 968293373441349
+											"sid": 968293373441349,
+											"disabled": true
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "else",
+													"objectClass": "System",
+													"sid": 884126247329859
+												},
+												{
+													"id": "is-boolean-instance-variable-set",
+													"objectClass": "Player1",
+													"sid": 232420156842034,
+													"disabled": true,
+													"parameters": {
+														"instance-variable": "StarState"
+													},
+													"isInverted": true
+												}
+											],
+											"actions": [
+												{
+													"id": "signal",
+													"objectClass": "System",
+													"sid": 166147190406496,
+													"parameters": {
+														"tag": "\"GotDamaged\""
+													}
+												}
+											],
+											"sid": 999276744532870
 										}
 									]
 								}
@@ -10740,6 +10857,15 @@
 														"comparison": 2,
 														"y-co-ordinate": "ENEMY_BanzaiBill.Y-0.001"
 													}
+												},
+												{
+													"id": "is-boolean-instance-variable-set",
+													"objectClass": "Player1",
+													"sid": 117152910529593,
+													"parameters": {
+														"instance-variable": "StarState"
+													},
+													"isInverted": true
 												}
 											],
 											"actions": [
@@ -14086,6 +14212,15 @@
 												"comparison": 1,
 												"value": "0"
 											}
+										},
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "Player1",
+											"sid": 933702624008003,
+											"parameters": {
+												"instance-variable": "StarState"
+											},
+											"isInverted": true
 										}
 									],
 									"actions": [],
@@ -29159,6 +29294,2039 @@
 				{
 					"eventType": "group",
 					"disabled": false,
+					"title": "Powerups",
+					"description": "Growing Up Animation is here",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "every-tick",
+									"objectClass": "System",
+									"sid": 179774690371918
+								}
+							],
+							"actions": [
+								{
+									"type": "comment",
+									"text": "exist so they dont get stuck on blocks when turning"
+								},
+								{
+									"id": "set-deceleration",
+									"objectClass": "Mushroom",
+									"sid": 211526957651488,
+									"behaviorType": "Movement",
+									"parameters": {
+										"deceleration": "0"
+									}
+								},
+								{
+									"id": "set-deceleration",
+									"objectClass": "1up",
+									"sid": 699737383231703,
+									"behaviorType": "Movement",
+									"parameters": {
+										"deceleration": "0"
+									}
+								}
+							],
+							"sid": 395791045554209
+						},
+						{
+							"eventType": "group",
+							"disabled": false,
+							"title": "Mushroom",
+							"description": "",
+							"isActiveOnStart": true,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-collision-with-another-object",
+											"objectClass": "Player1",
+											"sid": 485055937305205,
+											"parameters": {
+												"object": "Mushroom"
+											}
+										}
+									],
+									"actions": [],
+									"sid": 111850744302018,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "is-boolean-instance-variable-set",
+													"objectClass": "Mushroom",
+													"sid": 986494345248225,
+													"parameters": {
+														"instance-variable": "SpawnedFromItemHolder"
+													},
+													"isInverted": true
+												}
+											],
+											"actions": [
+												{
+													"id": "create-object",
+													"objectClass": "System",
+													"sid": 586336267482040,
+													"parameters": {
+														"object-to-create": "PART_PointGivenSprites",
+														"layer": "\"Main Objects\"",
+														"x": "Player1.X",
+														"y": "Player1.Y+16",
+														"create-hierarchy": false,
+														"template-name": "\"\""
+													}
+												},
+												{
+													"id": "set-animation",
+													"objectClass": "PART_PointGivenSprites",
+													"sid": 558640509429797,
+													"parameters": {
+														"animation": "\"1000\"",
+														"from": "beginning"
+													}
+												},
+												{
+													"id": "add-to-eventvar",
+													"objectClass": "System",
+													"sid": 743330146308790,
+													"parameters": {
+														"variable": "Score",
+														"value": "1000"
+													}
+												},
+												{
+													"id": "move-to-position",
+													"objectClass": "PART_PointGivenSprites",
+													"sid": 241228587584062,
+													"behaviorType": "MoveTo",
+													"parameters": {
+														"x": "Self.X",
+														"y": "Self.Y-40",
+														"mode": "direct"
+													}
+												},
+												{
+													"id": "wait",
+													"objectClass": "System",
+													"sid": 802879259458543,
+													"parameters": {
+														"seconds": "0.85",
+														"use-timescale": true
+													}
+												},
+												{
+													"id": "destroy",
+													"objectClass": "PART_PointGivenSprites",
+													"sid": 956686550986266
+												}
+											],
+											"sid": 610394693807875
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "Player1",
+													"sid": 399713371027499,
+													"parameters": {
+														"instance-variable": "HP",
+														"comparison": 0,
+														"value": "1"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-instvar-value",
+													"objectClass": "Player1",
+													"sid": 286872875486843,
+													"disabled": true,
+													"parameters": {
+														"instance-variable": "AnimationRem",
+														"value": "right(Self.AnimationState, len(Self.AnimationState)+6)"
+													}
+												},
+												{
+													"id": "set-instvar-value",
+													"objectClass": "Player1",
+													"sid": 999369731319326,
+													"parameters": {
+														"instance-variable": "AnimationRem",
+														"value": "right(Self.AnimationName, len(Self.AnimationName)-6)"
+													}
+												},
+												{
+													"id": "play",
+													"objectClass": "Audio",
+													"sid": 317425215707873,
+													"parameters": {
+														"audio-file": "powerup",
+														"loop": "not-looping",
+														"volume": "-5",
+														"stereo-pan": "0",
+														"tag-optional": "\"\""
+													}
+												},
+												{
+													"id": "set-enabled",
+													"objectClass": "Player1",
+													"sid": 382794416298730,
+													"behaviorType": "Platform",
+													"parameters": {
+														"state": "disabled"
+													}
+												},
+												{
+													"id": "set-instvar-value",
+													"objectClass": "Player1",
+													"sid": 363553592663757,
+													"disabled": true,
+													"parameters": {
+														"instance-variable": "AnimationState",
+														"value": "\"Growning\""
+													}
+												},
+												{
+													"id": "destroy",
+													"objectClass": "Mushroom",
+													"sid": 179327752365887
+												},
+												{
+													"id": "set-group-active",
+													"objectClass": "System",
+													"sid": 172178151290053,
+													"parameters": {
+														"group-name": "\"SMW Hud Stuff\"",
+														"state": "deactivated"
+													}
+												},
+												{
+													"id": "set-group-active",
+													"objectClass": "System",
+													"sid": 537069953874316,
+													"parameters": {
+														"group-name": "\"Player System\"",
+														"state": "deactivated"
+													}
+												},
+												{
+													"id": "set-group-active",
+													"objectClass": "System",
+													"sid": 171234927742619,
+													"parameters": {
+														"group-name": "\"Timer System\"",
+														"state": "deactivated"
+													}
+												},
+												{
+													"id": "set-group-active",
+													"objectClass": "System",
+													"sid": 747347342067715,
+													"parameters": {
+														"group-name": "\"Object Systems\"",
+														"state": "deactivated"
+													}
+												},
+												{
+													"id": "set-group-active",
+													"objectClass": "System",
+													"sid": 110725260808381,
+													"parameters": {
+														"group-name": "\"Event Systems\"",
+														"state": "deactivated"
+													}
+												},
+												{
+													"id": "set-group-active",
+													"objectClass": "System",
+													"sid": 880671573709762,
+													"parameters": {
+														"group-name": "\"Enemies System\"",
+														"state": "deactivated"
+													}
+												},
+												{
+													"id": "set-active",
+													"objectClass": "Goal_Pole",
+													"sid": 444842939300058,
+													"behaviorType": "Sine",
+													"parameters": {
+														"state": "inactive"
+													}
+												},
+												{
+													"id": "set-enabled",
+													"objectClass": "Player_FireBall",
+													"sid": 848746816119826,
+													"behaviorType": "Platform",
+													"parameters": {
+														"state": "disabled"
+													}
+												},
+												{
+													"id": "set-enabled",
+													"objectClass": "Player_FireBall",
+													"sid": 158443711749489,
+													"behaviorType": "Movement",
+													"parameters": {
+														"state": "disabled"
+													}
+												},
+												{
+													"id": "set-enabled",
+													"objectClass": "EnemyCoin",
+													"sid": 517269058465097,
+													"behaviorType": "Platform",
+													"parameters": {
+														"state": "disabled"
+													}
+												},
+												{
+													"id": "stop-animation",
+													"objectClass": "Enemies",
+													"sid": 444251905849780
+												},
+												{
+													"id": "stop-animation",
+													"objectClass": "Collectables",
+													"sid": 632738378473116
+												},
+												{
+													"id": "stop-animation",
+													"objectClass": "Blocks",
+													"sid": 173179124708161
+												},
+												{
+													"id": "set-animation",
+													"objectClass": "Player1",
+													"sid": 805571222399714,
+													"parameters": {
+														"animation": "\"Small_Growup\"",
+														"from": "beginning"
+													}
+												},
+												{
+													"id": "wait",
+													"objectClass": "System",
+													"sid": 934562736180764,
+													"parameters": {
+														"seconds": "1",
+														"use-timescale": false
+													}
+												},
+												{
+													"id": "set-enabled",
+													"objectClass": "Player1",
+													"sid": 609494991684691,
+													"behaviorType": "Platform",
+													"parameters": {
+														"state": "enabled"
+													}
+												},
+												{
+													"id": "set-group-active",
+													"objectClass": "System",
+													"sid": 187487532431406,
+													"parameters": {
+														"group-name": "\"SMW Hud Stuff\"",
+														"state": "activated"
+													}
+												},
+												{
+													"id": "set-group-active",
+													"objectClass": "System",
+													"sid": 438909854535191,
+													"parameters": {
+														"group-name": "\"Player System\"",
+														"state": "activated"
+													}
+												},
+												{
+													"id": "set-group-active",
+													"objectClass": "System",
+													"sid": 366984317339512,
+													"parameters": {
+														"group-name": "\"Timer System\"",
+														"state": "activated"
+													}
+												},
+												{
+													"id": "set-group-active",
+													"objectClass": "System",
+													"sid": 635460871338819,
+													"parameters": {
+														"group-name": "\"Object Systems\"",
+														"state": "activated"
+													}
+												},
+												{
+													"id": "set-group-active",
+													"objectClass": "System",
+													"sid": 835805833277702,
+													"parameters": {
+														"group-name": "\"Event Systems\"",
+														"state": "toggle-active"
+													}
+												},
+												{
+													"id": "set-group-active",
+													"objectClass": "System",
+													"sid": 640712691185337,
+													"parameters": {
+														"group-name": "\"Enemies System\"",
+														"state": "activated"
+													}
+												},
+												{
+													"id": "set-active",
+													"objectClass": "Goal_Pole",
+													"sid": 247548999198058,
+													"behaviorType": "Sine",
+													"parameters": {
+														"state": "active"
+													}
+												},
+												{
+													"id": "set-enabled",
+													"objectClass": "Player_FireBall",
+													"sid": 426733592359166,
+													"behaviorType": "Platform",
+													"parameters": {
+														"state": "enabled"
+													}
+												},
+												{
+													"id": "set-enabled",
+													"objectClass": "Player_FireBall",
+													"sid": 588921307734919,
+													"behaviorType": "Movement",
+													"parameters": {
+														"state": "enabled"
+													}
+												},
+												{
+													"id": "set-enabled",
+													"objectClass": "EnemyCoin",
+													"sid": 123280706957065,
+													"behaviorType": "Platform",
+													"parameters": {
+														"state": "enabled"
+													}
+												},
+												{
+													"id": "start-animation",
+													"objectClass": "Enemies",
+													"sid": 533091005159986,
+													"parameters": {
+														"from": "current-frame"
+													}
+												},
+												{
+													"id": "start-animation",
+													"objectClass": "Collectables",
+													"sid": 571739931897626,
+													"parameters": {
+														"from": "current-frame"
+													}
+												},
+												{
+													"id": "start-animation",
+													"objectClass": "Blocks",
+													"sid": 357940318965455,
+													"parameters": {
+														"from": "current-frame"
+													}
+												},
+												{
+													"id": "set-animation",
+													"objectClass": "Player1",
+													"sid": 759178403103828,
+													"parameters": {
+														"animation": "\"Big_\" & Self.AnimationRem",
+														"from": "beginning"
+													}
+												},
+												{
+													"id": "add-to-instvar",
+													"objectClass": "Player1",
+													"sid": 637459431384005,
+													"parameters": {
+														"instance-variable": "HP",
+														"value": "1"
+													}
+												}
+											],
+											"sid": 672734163292411
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "Player1",
+													"sid": 747814747918317,
+													"parameters": {
+														"instance-variable": "HP",
+														"comparison": 0,
+														"value": "1"
+													}
+												},
+												{
+													"id": "is-boolean-instance-variable-set",
+													"objectClass": "Player1",
+													"sid": 340367373877425,
+													"parameters": {
+														"instance-variable": "StarState"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "add-to-instvar",
+													"objectClass": "Player1",
+													"sid": 881446420938893,
+													"parameters": {
+														"instance-variable": "StarTimer",
+														"value": "60"
+													}
+												}
+											],
+											"sid": 481475673473206
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "Player1",
+													"sid": 617245491860278,
+													"parameters": {
+														"instance-variable": "HP",
+														"comparison": 4,
+														"value": "1"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "play",
+													"objectClass": "Audio",
+													"sid": 681090875188390,
+													"parameters": {
+														"audio-file": "smw_reserve_item_store",
+														"loop": "not-looping",
+														"volume": "-5",
+														"stereo-pan": "0",
+														"tag-optional": "\"\""
+													}
+												},
+												{
+													"id": "set-instvar-value",
+													"objectClass": "HUD_ItemHolder",
+													"sid": 582000301241322,
+													"parameters": {
+														"instance-variable": "Item_Holding",
+														"value": "\"Mushroom\""
+													}
+												},
+												{
+													"id": "destroy",
+													"objectClass": "Mushroom",
+													"sid": 895359719004474
+												}
+											],
+											"sid": 210155814021512
+										}
+									]
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Mushroom",
+											"sid": 615321999376078,
+											"parameters": {
+												"instance-variable": "State",
+												"comparison": 0,
+												"value": "\"Right\""
+											}
+										},
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "PauseSystem",
+											"sid": 344286348626766,
+											"parameters": {
+												"instance-variable": "CanPause",
+												"comparison": 3,
+												"value": "1"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "simulate-control",
+											"objectClass": "Mushroom",
+											"sid": 847188413286033,
+											"behaviorType": "Movement",
+											"parameters": {
+												"control": "right"
+											}
+										}
+									],
+									"sid": 586491685425783
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Mushroom",
+											"sid": 138440271767860,
+											"parameters": {
+												"instance-variable": "State",
+												"comparison": 0,
+												"value": "\"Left\""
+											}
+										},
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "PauseSystem",
+											"sid": 159645746319255,
+											"parameters": {
+												"instance-variable": "CanPause",
+												"comparison": 3,
+												"value": "1"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "simulate-control",
+											"objectClass": "Mushroom",
+											"sid": 857000757601983,
+											"behaviorType": "Movement",
+											"parameters": {
+												"control": "left"
+											}
+										}
+									],
+									"sid": 924299393542395
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-collision-with-another-object",
+											"objectClass": "Mushroom",
+											"sid": 565200539590753,
+											"parameters": {
+												"object": "Blocks"
+											}
+										},
+										{
+											"id": "on-collision-with-another-object",
+											"objectClass": "Mushroom",
+											"sid": 686301605413793,
+											"parameters": {
+												"object": "Tiles"
+											}
+										},
+										{
+											"id": "on-collision-with-another-object",
+											"objectClass": "Mushroom",
+											"sid": 317329994688187,
+											"disabled": true,
+											"parameters": {
+												"object": "General_Pipes"
+											}
+										}
+									],
+									"actions": [],
+									"sid": 511706837101910,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "is-by-wall",
+													"objectClass": "Mushroom",
+													"sid": 420840410131643,
+													"behaviorType": "Movement",
+													"parameters": {
+														"side": "left"
+													}
+												},
+												{
+													"id": "is-by-wall",
+													"objectClass": "Mushroom",
+													"sid": 544100646377528,
+													"behaviorType": "Movement",
+													"parameters": {
+														"side": "right"
+													}
+												}
+											],
+											"actions": [],
+											"sid": 201318270565886,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-instance-variable",
+															"objectClass": "Mushroom",
+															"sid": 392849679618554,
+															"parameters": {
+																"instance-variable": "State",
+																"comparison": 0,
+																"value": "\"Right\""
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-instvar-value",
+															"objectClass": "Mushroom",
+															"sid": 833277476769164,
+															"parameters": {
+																"instance-variable": "State",
+																"value": "\"Left\""
+															}
+														}
+													],
+													"sid": 678709660841031
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "else",
+															"objectClass": "System",
+															"sid": 298658099225909
+														}
+													],
+													"actions": [
+														{
+															"id": "set-instvar-value",
+															"objectClass": "Mushroom",
+															"sid": 477101645166066,
+															"parameters": {
+																"instance-variable": "State",
+																"value": "\"Right\""
+															}
+														}
+													],
+													"sid": 655755527241583
+												}
+											],
+											"isOrBlock": true
+										}
+									],
+									"isOrBlock": true
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "Mushroom",
+											"sid": 932126714680004,
+											"parameters": {
+												"instance-variable": "CanMove"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-enabled",
+											"objectClass": "Mushroom",
+											"sid": 863819178682427,
+											"behaviorType": "Movement",
+											"parameters": {
+												"state": "enabled"
+											}
+										}
+									],
+									"sid": 502624789463762
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "Mushroom",
+											"sid": 988075489642595,
+											"parameters": {
+												"instance-variable": "CanMove"
+											},
+											"isInverted": true
+										}
+									],
+									"actions": [
+										{
+											"id": "set-enabled",
+											"objectClass": "Mushroom",
+											"sid": 797769032616566,
+											"behaviorType": "Movement",
+											"parameters": {
+												"state": "disabled"
+											}
+										}
+									],
+									"sid": 808762520152410
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "Mushroom",
+											"sid": 997808746577213,
+											"parameters": {
+												"instance-variable": "CanMove"
+											}
+										},
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "PauseSystem",
+											"sid": 221695860047333,
+											"parameters": {
+												"instance-variable": "CanPause",
+												"comparison": 5,
+												"value": "2"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-enabled",
+											"objectClass": "Mushroom",
+											"sid": 303568588645864,
+											"behaviorType": "Movement",
+											"parameters": {
+												"state": "disabled"
+											}
+										},
+										{
+											"id": "set-max-speed",
+											"objectClass": "Mushroom",
+											"sid": 658233510060867,
+											"behaviorType": "Movement",
+											"parameters": {
+												"max-speed": "0"
+											}
+										}
+									],
+									"sid": 115131003017342,
+									"disabled": true
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "Mushroom",
+											"sid": 946869190671039,
+											"parameters": {
+												"instance-variable": "CanMove"
+											}
+										},
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "PauseSystem",
+											"sid": 931908790338728,
+											"parameters": {
+												"instance-variable": "CanPause",
+												"comparison": 3,
+												"value": "1"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-enabled",
+											"objectClass": "Mushroom",
+											"sid": 561557950800847,
+											"disabled": true,
+											"behaviorType": "Movement",
+											"parameters": {
+												"state": "enabled"
+											}
+										},
+										{
+											"id": "set-max-speed",
+											"objectClass": "Mushroom",
+											"sid": 902169543863724,
+											"behaviorType": "Movement",
+											"parameters": {
+												"max-speed": "100"
+											}
+										}
+									],
+									"sid": 109913227196074,
+									"disabled": true
+								}
+							],
+							"sid": 619277535569634
+						},
+						{
+							"eventType": "group",
+							"disabled": false,
+							"title": "FireFlower",
+							"description": "",
+							"isActiveOnStart": true,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-collision-with-another-object",
+											"objectClass": "Player1",
+											"sid": 408728776945259,
+											"parameters": {
+												"object": "FireFlower"
+											}
+										}
+									],
+									"actions": [],
+									"sid": 855224374652830,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "is-boolean-instance-variable-set",
+													"objectClass": "FireFlower",
+													"sid": 547847601370585,
+													"parameters": {
+														"instance-variable": "SpawnedFromItemHolder"
+													},
+													"isInverted": true
+												}
+											],
+											"actions": [
+												{
+													"id": "add-to-eventvar",
+													"objectClass": "System",
+													"sid": 371399267419928,
+													"parameters": {
+														"variable": "Score",
+														"value": "1000"
+													}
+												},
+												{
+													"id": "create-object",
+													"objectClass": "System",
+													"sid": 716783484319875,
+													"parameters": {
+														"object-to-create": "PART_PointGivenSprites",
+														"layer": "\"Main Objects\"",
+														"x": "Player1.X",
+														"y": "Player1.Y+16",
+														"create-hierarchy": false,
+														"template-name": "\"\""
+													}
+												},
+												{
+													"id": "set-animation",
+													"objectClass": "PART_PointGivenSprites",
+													"sid": 911738683027618,
+													"parameters": {
+														"animation": "\"1000\"",
+														"from": "beginning"
+													}
+												},
+												{
+													"id": "move-to-position",
+													"objectClass": "PART_PointGivenSprites",
+													"sid": 387567488976797,
+													"behaviorType": "MoveTo",
+													"parameters": {
+														"x": "Self.X",
+														"y": "Self.Y-40",
+														"mode": "direct"
+													}
+												},
+												{
+													"id": "wait",
+													"objectClass": "System",
+													"sid": 499337332995821,
+													"parameters": {
+														"seconds": "0.85",
+														"use-timescale": true
+													}
+												},
+												{
+													"id": "destroy",
+													"objectClass": "PART_PointGivenSprites",
+													"sid": 277169112019226
+												}
+											],
+											"sid": 962947500453367
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "Player1",
+													"sid": 890655115949503,
+													"parameters": {
+														"instance-variable": "HP",
+														"comparison": 5,
+														"value": "1"
+													}
+												},
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "Player1",
+													"sid": 134252868953913,
+													"parameters": {
+														"instance-variable": "HP",
+														"comparison": 1,
+														"value": "3"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-instvar-value",
+													"objectClass": "Player1",
+													"sid": 632562434474954,
+													"parameters": {
+														"instance-variable": "AnimationRem",
+														"value": "right(Self.AnimationState, len(Self.AnimationState)+6)"
+													}
+												},
+												{
+													"id": "set-instvar-value",
+													"objectClass": "Player1",
+													"sid": 820320275255588,
+													"disabled": true,
+													"parameters": {
+														"instance-variable": "AnimationRem",
+														"value": "right(Self.AnimationName, len(Self.AnimationName)-2)"
+													}
+												},
+												{
+													"id": "play",
+													"objectClass": "Audio",
+													"sid": 357308066730422,
+													"parameters": {
+														"audio-file": "powerup",
+														"loop": "not-looping",
+														"volume": "-5",
+														"stereo-pan": "0",
+														"tag-optional": "\"\""
+													}
+												},
+												{
+													"id": "set-enabled",
+													"objectClass": "Player1",
+													"sid": 125592171613877,
+													"behaviorType": "Platform",
+													"parameters": {
+														"state": "disabled"
+													}
+												},
+												{
+													"id": "set-instvar-value",
+													"objectClass": "Player1",
+													"sid": 880067251745731,
+													"disabled": true,
+													"parameters": {
+														"instance-variable": "AnimationState",
+														"value": "\"Growning\""
+													}
+												},
+												{
+													"id": "destroy",
+													"objectClass": "FireFlower",
+													"sid": 718490641461286
+												},
+												{
+													"id": "set-group-active",
+													"objectClass": "System",
+													"sid": 762579220925861,
+													"parameters": {
+														"group-name": "\"SMW Hud Stuff\"",
+														"state": "deactivated"
+													}
+												},
+												{
+													"id": "set-group-active",
+													"objectClass": "System",
+													"sid": 506629144507481,
+													"parameters": {
+														"group-name": "\"Player System\"",
+														"state": "deactivated"
+													}
+												},
+												{
+													"id": "set-group-active",
+													"objectClass": "System",
+													"sid": 519430434158207,
+													"parameters": {
+														"group-name": "\"Timer System\"",
+														"state": "deactivated"
+													}
+												},
+												{
+													"id": "set-group-active",
+													"objectClass": "System",
+													"sid": 106200113052203,
+													"parameters": {
+														"group-name": "\"Object Systems\"",
+														"state": "deactivated"
+													}
+												},
+												{
+													"id": "set-group-active",
+													"objectClass": "System",
+													"sid": 668808546542780,
+													"parameters": {
+														"group-name": "\"Event Systems\"",
+														"state": "deactivated"
+													}
+												},
+												{
+													"id": "set-group-active",
+													"objectClass": "System",
+													"sid": 153156142872928,
+													"parameters": {
+														"group-name": "\"Enemies System\"",
+														"state": "deactivated"
+													}
+												},
+												{
+													"id": "stop-animation",
+													"objectClass": "Enemies",
+													"sid": 908195058600581
+												},
+												{
+													"id": "stop-animation",
+													"objectClass": "Collectables",
+													"sid": 566670930620545
+												},
+												{
+													"id": "stop-animation",
+													"objectClass": "Blocks",
+													"sid": 898385350994527
+												},
+												{
+													"id": "set-enabled",
+													"objectClass": "Player_FireBall",
+													"sid": 710593774599102,
+													"behaviorType": "Platform",
+													"parameters": {
+														"state": "disabled"
+													}
+												},
+												{
+													"id": "set-enabled",
+													"objectClass": "Player_FireBall",
+													"sid": 703970363636150,
+													"behaviorType": "Movement",
+													"parameters": {
+														"state": "disabled"
+													}
+												},
+												{
+													"id": "set-animation",
+													"objectClass": "Player1",
+													"sid": 800488716760009,
+													"parameters": {
+														"animation": "\"Big_\" & Self.AnimationRem",
+														"from": "beginning"
+													}
+												},
+												{
+													"id": "stop-animation",
+													"objectClass": "Player1",
+													"sid": 311317807249168
+												},
+												{
+													"id": "set-enabled",
+													"objectClass": "EnemyCoin",
+													"sid": 215322176692547,
+													"behaviorType": "Platform",
+													"parameters": {
+														"state": "disabled"
+													}
+												},
+												{
+													"id": "add-to-instvar",
+													"objectClass": "Player1",
+													"sid": 837104995903905,
+													"parameters": {
+														"instance-variable": "StarTimer",
+														"value": "60"
+													}
+												},
+												{
+													"id": "wait",
+													"objectClass": "System",
+													"sid": 125202758133957,
+													"parameters": {
+														"seconds": "1",
+														"use-timescale": false
+													}
+												},
+												{
+													"id": "set-enabled",
+													"objectClass": "Player1",
+													"sid": 866287897605562,
+													"behaviorType": "Platform",
+													"parameters": {
+														"state": "enabled"
+													}
+												},
+												{
+													"id": "set-group-active",
+													"objectClass": "System",
+													"sid": 714745034566677,
+													"parameters": {
+														"group-name": "\"SMW Hud Stuff\"",
+														"state": "activated"
+													}
+												},
+												{
+													"id": "set-group-active",
+													"objectClass": "System",
+													"sid": 560427696591767,
+													"parameters": {
+														"group-name": "\"Player System\"",
+														"state": "activated"
+													}
+												},
+												{
+													"id": "set-group-active",
+													"objectClass": "System",
+													"sid": 657686779074209,
+													"parameters": {
+														"group-name": "\"Timer System\"",
+														"state": "activated"
+													}
+												},
+												{
+													"id": "set-group-active",
+													"objectClass": "System",
+													"sid": 519488454905338,
+													"parameters": {
+														"group-name": "\"Object Systems\"",
+														"state": "activated"
+													}
+												},
+												{
+													"id": "set-group-active",
+													"objectClass": "System",
+													"sid": 580751074531579,
+													"parameters": {
+														"group-name": "\"Event Systems\"",
+														"state": "toggle-active"
+													}
+												},
+												{
+													"id": "set-group-active",
+													"objectClass": "System",
+													"sid": 704668371501399,
+													"parameters": {
+														"group-name": "\"Enemies System\"",
+														"state": "activated"
+													}
+												},
+												{
+													"id": "start-animation",
+													"objectClass": "Enemies",
+													"sid": 415881313647628,
+													"parameters": {
+														"from": "current-frame"
+													}
+												},
+												{
+													"id": "start-animation",
+													"objectClass": "Collectables",
+													"sid": 449957847820217,
+													"parameters": {
+														"from": "current-frame"
+													}
+												},
+												{
+													"id": "start-animation",
+													"objectClass": "Blocks",
+													"sid": 175949408017326,
+													"parameters": {
+														"from": "current-frame"
+													}
+												},
+												{
+													"id": "set-enabled",
+													"objectClass": "Player_FireBall",
+													"sid": 823518464996365,
+													"behaviorType": "Platform",
+													"parameters": {
+														"state": "enabled"
+													}
+												},
+												{
+													"id": "set-enabled",
+													"objectClass": "Player_FireBall",
+													"sid": 346571693151168,
+													"behaviorType": "Movement",
+													"parameters": {
+														"state": "enabled"
+													}
+												},
+												{
+													"id": "set-enabled",
+													"objectClass": "EnemyCoin",
+													"sid": 960131740731901,
+													"behaviorType": "Platform",
+													"parameters": {
+														"state": "enabled"
+													}
+												},
+												{
+													"id": "set-animation",
+													"objectClass": "Player1",
+													"sid": 511596463612738,
+													"parameters": {
+														"animation": "\"Fire_\" & Self.AnimationRem",
+														"from": "beginning"
+													}
+												},
+												{
+													"id": "set-instvar-value",
+													"objectClass": "Player1",
+													"sid": 319230991797690,
+													"parameters": {
+														"instance-variable": "HP",
+														"value": "3"
+													}
+												}
+											],
+											"sid": 447707918211169
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "Player1",
+													"sid": 140844866884925,
+													"parameters": {
+														"instance-variable": "HP",
+														"comparison": 4,
+														"value": "2"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "play",
+													"objectClass": "Audio",
+													"sid": 336233731851950,
+													"parameters": {
+														"audio-file": "smw_reserve_item_store",
+														"loop": "not-looping",
+														"volume": "-5",
+														"stereo-pan": "0",
+														"tag-optional": "\"\""
+													}
+												},
+												{
+													"id": "set-instvar-value",
+													"objectClass": "HUD_ItemHolder",
+													"sid": 802547248314786,
+													"parameters": {
+														"instance-variable": "Item_Holding",
+														"value": "\"FireFlower\""
+													}
+												},
+												{
+													"id": "destroy",
+													"objectClass": "FireFlower",
+													"sid": 447404461842300
+												}
+											],
+											"sid": 972039286405749
+										}
+									]
+								}
+							],
+							"sid": 677638896701650
+						},
+						{
+							"eventType": "group",
+							"disabled": false,
+							"title": "SuperStar",
+							"description": "",
+							"isActiveOnStart": true,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-collision-with-another-object",
+											"objectClass": "Player1",
+											"sid": 819749098743103,
+											"parameters": {
+												"object": "SuperStar"
+											}
+										}
+									],
+									"actions": [],
+									"sid": 576795366773240,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [],
+											"actions": [
+												{
+													"id": "add-to-eventvar",
+													"objectClass": "System",
+													"sid": 876243530437797,
+													"parameters": {
+														"variable": "Score",
+														"value": "1000"
+													}
+												},
+												{
+													"id": "set-instvar-value",
+													"objectClass": "Player1",
+													"sid": 428064054143719,
+													"parameters": {
+														"instance-variable": "StarTimer",
+														"value": "960"
+													}
+												},
+												{
+													"id": "set-boolean-instvar",
+													"objectClass": "Player1",
+													"sid": 110684059771896,
+													"parameters": {
+														"instance-variable": "StarState",
+														"value": "true"
+													}
+												},
+												{
+													"id": "destroy",
+													"objectClass": "SuperStar",
+													"sid": 864748471703470
+												},
+												{
+													"id": "play",
+													"objectClass": "Audio",
+													"sid": 346907800877935,
+													"parameters": {
+														"audio-file": "powerup",
+														"loop": "not-looping",
+														"volume": "-5",
+														"stereo-pan": "0",
+														"tag-optional": "\"\""
+													}
+												},
+												{
+													"id": "create-object",
+													"objectClass": "System",
+													"sid": 913973411340198,
+													"parameters": {
+														"object-to-create": "PART_PointGivenSprites",
+														"layer": "\"Main Objects\"",
+														"x": "Player1.X",
+														"y": "Player1.Y+16",
+														"create-hierarchy": false,
+														"template-name": "\"\""
+													}
+												},
+												{
+													"id": "set-animation",
+													"objectClass": "PART_PointGivenSprites",
+													"sid": 200731791594939,
+													"parameters": {
+														"animation": "\"1000\"",
+														"from": "beginning"
+													}
+												},
+												{
+													"id": "move-to-position",
+													"objectClass": "PART_PointGivenSprites",
+													"sid": 107083743462654,
+													"behaviorType": "MoveTo",
+													"parameters": {
+														"x": "Self.X",
+														"y": "Self.Y-40",
+														"mode": "direct"
+													}
+												},
+												{
+													"id": "wait",
+													"objectClass": "System",
+													"sid": 532529443944185,
+													"parameters": {
+														"seconds": "0.85",
+														"use-timescale": true
+													}
+												},
+												{
+													"id": "destroy",
+													"objectClass": "PART_PointGivenSprites",
+													"sid": 896330017772006
+												}
+											],
+											"sid": 651046122412636
+										}
+									]
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "Player1",
+											"sid": 517453489355286,
+											"parameters": {
+												"instance-variable": "StarState"
+											}
+										}
+									],
+									"actions": [],
+									"sid": 456700244528563,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "every-x-seconds",
+													"objectClass": "System",
+													"sid": 633577999853555,
+													"parameters": {
+														"interval-seconds": "0.05"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "create-object",
+													"objectClass": "System",
+													"sid": 319385940309284,
+													"parameters": {
+														"object-to-create": "PART_StarShine",
+														"layer": "\"Main Objects\"",
+														"x": "Player1.X+round(random(-15,15))",
+														"y": "Player1.Y+round(random(-15,30))",
+														"create-hierarchy": false,
+														"template-name": "\"\""
+													}
+												},
+												{
+													"id": "set-y",
+													"objectClass": "PART_StarShine",
+													"sid": 379748430386378,
+													"parameters": {
+														"y": "Self.Y+30"
+													}
+												}
+											],
+											"sid": 683378587275989
+										}
+									]
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-any-animation-finished",
+											"objectClass": "PART_StarShine",
+											"sid": 265967367410914
+										}
+									],
+									"actions": [
+										{
+											"id": "destroy",
+											"objectClass": "PART_StarShine",
+											"sid": 415296949095082
+										}
+									],
+									"sid": 585291124952469
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "Player1",
+											"sid": 246634420149012,
+											"parameters": {
+												"instance-variable": "StarState"
+											}
+										},
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Player1",
+											"sid": 603906090156853,
+											"parameters": {
+												"instance-variable": "StarTimer",
+												"comparison": 3,
+												"value": "0"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-boolean-instvar",
+											"objectClass": "Player1",
+											"sid": 163857787093743,
+											"parameters": {
+												"instance-variable": "StarState",
+												"value": "false"
+											}
+										}
+									],
+									"sid": 947506122310991
+								}
+							],
+							"sid": 810663046436009
+						},
+						{
+							"eventType": "group",
+							"disabled": false,
+							"title": "1-up",
+							"description": "pretty much the same thing but you get a 1-up instead of a mushroom lmaoooo",
+							"isActiveOnStart": true,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-collision-with-another-object",
+											"objectClass": "Player1",
+											"sid": 764726042871103,
+											"parameters": {
+												"object": "1up"
+											}
+										}
+									],
+									"actions": [],
+									"sid": 242143930501665,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [],
+											"actions": [
+												{
+													"id": "destroy",
+													"objectClass": "1up",
+													"sid": 231660765747593
+												},
+												{
+													"id": "add-to-eventvar",
+													"objectClass": "System",
+													"sid": 674181177664923,
+													"parameters": {
+														"variable": "Lifes",
+														"value": "1"
+													}
+												},
+												{
+													"id": "play",
+													"objectClass": "Audio",
+													"sid": 448036102432186,
+													"parameters": {
+														"audio-file": "1up",
+														"loop": "not-looping",
+														"volume": "-5",
+														"stereo-pan": "0",
+														"tag-optional": "\"SF\""
+													}
+												},
+												{
+													"id": "create-object",
+													"objectClass": "System",
+													"sid": 999928007591878,
+													"parameters": {
+														"object-to-create": "PART_PointGivenSprites",
+														"layer": "\"Main Objects\"",
+														"x": "Player1.X",
+														"y": "Player1.Y+16",
+														"create-hierarchy": false,
+														"template-name": "\"\""
+													}
+												},
+												{
+													"id": "set-animation",
+													"objectClass": "PART_PointGivenSprites",
+													"sid": 584636429107976,
+													"parameters": {
+														"animation": "\"1UP\"",
+														"from": "beginning"
+													}
+												},
+												{
+													"id": "move-to-position",
+													"objectClass": "PART_PointGivenSprites",
+													"sid": 866461436634723,
+													"behaviorType": "MoveTo",
+													"parameters": {
+														"x": "Self.X",
+														"y": "Self.Y-40",
+														"mode": "direct"
+													}
+												},
+												{
+													"id": "wait",
+													"objectClass": "System",
+													"sid": 780284564510285,
+													"parameters": {
+														"seconds": "0.85",
+														"use-timescale": true
+													}
+												},
+												{
+													"id": "destroy",
+													"objectClass": "PART_PointGivenSprites",
+													"sid": 893112198835096
+												}
+											],
+											"sid": 364955830536122
+										}
+									]
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "1up",
+											"sid": 484808953182503,
+											"parameters": {
+												"instance-variable": "State",
+												"comparison": 0,
+												"value": "\"Right\""
+											}
+										},
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "PauseSystem",
+											"sid": 726677421827549,
+											"parameters": {
+												"instance-variable": "CanPause",
+												"comparison": 3,
+												"value": "1"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "simulate-control",
+											"objectClass": "1up",
+											"sid": 570181805016600,
+											"behaviorType": "Movement",
+											"parameters": {
+												"control": "right"
+											}
+										}
+									],
+									"sid": 282199500325458
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "1up",
+											"sid": 417847322339085,
+											"parameters": {
+												"instance-variable": "State",
+												"comparison": 0,
+												"value": "\"Left\""
+											}
+										},
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "PauseSystem",
+											"sid": 199311134804769,
+											"parameters": {
+												"instance-variable": "CanPause",
+												"comparison": 3,
+												"value": "1"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "simulate-control",
+											"objectClass": "1up",
+											"sid": 372798925122547,
+											"behaviorType": "Movement",
+											"parameters": {
+												"control": "left"
+											}
+										}
+									],
+									"sid": 776628214147559
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-collision-with-another-object",
+											"objectClass": "1up",
+											"sid": 914582421096545,
+											"parameters": {
+												"object": "Blocks"
+											}
+										},
+										{
+											"id": "on-collision-with-another-object",
+											"objectClass": "1up",
+											"sid": 735271244683849,
+											"parameters": {
+												"object": "Tiles"
+											}
+										}
+									],
+									"actions": [],
+									"sid": 598121472908387,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "is-by-wall",
+													"objectClass": "1up",
+													"sid": 317148717474238,
+													"behaviorType": "Movement",
+													"parameters": {
+														"side": "left"
+													}
+												},
+												{
+													"id": "is-by-wall",
+													"objectClass": "1up",
+													"sid": 556447018836107,
+													"behaviorType": "Movement",
+													"parameters": {
+														"side": "right"
+													}
+												}
+											],
+											"actions": [],
+											"sid": 761892480717130,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-instance-variable",
+															"objectClass": "1up",
+															"sid": 982671557040543,
+															"parameters": {
+																"instance-variable": "State",
+																"comparison": 0,
+																"value": "\"Right\""
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-instvar-value",
+															"objectClass": "1up",
+															"sid": 923046801106367,
+															"parameters": {
+																"instance-variable": "State",
+																"value": "\"Left\""
+															}
+														}
+													],
+													"sid": 305832634454676
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "else",
+															"objectClass": "System",
+															"sid": 456552170433024
+														}
+													],
+													"actions": [
+														{
+															"id": "set-instvar-value",
+															"objectClass": "1up",
+															"sid": 608156049967541,
+															"parameters": {
+																"instance-variable": "State",
+																"value": "\"Right\""
+															}
+														}
+													],
+													"sid": 676412514610796
+												}
+											],
+											"isOrBlock": true
+										}
+									],
+									"isOrBlock": true
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "1up",
+											"sid": 364867239671603,
+											"parameters": {
+												"instance-variable": "CanMove"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-enabled",
+											"objectClass": "1up",
+											"sid": 270795749291604,
+											"behaviorType": "Movement",
+											"parameters": {
+												"state": "enabled"
+											}
+										}
+									],
+									"sid": 105470291878122
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "1up",
+											"sid": 153877572732139,
+											"parameters": {
+												"instance-variable": "CanMove"
+											},
+											"isInverted": true
+										}
+									],
+									"actions": [
+										{
+											"id": "set-enabled",
+											"objectClass": "1up",
+											"sid": 933207128938509,
+											"behaviorType": "Movement",
+											"parameters": {
+												"state": "disabled"
+											}
+										}
+									],
+									"sid": 272474166368804
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "1up",
+											"sid": 500759271372789,
+											"parameters": {
+												"instance-variable": "CanMove"
+											}
+										},
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "PauseSystem",
+											"sid": 710605382343660,
+											"parameters": {
+												"instance-variable": "CanPause",
+												"comparison": 5,
+												"value": "2"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-enabled",
+											"objectClass": "1up",
+											"sid": 488581266590527,
+											"behaviorType": "Movement",
+											"parameters": {
+												"state": "disabled"
+											}
+										},
+										{
+											"id": "set-max-speed",
+											"objectClass": "1up",
+											"sid": 392770710438264,
+											"behaviorType": "Movement",
+											"parameters": {
+												"max-speed": "0"
+											}
+										}
+									],
+									"sid": 448045709268637,
+									"disabled": true
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "1up",
+											"sid": 709117476319341,
+											"parameters": {
+												"instance-variable": "CanMove"
+											}
+										},
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "PauseSystem",
+											"sid": 354328801033254,
+											"parameters": {
+												"instance-variable": "CanPause",
+												"comparison": 3,
+												"value": "1"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-enabled",
+											"objectClass": "1up",
+											"sid": 506550188317294,
+											"behaviorType": "Movement",
+											"parameters": {
+												"state": "enabled"
+											}
+										},
+										{
+											"id": "set-max-speed",
+											"objectClass": "1up",
+											"sid": 721257126789765,
+											"behaviorType": "Movement",
+											"parameters": {
+												"max-speed": "100"
+											}
+										}
+									],
+									"sid": 531194856854573,
+									"disabled": true
+								}
+							],
+							"sid": 209294220311660
+						}
+					],
+					"sid": 845047157145741
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
 					"title": "MushShooter",
 					"description": "might have to put this on the main branch of construct world",
 					"isActiveOnStart": true,
@@ -31045,2039 +33213,6 @@
 						}
 					],
 					"sid": 156539411677693
-				},
-				{
-					"eventType": "group",
-					"disabled": false,
-					"title": "Powerups",
-					"description": "Growing Up Animation is here",
-					"isActiveOnStart": true,
-					"children": [
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "every-tick",
-									"objectClass": "System",
-									"sid": 849810229278416
-								}
-							],
-							"actions": [
-								{
-									"type": "comment",
-									"text": "exist so they dont get stuck on blocks when turning"
-								},
-								{
-									"id": "set-deceleration",
-									"objectClass": "Mushroom",
-									"sid": 162753404079284,
-									"behaviorType": "Movement",
-									"parameters": {
-										"deceleration": "0"
-									}
-								},
-								{
-									"id": "set-deceleration",
-									"objectClass": "1up",
-									"sid": 612208639289819,
-									"behaviorType": "Movement",
-									"parameters": {
-										"deceleration": "0"
-									}
-								}
-							],
-							"sid": 344096083148206
-						},
-						{
-							"eventType": "group",
-							"disabled": false,
-							"title": "Mushroom",
-							"description": "",
-							"isActiveOnStart": true,
-							"children": [
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "on-collision-with-another-object",
-											"objectClass": "Player1",
-											"sid": 492949030198870,
-											"parameters": {
-												"object": "Mushroom"
-											}
-										}
-									],
-									"actions": [],
-									"sid": 571166614778757,
-									"children": [
-										{
-											"eventType": "block",
-											"conditions": [
-												{
-													"id": "is-boolean-instance-variable-set",
-													"objectClass": "Mushroom",
-													"sid": 992445122461134,
-													"parameters": {
-														"instance-variable": "SpawnedFromItemHolder"
-													},
-													"isInverted": true
-												}
-											],
-											"actions": [
-												{
-													"id": "create-object",
-													"objectClass": "System",
-													"sid": 514378479987409,
-													"parameters": {
-														"object-to-create": "PART_PointGivenSprites",
-														"layer": "\"Main Objects\"",
-														"x": "Player1.X",
-														"y": "Player1.Y+16",
-														"create-hierarchy": false,
-														"template-name": "\"\""
-													}
-												},
-												{
-													"id": "set-animation",
-													"objectClass": "PART_PointGivenSprites",
-													"sid": 369000048818320,
-													"parameters": {
-														"animation": "\"1000\"",
-														"from": "beginning"
-													}
-												},
-												{
-													"id": "add-to-eventvar",
-													"objectClass": "System",
-													"sid": 872427175225854,
-													"parameters": {
-														"variable": "Score",
-														"value": "1000"
-													}
-												},
-												{
-													"id": "move-to-position",
-													"objectClass": "PART_PointGivenSprites",
-													"sid": 787810103390910,
-													"behaviorType": "MoveTo",
-													"parameters": {
-														"x": "Self.X",
-														"y": "Self.Y-40",
-														"mode": "direct"
-													}
-												},
-												{
-													"id": "wait",
-													"objectClass": "System",
-													"sid": 430425138227269,
-													"parameters": {
-														"seconds": "0.85",
-														"use-timescale": true
-													}
-												},
-												{
-													"id": "destroy",
-													"objectClass": "PART_PointGivenSprites",
-													"sid": 863303414138503
-												}
-											],
-											"sid": 499857430742523
-										},
-										{
-											"eventType": "block",
-											"conditions": [
-												{
-													"id": "compare-instance-variable",
-													"objectClass": "Player1",
-													"sid": 750461388968166,
-													"parameters": {
-														"instance-variable": "HP",
-														"comparison": 0,
-														"value": "1"
-													}
-												}
-											],
-											"actions": [
-												{
-													"id": "set-instvar-value",
-													"objectClass": "Player1",
-													"sid": 490168473275359,
-													"disabled": true,
-													"parameters": {
-														"instance-variable": "AnimationRem",
-														"value": "right(Self.AnimationState, len(Self.AnimationState)+6)"
-													}
-												},
-												{
-													"id": "set-instvar-value",
-													"objectClass": "Player1",
-													"sid": 928991301674553,
-													"parameters": {
-														"instance-variable": "AnimationRem",
-														"value": "right(Self.AnimationName, len(Self.AnimationName)-6)"
-													}
-												},
-												{
-													"id": "play",
-													"objectClass": "Audio",
-													"sid": 483493000195460,
-													"parameters": {
-														"audio-file": "powerup",
-														"loop": "not-looping",
-														"volume": "-5",
-														"stereo-pan": "0",
-														"tag-optional": "\"\""
-													}
-												},
-												{
-													"id": "set-enabled",
-													"objectClass": "Player1",
-													"sid": 719015721510926,
-													"behaviorType": "Platform",
-													"parameters": {
-														"state": "disabled"
-													}
-												},
-												{
-													"id": "set-instvar-value",
-													"objectClass": "Player1",
-													"sid": 972170539263109,
-													"disabled": true,
-													"parameters": {
-														"instance-variable": "AnimationState",
-														"value": "\"Growning\""
-													}
-												},
-												{
-													"id": "destroy",
-													"objectClass": "Mushroom",
-													"sid": 365391013565457
-												},
-												{
-													"id": "set-group-active",
-													"objectClass": "System",
-													"sid": 548732274188068,
-													"parameters": {
-														"group-name": "\"SMW Hud Stuff\"",
-														"state": "deactivated"
-													}
-												},
-												{
-													"id": "set-group-active",
-													"objectClass": "System",
-													"sid": 381703779917710,
-													"parameters": {
-														"group-name": "\"Player System\"",
-														"state": "deactivated"
-													}
-												},
-												{
-													"id": "set-group-active",
-													"objectClass": "System",
-													"sid": 609714608362911,
-													"parameters": {
-														"group-name": "\"Timer System\"",
-														"state": "deactivated"
-													}
-												},
-												{
-													"id": "set-group-active",
-													"objectClass": "System",
-													"sid": 987666619337128,
-													"parameters": {
-														"group-name": "\"Object Systems\"",
-														"state": "deactivated"
-													}
-												},
-												{
-													"id": "set-group-active",
-													"objectClass": "System",
-													"sid": 607427008734127,
-													"parameters": {
-														"group-name": "\"Event Systems\"",
-														"state": "deactivated"
-													}
-												},
-												{
-													"id": "set-group-active",
-													"objectClass": "System",
-													"sid": 604156582815833,
-													"parameters": {
-														"group-name": "\"Enemies System\"",
-														"state": "deactivated"
-													}
-												},
-												{
-													"id": "set-active",
-													"objectClass": "Goal_Pole",
-													"sid": 175487823720203,
-													"behaviorType": "Sine",
-													"parameters": {
-														"state": "inactive"
-													}
-												},
-												{
-													"id": "set-enabled",
-													"objectClass": "Player_FireBall",
-													"sid": 520325658662254,
-													"behaviorType": "Platform",
-													"parameters": {
-														"state": "disabled"
-													}
-												},
-												{
-													"id": "set-enabled",
-													"objectClass": "Player_FireBall",
-													"sid": 348591905416570,
-													"behaviorType": "Movement",
-													"parameters": {
-														"state": "disabled"
-													}
-												},
-												{
-													"id": "set-enabled",
-													"objectClass": "EnemyCoin",
-													"sid": 799158720002785,
-													"behaviorType": "Platform",
-													"parameters": {
-														"state": "disabled"
-													}
-												},
-												{
-													"id": "stop-animation",
-													"objectClass": "Enemies",
-													"sid": 430940352976394
-												},
-												{
-													"id": "stop-animation",
-													"objectClass": "Collectables",
-													"sid": 248353833379763
-												},
-												{
-													"id": "stop-animation",
-													"objectClass": "Blocks",
-													"sid": 687118538467523
-												},
-												{
-													"id": "set-animation",
-													"objectClass": "Player1",
-													"sid": 191202261046148,
-													"parameters": {
-														"animation": "\"Small_Growup\"",
-														"from": "beginning"
-													}
-												},
-												{
-													"id": "wait",
-													"objectClass": "System",
-													"sid": 172218516856321,
-													"parameters": {
-														"seconds": "1",
-														"use-timescale": false
-													}
-												},
-												{
-													"id": "set-enabled",
-													"objectClass": "Player1",
-													"sid": 685082561828095,
-													"behaviorType": "Platform",
-													"parameters": {
-														"state": "enabled"
-													}
-												},
-												{
-													"id": "set-group-active",
-													"objectClass": "System",
-													"sid": 661537845104142,
-													"parameters": {
-														"group-name": "\"SMW Hud Stuff\"",
-														"state": "activated"
-													}
-												},
-												{
-													"id": "set-group-active",
-													"objectClass": "System",
-													"sid": 192688389817381,
-													"parameters": {
-														"group-name": "\"Player System\"",
-														"state": "activated"
-													}
-												},
-												{
-													"id": "set-group-active",
-													"objectClass": "System",
-													"sid": 878191461811259,
-													"parameters": {
-														"group-name": "\"Timer System\"",
-														"state": "activated"
-													}
-												},
-												{
-													"id": "set-group-active",
-													"objectClass": "System",
-													"sid": 509554353868977,
-													"parameters": {
-														"group-name": "\"Object Systems\"",
-														"state": "activated"
-													}
-												},
-												{
-													"id": "set-group-active",
-													"objectClass": "System",
-													"sid": 987478303863974,
-													"parameters": {
-														"group-name": "\"Event Systems\"",
-														"state": "toggle-active"
-													}
-												},
-												{
-													"id": "set-group-active",
-													"objectClass": "System",
-													"sid": 133013571477613,
-													"parameters": {
-														"group-name": "\"Enemies System\"",
-														"state": "activated"
-													}
-												},
-												{
-													"id": "set-active",
-													"objectClass": "Goal_Pole",
-													"sid": 718226770392157,
-													"behaviorType": "Sine",
-													"parameters": {
-														"state": "active"
-													}
-												},
-												{
-													"id": "set-enabled",
-													"objectClass": "Player_FireBall",
-													"sid": 143316383679849,
-													"behaviorType": "Platform",
-													"parameters": {
-														"state": "enabled"
-													}
-												},
-												{
-													"id": "set-enabled",
-													"objectClass": "Player_FireBall",
-													"sid": 864931348177920,
-													"behaviorType": "Movement",
-													"parameters": {
-														"state": "enabled"
-													}
-												},
-												{
-													"id": "set-enabled",
-													"objectClass": "EnemyCoin",
-													"sid": 538155008453165,
-													"behaviorType": "Platform",
-													"parameters": {
-														"state": "enabled"
-													}
-												},
-												{
-													"id": "start-animation",
-													"objectClass": "Enemies",
-													"sid": 518416042226133,
-													"parameters": {
-														"from": "current-frame"
-													}
-												},
-												{
-													"id": "start-animation",
-													"objectClass": "Collectables",
-													"sid": 658930952174250,
-													"parameters": {
-														"from": "current-frame"
-													}
-												},
-												{
-													"id": "start-animation",
-													"objectClass": "Blocks",
-													"sid": 855778161120002,
-													"parameters": {
-														"from": "current-frame"
-													}
-												},
-												{
-													"id": "set-animation",
-													"objectClass": "Player1",
-													"sid": 880938140844253,
-													"parameters": {
-														"animation": "\"Big_\" & Self.AnimationRem",
-														"from": "beginning"
-													}
-												},
-												{
-													"id": "add-to-instvar",
-													"objectClass": "Player1",
-													"sid": 804933933766978,
-													"parameters": {
-														"instance-variable": "HP",
-														"value": "1"
-													}
-												}
-											],
-											"sid": 379290132059230
-										},
-										{
-											"eventType": "block",
-											"conditions": [
-												{
-													"id": "compare-instance-variable",
-													"objectClass": "Player1",
-													"sid": 328660094410484,
-													"parameters": {
-														"instance-variable": "HP",
-														"comparison": 0,
-														"value": "1"
-													}
-												},
-												{
-													"id": "is-boolean-instance-variable-set",
-													"objectClass": "Player1",
-													"sid": 653854825647201,
-													"parameters": {
-														"instance-variable": "StarState"
-													}
-												}
-											],
-											"actions": [
-												{
-													"id": "add-to-instvar",
-													"objectClass": "Player1",
-													"sid": 613766997143237,
-													"parameters": {
-														"instance-variable": "StarTimer",
-														"value": "60"
-													}
-												}
-											],
-											"sid": 385826310072801
-										},
-										{
-											"eventType": "block",
-											"conditions": [
-												{
-													"id": "compare-instance-variable",
-													"objectClass": "Player1",
-													"sid": 806118228080434,
-													"parameters": {
-														"instance-variable": "HP",
-														"comparison": 4,
-														"value": "1"
-													}
-												}
-											],
-											"actions": [
-												{
-													"id": "play",
-													"objectClass": "Audio",
-													"sid": 961715730666476,
-													"parameters": {
-														"audio-file": "smw_reserve_item_store",
-														"loop": "not-looping",
-														"volume": "-5",
-														"stereo-pan": "0",
-														"tag-optional": "\"\""
-													}
-												},
-												{
-													"id": "set-instvar-value",
-													"objectClass": "HUD_ItemHolder",
-													"sid": 535908351135089,
-													"parameters": {
-														"instance-variable": "Item_Holding",
-														"value": "\"Mushroom\""
-													}
-												},
-												{
-													"id": "destroy",
-													"objectClass": "Mushroom",
-													"sid": 163037166414745
-												}
-											],
-											"sid": 798636745999115
-										}
-									]
-								},
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "compare-instance-variable",
-											"objectClass": "Mushroom",
-											"sid": 866664678197031,
-											"parameters": {
-												"instance-variable": "State",
-												"comparison": 0,
-												"value": "\"Right\""
-											}
-										},
-										{
-											"id": "compare-instance-variable",
-											"objectClass": "PauseSystem",
-											"sid": 634808700369272,
-											"parameters": {
-												"instance-variable": "CanPause",
-												"comparison": 3,
-												"value": "1"
-											}
-										}
-									],
-									"actions": [
-										{
-											"id": "simulate-control",
-											"objectClass": "Mushroom",
-											"sid": 795455306675761,
-											"behaviorType": "Movement",
-											"parameters": {
-												"control": "right"
-											}
-										}
-									],
-									"sid": 680650206723193
-								},
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "compare-instance-variable",
-											"objectClass": "Mushroom",
-											"sid": 888651129336271,
-											"parameters": {
-												"instance-variable": "State",
-												"comparison": 0,
-												"value": "\"Left\""
-											}
-										},
-										{
-											"id": "compare-instance-variable",
-											"objectClass": "PauseSystem",
-											"sid": 670861874541540,
-											"parameters": {
-												"instance-variable": "CanPause",
-												"comparison": 3,
-												"value": "1"
-											}
-										}
-									],
-									"actions": [
-										{
-											"id": "simulate-control",
-											"objectClass": "Mushroom",
-											"sid": 217019957005652,
-											"behaviorType": "Movement",
-											"parameters": {
-												"control": "left"
-											}
-										}
-									],
-									"sid": 466259590956834
-								},
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "on-collision-with-another-object",
-											"objectClass": "Mushroom",
-											"sid": 520956647107130,
-											"parameters": {
-												"object": "Blocks"
-											}
-										},
-										{
-											"id": "on-collision-with-another-object",
-											"objectClass": "Mushroom",
-											"sid": 932001520880715,
-											"parameters": {
-												"object": "Tiles"
-											}
-										},
-										{
-											"id": "on-collision-with-another-object",
-											"objectClass": "Mushroom",
-											"sid": 203301132773741,
-											"disabled": true,
-											"parameters": {
-												"object": "General_Pipes"
-											}
-										}
-									],
-									"actions": [],
-									"sid": 534469453956623,
-									"children": [
-										{
-											"eventType": "block",
-											"conditions": [
-												{
-													"id": "is-by-wall",
-													"objectClass": "Mushroom",
-													"sid": 137427885318101,
-													"behaviorType": "Movement",
-													"parameters": {
-														"side": "left"
-													}
-												},
-												{
-													"id": "is-by-wall",
-													"objectClass": "Mushroom",
-													"sid": 958389962109999,
-													"behaviorType": "Movement",
-													"parameters": {
-														"side": "right"
-													}
-												}
-											],
-											"actions": [],
-											"sid": 426345326675924,
-											"children": [
-												{
-													"eventType": "block",
-													"conditions": [
-														{
-															"id": "compare-instance-variable",
-															"objectClass": "Mushroom",
-															"sid": 393093567361417,
-															"parameters": {
-																"instance-variable": "State",
-																"comparison": 0,
-																"value": "\"Right\""
-															}
-														}
-													],
-													"actions": [
-														{
-															"id": "set-instvar-value",
-															"objectClass": "Mushroom",
-															"sid": 833795250130052,
-															"parameters": {
-																"instance-variable": "State",
-																"value": "\"Left\""
-															}
-														}
-													],
-													"sid": 608405716032053
-												},
-												{
-													"eventType": "block",
-													"conditions": [
-														{
-															"id": "else",
-															"objectClass": "System",
-															"sid": 627685554212397
-														}
-													],
-													"actions": [
-														{
-															"id": "set-instvar-value",
-															"objectClass": "Mushroom",
-															"sid": 783002459468860,
-															"parameters": {
-																"instance-variable": "State",
-																"value": "\"Right\""
-															}
-														}
-													],
-													"sid": 713760672516947
-												}
-											],
-											"isOrBlock": true
-										}
-									],
-									"isOrBlock": true
-								},
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "is-boolean-instance-variable-set",
-											"objectClass": "Mushroom",
-											"sid": 228296898047245,
-											"parameters": {
-												"instance-variable": "CanMove"
-											}
-										}
-									],
-									"actions": [
-										{
-											"id": "set-enabled",
-											"objectClass": "Mushroom",
-											"sid": 376327312343289,
-											"behaviorType": "Movement",
-											"parameters": {
-												"state": "enabled"
-											}
-										}
-									],
-									"sid": 546313774292054
-								},
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "is-boolean-instance-variable-set",
-											"objectClass": "Mushroom",
-											"sid": 173144866675961,
-											"parameters": {
-												"instance-variable": "CanMove"
-											},
-											"isInverted": true
-										}
-									],
-									"actions": [
-										{
-											"id": "set-enabled",
-											"objectClass": "Mushroom",
-											"sid": 204695867317171,
-											"behaviorType": "Movement",
-											"parameters": {
-												"state": "disabled"
-											}
-										}
-									],
-									"sid": 323245612186920
-								},
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "is-boolean-instance-variable-set",
-											"objectClass": "Mushroom",
-											"sid": 376417833001377,
-											"parameters": {
-												"instance-variable": "CanMove"
-											}
-										},
-										{
-											"id": "compare-instance-variable",
-											"objectClass": "PauseSystem",
-											"sid": 574549027864630,
-											"parameters": {
-												"instance-variable": "CanPause",
-												"comparison": 5,
-												"value": "2"
-											}
-										}
-									],
-									"actions": [
-										{
-											"id": "set-enabled",
-											"objectClass": "Mushroom",
-											"sid": 585140925173421,
-											"behaviorType": "Movement",
-											"parameters": {
-												"state": "disabled"
-											}
-										},
-										{
-											"id": "set-max-speed",
-											"objectClass": "Mushroom",
-											"sid": 519319797027065,
-											"behaviorType": "Movement",
-											"parameters": {
-												"max-speed": "0"
-											}
-										}
-									],
-									"sid": 894807200553944,
-									"disabled": true
-								},
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "is-boolean-instance-variable-set",
-											"objectClass": "Mushroom",
-											"sid": 572955248587064,
-											"parameters": {
-												"instance-variable": "CanMove"
-											}
-										},
-										{
-											"id": "compare-instance-variable",
-											"objectClass": "PauseSystem",
-											"sid": 391140346702565,
-											"parameters": {
-												"instance-variable": "CanPause",
-												"comparison": 3,
-												"value": "1"
-											}
-										}
-									],
-									"actions": [
-										{
-											"id": "set-enabled",
-											"objectClass": "Mushroom",
-											"sid": 697955935678044,
-											"disabled": true,
-											"behaviorType": "Movement",
-											"parameters": {
-												"state": "enabled"
-											}
-										},
-										{
-											"id": "set-max-speed",
-											"objectClass": "Mushroom",
-											"sid": 245643043689714,
-											"behaviorType": "Movement",
-											"parameters": {
-												"max-speed": "100"
-											}
-										}
-									],
-									"sid": 283674346808628,
-									"disabled": true
-								}
-							],
-							"sid": 845025641195788
-						},
-						{
-							"eventType": "group",
-							"disabled": false,
-							"title": "FireFlower",
-							"description": "",
-							"isActiveOnStart": true,
-							"children": [
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "on-collision-with-another-object",
-											"objectClass": "Player1",
-											"sid": 911273838311395,
-											"parameters": {
-												"object": "FireFlower"
-											}
-										}
-									],
-									"actions": [],
-									"sid": 672787280497642,
-									"children": [
-										{
-											"eventType": "block",
-											"conditions": [
-												{
-													"id": "is-boolean-instance-variable-set",
-													"objectClass": "FireFlower",
-													"sid": 987842532279796,
-													"parameters": {
-														"instance-variable": "SpawnedFromItemHolder"
-													},
-													"isInverted": true
-												}
-											],
-											"actions": [
-												{
-													"id": "add-to-eventvar",
-													"objectClass": "System",
-													"sid": 301124781070860,
-													"parameters": {
-														"variable": "Score",
-														"value": "1000"
-													}
-												},
-												{
-													"id": "create-object",
-													"objectClass": "System",
-													"sid": 986724356860570,
-													"parameters": {
-														"object-to-create": "PART_PointGivenSprites",
-														"layer": "\"Main Objects\"",
-														"x": "Player1.X",
-														"y": "Player1.Y+16",
-														"create-hierarchy": false,
-														"template-name": "\"\""
-													}
-												},
-												{
-													"id": "set-animation",
-													"objectClass": "PART_PointGivenSprites",
-													"sid": 133894699428039,
-													"parameters": {
-														"animation": "\"1000\"",
-														"from": "beginning"
-													}
-												},
-												{
-													"id": "move-to-position",
-													"objectClass": "PART_PointGivenSprites",
-													"sid": 148202396982084,
-													"behaviorType": "MoveTo",
-													"parameters": {
-														"x": "Self.X",
-														"y": "Self.Y-40",
-														"mode": "direct"
-													}
-												},
-												{
-													"id": "wait",
-													"objectClass": "System",
-													"sid": 849137337859632,
-													"parameters": {
-														"seconds": "0.85",
-														"use-timescale": true
-													}
-												},
-												{
-													"id": "destroy",
-													"objectClass": "PART_PointGivenSprites",
-													"sid": 409629516002357
-												}
-											],
-											"sid": 834144672326578
-										},
-										{
-											"eventType": "block",
-											"conditions": [
-												{
-													"id": "compare-instance-variable",
-													"objectClass": "Player1",
-													"sid": 846690658808588,
-													"parameters": {
-														"instance-variable": "HP",
-														"comparison": 5,
-														"value": "1"
-													}
-												},
-												{
-													"id": "compare-instance-variable",
-													"objectClass": "Player1",
-													"sid": 133167856834355,
-													"parameters": {
-														"instance-variable": "HP",
-														"comparison": 1,
-														"value": "3"
-													}
-												}
-											],
-											"actions": [
-												{
-													"id": "set-instvar-value",
-													"objectClass": "Player1",
-													"sid": 661283334852476,
-													"parameters": {
-														"instance-variable": "AnimationRem",
-														"value": "right(Self.AnimationState, len(Self.AnimationState)+6)"
-													}
-												},
-												{
-													"id": "set-instvar-value",
-													"objectClass": "Player1",
-													"sid": 930566239140646,
-													"disabled": true,
-													"parameters": {
-														"instance-variable": "AnimationRem",
-														"value": "right(Self.AnimationName, len(Self.AnimationName)-2)"
-													}
-												},
-												{
-													"id": "play",
-													"objectClass": "Audio",
-													"sid": 384334242586981,
-													"parameters": {
-														"audio-file": "powerup",
-														"loop": "not-looping",
-														"volume": "-5",
-														"stereo-pan": "0",
-														"tag-optional": "\"\""
-													}
-												},
-												{
-													"id": "set-enabled",
-													"objectClass": "Player1",
-													"sid": 649569647610647,
-													"behaviorType": "Platform",
-													"parameters": {
-														"state": "disabled"
-													}
-												},
-												{
-													"id": "set-instvar-value",
-													"objectClass": "Player1",
-													"sid": 287907149276548,
-													"disabled": true,
-													"parameters": {
-														"instance-variable": "AnimationState",
-														"value": "\"Growning\""
-													}
-												},
-												{
-													"id": "destroy",
-													"objectClass": "FireFlower",
-													"sid": 463358980799259
-												},
-												{
-													"id": "set-group-active",
-													"objectClass": "System",
-													"sid": 259774995567153,
-													"parameters": {
-														"group-name": "\"SMW Hud Stuff\"",
-														"state": "deactivated"
-													}
-												},
-												{
-													"id": "set-group-active",
-													"objectClass": "System",
-													"sid": 645704412112840,
-													"parameters": {
-														"group-name": "\"Player System\"",
-														"state": "deactivated"
-													}
-												},
-												{
-													"id": "set-group-active",
-													"objectClass": "System",
-													"sid": 509054105093270,
-													"parameters": {
-														"group-name": "\"Timer System\"",
-														"state": "deactivated"
-													}
-												},
-												{
-													"id": "set-group-active",
-													"objectClass": "System",
-													"sid": 683637250040366,
-													"parameters": {
-														"group-name": "\"Object Systems\"",
-														"state": "deactivated"
-													}
-												},
-												{
-													"id": "set-group-active",
-													"objectClass": "System",
-													"sid": 245416856467105,
-													"parameters": {
-														"group-name": "\"Event Systems\"",
-														"state": "deactivated"
-													}
-												},
-												{
-													"id": "set-group-active",
-													"objectClass": "System",
-													"sid": 248270352782819,
-													"parameters": {
-														"group-name": "\"Enemies System\"",
-														"state": "deactivated"
-													}
-												},
-												{
-													"id": "stop-animation",
-													"objectClass": "Enemies",
-													"sid": 200844138215001
-												},
-												{
-													"id": "stop-animation",
-													"objectClass": "Collectables",
-													"sid": 725317178872740
-												},
-												{
-													"id": "stop-animation",
-													"objectClass": "Blocks",
-													"sid": 275329394840369
-												},
-												{
-													"id": "set-enabled",
-													"objectClass": "Player_FireBall",
-													"sid": 340876265333340,
-													"behaviorType": "Platform",
-													"parameters": {
-														"state": "disabled"
-													}
-												},
-												{
-													"id": "set-enabled",
-													"objectClass": "Player_FireBall",
-													"sid": 942163161539628,
-													"behaviorType": "Movement",
-													"parameters": {
-														"state": "disabled"
-													}
-												},
-												{
-													"id": "set-animation",
-													"objectClass": "Player1",
-													"sid": 140995017164726,
-													"parameters": {
-														"animation": "\"Big_\" & Self.AnimationRem",
-														"from": "beginning"
-													}
-												},
-												{
-													"id": "stop-animation",
-													"objectClass": "Player1",
-													"sid": 892898377883121
-												},
-												{
-													"id": "set-enabled",
-													"objectClass": "EnemyCoin",
-													"sid": 459517465538301,
-													"behaviorType": "Platform",
-													"parameters": {
-														"state": "disabled"
-													}
-												},
-												{
-													"id": "add-to-instvar",
-													"objectClass": "Player1",
-													"sid": 279315494801124,
-													"parameters": {
-														"instance-variable": "StarTimer",
-														"value": "60"
-													}
-												},
-												{
-													"id": "wait",
-													"objectClass": "System",
-													"sid": 401939824617513,
-													"parameters": {
-														"seconds": "1",
-														"use-timescale": false
-													}
-												},
-												{
-													"id": "set-enabled",
-													"objectClass": "Player1",
-													"sid": 381562994191600,
-													"behaviorType": "Platform",
-													"parameters": {
-														"state": "enabled"
-													}
-												},
-												{
-													"id": "set-group-active",
-													"objectClass": "System",
-													"sid": 852957445782013,
-													"parameters": {
-														"group-name": "\"SMW Hud Stuff\"",
-														"state": "activated"
-													}
-												},
-												{
-													"id": "set-group-active",
-													"objectClass": "System",
-													"sid": 135525071232483,
-													"parameters": {
-														"group-name": "\"Player System\"",
-														"state": "activated"
-													}
-												},
-												{
-													"id": "set-group-active",
-													"objectClass": "System",
-													"sid": 528199187206286,
-													"parameters": {
-														"group-name": "\"Timer System\"",
-														"state": "activated"
-													}
-												},
-												{
-													"id": "set-group-active",
-													"objectClass": "System",
-													"sid": 716946394459708,
-													"parameters": {
-														"group-name": "\"Object Systems\"",
-														"state": "activated"
-													}
-												},
-												{
-													"id": "set-group-active",
-													"objectClass": "System",
-													"sid": 452025852554180,
-													"parameters": {
-														"group-name": "\"Event Systems\"",
-														"state": "toggle-active"
-													}
-												},
-												{
-													"id": "set-group-active",
-													"objectClass": "System",
-													"sid": 955263526647366,
-													"parameters": {
-														"group-name": "\"Enemies System\"",
-														"state": "activated"
-													}
-												},
-												{
-													"id": "start-animation",
-													"objectClass": "Enemies",
-													"sid": 638987606365894,
-													"parameters": {
-														"from": "current-frame"
-													}
-												},
-												{
-													"id": "start-animation",
-													"objectClass": "Collectables",
-													"sid": 329706445886221,
-													"parameters": {
-														"from": "current-frame"
-													}
-												},
-												{
-													"id": "start-animation",
-													"objectClass": "Blocks",
-													"sid": 741073847605005,
-													"parameters": {
-														"from": "current-frame"
-													}
-												},
-												{
-													"id": "set-enabled",
-													"objectClass": "Player_FireBall",
-													"sid": 572535389398850,
-													"behaviorType": "Platform",
-													"parameters": {
-														"state": "enabled"
-													}
-												},
-												{
-													"id": "set-enabled",
-													"objectClass": "Player_FireBall",
-													"sid": 314345383961023,
-													"behaviorType": "Movement",
-													"parameters": {
-														"state": "enabled"
-													}
-												},
-												{
-													"id": "set-enabled",
-													"objectClass": "EnemyCoin",
-													"sid": 425913015022813,
-													"behaviorType": "Platform",
-													"parameters": {
-														"state": "enabled"
-													}
-												},
-												{
-													"id": "set-animation",
-													"objectClass": "Player1",
-													"sid": 363479170568548,
-													"parameters": {
-														"animation": "\"Fire_\" & Self.AnimationRem",
-														"from": "beginning"
-													}
-												},
-												{
-													"id": "set-instvar-value",
-													"objectClass": "Player1",
-													"sid": 841451714464313,
-													"parameters": {
-														"instance-variable": "HP",
-														"value": "3"
-													}
-												}
-											],
-											"sid": 217053448242724
-										},
-										{
-											"eventType": "block",
-											"conditions": [
-												{
-													"id": "compare-instance-variable",
-													"objectClass": "Player1",
-													"sid": 209772013945210,
-													"parameters": {
-														"instance-variable": "HP",
-														"comparison": 4,
-														"value": "2"
-													}
-												}
-											],
-											"actions": [
-												{
-													"id": "play",
-													"objectClass": "Audio",
-													"sid": 931353395159319,
-													"parameters": {
-														"audio-file": "smw_reserve_item_store",
-														"loop": "not-looping",
-														"volume": "-5",
-														"stereo-pan": "0",
-														"tag-optional": "\"\""
-													}
-												},
-												{
-													"id": "set-instvar-value",
-													"objectClass": "HUD_ItemHolder",
-													"sid": 832434228251611,
-													"parameters": {
-														"instance-variable": "Item_Holding",
-														"value": "\"FireFlower\""
-													}
-												},
-												{
-													"id": "destroy",
-													"objectClass": "FireFlower",
-													"sid": 573093547570434
-												}
-											],
-											"sid": 960739934574080
-										}
-									]
-								}
-							],
-							"sid": 350078031763009
-						},
-						{
-							"eventType": "group",
-							"disabled": false,
-							"title": "SuperStar",
-							"description": "",
-							"isActiveOnStart": true,
-							"children": [
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "on-collision-with-another-object",
-											"objectClass": "Player1",
-											"sid": 256012410191990,
-											"parameters": {
-												"object": "SuperStar"
-											}
-										}
-									],
-									"actions": [],
-									"sid": 522890873851210,
-									"children": [
-										{
-											"eventType": "block",
-											"conditions": [],
-											"actions": [
-												{
-													"id": "add-to-eventvar",
-													"objectClass": "System",
-													"sid": 196039513210544,
-													"parameters": {
-														"variable": "Score",
-														"value": "1000"
-													}
-												},
-												{
-													"id": "set-instvar-value",
-													"objectClass": "Player1",
-													"sid": 289478291110749,
-													"parameters": {
-														"instance-variable": "StarTimer",
-														"value": "960"
-													}
-												},
-												{
-													"id": "set-boolean-instvar",
-													"objectClass": "Player1",
-													"sid": 811144787841987,
-													"parameters": {
-														"instance-variable": "StarState",
-														"value": "true"
-													}
-												},
-												{
-													"id": "destroy",
-													"objectClass": "SuperStar",
-													"sid": 620095450133235
-												},
-												{
-													"id": "play",
-													"objectClass": "Audio",
-													"sid": 479699888952697,
-													"parameters": {
-														"audio-file": "powerup",
-														"loop": "not-looping",
-														"volume": "-5",
-														"stereo-pan": "0",
-														"tag-optional": "\"\""
-													}
-												},
-												{
-													"id": "create-object",
-													"objectClass": "System",
-													"sid": 884683713000237,
-													"parameters": {
-														"object-to-create": "PART_PointGivenSprites",
-														"layer": "\"Main Objects\"",
-														"x": "Player1.X",
-														"y": "Player1.Y+16",
-														"create-hierarchy": false,
-														"template-name": "\"\""
-													}
-												},
-												{
-													"id": "set-animation",
-													"objectClass": "PART_PointGivenSprites",
-													"sid": 528001110773884,
-													"parameters": {
-														"animation": "\"1000\"",
-														"from": "beginning"
-													}
-												},
-												{
-													"id": "move-to-position",
-													"objectClass": "PART_PointGivenSprites",
-													"sid": 553265369211458,
-													"behaviorType": "MoveTo",
-													"parameters": {
-														"x": "Self.X",
-														"y": "Self.Y-40",
-														"mode": "direct"
-													}
-												},
-												{
-													"id": "wait",
-													"objectClass": "System",
-													"sid": 958308501587126,
-													"parameters": {
-														"seconds": "0.85",
-														"use-timescale": true
-													}
-												},
-												{
-													"id": "destroy",
-													"objectClass": "PART_PointGivenSprites",
-													"sid": 888662507682055
-												}
-											],
-											"sid": 836630987938152
-										}
-									]
-								},
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "is-boolean-instance-variable-set",
-											"objectClass": "Player1",
-											"sid": 344251427726309,
-											"parameters": {
-												"instance-variable": "StarState"
-											}
-										}
-									],
-									"actions": [],
-									"sid": 815339508353542,
-									"children": [
-										{
-											"eventType": "block",
-											"conditions": [
-												{
-													"id": "every-x-seconds",
-													"objectClass": "System",
-													"sid": 901347033353033,
-													"parameters": {
-														"interval-seconds": "0.05"
-													}
-												}
-											],
-											"actions": [
-												{
-													"id": "create-object",
-													"objectClass": "System",
-													"sid": 127051170805981,
-													"parameters": {
-														"object-to-create": "PART_StarShine",
-														"layer": "\"Main Objects\"",
-														"x": "Player1.X+round(random(-15,15))",
-														"y": "Player1.Y+round(random(-15,30))",
-														"create-hierarchy": false,
-														"template-name": "\"\""
-													}
-												},
-												{
-													"id": "set-y",
-													"objectClass": "PART_StarShine",
-													"sid": 987941307387104,
-													"parameters": {
-														"y": "Self.Y+30"
-													}
-												}
-											],
-											"sid": 493386596079709
-										}
-									]
-								},
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "on-any-animation-finished",
-											"objectClass": "PART_StarShine",
-											"sid": 722801624633980
-										}
-									],
-									"actions": [
-										{
-											"id": "destroy",
-											"objectClass": "PART_StarShine",
-											"sid": 712089679109756
-										}
-									],
-									"sid": 727895758759169
-								},
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "is-boolean-instance-variable-set",
-											"objectClass": "Player1",
-											"sid": 533804459880566,
-											"parameters": {
-												"instance-variable": "StarState"
-											}
-										},
-										{
-											"id": "compare-instance-variable",
-											"objectClass": "Player1",
-											"sid": 962188072443433,
-											"parameters": {
-												"instance-variable": "StarTimer",
-												"comparison": 3,
-												"value": "0"
-											}
-										}
-									],
-									"actions": [
-										{
-											"id": "set-boolean-instvar",
-											"objectClass": "Player1",
-											"sid": 152222784721631,
-											"parameters": {
-												"instance-variable": "StarState",
-												"value": "false"
-											}
-										}
-									],
-									"sid": 698700474373714
-								}
-							],
-							"sid": 378023149677049
-						},
-						{
-							"eventType": "group",
-							"disabled": false,
-							"title": "1-up",
-							"description": "pretty much the same thing but you get a 1-up instead of a mushroom lmaoooo",
-							"isActiveOnStart": true,
-							"children": [
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "on-collision-with-another-object",
-											"objectClass": "Player1",
-											"sid": 399313947049513,
-											"parameters": {
-												"object": "1up"
-											}
-										}
-									],
-									"actions": [],
-									"sid": 652318217568750,
-									"children": [
-										{
-											"eventType": "block",
-											"conditions": [],
-											"actions": [
-												{
-													"id": "destroy",
-													"objectClass": "1up",
-													"sid": 899584706815843
-												},
-												{
-													"id": "add-to-eventvar",
-													"objectClass": "System",
-													"sid": 246175599405788,
-													"parameters": {
-														"variable": "Lifes",
-														"value": "1"
-													}
-												},
-												{
-													"id": "play",
-													"objectClass": "Audio",
-													"sid": 586997980626783,
-													"parameters": {
-														"audio-file": "1up",
-														"loop": "not-looping",
-														"volume": "-5",
-														"stereo-pan": "0",
-														"tag-optional": "\"SF\""
-													}
-												},
-												{
-													"id": "create-object",
-													"objectClass": "System",
-													"sid": 265506821664015,
-													"parameters": {
-														"object-to-create": "PART_PointGivenSprites",
-														"layer": "\"Main Objects\"",
-														"x": "Player1.X",
-														"y": "Player1.Y+16",
-														"create-hierarchy": false,
-														"template-name": "\"\""
-													}
-												},
-												{
-													"id": "set-animation",
-													"objectClass": "PART_PointGivenSprites",
-													"sid": 717792132748009,
-													"parameters": {
-														"animation": "\"1UP\"",
-														"from": "beginning"
-													}
-												},
-												{
-													"id": "move-to-position",
-													"objectClass": "PART_PointGivenSprites",
-													"sid": 987537218678239,
-													"behaviorType": "MoveTo",
-													"parameters": {
-														"x": "Self.X",
-														"y": "Self.Y-40",
-														"mode": "direct"
-													}
-												},
-												{
-													"id": "wait",
-													"objectClass": "System",
-													"sid": 760894612005918,
-													"parameters": {
-														"seconds": "0.85",
-														"use-timescale": true
-													}
-												},
-												{
-													"id": "destroy",
-													"objectClass": "PART_PointGivenSprites",
-													"sid": 142520485104689
-												}
-											],
-											"sid": 270349671912182
-										}
-									]
-								},
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "compare-instance-variable",
-											"objectClass": "1up",
-											"sid": 479502639215162,
-											"parameters": {
-												"instance-variable": "State",
-												"comparison": 0,
-												"value": "\"Right\""
-											}
-										},
-										{
-											"id": "compare-instance-variable",
-											"objectClass": "PauseSystem",
-											"sid": 177128196865680,
-											"parameters": {
-												"instance-variable": "CanPause",
-												"comparison": 3,
-												"value": "1"
-											}
-										}
-									],
-									"actions": [
-										{
-											"id": "simulate-control",
-											"objectClass": "1up",
-											"sid": 888567550116329,
-											"behaviorType": "Movement",
-											"parameters": {
-												"control": "right"
-											}
-										}
-									],
-									"sid": 696560463127028
-								},
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "compare-instance-variable",
-											"objectClass": "1up",
-											"sid": 985258717990240,
-											"parameters": {
-												"instance-variable": "State",
-												"comparison": 0,
-												"value": "\"Left\""
-											}
-										},
-										{
-											"id": "compare-instance-variable",
-											"objectClass": "PauseSystem",
-											"sid": 118036898427832,
-											"parameters": {
-												"instance-variable": "CanPause",
-												"comparison": 3,
-												"value": "1"
-											}
-										}
-									],
-									"actions": [
-										{
-											"id": "simulate-control",
-											"objectClass": "1up",
-											"sid": 876132082022372,
-											"behaviorType": "Movement",
-											"parameters": {
-												"control": "left"
-											}
-										}
-									],
-									"sid": 676222025362609
-								},
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "on-collision-with-another-object",
-											"objectClass": "1up",
-											"sid": 618251452587355,
-											"parameters": {
-												"object": "Blocks"
-											}
-										},
-										{
-											"id": "on-collision-with-another-object",
-											"objectClass": "1up",
-											"sid": 566479056160777,
-											"parameters": {
-												"object": "Tiles"
-											}
-										}
-									],
-									"actions": [],
-									"sid": 312277229643376,
-									"children": [
-										{
-											"eventType": "block",
-											"conditions": [
-												{
-													"id": "is-by-wall",
-													"objectClass": "1up",
-													"sid": 756903008034628,
-													"behaviorType": "Movement",
-													"parameters": {
-														"side": "left"
-													}
-												},
-												{
-													"id": "is-by-wall",
-													"objectClass": "1up",
-													"sid": 563301499114741,
-													"behaviorType": "Movement",
-													"parameters": {
-														"side": "right"
-													}
-												}
-											],
-											"actions": [],
-											"sid": 834031935436733,
-											"children": [
-												{
-													"eventType": "block",
-													"conditions": [
-														{
-															"id": "compare-instance-variable",
-															"objectClass": "1up",
-															"sid": 111753010623398,
-															"parameters": {
-																"instance-variable": "State",
-																"comparison": 0,
-																"value": "\"Right\""
-															}
-														}
-													],
-													"actions": [
-														{
-															"id": "set-instvar-value",
-															"objectClass": "1up",
-															"sid": 160736647553413,
-															"parameters": {
-																"instance-variable": "State",
-																"value": "\"Left\""
-															}
-														}
-													],
-													"sid": 779559107633980
-												},
-												{
-													"eventType": "block",
-													"conditions": [
-														{
-															"id": "else",
-															"objectClass": "System",
-															"sid": 387396706948883
-														}
-													],
-													"actions": [
-														{
-															"id": "set-instvar-value",
-															"objectClass": "1up",
-															"sid": 943708244948767,
-															"parameters": {
-																"instance-variable": "State",
-																"value": "\"Right\""
-															}
-														}
-													],
-													"sid": 190154529960628
-												}
-											],
-											"isOrBlock": true
-										}
-									],
-									"isOrBlock": true
-								},
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "is-boolean-instance-variable-set",
-											"objectClass": "1up",
-											"sid": 299551512860031,
-											"parameters": {
-												"instance-variable": "CanMove"
-											}
-										}
-									],
-									"actions": [
-										{
-											"id": "set-enabled",
-											"objectClass": "1up",
-											"sid": 589497042600335,
-											"behaviorType": "Movement",
-											"parameters": {
-												"state": "enabled"
-											}
-										}
-									],
-									"sid": 840230031732214
-								},
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "is-boolean-instance-variable-set",
-											"objectClass": "1up",
-											"sid": 478992692328976,
-											"parameters": {
-												"instance-variable": "CanMove"
-											},
-											"isInverted": true
-										}
-									],
-									"actions": [
-										{
-											"id": "set-enabled",
-											"objectClass": "1up",
-											"sid": 775783707201405,
-											"behaviorType": "Movement",
-											"parameters": {
-												"state": "disabled"
-											}
-										}
-									],
-									"sid": 863139360231595
-								},
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "is-boolean-instance-variable-set",
-											"objectClass": "1up",
-											"sid": 278596373979484,
-											"parameters": {
-												"instance-variable": "CanMove"
-											}
-										},
-										{
-											"id": "compare-instance-variable",
-											"objectClass": "PauseSystem",
-											"sid": 181227477323215,
-											"parameters": {
-												"instance-variable": "CanPause",
-												"comparison": 5,
-												"value": "2"
-											}
-										}
-									],
-									"actions": [
-										{
-											"id": "set-enabled",
-											"objectClass": "1up",
-											"sid": 605293193305265,
-											"behaviorType": "Movement",
-											"parameters": {
-												"state": "disabled"
-											}
-										},
-										{
-											"id": "set-max-speed",
-											"objectClass": "1up",
-											"sid": 592300691386551,
-											"behaviorType": "Movement",
-											"parameters": {
-												"max-speed": "0"
-											}
-										}
-									],
-									"sid": 437497077839615,
-									"disabled": true
-								},
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "is-boolean-instance-variable-set",
-											"objectClass": "1up",
-											"sid": 608805814535209,
-											"parameters": {
-												"instance-variable": "CanMove"
-											}
-										},
-										{
-											"id": "compare-instance-variable",
-											"objectClass": "PauseSystem",
-											"sid": 401821487994872,
-											"parameters": {
-												"instance-variable": "CanPause",
-												"comparison": 3,
-												"value": "1"
-											}
-										}
-									],
-									"actions": [
-										{
-											"id": "set-enabled",
-											"objectClass": "1up",
-											"sid": 685113279357224,
-											"behaviorType": "Movement",
-											"parameters": {
-												"state": "enabled"
-											}
-										},
-										{
-											"id": "set-max-speed",
-											"objectClass": "1up",
-											"sid": 975115745685423,
-											"behaviorType": "Movement",
-											"parameters": {
-												"max-speed": "100"
-											}
-										}
-									],
-									"sid": 761011947365713,
-									"disabled": true
-								}
-							],
-							"sid": 504231461315457
-						}
-					],
-					"sid": 369187945035028
 				},
 				{
 					"eventType": "group",
